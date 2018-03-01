@@ -15,11 +15,11 @@ public class Person implements NoiseMaker, Eater, Rider{
     }
 
     public void mount(Rideable thingToMount) {
-
+        thingToMount.mounted();
     }
 
     public void dismount(Rideable thingToMount) {
-
+        thingToMount.dismounted();
     }
 
     // Can be abstract? Only two people, Farmer and Pilot

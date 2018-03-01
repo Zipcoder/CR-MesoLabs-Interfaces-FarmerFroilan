@@ -2,6 +2,8 @@ package com.zipcodewilmington.froilansfarm;
 
 public class Chicken extends Animal implements Produce {
 
+    private boolean fertilized = false;
+
     public void eat(Edible food) {
 
     }
@@ -12,6 +14,15 @@ public class Chicken extends Animal implements Produce {
 
     public Edible yield() {
         return new Egg();
+    }
+
+    public boolean isFertilized() {
+        return fertilized;
+    }
+
+    public boolean fertilize() {
+        fertilized = true;
+        return fertilized;
     }
 
 }
