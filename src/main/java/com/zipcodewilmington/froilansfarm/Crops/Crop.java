@@ -1,4 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
-public class Crop {
+import com.zipcodewilmington.froilansfarm.Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Produce;
+
+public abstract class Crop extends Produce {
+    boolean isHarvested = false;
+
 }
