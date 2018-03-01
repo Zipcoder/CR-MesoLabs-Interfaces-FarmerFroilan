@@ -34,4 +34,8 @@ public class Tractor extends Vehicle implements FarmVehicle {
     public void stopRiding(){
         this.hasRider = false;
     }
+
+    public boolean getHasRider(){
+        return this.hasRider;
+    }
 }

@@ -44,6 +44,13 @@ public class CropDuster extends AirCraft implements FarmVehicle{
         if (!isFlying){
             this.hasRider = false;
         }
+    }
 
+    public boolean getHasRider(){
+        return this.hasRider;
+    }
+
+    public boolean getIsFlying(){
+        return this.isFlying;
     }
 }

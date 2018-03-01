@@ -1,27 +1,23 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-import com.zipcodewilmington.froilansfarm.crop.Crop;
-import com.zipcodewilmington.froilansfarm.crop.CropRow;
-import com.zipcodewilmington.froilansfarm.interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 import java.util.ArrayList;
 
-public class Farmer extends Person implements Rider, Botanist{
+public class Pilot extends Person implements Rider {
 
-    private String name = "Froilan";
     private ArrayList<Edible> foodEaten = new ArrayList<Edible>();
+    private String name = "Froilanda";
 
-    public void plant(CropRow cropRow, Crop crop) {
-        for (int i = 0; i < 5; i++){
-            cropRow.getCropsInRow().add(crop);
-        }
+
+    public void eat(Edible food) {
+        foodEaten.add(food);
     }
 
     public String makeNoise() {
-        return "I am making noise!";
+        return "I'm the best pilot ever!";
     }
 
     public void mount(Rideable rideable) {
@@ -30,10 +26,6 @@ public class Farmer extends Person implements Rider, Botanist{
 
     public void dismount(Rideable rideable) {
         rideable.stopRiding();
-    }
-
-    public void eat(Edible food) {
-        foodEaten.add(food);
     }
 
     public ArrayList<Edible> getFoodEaten() {

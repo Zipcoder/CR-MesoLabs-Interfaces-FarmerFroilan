@@ -17,6 +17,13 @@ public class TractorTest {
     }
 
     @Test
+    public void getHasRiderTest(){
+        testTractor.ride();
+        boolean actual = testTractor.getHasRider();
+        Assert.assertTrue(actual);
+    }
+
+    @Test
     public void operateTest(){
         for (int i =0; i < 5; i++){
             Field.getCropRowsInField()[0].getCropsInRow().add(new CornStalk());

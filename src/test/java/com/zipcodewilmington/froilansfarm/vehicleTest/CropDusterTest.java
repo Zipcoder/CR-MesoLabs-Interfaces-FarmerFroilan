@@ -28,4 +28,19 @@ public class CropDusterTest {
         boolean actual = Field.getCropRowsInField()[0].getCropsInRow().get(4).getHasBeenFertilized();
         Assert.assertTrue(actual);
     }
+
+    @Test
+    public void getHasRiderTest(){
+        testCropDuster.ride();
+        boolean actual = testCropDuster.getHasRider();
+        Assert.assertTrue(actual);
+    }
+
+    @Test
+    public void getIsFlyingTest(){
+        testCropDuster.ride();
+        testCropDuster.fly();
+        boolean actual = testCropDuster.getIsFlying();
+        Assert.assertTrue(actual);
+    }
 }
