@@ -2,9 +2,10 @@ package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.an
 
 import com.zipcodewilmington.froilansfarm.farm.things.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Oats;
 
 public class Horse extends Animal implements Rideable {
-    public void eat(Edible food) {
+    public void eat(Oats food) {
 
     }
 
