@@ -1,4 +1,7 @@
-package com.zipcodewilmington.froilansfarm.Chicken;
+package com.zipcodewilmington.froilansfarm.Edible;
 
-public class Egg {
+public class Egg extends Edible {
+    public Egg(){
+        this.calories = 80;
+    }
 }
