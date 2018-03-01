@@ -1,9 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Botanist {
-
-    void plant (Crop cropToPlant, CropRow plantingLocation){
-
-    }
-
+public interface Botanist {
+    void plant (Crop cropToPlant, CropRow plantingLocation);
 }

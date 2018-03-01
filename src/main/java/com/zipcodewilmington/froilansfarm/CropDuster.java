@@ -12,4 +12,8 @@ public class CropDuster extends Vehicle implements FarmVehicle,Aircraft {
     public String makeNoise() {
         return null;
     }
+
+    public void fertilize (CropRow targetRow){
+
+    }
 }
