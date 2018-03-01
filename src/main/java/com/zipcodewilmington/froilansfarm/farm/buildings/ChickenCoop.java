@@ -34,6 +34,13 @@ public class ChickenCoop {
         return this.chickens.get(chickenIndex);
     }
 
+    public Chicken getChicken(String name){
+        for(Chicken c : this.chickens){
+            if (c.getName().equals(name)) return c;
+        }
+        return null;
+    }
+
     public int getChickenCoopSize(){
         return this.chickens.size();
     }

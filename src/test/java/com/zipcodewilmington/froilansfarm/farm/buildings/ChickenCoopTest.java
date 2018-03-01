@@ -65,8 +65,19 @@ public class ChickenCoopTest {
 
         //Then
         Assert.assertEquals(expected,actual);
+    }
 
+    @Test
+    public void getChickenByNameTest(){
+        //Given
+        ChickenCoop test = new ChickenCoop(new Chicken("Larry"));
 
+        //When
+        String expected = "Larry";
+        String actual = test.getChicken("Larry").getName();
+
+        //Then
+        Assert.assertEquals(expected,actual);
     }
 
 
