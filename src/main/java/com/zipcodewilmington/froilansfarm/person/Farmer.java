@@ -15,7 +15,7 @@ public class Farmer extends Person implements Rider, Botanist{
     private ArrayList<Edible> foodEaten = new ArrayList<Edible>();
 
     public void plant(CropRow cropRow, Crop crop) {
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 25; i++){
             cropRow.getCropsInRow().add(crop);
         }
     }

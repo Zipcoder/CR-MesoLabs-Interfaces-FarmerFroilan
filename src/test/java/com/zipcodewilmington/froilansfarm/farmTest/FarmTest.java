@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.farmTest;
 
 import com.zipcodewilmington.froilansfarm.animal.Chicken;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
+import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.Stable;
@@ -28,8 +29,8 @@ public class FarmTest {
         Chicken testChicken = new Chicken();
         chickenCoopTest.getChickensInCoop().add(testChicken);
         Chicken expected = testChicken;
-        testFarm.getChickenCoops().add(chickenCoopTest);
-        Chicken actual = testFarm.getChickenCoops().get(0).getChickensInCoop().get(0);
+        testFarm.getChickenCoops()[0] = chickenCoopTest;
+        Chicken actual = testFarm.getChickenCoops()[0].getChickensInCoop().get(0);
         Assert.assertEquals(expected, actual);
     }
 
@@ -39,8 +40,17 @@ public class FarmTest {
         Horse testHorse = new Horse();
         testStable.getHorsesInStable().add(testHorse);
         Horse expected = testHorse;
-        testFarm.getStables().add(testStable);
-        Horse actual = testFarm.getStables().get(0).getHorsesInStable().get(0);
+        testFarm.getStables()[0] = testStable;
+        Horse actual = testFarm.getStables()[0].getHorsesInStable().get(0);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getFroilansFieldTest(){
+        CornStalk testCornStalk = new CornStalk();
+        testFarm.getFroilansField().getCropRowsInField()[0].getCropsInRow().add(testCornStalk);
+        CornStalk expected = testCornStalk;
+        CornStalk actual = (CornStalk) testFarm.getFroilansField().getCropRowsInField()[0].getCropsInRow().get(0);
         Assert.assertEquals(expected, actual);
     }
 }

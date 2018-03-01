@@ -9,11 +9,12 @@ public class CropDuster extends AirCraft implements FarmVehicle{
     private boolean hasRider = false;
     private boolean isFlying = false;
 
-    public void operate() {
+    public void operate(Field field) {
         if (hasRider && isFlying) {
-            for (CropRow cropRow : Field.getCropRowsInField()) {
+            for (CropRow cropRow : field.getCropRowsInField()) {
                 for (Crop crop : cropRow.getCropsInRow()) {
                     crop.setHasBeenFertilized(true);
+                    crop.setHasBeenHarvested(false);
                 }
             }
         }

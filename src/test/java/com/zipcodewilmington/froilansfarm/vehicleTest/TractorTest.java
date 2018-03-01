@@ -25,15 +25,16 @@ public class TractorTest {
 
     @Test
     public void operateTest(){
+        Field testField = new Field();
         for (int i =0; i < 5; i++){
-            Field.getCropRowsInField()[0].getCropsInRow().add(new CornStalk());
+            testField.getCropRowsInField()[0].getCropsInRow().add(new CornStalk());
         }
         for (int i =0; i < 5; i++){
-            Field.getCropRowsInField()[0].getCropsInRow().get(i).setHasBeenFertilized(true);
+            testField.getCropRowsInField()[0].getCropsInRow().get(i).setHasBeenFertilized(true);
         }
         testTractor.ride();
-        testTractor.operate();
-        boolean actual = Field.getCropRowsInField()[0].getCropsInRow().get(4).getHasBeenHarvested();
+        testTractor.operate(testField);
+        boolean actual = testField.getCropRowsInField()[0].getCropsInRow().get(4).getHasBeenHarvested();
         Assert.assertTrue(actual);
     }
 }

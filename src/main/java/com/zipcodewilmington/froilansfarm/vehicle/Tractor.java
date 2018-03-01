@@ -13,9 +13,9 @@ public class Tractor extends Vehicle implements FarmVehicle {
     private boolean hasRider = false;
     private ArrayList<Edible> tractorCropStorage = new ArrayList<Edible>();
 
-    public void operate() {
+    public void operate(Field field) {
         if (hasRider) {
-            for (CropRow cropRow : Field.getCropRowsInField()) {
+            for (CropRow cropRow : field.getCropRowsInField()) {
                 for (Crop crop : cropRow.getCropsInRow()) {
                         tractorCropStorage.add(crop.yield());
                 }

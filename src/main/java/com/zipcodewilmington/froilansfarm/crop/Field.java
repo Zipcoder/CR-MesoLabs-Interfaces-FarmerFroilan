@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Field {
 
-    private static CropRow[] cropRowsInField = new CropRow[5];
+    private CropRow[] cropRowsInField = new CropRow[5];
 
-    static {
+    public Field() {
         cropRowsInField[0] = new CropRow();
         cropRowsInField[1] = new CropRow();
         cropRowsInField[2] = new CropRow();
@@ -15,7 +15,7 @@ public class Field {
         cropRowsInField[4] = new CropRow();
     }
 
-    public static CropRow[] getCropRowsInField() {
+    public CropRow[] getCropRowsInField() {
 
         return cropRowsInField;
 
