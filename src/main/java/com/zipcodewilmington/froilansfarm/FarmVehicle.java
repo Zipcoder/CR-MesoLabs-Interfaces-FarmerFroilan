@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class FarmVehicle {
+public class FarmVehicle extends Vehicle {
+
+
+
 }

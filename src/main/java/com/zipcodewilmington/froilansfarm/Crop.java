@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Crop {
+public class Crop implements Produce {
+
+
+
 }

@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class AirCraft {
+public class AirCraft extends Vehicle {
+
+
+
 }
