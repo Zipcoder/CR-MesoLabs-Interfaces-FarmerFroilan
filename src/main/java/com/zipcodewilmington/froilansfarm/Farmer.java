@@ -8,8 +8,23 @@ public class Farmer extends Person implements Botanist{
         this.name = name;
     }
 
-    public void plant(Crop cropToPlant, CropRow rowToPlantIn) {
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public void plant(Crop cropToPlant, CropRow rowToPlantIn) {
+        rowToPlantIn.cropArrayList.add(cropToPlant);
+    }
+
+    public String fertilizeOnVehicle(Crop cropToBeFertilized) {
+        return null;
+        // need to figure out how to check for mount in order to tell vehicle to fertilize
     }
 
     public void eat(Edible food) {

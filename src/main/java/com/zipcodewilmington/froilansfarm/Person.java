@@ -4,7 +4,17 @@ import java.util.ArrayList;
 
 public class Person implements NoiseMaker, Eater, Rider{
 
+    private String name;
+
     private ArrayList<Edible> foodInventory;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public void eat(Edible food) {
 

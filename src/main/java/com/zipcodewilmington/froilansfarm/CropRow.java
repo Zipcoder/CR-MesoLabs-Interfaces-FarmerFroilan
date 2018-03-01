@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.util.ArrayList;
+
 public class CropRow {
 
-    // Lives in Field
+    public ArrayList<Crop> cropArrayList;
 
 }
