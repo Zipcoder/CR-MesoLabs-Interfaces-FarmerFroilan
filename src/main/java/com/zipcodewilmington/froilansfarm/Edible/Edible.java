@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Edible;
 
-public class Edible {
+public abstract class Edible {
     public int calories;
 }
