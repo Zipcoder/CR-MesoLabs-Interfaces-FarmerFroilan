@@ -15,7 +15,7 @@ public class Horse extends Animal implements Rideable {
 
     }
 
-    public boolean beingRidden(){
+    public boolean isBeingRidden(){
         return this.ridden;
     }
 

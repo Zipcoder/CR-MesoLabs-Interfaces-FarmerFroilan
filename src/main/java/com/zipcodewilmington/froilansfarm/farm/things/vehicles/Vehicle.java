@@ -5,7 +5,9 @@ import com.zipcodewilmington.froilansfarm.farm.things.Rideable;
 
 public abstract class Vehicle implements NoiseMaker,Rideable {
 
-    protected String name;
+    private boolean ridden;
+
+    private String name;
 
     public Vehicle(String name){
         this.name = name;
@@ -13,6 +15,10 @@ public abstract class Vehicle implements NoiseMaker,Rideable {
 
     public String getName(){
         return this.name;
+    }
+
+    public boolean isBeingRidden(){
+        return this.ridden;
     }
 
 }

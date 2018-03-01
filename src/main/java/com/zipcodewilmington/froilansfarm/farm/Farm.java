@@ -12,4 +12,11 @@ public class Farm {
     private ArrayList<ChickenCoop> chickenCoops;
     private Field field;
     private FarmHouse farmHouse;
+
+    public Farm(){
+
+    }
+
+
+
 }
