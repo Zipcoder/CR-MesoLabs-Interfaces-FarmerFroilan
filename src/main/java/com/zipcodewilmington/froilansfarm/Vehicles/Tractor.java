@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public class Tractor extends FarmVehicle{
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+
+public class Tractor extends Vehicle implements FarmVehicle {
 }

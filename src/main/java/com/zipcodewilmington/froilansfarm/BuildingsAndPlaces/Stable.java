@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.BuildingsAndPlaces;
 
-public class Stable extends Farm{
+public class Stable{
 }

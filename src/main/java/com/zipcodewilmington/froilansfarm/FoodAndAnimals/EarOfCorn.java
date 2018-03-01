@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.FoodAndAnimals;
 
-public class EarOfCorn extends CornStalk{
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+
+public class EarOfCorn implements Edible{
 }

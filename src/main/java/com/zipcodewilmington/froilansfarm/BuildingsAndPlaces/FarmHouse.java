@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.BuildingsAndPlaces;
 
-public class FarmHouse extends Farm{
+public class FarmHouse{
     private static FarmHouse ourInstance = new FarmHouse();
 
     public static FarmHouse getInstance() {

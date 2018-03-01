@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface NoiseMaker {
-    String makeNoise();
+
+public interface FarmVehicle {
+    void operate();
 }
