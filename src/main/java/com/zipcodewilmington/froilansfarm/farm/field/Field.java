@@ -5,5 +5,19 @@ import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 import java.util.ArrayList;
 
 public class Field {
-    ArrayList<CropRow> rows;
+    private ArrayList<CropRow> rows;
+
+    public Field (){
+
+    }
+
+    public CropRow getRow(CropRow rowToGet){
+        return null;
+    }
+
+    public ArrayList<CropRow> getField(){
+        return null;
+    }
+
+
 }

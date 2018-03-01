@@ -6,4 +6,17 @@ import java.util.ArrayList;
 
 public class Stable {
     private ArrayList<Horse> horses;
+
+    public void addHorse(Horse horseToAdd){
+
+    }
+
+    public void removeHorse(Horse horseToRemove){
+
+    }
+
+    public Horse getHorse(Horse horseToGet){
+        return null;
+    }
+
 }
