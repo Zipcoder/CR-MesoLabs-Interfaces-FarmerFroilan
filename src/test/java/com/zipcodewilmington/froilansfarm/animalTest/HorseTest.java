@@ -28,15 +28,15 @@ public class HorseTest {
     @Test
     public void mountTest(){
         Horse testHorse = new Horse();
-        testHorse.setMounted(true);
+        testHorse.ride();
         boolean expected = testHorse.getHasBeenMounted();
         Assert.assertTrue(expected);
     }
     @Test
     public void rideTest(){
         Horse testHorse = new Horse();
-        testHorse.setMounted(true);
         testHorse.ride();
+        testHorse.stopRiding();
         boolean expected = testHorse.getHasBeenRidden();
         Assert.assertTrue(expected);
     }
@@ -45,8 +45,8 @@ public class HorseTest {
     public void endOfDayResetTest(){
         Horse testHorse = new Horse();
         EarCorn testCorn = new EarCorn();
-        testHorse.setMounted(true);
         testHorse.ride();
+        testHorse.stopRiding();
         testHorse.eat(testCorn);
         testHorse.endOfDayReset();
         boolean actual1 = testHorse.getHasBeenMounted();

@@ -29,15 +29,4 @@ public class CornStalkTest {
         EarCorn earCornTest = cornStalkTest.yield();
         Assert.assertTrue(earCornTest instanceof EarCorn);
     }
-
-    @Test
-    public void endOfDayResetTest(){
-        cornStalkTest.setHasBeenFertilized(true);
-        cornStalkTest.setHasBeenHarvested(true);
-        cornStalkTest.endOfDayReset();
-        boolean expected = cornStalkTest.getHasBeenFertilized();
-        boolean expected2 = cornStalkTest.getHasBeenHarvested();
-        Assert.assertFalse(expected);
-        Assert.assertFalse(expected2);
-    }
 }

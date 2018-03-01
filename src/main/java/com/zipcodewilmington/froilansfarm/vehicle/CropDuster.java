@@ -3,35 +3,47 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.crop.CropRow;
 import com.zipcodewilmington.froilansfarm.crop.Field;
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
-import java.util.ArrayList;
-
-public class Tractor extends Vehicle implements FarmVehicle {
-
+public class CropDuster extends AirCraft implements FarmVehicle{
     private boolean hasRider = false;
-    private ArrayList<Edible> tractorCropStorage = new ArrayList<Edible>();
+    private boolean isFlying = false;
 
     public void operate() {
-        if (hasRider) {
+        if (hasRider && isFlying) {
             for (CropRow cropRow : Field.getCropRowsInField()) {
                 for (Crop crop : cropRow.getCropsInRow()) {
-                        tractorCropStorage.add(crop.yield());
+                    crop.setHasBeenFertilized(true);
                 }
             }
         }
     }
 
+    public void fly() {
+        if (hasRider){
+            this.isFlying = true;
+        }
+    }
+
+    public void land() {
+        if(isFlying){
+            this.isFlying = false;
+        }
+    }
+
     public String makeNoise() {
-        return "Vrrrrrr";
+        return "Whoosh!";
     }
 
     public void ride() {
         this.hasRider = true;
+
     }
 
-    public void stopRiding(){
-        this.hasRider = false;
+    public void stopRiding() {
+        if (!isFlying){
+            this.hasRider = false;
+        }
+
     }
 }

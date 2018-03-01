@@ -30,16 +30,4 @@ public class TomatoPlantTest {
         boolean actual = tomatoPlantTest.getHasBeenFertilized();
         Assert.assertTrue(actual);
     }
-
-    @Test
-    public void endOfDayResetTest(){
-        TomatoPlant testTomatoPlant = new TomatoPlant();
-        testTomatoPlant.setHasBeenFertilized(true);
-        testTomatoPlant.setHasBeenHarvested(true);
-        testTomatoPlant.endOfDayReset();
-        boolean expected = testTomatoPlant.getHasBeenFertilized();
-        boolean expected2 = testTomatoPlant.getHasBeenHarvested();
-        Assert.assertFalse(expected);
-        Assert.assertFalse(expected2);
-    }
 }
