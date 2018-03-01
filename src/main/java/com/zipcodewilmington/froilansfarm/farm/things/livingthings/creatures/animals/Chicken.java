@@ -6,7 +6,16 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edibl
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.Produce;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Egg;
 
-public class Chicken extends Animal implements Produce,Eater {
+public class Chicken extends Animal implements Produce {
+
+    private boolean fertilized;
+    private boolean harvested;
+
+    public Chicken(String name){
+        super(name);
+    }
+
+
     public void eat(ChickenFeed food) {
 
     }

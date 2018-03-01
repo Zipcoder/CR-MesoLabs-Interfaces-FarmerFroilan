@@ -6,6 +6,10 @@ import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
+    public Tractor(String name) {
+        super(name);
+    }
+
     public void operate(Farm homeFarm) {
 
     }

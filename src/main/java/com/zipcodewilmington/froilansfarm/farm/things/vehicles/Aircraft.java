@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.things.vehicles;
 
-public interface Aircraft {
+import com.zipcodewilmington.froilansfarm.farm.things.Rideable;
+
+public interface Aircraft{
     void fly();
 }

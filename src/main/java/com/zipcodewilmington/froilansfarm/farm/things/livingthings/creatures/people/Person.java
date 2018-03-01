@@ -1,7 +1,14 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people;
 
 import com.zipcodewilmington.froilansfarm.farm.things.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.Creature;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.Eater;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.PeopleFood;
 
-public abstract class Person implements Eater,NoiseMaker {
+public abstract class Person extends Creature {
+    public Person(String name) {
+        super(name);
+    }
+
+    public void eat (PeopleFood food){}
 }

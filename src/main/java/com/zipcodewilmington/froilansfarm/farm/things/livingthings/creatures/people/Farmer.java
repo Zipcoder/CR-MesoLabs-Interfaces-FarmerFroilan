@@ -6,11 +6,11 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edibl
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 
 public class Farmer extends Person implements Botanist,Rider {
-    public void plant(Crop cropToPlant, CropRow plantingLocation) {
-
+    public Farmer(String name) {
+        super(name);
     }
 
-    public void eat(Edible food) {
+    public void plant(Crop cropToPlant, CropRow plantingLocation) {
 
     }
 

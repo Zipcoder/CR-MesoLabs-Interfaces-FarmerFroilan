@@ -4,6 +4,10 @@ import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 
 public class CropDuster extends Vehicle implements FarmVehicle,Aircraft {
+    public CropDuster(String name) {
+        super(name);
+    }
+
     public void fly() {
 
     }
