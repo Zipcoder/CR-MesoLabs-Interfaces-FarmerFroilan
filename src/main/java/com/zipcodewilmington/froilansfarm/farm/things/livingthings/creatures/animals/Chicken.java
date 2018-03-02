@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals;
 
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.Eater;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.Produce;
@@ -16,16 +15,41 @@ public class Chicken extends Animal implements Produce {
     }
 
 
-    public void eat(ChickenFeed food) {
+    public void eat(Edible food) {
+        if(food instanceof ChickenFeed){
+            this.hasEaten = true;
+            this.energyReserves += food.getEnergyValue();
+        }
 
     }
 
     public String makeNoise() {
-        return null;
+        return "bucKAW!!!";
     }
 
-    public Egg yield(boolean hasBeenFertilized, boolean hasBeenHarvested) {
-        return null;
+    public Egg yield() {
+        if(!this.isFertilized() && this.isHarvested()) {
+            return new Egg();
+        }
+        else{
+            return null;
+        }
+    }
+
+    public void fertilize(){
+        this.fertilized=true;
+    }
+
+    public Boolean isFertilized(){
+        return this.fertilized;
+    }
+
+    public void harvest(){
+        this.harvested=true;
+    }
+
+    public Boolean isHarvested(){
+        return this.harvested;
     }
 
 }

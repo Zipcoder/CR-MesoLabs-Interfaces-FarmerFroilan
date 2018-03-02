@@ -13,7 +13,5 @@ public abstract class Animal extends Creature {
         super(name);
     }
 
-    public void eat (AnimalFeed food){}
-
 
 }

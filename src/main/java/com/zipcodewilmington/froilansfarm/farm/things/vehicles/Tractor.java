@@ -26,4 +26,13 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
     }
 
+    @Override
+    public void getOn() {
+
+    }
+
+    @Override
+    public void getOff() {
+
+    }
 }

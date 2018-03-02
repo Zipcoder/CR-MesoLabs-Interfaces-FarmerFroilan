@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.pe
 import com.zipcodewilmington.froilansfarm.farm.things.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.Creature;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.Eater;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.PeopleFood;
 
 public abstract class Person extends Creature {
@@ -10,5 +11,5 @@ public abstract class Person extends Creature {
         super(name);
     }
 
-    public void eat (PeopleFood food){}
+    public void eat (Edible food){}
 }

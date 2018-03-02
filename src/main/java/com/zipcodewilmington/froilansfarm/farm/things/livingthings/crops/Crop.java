@@ -7,19 +7,20 @@ public abstract class Crop implements Produce {
     private boolean harvested;
 
     public void fertilize(){
-
+        this.fertilized=true;
     }
 
-    public void harvest(){
-
-    }
-
-    public boolean isFertilized(){
+    public Boolean isFertilized(){
         return this.fertilized;
     }
 
-    public boolean isHarvested(){
+    public void harvest(){
+        this.harvested=true;
+    }
+
+    public Boolean isHarvested(){
         return this.harvested;
     }
+
 
 }
