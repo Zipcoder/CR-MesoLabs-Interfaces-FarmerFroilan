@@ -10,6 +10,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         CropTest.class,
         CropFactoryTest.class,
+        CornStalkTest.class,
+
 
 
 })
