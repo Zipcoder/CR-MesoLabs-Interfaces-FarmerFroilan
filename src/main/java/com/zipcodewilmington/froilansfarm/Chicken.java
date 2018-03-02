@@ -29,7 +29,4 @@ public class Chicken extends Produce implements Animal{
         else return null;
     }
 
-    public void fertilize(){
-        this.isFertilized = true;
-    }
 }
