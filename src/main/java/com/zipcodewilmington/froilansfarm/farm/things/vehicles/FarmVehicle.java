@@ -5,5 +5,7 @@ import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 
 public interface FarmVehicle {
     void operate(Farm homeFarm);
+    void shutDown(Farm homeFarm);
     void fertilize (CropRow targetRow);
+
 }

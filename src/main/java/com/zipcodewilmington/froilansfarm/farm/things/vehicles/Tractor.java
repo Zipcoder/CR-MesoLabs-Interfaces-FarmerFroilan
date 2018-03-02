@@ -14,9 +14,16 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
     }
 
+    @Override
+    public void shutDown(Farm homeFarm) {
+
+    }
+
+
     public void fertilize(CropRow targetRow) {
 
     }
+
 
     public String makeNoise() {
         return null;

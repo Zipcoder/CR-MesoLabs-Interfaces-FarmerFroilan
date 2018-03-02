@@ -29,5 +29,34 @@ public class CropDusterTest {
         Assert.assertTrue(badLarry.isFlying());
     }
 
+    @Test
+    public void flyFailTest(){
+        //Given
+
+        //When
+        badLarry.fly();
+
+        //Then
+        Assert.assertFalse(badLarry.isFlying());
+    }
+
+    @Test
+    public void landTest(){
+        //Given
+
+        //When
+        froilanda.mount(badLarry);
+        badLarry.fly();
+        badLarry.land();
+
+        //Then
+        Assert.assertFalse(badLarry.isFlying());
+    }
+
+    @Test
+    public void operateTest(){
+
+    }
+
 
 }

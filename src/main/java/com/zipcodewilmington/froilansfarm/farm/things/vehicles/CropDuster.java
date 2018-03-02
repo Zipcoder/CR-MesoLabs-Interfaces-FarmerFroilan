@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.farm.Farm;
 
 public class CropDuster extends Vehicle implements FarmVehicle,Aircraft {
     private boolean flying;
+    private boolean operating;
 
     public CropDuster(String name) {
         super(name);
@@ -29,6 +30,11 @@ public class CropDuster extends Vehicle implements FarmVehicle,Aircraft {
     }
 
     public void operate(Farm homeFarm) {
+
+    }
+
+    @Override
+    public void shutDown(Farm homeFarm) {
 
     }
 
