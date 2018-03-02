@@ -4,8 +4,18 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    private ArrayList<Crop> aCropRow = new ArrayList<Crop>();
+    private ArrayList<Crop> aCropRow;
 
+    public CropRow() {
+        aCropRow = new ArrayList<Crop>();
+    }
 
+    public void addCrop(Crop aCrop) {
+        aCropRow.add(aCrop);
+    }
+
+    public ArrayList<Crop> getCropField() {
+        return this.aCropRow;
+    }
 
 }

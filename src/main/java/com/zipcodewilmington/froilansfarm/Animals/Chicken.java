@@ -6,7 +6,12 @@ import com.zipcodewilmington.froilansfarm.Production.Egg;
 
 public class Chicken extends Animal implements Produce {
 
+    private boolean hasBeenFertilized = false;
 
+
+    public Chicken() {
+
+    }
 
     public Egg yield() {
 
@@ -20,6 +25,15 @@ public class Chicken extends Animal implements Produce {
     public void eat(Edible object) {
 
     }
+
+    public void setHasBeenFertilized(boolean someBoolean) {
+        this.hasBeenFertilized = someBoolean;
+    }
+
+//    public boolean getHasBeenFertilized() {
+//        return hasBeenFertilized;
+//    }
+
 
 
 }

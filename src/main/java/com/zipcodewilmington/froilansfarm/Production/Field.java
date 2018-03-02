@@ -4,8 +4,19 @@ import java.util.ArrayList;
 
 public class Field {
 
+    private ArrayList<CropRow> cropField;
 
-    private ArrayList<CropRow> cropField = new ArrayList<CropRow>();
+    public Field() {
+        cropField = new ArrayList<CropRow>();
+    }
+
+    public void addCropRow(CropRow aCropRow) {
+        cropField.add(aCropRow);
+    }
+
+    public ArrayList<CropRow> getCropField() {
+        return this.cropField;
+    }
 
 
 }
