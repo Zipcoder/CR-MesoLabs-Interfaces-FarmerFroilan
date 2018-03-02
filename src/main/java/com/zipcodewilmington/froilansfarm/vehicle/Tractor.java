@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.crop.CropRow;
 import com.zipcodewilmington.froilansfarm.crop.Field;
+import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
@@ -21,6 +22,14 @@ public class Tractor extends Vehicle implements FarmVehicle {
                 }
             }
         }
+    }
+
+    public void depositHarvest(Silo silo){
+        silo.storeFood(tractorCropStorage);
+    }
+
+    public ArrayList<Edible> getTractorCropStorage() {
+        return tractorCropStorage;
     }
 
     public String makeNoise() {

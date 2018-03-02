@@ -10,6 +10,7 @@ public class Farm {
     private ChickenCoop[] chickenCoops = new ChickenCoop[4];
     private Stable[] stables = new Stable[3];
     private Field froilansField = new Field();
+    private Silo foodSilo = new Silo();
 
     public Farm(){
         chickenCoops[0] = new ChickenCoop();
@@ -51,5 +52,9 @@ public class Farm {
 
     public Field getFroilansField() {
         return froilansField;
+    }
+
+    public Silo getFoodSilo() {
+        return foodSilo;
     }
 }

@@ -1,11 +1,14 @@
 package com.zipcodewilmington.froilansfarm.farmTest;
 
 import com.zipcodewilmington.froilansfarm.animal.Egg;
-import com.zipcodewilmington.froilansfarm.crop.EarCorn;
-import com.zipcodewilmington.froilansfarm.crop.Potato;
-import com.zipcodewilmington.froilansfarm.crop.Tomato;
+import com.zipcodewilmington.froilansfarm.crop.*;
+import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.person.Farmer;
+import com.zipcodewilmington.froilansfarm.person.Pilot;
+import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -92,4 +95,5 @@ public class SiloTest {
         Assert.assertEquals(expected2, actual2);
 
     }
+
 }
