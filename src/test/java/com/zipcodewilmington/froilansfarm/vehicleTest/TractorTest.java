@@ -1,10 +1,8 @@
 package com.zipcodewilmington.froilansfarm.vehicleTest;
 
-import com.zipcodewilmington.froilansfarm.crop.CornStalk;
-import com.zipcodewilmington.froilansfarm.crop.Field;
-import com.zipcodewilmington.froilansfarm.crop.PotatoPlant;
-import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.crop.*;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Pilot;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
@@ -46,25 +44,33 @@ public class TractorTest {
 
     @Test
     public void tractorTest(){
-        Farm testFarm = new Farm();
+
         Farmer testFarmer = new Farmer();
-        testFarmer.plant(testFarm.getFroilansField().getCropRowsInField()[0], new CornStalk());
-        testFarmer.plant(testFarm.getFroilansField().getCropRowsInField()[1], new TomatoPlant());
-        testFarmer.plant(testFarm.getFroilansField().getCropRowsInField()[2], new PotatoPlant());
+        CropRow testCropRow1 = new CropRow();
+        CropRow testCropRow2 = new CropRow();
+        CropRow testCropRow3 = new CropRow();
+        testFarmer.plant(testCropRow1, new CornStalk());
+        testFarmer.plant(testCropRow2, new TomatoPlant());
+        testFarmer.plant(testCropRow3, new PotatoPlant());
         Pilot pilotTest = new Pilot();
         CropDuster cropDusterTest = new CropDuster();
+        Field testField = new Field();
+        testField.getCropRowsInField()[0] = testCropRow1;
+        testField.getCropRowsInField()[1] = testCropRow2;
+        testField.getCropRowsInField()[2] = testCropRow3;
         pilotTest.mount(cropDusterTest);
         cropDusterTest.fly();
-        cropDusterTest.operate(testFarm.getFroilansField());
+        cropDusterTest.operate(testField);
         Tractor tractorTest = new Tractor();
         testFarmer.mount(tractorTest);
-        tractorTest.operate(testFarm.getFroilansField());
-        tractorTest.depositHarvest(testFarm.getFoodSilo());
-        int actual = testFarm.getFoodSilo().getEarCornStorage().size();
+        tractorTest.operate(testField);
+        Silo siloTest = new Silo();
+        tractorTest.depositHarvest(siloTest);
+        int actual = siloTest.getEarCornStorage().size();
         int expected = 25;
-        int actual2 = testFarm.getFoodSilo().getPotatoStorage().size();
+        int actual2 = siloTest.getPotatoStorage().size();
         int expected2 = 25;
-        int actual3 = testFarm.getFoodSilo().getPotatoStorage().size();
+        int actual3 = siloTest.getPotatoStorage().size();
         int expetced3 = 25;
         Assert.assertEquals(expected, actual);
         Assert.assertEquals(expected2, actual2);

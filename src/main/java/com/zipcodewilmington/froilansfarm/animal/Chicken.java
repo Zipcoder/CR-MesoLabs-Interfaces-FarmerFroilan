@@ -1,26 +1,13 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
-import java.util.ArrayList;
 
 public class Chicken extends Animal implements Produce{
 
     private boolean hasBeenHarvested = false;
     private boolean hasBeenFertilized = false;
 
-
-    private ArrayList<Edible> foodEaten = new ArrayList();
-
-    public void eat(Edible food) {
-        this.foodEaten.add(food);
-
-    }
-
-    public ArrayList<Edible> getFoodEaten() {
-        return foodEaten;
-    }
 
     public String makeNoise() {
         return "Bawk!";
@@ -51,7 +38,7 @@ public class Chicken extends Animal implements Produce{
         }
     }
 
-    public void endOfDayReset(){
+    public void startOfDayReset(){
         this.hasBeenFertilized = false;
         this.hasBeenHarvested = false;
         this.foodEaten.clear();

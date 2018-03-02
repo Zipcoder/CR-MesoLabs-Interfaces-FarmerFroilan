@@ -15,9 +15,11 @@ import java.util.ArrayList;
 
 public class Farmer extends Person implements Rider, Botanist{
 
-    private String name = "Froilan";
-    private ArrayList<Edible> foodEaten = new ArrayList<Edible>();
-    private ArrayList<Edible> eggHarvest = new ArrayList<Edible>();
+    private final ArrayList<Edible> eggHarvest = new ArrayList<Edible>();
+
+    public Farmer(){
+        this.name = "Froilan";
+    }
 
     public void plant(CropRow cropRow, Crop crop) {
         Class classOfCrop = crop.getClass();
@@ -47,22 +49,6 @@ public class Farmer extends Person implements Rider, Botanist{
 
     public String makeNoise() {
         return "I am making noise!";
-    }
-
-    public void mount(Rideable rideable) {
-        rideable.ride();
-    }
-
-    public void dismount(Rideable rideable) {
-        rideable.stopRiding();
-    }
-
-    public void eat(Edible food) {
-        foodEaten.add(food);
-    }
-
-    public ArrayList<Edible> getFoodEaten() {
-        return foodEaten;
     }
 
     public ArrayList<Edible> getEggHarvest() {

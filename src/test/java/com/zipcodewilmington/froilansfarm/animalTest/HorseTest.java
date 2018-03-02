@@ -48,7 +48,7 @@ public class HorseTest {
         testHorse.ride();
         testHorse.stopRiding();
         testHorse.eat(testCorn);
-        testHorse.endOfDayReset();
+        testHorse.startOfDayReset();
         boolean actual1 = testHorse.getHasBeenMounted();
         boolean actual2 = testHorse.getHasBeenRidden();
         int expected3 = 0;
@@ -57,6 +57,5 @@ public class HorseTest {
         Assert.assertFalse(actual1);
         Assert.assertFalse(actual2);
         Assert.assertEquals(expected3, actual3);
-
     }
 }

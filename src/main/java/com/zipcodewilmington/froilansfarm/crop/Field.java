@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Field {
 
-    private CropRow[] cropRowsInField = new CropRow[5];
+    private final CropRow[] cropRowsInField = new CropRow[5];
 
     public Field() {
         cropRowsInField[0] = new CropRow();

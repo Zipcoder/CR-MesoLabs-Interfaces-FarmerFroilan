@@ -5,4 +5,9 @@ package com.zipcodewilmington.froilansfarm;
  */
 public class MainApplication {
 
+    public void sundayRoutine(){
+
+
+    }
+
 }

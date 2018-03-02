@@ -37,4 +37,20 @@ public class PilotTest {
         int actual = pilotTest.getFoodEaten().size();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void startOfDayResetTest(){
+        pilotTest.eat(new Egg());
+        pilotTest.startOfDayReset();
+        int expected = 0;
+        int actual = pilotTest.getFoodEaten().size();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNameTest(){
+        String expected = "Froilanda";
+        String actual = pilotTest.getName();
+        Assert.assertEquals(expected, actual);
+    }
 }

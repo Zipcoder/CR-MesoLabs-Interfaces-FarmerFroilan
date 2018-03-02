@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class Silo {
 
-    private ArrayList<EarCorn> earCornStorage = new ArrayList<EarCorn>();
-    private ArrayList<Tomato> tomatoStorage = new ArrayList<Tomato>();
-    private ArrayList<Potato> potatoStorage = new ArrayList<Potato>();
-    private ArrayList<Egg> eggStorage = new ArrayList<Egg>();
+    private final ArrayList<EarCorn> earCornStorage = new ArrayList<EarCorn>();
+    private final ArrayList<Tomato> tomatoStorage = new ArrayList<Tomato>();
+    private final ArrayList<Potato> potatoStorage = new ArrayList<Potato>();
+    private final ArrayList<Egg> eggStorage = new ArrayList<Egg>();
 
     public void storeFood(ArrayList<Edible> incomingFood){
         for (Edible edible: incomingFood) {

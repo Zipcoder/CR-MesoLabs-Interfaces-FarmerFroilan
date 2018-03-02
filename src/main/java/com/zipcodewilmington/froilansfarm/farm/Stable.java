@@ -6,9 +6,15 @@ import java.util.ArrayList;
 
 public class Stable {
 
-    private ArrayList<Horse> horsesInStable = new ArrayList<Horse>();
+    private final ArrayList<Horse> horsesInStable = new ArrayList<Horse>();
 
     public ArrayList<Horse> getHorsesInStable() {
         return horsesInStable;
+    }
+
+    public void startOfDayReset(){
+        for (Horse horse: horsesInStable) {
+            horse.startOfDayReset();
+        }
     }
 }

@@ -58,7 +58,7 @@ public class ChickenTest {
         testChicken.setHasBeenHarvested(true);
         testChicken.setHasBeenFertilized(true);
         testChicken.eat(testCorn);
-        testChicken.endOfDayReset();
+        testChicken.startOfDayReset();
         boolean actual1 = testChicken.getHasBeenHarvested();
         boolean actual2 = testChicken.getHasBeenFertilized();
         int expected3 = 0;

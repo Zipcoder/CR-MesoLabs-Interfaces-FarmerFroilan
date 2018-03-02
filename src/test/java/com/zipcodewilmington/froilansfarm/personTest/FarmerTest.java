@@ -1,9 +1,12 @@
 package com.zipcodewilmington.froilansfarm.personTest;
 
+import com.zipcodewilmington.froilansfarm.animal.Chicken;
 import com.zipcodewilmington.froilansfarm.animal.Egg;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
@@ -49,23 +52,49 @@ public class FarmerTest {
 
     @Test
     public void harvestEggsTest(){
-        Farm testFarm = new Farm();
-        farmerTest.harvestEggs(testFarm.getChickenCoops());
+        ChickenCoop testChickenCoop = new ChickenCoop();
+        for (int i =0 ; i < 15; i++){
+            testChickenCoop.getChickensInCoop().add(new Chicken());
+        }
+        ChickenCoop[] testChickenCoopArray = new ChickenCoop[1];
+        testChickenCoopArray[0] = testChickenCoop;
+        farmerTest.harvestEggs(testChickenCoopArray);
         int expected = 15;
         int actualy = farmerTest.getEggHarvest().size();
         Assert.assertEquals(expected, actualy);
     }
 
     @Test
-    public void tractorTest(){
-        Farm testFarm = new Farm();
+    public void despostEggsTest(){
         Farmer testFarmer = new Farmer();
-        testFarmer.harvestEggs(testFarm.getChickenCoops());
-        testFarmer.depositEggs(testFarm.getFoodSilo());
+        ChickenCoop testChickenCoop = new ChickenCoop();
+        for (int i =0 ; i < 15; i++){
+            testChickenCoop.getChickensInCoop().add(new Chicken());
+        }
+        ChickenCoop[] testChickenCoopArray = new ChickenCoop[1];
+        testChickenCoopArray[0] = testChickenCoop;
+        testFarmer.harvestEggs(testChickenCoopArray);
+        Silo testSilo = new Silo();
+        testFarmer.depositEggs(testSilo);
         int expected = 15;
-        int actual = testFarm.getFoodSilo().getEggStorage().size();
+        int actual = testSilo.getEggStorage().size();
         Assert.assertEquals(expected, actual);
+    }
 
+    @Test
+    public void startOfDayResetTest(){
+        farmerTest.eat(new Egg());
+        farmerTest.startOfDayReset();
+        int expected = 0;
+        int actual = farmerTest.getFoodEaten().size();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNameTest(){
+        String expected = "Froilan";
+        String actual = farmerTest.getName();
+        Assert.assertEquals(expected, actual);
     }
 
 }

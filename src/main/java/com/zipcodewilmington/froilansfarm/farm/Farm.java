@@ -1,18 +1,26 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
 import com.zipcodewilmington.froilansfarm.animal.Chicken;
+import com.zipcodewilmington.froilansfarm.animal.Egg;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
+import com.zipcodewilmington.froilansfarm.crop.EarCorn;
 import com.zipcodewilmington.froilansfarm.crop.Field;
+import com.zipcodewilmington.froilansfarm.crop.Potato;
+import com.zipcodewilmington.froilansfarm.crop.Tomato;
+import com.zipcodewilmington.froilansfarm.person.Farmer;
+import com.zipcodewilmington.froilansfarm.person.Pilot;
 
-public class Farm {
+public final class Farm {
 
-    private FarmHouse farmHouse = new FarmHouse();
-    private ChickenCoop[] chickenCoops = new ChickenCoop[4];
-    private Stable[] stables = new Stable[3];
-    private Field froilansField = new Field();
-    private Silo foodSilo = new Silo();
+    private final FarmHouse farmHouse = new FarmHouse();
+    private final ChickenCoop[] chickenCoops = new ChickenCoop[4];
+    private final Stable[] stables = new Stable[3];
+    private final Field froilansField = new Field();
+    private final Silo foodSilo = new Silo();
 
-    public Farm(){
+    private static final Farm INSTANCE = new Farm();
+
+    private Farm(){
         chickenCoops[0] = new ChickenCoop();
         chickenCoops[1] = new ChickenCoop();
         chickenCoops[2] = new ChickenCoop();
@@ -35,7 +43,25 @@ public class Farm {
             stables[1].getHorsesInStable().add(new Horse());
             stables[2].getHorsesInStable().add(new Horse());
         }
+        for (int i = 0; i < 20; i++){
+            foodSilo.getEggStorage().add(new Egg());
+            foodSilo.getEarCornStorage().add(new EarCorn());
+            foodSilo.getPotatoStorage().add(new Potato());
+            foodSilo.getTomatoStorage().add(new Tomato());
+        }
+        farmHouse.getPeopleLivingInFarmHouse().add(new Farmer());
+        farmHouse.getPeopleLivingInFarmHouse().add(new Pilot());
 
+    }
+
+    public void startOfDayReset(){
+        for (Stable stable: stables) {
+            stable.startOfDayReset();
+        }
+        for (ChickenCoop chickenCoop: chickenCoops) {
+            chickenCoop.startOfDayReset();
+        }
+        farmHouse.startOfDayReset();
     }
 
     public ChickenCoop[] getChickenCoops() {
@@ -57,4 +83,9 @@ public class Farm {
     public Silo getFoodSilo() {
         return foodSilo;
     }
+    public static Farm getInstance(){
+        return INSTANCE;
+
+    }
+
 }

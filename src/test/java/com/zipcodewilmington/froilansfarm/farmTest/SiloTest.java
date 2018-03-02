@@ -5,10 +5,6 @@ import com.zipcodewilmington.froilansfarm.crop.*;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.person.Farmer;
-import com.zipcodewilmington.froilansfarm.person.Pilot;
-import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
-import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -46,6 +42,7 @@ public class SiloTest {
 
     @Test
     public void removeAnEggTest(){
+        Farm.getInstance().getFoodSilo().getEggStorage().clear();
         Egg eggTest1 = new Egg();
         Egg eggTest2 = new Egg();
         testSilo.getEggStorage().add(eggTest1);
@@ -61,6 +58,7 @@ public class SiloTest {
 
     @Test
     public void removeATomatoTest(){
+        Farm.getInstance().getFoodSilo().getTomatoStorage().clear();
         Tomato tomatoTest = new Tomato();
         testSilo.getTomatoStorage().add(tomatoTest);
         Tomato actual = testSilo.removeATomato();
@@ -73,6 +71,7 @@ public class SiloTest {
 
     @Test
     public void removeAPotatoTest(){
+        Farm.getInstance().getFoodSilo().getPotatoStorage().clear();
         Potato potatoTest = new Potato();
         testSilo.getPotatoStorage().add(potatoTest);
         Potato actual = testSilo.removeAPotato();
@@ -85,6 +84,7 @@ public class SiloTest {
 
     @Test
     public void removeAnEarCornTest(){
+        Farm.getInstance().getFoodSilo().getEarCornStorage().clear();
         EarCorn earCornTest = new EarCorn();
         testSilo.getEarCornStorage().add(earCornTest);
         EarCorn expected1 = earCornTest;

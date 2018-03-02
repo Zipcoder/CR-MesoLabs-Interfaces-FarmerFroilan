@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Tractor extends Vehicle implements FarmVehicle {
 
     private boolean hasRider = false;
-    private ArrayList<Edible> tractorCropStorage = new ArrayList<Edible>();
+    private final ArrayList<Edible> tractorCropStorage = new ArrayList<Edible>();
 
     public void operate(Field field) {
         if (hasRider) {
