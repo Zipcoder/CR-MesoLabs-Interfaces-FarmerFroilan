@@ -1,11 +1,16 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer extends Person implements Botanist{
+import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Plants.Crop;
+import com.zipcodewilmington.froilansfarm.Plants.CropRow;
+
+public class Farmer extends Person implements Botanist {
 
     private String name;
 
     public Farmer(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override

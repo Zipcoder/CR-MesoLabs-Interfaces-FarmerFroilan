@@ -1,4 +1,7 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Plants;
+
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class Crop implements Produce {
 

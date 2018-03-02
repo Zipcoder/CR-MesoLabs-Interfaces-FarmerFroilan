@@ -1,6 +1,8 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public class Tractor extends FarmVehicle{
+import com.zipcodewilmington.froilansfarm.Plants.Crop;
+
+public class Tractor extends Vehicle implements FarmVehicle {
 
     // can fertilize one crop at a time
     public void fertilize(Crop crop) {

@@ -1,4 +1,6 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Buildings;
+
+import com.zipcodewilmington.froilansfarm.Person;
 
 import java.util.ArrayList;
 
