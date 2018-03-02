@@ -18,7 +18,6 @@ public class FieldTest {
         testCropRow = new CropRow();
     }
 
-
     @Test
     public void addCropRowTest() {
         testField.addCropRow(testCropRow);

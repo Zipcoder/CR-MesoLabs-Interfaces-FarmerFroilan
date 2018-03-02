@@ -1,12 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.Production.Crop;
 import com.zipcodewilmington.froilansfarm.Production.CropRow;
+import com.zipcodewilmington.froilansfarm.Production.EdibleStorage;
 import com.zipcodewilmington.froilansfarm.Production.Field;
 
-import java.util.ArrayList;
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
@@ -31,17 +29,31 @@ public class Tractor extends Vehicle implements FarmVehicle {
         return isMounted;
     }
 
-
     public boolean canOperate() {
         return (isMounted && isOnFarm);
     }
 
-    public void harvest(Field farmField) {
+    public void harvestCropRow(CropRow aCropRow, EdibleStorage storage) {
 
         if (canOperate()) {
-//            Farm.
+            for (int i = 0; i < aCropRow.getCropRow().size(); i++) {
+                storage.getEdibleStorage().add(aCropRow.getCropRow().get(i).yield());
+            }
+            aCropRow.getCropRow().clear();
+        } else {
+            System.out.println("Tractor not currently operable.");
         }
+    }
 
+    public void harvestField(Field farmField, EdibleStorage storage) {
+
+        if (canOperate()) {
+            for (int i = 0; i < farmField.getCropField().size(); i++) {
+                harvestCropRow(farmField.getCropField().get(i), storage);
+            }
+        } else {
+            System.out.println("Tractor not currently operable.");
+        }
     }
 
     public void makeNoise() {
