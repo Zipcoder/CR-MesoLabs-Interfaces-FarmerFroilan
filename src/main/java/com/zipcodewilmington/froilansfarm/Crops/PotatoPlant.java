@@ -1,4 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
-public class PotatoPlant {
+import com.zipcodewilmington.froilansfarm.Edible.Potato;
+
+public class PotatoPlant extends Crop{
+    @Override
+    public Potato yield() {
+        if (this.isHarvested && this.isFertilized) return new Potato();
+        return null;
+    }
 }
