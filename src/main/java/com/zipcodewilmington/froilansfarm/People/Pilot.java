@@ -1,7 +1,8 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.People;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.People.Person;
 import com.zipcodewilmington.froilansfarm.Plants.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicles.AirCraft;
 

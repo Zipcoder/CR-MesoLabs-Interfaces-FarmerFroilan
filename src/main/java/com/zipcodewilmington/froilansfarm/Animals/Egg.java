@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Animals;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 

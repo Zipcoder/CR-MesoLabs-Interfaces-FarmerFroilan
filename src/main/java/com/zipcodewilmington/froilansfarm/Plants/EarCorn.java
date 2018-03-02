@@ -4,8 +4,10 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class EarCorn implements Edible {
 
-    public void getsEaten() {
+    private boolean hasBeenEaten = false;
 
+    public void getsEaten() {
+        this.hasBeenEaten = true;
     }
 
     // made by CornStalk

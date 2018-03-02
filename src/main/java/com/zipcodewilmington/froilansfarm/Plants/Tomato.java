@@ -4,8 +4,10 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class Tomato implements Edible {
 
-    public void getsEaten() {
+    boolean hasBeenEaten = false;
 
+    public void getsEaten() {
+        this.hasBeenEaten = true;
     }
 
     // made by TomatoPlant

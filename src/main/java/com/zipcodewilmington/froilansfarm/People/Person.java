@@ -1,10 +1,10 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.People;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.*;
 
 import java.util.ArrayList;
 
-public class Person implements NoiseMaker, Eater, Rider {
+public abstract class Person implements NoiseMaker, Eater, Rider {
 
     private String name;
     private ArrayList<Edible> foodInventory;
@@ -23,7 +23,6 @@ public class Person implements NoiseMaker, Eater, Rider {
 
     public void eat(Edible food) {
         food = null;
-        // Setting to null sets the food to be collected by garbage collector
     }
 
     public String makeNoise() {

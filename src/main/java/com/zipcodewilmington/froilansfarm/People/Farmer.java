@@ -1,7 +1,8 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.People;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.People.Person;
 import com.zipcodewilmington.froilansfarm.Plants.Crop;
 import com.zipcodewilmington.froilansfarm.Plants.CropRow;
 

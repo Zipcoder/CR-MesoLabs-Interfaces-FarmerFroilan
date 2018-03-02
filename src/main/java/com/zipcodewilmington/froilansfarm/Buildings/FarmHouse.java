@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Buildings;
 
-import com.zipcodewilmington.froilansfarm.Person;
+import com.zipcodewilmington.froilansfarm.People.Person;
 
 import java.util.ArrayList;
 
