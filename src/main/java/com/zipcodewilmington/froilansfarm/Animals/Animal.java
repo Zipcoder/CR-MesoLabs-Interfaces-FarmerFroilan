@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 public class Animal implements Eater, NoiseMaker {
 
     public void eat(Edible food) {
-
+        food = null;
     }
 
     public String makeNoise() {
