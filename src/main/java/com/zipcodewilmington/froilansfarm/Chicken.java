@@ -25,6 +25,11 @@ public class Chicken extends Produce implements Animal{
     }
 
     public Egg yield() {
-        return new Egg();
+        if (this.isFertilized) return new Egg();
+        else return null;
+    }
+
+    public void fertilize(){
+        this.isFertilized = true;
     }
 }

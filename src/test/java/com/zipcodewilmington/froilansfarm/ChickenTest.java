@@ -31,8 +31,15 @@ public class ChickenTest {
     }
 
     @Test
-    public void produceTest(){
+    public void producePositiveTest(){
+        chicken.fertilize();
         Egg expected = chicken.yield();
         Assert.assertNotNull(expected);
+    }
+
+    @Test
+    public void produceNegativeTest(){
+        Egg expected = chicken.yield();
+        Assert.assertNull(expected);
     }
 }
