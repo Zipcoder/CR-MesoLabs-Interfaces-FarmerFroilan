@@ -6,6 +6,11 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Veget
 public class ArbitrayVegetation extends Crop {
 
     public Vegetable yield() {
+
+        if (this.isFertilized() && this.isHarvested()){
+            return new Vegetable();
+        }
+
         return null;
     }
 }

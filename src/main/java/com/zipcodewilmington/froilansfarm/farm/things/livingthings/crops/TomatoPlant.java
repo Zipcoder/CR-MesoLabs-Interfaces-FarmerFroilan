@@ -6,6 +6,10 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Tomat
 public class TomatoPlant extends Crop  {
 
     public Tomato yield() {
+        if(this.isFertilized() && this.isHarvested()){
+            return new Tomato();
+        }
+
         return null;
     }
 }

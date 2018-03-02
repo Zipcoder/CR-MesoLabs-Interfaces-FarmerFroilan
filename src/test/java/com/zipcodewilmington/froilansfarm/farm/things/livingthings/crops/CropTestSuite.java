@@ -11,6 +11,9 @@ import org.junit.runners.Suite;
         CropTest.class,
         CropFactoryTest.class,
         CornStalkTest.class,
+        ArbitraryVegetationTest.class,
+        TomatoPlantTest.class,
+
 
 
 
