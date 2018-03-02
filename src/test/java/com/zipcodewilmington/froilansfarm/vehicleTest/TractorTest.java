@@ -67,11 +67,11 @@ public class TractorTest {
         Silo siloTest = new Silo();
         tractorTest.depositHarvest(siloTest);
         int actual = siloTest.getEarCornStorage().size();
-        int expected = 25;
+        int expected = 80;
         int actual2 = siloTest.getPotatoStorage().size();
-        int expected2 = 25;
+        int expected2 = 80;
         int actual3 = siloTest.getPotatoStorage().size();
-        int expetced3 = 25;
+        int expetced3 = 80;
         Assert.assertEquals(expected, actual);
         Assert.assertEquals(expected2, actual2);
         Assert.assertEquals(expetced3, actual3);

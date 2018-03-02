@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.animal.Egg;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.crop.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
@@ -23,7 +24,7 @@ public class Farmer extends Person implements Rider, Botanist{
 
     public void plant(CropRow cropRow, Crop crop) {
         Class classOfCrop = crop.getClass();
-        for (int i = 0; i < 25; i++){
+        for (int i = 0; i < 80; i++){
             try {
                 cropRow.getCropsInRow().add((Crop) classOfCrop.newInstance());
             } catch (InstantiationException e) {
@@ -34,24 +35,20 @@ public class Farmer extends Person implements Rider, Botanist{
         }
     }
 
-    public void harvestEggs(ChickenCoop[] chickenCoops){
-        for (ChickenCoop chickenCoop: chickenCoops) {
-            for (Chicken chicken: chickenCoop.getChickensInCoop()) {
-                eggHarvest.add(chicken.yield());
-                chicken.setHasBeenHarvested(true);
-            }
-        }
-    }
-
-    public void depositEggs(Silo silo){
-        silo.storeFood(eggHarvest);
-    }
 
     public String makeNoise() {
         return "I am making noise!";
     }
 
-    public ArrayList<Edible> getEggHarvest() {
-        return eggHarvest;
+    public void eatBreakfast(){
+        this.eat(Farm.getInstance().getFoodSilo().removeAnEarCorn());
+        this.eat(Farm.getInstance().getFoodSilo().removeATomato());
+        this.eat(Farm.getInstance().getFoodSilo().removeATomato());
+        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
+        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
+        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
+        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
+        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
+
     }
 }

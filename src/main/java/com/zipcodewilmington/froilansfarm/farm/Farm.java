@@ -9,6 +9,8 @@ import com.zipcodewilmington.froilansfarm.crop.Potato;
 import com.zipcodewilmington.froilansfarm.crop.Tomato;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Pilot;
+import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 
 public final class Farm {
 
@@ -17,6 +19,8 @@ public final class Farm {
     private final Stable[] stables = new Stable[3];
     private final Field froilansField = new Field();
     private final Silo foodSilo = new Silo();
+    private final Tractor froilansTractor = new Tractor();
+    private final CropDuster froilandasCropDuster = new CropDuster();
 
     private static final Farm INSTANCE = new Farm();
 
@@ -43,7 +47,7 @@ public final class Farm {
             stables[1].getHorsesInStable().add(new Horse());
             stables[2].getHorsesInStable().add(new Horse());
         }
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 120; i++){
             foodSilo.getEggStorage().add(new Egg());
             foodSilo.getEarCornStorage().add(new EarCorn());
             foodSilo.getPotatoStorage().add(new Potato());
@@ -88,4 +92,11 @@ public final class Farm {
 
     }
 
+    public CropDuster getFroilandasCropDuster() {
+        return froilandasCropDuster;
+    }
+
+    public Tractor getFroilansTractor() {
+        return froilansTractor;
+    }
 }

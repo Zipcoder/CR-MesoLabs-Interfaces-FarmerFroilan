@@ -32,7 +32,6 @@ public class Horse extends Animal implements Rideable {
 
     public void startOfDayReset(){
         this.hasBeenRidden = false;
-        this.mounted = false;
         this.foodEaten.clear();
     }
 }

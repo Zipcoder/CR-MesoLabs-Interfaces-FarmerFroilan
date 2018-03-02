@@ -11,40 +11,34 @@ import java.util.ArrayList;
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
-    private boolean hasRider = false;
     private final ArrayList<Edible> tractorCropStorage = new ArrayList<Edible>();
 
     public void operate(Field field) {
         if (hasRider) {
             for (CropRow cropRow : field.getCropRowsInField()) {
                 for (Crop crop : cropRow.getCropsInRow()) {
-                        tractorCropStorage.add(crop.yield());
+                        this.tractorCropStorage.add(crop.yield());
                 }
             }
         }
     }
 
     public void depositHarvest(Silo silo){
-        silo.storeFood(tractorCropStorage);
+        silo.storeFood(this.tractorCropStorage);
+        this.tractorCropStorage.clear();
     }
 
     public ArrayList<Edible> getTractorCropStorage() {
-        return tractorCropStorage;
+        return this.tractorCropStorage;
     }
 
     public String makeNoise() {
         return "Vrrrrrr";
     }
 
-    public void ride() {
-        this.hasRider = true;
-    }
 
     public void stopRiding(){
         this.hasRider = false;
     }
 
-    public boolean getHasRider(){
-        return this.hasRider;
-    }
 }

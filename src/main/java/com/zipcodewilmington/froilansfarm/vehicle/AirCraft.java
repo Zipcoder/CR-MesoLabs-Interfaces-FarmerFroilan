@@ -1,6 +1,17 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
 public abstract class AirCraft extends Vehicle{
-    public abstract void fly();
-    public abstract void land();
+    protected boolean isFlying = false;
+
+    public void fly() {
+        if (hasRider){
+            this.isFlying = true;
+        }
+    }
+
+    public void land() {
+        if(isFlying){
+            this.isFlying = false;
+        }
+    }
 }

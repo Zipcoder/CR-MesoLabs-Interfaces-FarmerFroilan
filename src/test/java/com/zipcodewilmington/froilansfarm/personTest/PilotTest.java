@@ -3,6 +3,9 @@ package com.zipcodewilmington.froilansfarm.personTest;
 import com.zipcodewilmington.froilansfarm.animal.Egg;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.CropRow;
+import com.zipcodewilmington.froilansfarm.crop.EarCorn;
+import com.zipcodewilmington.froilansfarm.crop.Tomato;
+import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.person.Pilot;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
@@ -51,6 +54,19 @@ public class PilotTest {
     public void getNameTest(){
         String expected = "Froilanda";
         String actual = pilotTest.getName();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void eatBreakfastTest(){
+        for(int i = 0; i <8; i++){
+            Farm.getInstance().getFoodSilo().getEarCornStorage().add(new EarCorn());
+            Farm.getInstance().getFoodSilo().getEggStorage().add(new Egg());
+            Farm.getInstance().getFoodSilo().getTomatoStorage().add(new Tomato());
+        }
+        pilotTest.eatBreakfast();
+        int expected = 5;
+        int actual = pilotTest.getFoodEaten().size();
         Assert.assertEquals(expected, actual);
     }
 }

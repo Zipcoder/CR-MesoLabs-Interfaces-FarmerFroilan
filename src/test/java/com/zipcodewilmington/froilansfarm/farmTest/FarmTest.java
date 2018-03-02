@@ -87,4 +87,22 @@ public class FarmTest {
         Assert.assertEquals(actual2, expected2);
         Assert.assertEquals(actual3, expected3);
     }
+
+    @Test
+    public void getFroilansTractorTest(){
+        Farm.getInstance().getFroilansTractor().ride();
+        boolean expected = true;
+        boolean actual = Farm.getInstance().getFroilansTractor().getHasRider();
+        Farm.getInstance().startOfDayReset();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void getFroilandasCropDusterTest(){
+        Farm.getInstance().getFroilandasCropDuster().ride();
+        boolean expected = true;
+        boolean actual = Farm.getInstance().getFroilandasCropDuster().getHasRider();
+        Farm.getInstance().startOfDayReset();
+        Assert.assertEquals(expected, actual);
+    }
 }
