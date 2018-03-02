@@ -17,6 +17,7 @@ import org.junit.Test;
 
 public class FarmTest {
 
+    Farm farm = new Farm();
 
     @Test
     public void getFarmHouseTest(){
@@ -34,8 +35,8 @@ public class FarmTest {
         Chicken testChicken = new Chicken();
         chickenCoopTest.getChickensInCoop().add(testChicken);
         Chicken expected = testChicken;
-        Farm.getInstance().getChickenCoops()[0] = chickenCoopTest;
-        Chicken actual = Farm.getInstance().getChickenCoops()[0].getChickensInCoop().get(0);
+        farm.getChickenCoops()[0] = chickenCoopTest;
+        Chicken actual = farm.getChickenCoops()[0].getChickensInCoop().get(0);
         Assert.assertEquals(expected, actual);
     }
 
@@ -45,26 +46,26 @@ public class FarmTest {
         Horse testHorse = new Horse();
         testStable.getHorsesInStable().add(testHorse);
         Horse expected = testHorse;
-        Farm.getInstance().getStables()[0] = testStable;
-        Horse actual = Farm.getInstance().getStables()[0].getHorsesInStable().get(0);
+        farm.getStables()[0] = testStable;
+        Horse actual = farm.getStables()[0].getHorsesInStable().get(0);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getFroilansFieldTest(){
         CornStalk testCornStalk = new CornStalk();
-        Farm.getInstance().getFroilansField().getCropRowsInField()[0].getCropsInRow().add(testCornStalk);
+        farm.getFroilansField().getCropRowsInField()[0].getCropsInRow().add(testCornStalk);
         CornStalk expected = testCornStalk;
-        CornStalk actual = (CornStalk) Farm.getInstance().getFroilansField().getCropRowsInField()[0].getCropsInRow().get(0);
-        Assert.assertEquals(expected, actual);
+        CornStalk actual = (CornStalk) farm.getFroilansField().getCropRowsInField()[0].getCropsInRow().get(0);
+        Assert.assertTrue(actual instanceof CornStalk);
     }
 
     @Test
     public void SiloConstructorTest(){
-        Egg expected = Farm.getInstance().getFoodSilo().removeAnEgg();
-        EarCorn expected2 = Farm.getInstance().getFoodSilo().removeAnEarCorn();
-        Tomato expected3 = Farm.getInstance().getFoodSilo().removeATomato();
-        Potato expected4 = Farm.getInstance().getFoodSilo().removeAPotato();
+        Egg expected = farm.getFoodSilo().removeAnEgg();
+        EarCorn expected2 = farm.getFoodSilo().removeAnEarCorn();
+        Tomato expected3 = farm.getFoodSilo().removeATomato();
+        Potato expected4 = farm.getFoodSilo().removeAPotato();
         Assert.assertTrue(expected instanceof Egg);
         Assert.assertTrue(expected2 instanceof EarCorn);
         Assert.assertTrue(expected3 instanceof Tomato);
@@ -73,16 +74,16 @@ public class FarmTest {
 
     @Test
     public void startOfDayResetTest(){
-        Farm.getInstance().getFarmHouse().getPeopleLivingInFarmHouse().get(0).eat(new Egg());
-        Farm.getInstance().getChickenCoops()[0].getChickensInCoop().get(0).eat(new EarCorn());
-        Farm.getInstance().getStables()[0].getHorsesInStable().get(0).eat(new EarCorn());
-        Farm.getInstance().startOfDayReset();
+        farm.getFarmHouse().getPeopleLivingInFarmHouse().get(0).eat(new Egg());
+        farm.getChickenCoops()[0].getChickensInCoop().get(0).eat(new EarCorn());
+        farm.getStables()[0].getHorsesInStable().get(0).eat(new EarCorn());
+        farm.startOfDayReset();
         int expected = 0;
         int expected2 = 0;
         int expected3 = 0;
-        int actual = Farm.getInstance().getFarmHouse().getPeopleLivingInFarmHouse().get(0).getFoodEaten().size();
-        int actual2 = Farm.getInstance().getChickenCoops()[0].getChickensInCoop().get(0).getFoodEaten().size();
-        int actual3 = Farm.getInstance().getStables()[0].getHorsesInStable().get(0).getFoodEaten().size();
+        int actual = farm.getFarmHouse().getPeopleLivingInFarmHouse().get(0).getFoodEaten().size();
+        int actual2 = farm.getChickenCoops()[0].getChickensInCoop().get(0).getFoodEaten().size();
+        int actual3 = farm.getStables()[0].getHorsesInStable().get(0).getFoodEaten().size();
         Assert.assertEquals(actual, expected);
         Assert.assertEquals(actual2, expected2);
         Assert.assertEquals(actual3, expected3);
@@ -90,19 +91,19 @@ public class FarmTest {
 
     @Test
     public void getFroilansTractorTest(){
-        Farm.getInstance().getFroilansTractor().ride();
+        farm.getFroilansTractor().ride();
         boolean expected = true;
-        boolean actual = Farm.getInstance().getFroilansTractor().getHasRider();
-        Farm.getInstance().startOfDayReset();
+        boolean actual = farm.getFroilansTractor().getHasRider();
+        farm.startOfDayReset();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
     public void getFroilandasCropDusterTest(){
-        Farm.getInstance().getFroilandasCropDuster().ride();
+        farm.getFroilandasCropDuster().ride();
         boolean expected = true;
-        boolean actual = Farm.getInstance().getFroilandasCropDuster().getHasRider();
-        Farm.getInstance().startOfDayReset();
+        boolean actual = farm.getFroilandasCropDuster().getHasRider();
+        farm.startOfDayReset();
         Assert.assertEquals(expected, actual);
     }
 }

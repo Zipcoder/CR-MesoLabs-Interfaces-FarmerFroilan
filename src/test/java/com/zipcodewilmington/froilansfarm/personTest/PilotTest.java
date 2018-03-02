@@ -59,12 +59,13 @@ public class PilotTest {
 
     @Test
     public void eatBreakfastTest(){
+        Farm farm = new Farm();
         for(int i = 0; i <8; i++){
-            Farm.getInstance().getFoodSilo().getEarCornStorage().add(new EarCorn());
-            Farm.getInstance().getFoodSilo().getEggStorage().add(new Egg());
-            Farm.getInstance().getFoodSilo().getTomatoStorage().add(new Tomato());
+            farm.getFoodSilo().getEarCornStorage().add(new EarCorn());
+            farm.getFoodSilo().getEggStorage().add(new Egg());
+            farm.getFoodSilo().getTomatoStorage().add(new Tomato());
         }
-        pilotTest.eatBreakfast();
+        pilotTest.eatBreakfast(farm.getFoodSilo());
         int expected = 5;
         int actual = pilotTest.getFoodEaten().size();
         Assert.assertEquals(expected, actual);

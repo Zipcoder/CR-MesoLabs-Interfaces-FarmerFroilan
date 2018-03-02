@@ -22,9 +22,7 @@ public final class Farm {
     private final Tractor froilansTractor = new Tractor();
     private final CropDuster froilandasCropDuster = new CropDuster();
 
-    private static final Farm INSTANCE = new Farm();
-
-    private Farm(){
+    public Farm(){
         chickenCoops[0] = new ChickenCoop();
         chickenCoops[1] = new ChickenCoop();
         chickenCoops[2] = new ChickenCoop();
@@ -47,7 +45,7 @@ public final class Farm {
             stables[1].getHorsesInStable().add(new Horse());
             stables[2].getHorsesInStable().add(new Horse());
         }
-        for (int i = 0; i < 120; i++){
+        for (int i = 0; i < 200; i++){
             foodSilo.getEggStorage().add(new Egg());
             foodSilo.getEarCornStorage().add(new EarCorn());
             foodSilo.getPotatoStorage().add(new Potato());
@@ -86,10 +84,6 @@ public final class Farm {
 
     public Silo getFoodSilo() {
         return foodSilo;
-    }
-    public static Farm getInstance(){
-        return INSTANCE;
-
     }
 
     public CropDuster getFroilandasCropDuster() {

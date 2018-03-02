@@ -42,7 +42,6 @@ public class SiloTest {
 
     @Test
     public void removeAnEggTest(){
-        Farm.getInstance().getFoodSilo().getEggStorage().clear();
         Egg eggTest1 = new Egg();
         Egg eggTest2 = new Egg();
         testSilo.getEggStorage().add(eggTest1);
@@ -58,7 +57,6 @@ public class SiloTest {
 
     @Test
     public void removeATomatoTest(){
-        Farm.getInstance().getFoodSilo().getTomatoStorage().clear();
         Tomato tomatoTest = new Tomato();
         testSilo.getTomatoStorage().add(tomatoTest);
         Tomato actual = testSilo.removeATomato();
@@ -71,7 +69,6 @@ public class SiloTest {
 
     @Test
     public void removeAPotatoTest(){
-        Farm.getInstance().getFoodSilo().getPotatoStorage().clear();
         Potato potatoTest = new Potato();
         testSilo.getPotatoStorage().add(potatoTest);
         Potato actual = testSilo.removeAPotato();
@@ -84,7 +81,6 @@ public class SiloTest {
 
     @Test
     public void removeAnEarCornTest(){
-        Farm.getInstance().getFoodSilo().getEarCornStorage().clear();
         EarCorn earCornTest = new EarCorn();
         testSilo.getEarCornStorage().add(earCornTest);
         EarCorn expected1 = earCornTest;

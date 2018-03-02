@@ -19,6 +19,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
                 for (Crop crop : cropRow.getCropsInRow()) {
                         this.tractorCropStorage.add(crop.yield());
                 }
+                cropRow.getCropsInRow().clear();
             }
         }
     }

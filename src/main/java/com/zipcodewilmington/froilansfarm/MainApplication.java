@@ -1,40 +1,91 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.crop.CornStalk;
-import com.zipcodewilmington.froilansfarm.crop.CropRow;
-import com.zipcodewilmington.froilansfarm.crop.PotatoPlant;
-import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.crop.*;
 import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.Silo;
 import com.zipcodewilmington.froilansfarm.farm.Stable;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Pilot;
+import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 
 /**
  * Created by leon on 2/26/18.
  */
 public class MainApplication {
 
-    Farmer froilan = (Farmer) Farm.getInstance().getFarmHouse().getPeopleLivingInFarmHouse().get(0);
-    Pilot froilanda = (Pilot) Farm.getInstance().getFarmHouse().getPeopleLivingInFarmHouse().get(1);
-    Silo silo = Farm.getInstance().getFoodSilo();
-    Stable[] stables = Farm.getInstance().getStables();
-    ChickenCoop[] chickenCoops = Farm.getInstance().getChickenCoops();
-    CropRow[] cropRows = Farm.getInstance().getFroilansField().getCropRowsInField();
+    private final Farm farm;
+    private final Farmer froilan;
+    private final Pilot froilanda;
+    private final Silo silo;
+    private final Stable[] stables;
+    private final ChickenCoop[] chickenCoops;
+    private final CropRow[] cropRows;
+    private final CropDuster froilandasCropDuster;
+    private final Tractor froilansTractor;
+    private final Field field;
+
+    public MainApplication(){
+        this.farm = new Farm();
+        this.froilan = (Farmer) farm.getFarmHouse().getPeopleLivingInFarmHouse().get(0);
+        this.froilanda = (Pilot) farm.getFarmHouse().getPeopleLivingInFarmHouse().get(1);
+        this.silo = farm.getFoodSilo();
+        this.stables = farm.getStables();
+        this.chickenCoops = farm.getChickenCoops();
+        this. cropRows = farm.getFroilansField().getCropRowsInField();
+        this.froilandasCropDuster = farm.getFroilandasCropDuster();
+        this.froilansTractor = farm.getFroilansTractor();
+        this.field = farm.getFroilansField();
+    }
 
     public void sundayRoutine(){
 
-        Farm.getInstance().startOfDayReset();
-        froilan.eatBreakfast();
-        froilanda.eatBreakfast();
+        farm.startOfDayReset();
+        froilan.eatBreakfast(silo);
+        froilanda.eatBreakfast(silo);
         froilan.feedHorses(stables, silo);
         froilan.rideHorses(stables);
         froilanda.feedChickens(chickenCoops, silo);
         froilan.plant(cropRows[0], new CornStalk());
         froilan.plant(cropRows[1], new TomatoPlant());
         froilan.plant(cropRows[2], new PotatoPlant());
-
+        froilanda.harvestEggs(chickenCoops);
+        froilanda.depositEggs(silo);
     }
 
+    public void mondayRoutine(){
+        farm.startOfDayReset();
+        froilan.eatBreakfast(silo);
+        froilanda.eatBreakfast(silo);
+        froilan.feedHorses(stables, silo);
+        froilan.rideHorses(stables);
+        froilan.feedChickens(chickenCoops, silo);
+        froilanda.mount(froilandasCropDuster);
+        froilandasCropDuster.fly();
+        froilandasCropDuster.operate(field);
+        froilandasCropDuster.land();
+        froilanda.dismount(froilandasCropDuster);
+        froilan.harvestEggs(chickenCoops);
+        froilan.depositEggs(silo);
+    }
+
+    public void tuesdayRoutine(){
+        farm.startOfDayReset();
+        froilan.eatBreakfast(silo);
+        froilanda.eatBreakfast(silo);
+        froilan.feedHorses(stables, silo);
+        froilan.rideHorses(stables);
+        froilanda.feedChickens(chickenCoops, silo);
+        froilan.mount(froilansTractor);
+        froilansTractor.operate(field);
+        froilansTractor.depositHarvest(silo);
+        froilan.dismount(froilansTractor);
+        froilanda.harvestEggs(chickenCoops);
+        froilanda.depositEggs(silo);
+    }
+
+    public Farm getFarm() {
+        return farm;
+    }
 }

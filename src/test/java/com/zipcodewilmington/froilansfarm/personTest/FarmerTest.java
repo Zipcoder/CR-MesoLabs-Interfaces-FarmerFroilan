@@ -19,6 +19,7 @@ import org.junit.Test;
 public class FarmerTest {
 
     Farmer farmerTest = new Farmer();
+    Farm farm = new Farm();
 
     @Test
     public void makeNoiseTest(){
@@ -40,7 +41,7 @@ public class FarmerTest {
         CropRow testCropRow = new CropRow();
         CornStalk testCornStalk = new CornStalk();
         farmerTest.plant(testCropRow, testCornStalk);
-        int expected = 80;
+        int expected = 100;
         int actual = testCropRow.getCropsInRow().size();
         Assert.assertEquals(actual, expected);
     }
@@ -103,9 +104,9 @@ public class FarmerTest {
 
     @Test
     public void rideHorsesTest(){
-        farmerTest.rideHorses(Farm.getInstance().getStables());
+        farmerTest.rideHorses(farm.getStables());
         boolean expected = true;
-        for (Stable stable: Farm.getInstance().getStables()) {
+        for (Stable stable: farm.getStables()) {
             for (Horse horse: stable.getHorsesInStable()) {
                 boolean actual = horse.getHasBeenRidden();
                 Assert.assertEquals(expected, actual);
@@ -119,9 +120,9 @@ public class FarmerTest {
         for (int i = 0; i < 40; i++){
             testSilo.getEarCornStorage().add(new EarCorn());
         }
-        farmerTest.feedHorses(Farm.getInstance().getStables(), testSilo);
+        farmerTest.feedHorses(farm.getStables(), testSilo);
         int expected = 3;
-        for (Stable stable: Farm.getInstance().getStables()) {
+        for (Stable stable: farm.getStables()) {
             for (Horse horse: stable.getHorsesInStable()) {
                 int actual = horse.getFoodEaten().size();
                 Assert.assertEquals(expected, actual);
@@ -135,9 +136,9 @@ public class FarmerTest {
         for (int i = 0; i < 40; i++){
             testSilo.getEarCornStorage().add(new EarCorn());
         }
-        farmerTest.feedChickens(Farm.getInstance().getChickenCoops(), testSilo);
+        farmerTest.feedChickens(farm.getChickenCoops(), testSilo);
         int expected = 1;
-        for (ChickenCoop  chickenCoop: Farm.getInstance().getChickenCoops()) {
+        for (ChickenCoop  chickenCoop: farm.getChickenCoops()) {
             for (Chicken chicken: chickenCoop.getChickensInCoop()) {
                 int actual = chicken.getFoodEaten().size();
                 Assert.assertEquals(expected, actual);
@@ -148,11 +149,11 @@ public class FarmerTest {
     @Test
     public void eatBreakfastTest(){
         for(int i = 0; i <8; i++){
-            Farm.getInstance().getFoodSilo().getEarCornStorage().add(new EarCorn());
-            Farm.getInstance().getFoodSilo().getEggStorage().add(new Egg());
-            Farm.getInstance().getFoodSilo().getTomatoStorage().add(new Tomato());
+            farm.getFoodSilo().getEarCornStorage().add(new EarCorn());
+            farm.getFoodSilo().getEggStorage().add(new Egg());
+            farm.getFoodSilo().getTomatoStorage().add(new Tomato());
         }
-        farmerTest.eatBreakfast();
+        farmerTest.eatBreakfast(farm.getFoodSilo());
         int expected = 8;
         int actual = farmerTest.getFoodEaten().size();
         Assert.assertEquals(expected, actual);

@@ -38,8 +38,9 @@ public class TractorTest {
         }
         testTractor.ride();
         testTractor.operate(testField);
-        boolean actual = testField.getCropRowsInField()[0].getCropsInRow().get(4).getHasBeenHarvested();
-        Assert.assertTrue(actual);
+        int expected = 5;
+        int actual = testTractor.getTractorCropStorage().size();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -67,11 +68,11 @@ public class TractorTest {
         Silo siloTest = new Silo();
         tractorTest.depositHarvest(siloTest);
         int actual = siloTest.getEarCornStorage().size();
-        int expected = 80;
+        int expected = 100;
         int actual2 = siloTest.getPotatoStorage().size();
-        int expected2 = 80;
+        int expected2 = 100;
         int actual3 = siloTest.getPotatoStorage().size();
-        int expetced3 = 80;
+        int expetced3 = 100;
         Assert.assertEquals(expected, actual);
         Assert.assertEquals(expected2, actual2);
         Assert.assertEquals(expetced3, actual3);

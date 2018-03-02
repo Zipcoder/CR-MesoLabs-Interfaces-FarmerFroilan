@@ -24,7 +24,7 @@ public class Farmer extends Person implements Rider, Botanist{
 
     public void plant(CropRow cropRow, Crop crop) {
         Class classOfCrop = crop.getClass();
-        for (int i = 0; i < 80; i++){
+        for (int i = 0; i < 100; i++){
             try {
                 cropRow.getCropsInRow().add((Crop) classOfCrop.newInstance());
             } catch (InstantiationException e) {
@@ -40,15 +40,15 @@ public class Farmer extends Person implements Rider, Botanist{
         return "I am making noise!";
     }
 
-    public void eatBreakfast(){
-        this.eat(Farm.getInstance().getFoodSilo().removeAnEarCorn());
-        this.eat(Farm.getInstance().getFoodSilo().removeATomato());
-        this.eat(Farm.getInstance().getFoodSilo().removeATomato());
-        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
-        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
-        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
-        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
-        this.eat(Farm.getInstance().getFoodSilo().removeAnEgg());
+    public void eatBreakfast(Silo silo){
+        this.eat(silo.removeAnEarCorn());
+        this.eat(silo.removeATomato());
+        this.eat(silo.removeATomato());
+        this.eat(silo.removeAnEgg());
+        this.eat(silo.removeAnEgg());
+        this.eat(silo.removeAnEgg());
+        this.eat(silo.removeAnEgg());
+        this.eat(silo.removeAnEgg());
 
     }
 }
