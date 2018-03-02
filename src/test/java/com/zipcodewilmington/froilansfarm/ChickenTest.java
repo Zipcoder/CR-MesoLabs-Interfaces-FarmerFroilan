@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Edible.EarCorn;
-import com.zipcodewilmington.froilansfarm.Edible.Egg;
+import com.zipcodewilmington.froilansfarm.Edible.EdibleEgg;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,6 +10,7 @@ public class ChickenTest {
     Chicken chicken;
 
     @Before
+
     public void setup(){
         chicken = new Chicken();
     }
@@ -31,15 +32,16 @@ public class ChickenTest {
     }
 
     @Test
-    public void producePositiveTest(){
+    public void produceReproductiveTest(){
         chicken.fertilize();
-        Egg expected = chicken.yield();
-        Assert.assertNotNull(expected);
+        chicken.yield();
+        Assert.assertNotNull(chicken.eggs.get(0));
     }
 
     @Test
-    public void produceNegativeTest(){
-        Egg expected = chicken.yield();
+    public void produceEdibleTest(){
+        chicken.fertilize();
+        EdibleEgg expected = chicken.yield();
         Assert.assertNull(expected);
     }
 }

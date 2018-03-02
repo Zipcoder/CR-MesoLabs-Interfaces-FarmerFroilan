@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface Rider{
-    void mount();
-    void dismount();
+public interface Rider <T extends Rideable>{
+    void mount(T rideable);
+    void dismount(T rideable);
 }

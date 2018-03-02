@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Edible.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
 public class Farmer extends Person implements Rider, Botanist {
@@ -24,11 +25,11 @@ public class Farmer extends Person implements Rider, Botanist {
         }
     }
 
-    public void mount(){
+    public void mount(Rideable rideable){
 
     }
 
-    public void dismount(){
+    public void dismount(Rideable rideable){
 
     }
 

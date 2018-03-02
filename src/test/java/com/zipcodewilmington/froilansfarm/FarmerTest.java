@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Edible.Egg;
+import com.zipcodewilmington.froilansfarm.Edible.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.Edible.Tomato;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,13 +9,13 @@ import org.junit.Test;
 public class FarmerTest {
 
     Farmer farmer;
-    Egg egg;
+    EdibleEgg edibleEgg;
     Tomato tomato;
 
     @Before
     public void setup(){
         farmer = new Farmer("Farmer");
-        egg = new Egg();
+         edibleEgg = new EdibleEgg();
         tomato = new Tomato();
     }
 
@@ -29,7 +29,7 @@ public class FarmerTest {
     @Test
     public void eatTest(){
         int expected = farmer.getCalories() + 80;
-        farmer.eat(egg);
+        farmer.eat(edibleEgg);
         int actual = farmer.getCalories();
         Assert.assertEquals(expected, actual);
     }
@@ -37,7 +37,7 @@ public class FarmerTest {
     @Test
     public void eatVarArgsTest(){
         int expected = farmer.getCalories() + 120;
-        farmer.eat(egg, tomato);
+        farmer.eat(edibleEgg, tomato);
         int actual = farmer.getCalories();
         Assert.assertEquals(expected, actual);
     }

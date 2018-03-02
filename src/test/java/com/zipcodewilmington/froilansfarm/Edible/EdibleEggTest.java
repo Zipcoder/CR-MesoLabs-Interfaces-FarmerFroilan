@@ -4,13 +4,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class EggTest {
+public class EdibleEggTest {
 
-    Egg egg;
+    EdibleEgg egg;
 
     @Before
     public void setup(){
-        egg = new Egg();
+        egg = new EdibleEgg();
     }
 
     @Test

@@ -1,12 +1,16 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Edible.Edible;
-import com.zipcodewilmington.froilansfarm.Edible.Egg;
+import com.zipcodewilmington.froilansfarm.Edible.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.Interfaces.Animal;
+
+import java.util.ArrayList;
 
 public class Chicken extends Produce implements Animal{
 
-    public int calories;
+    protected int calories;
+    protected ArrayList<ReproductiveEgg> eggs;
+
 
     public int getCalories() {
         return calories;
@@ -14,6 +18,7 @@ public class Chicken extends Produce implements Animal{
 
     public Chicken(){
         this.calories = 0;
+        this.eggs = new ArrayList<ReproductiveEgg>();
     }
 
     public String makeNoise() {
@@ -24,9 +29,16 @@ public class Chicken extends Produce implements Animal{
         this.calories += edible.calories;
     }
 
-    public Egg yield() {
-        if (this.isFertilized) return new Egg();
-        else return null;
+    public EdibleEgg yield() {
+        if (!this.isFertilized) return new EdibleEgg();
+        else {
+            eggs.add(this.layReproductiveEgg());
+        }
+        return null;
+    }
+
+    public ReproductiveEgg layReproductiveEgg(){
+        return new ReproductiveEgg();
     }
 
 }
