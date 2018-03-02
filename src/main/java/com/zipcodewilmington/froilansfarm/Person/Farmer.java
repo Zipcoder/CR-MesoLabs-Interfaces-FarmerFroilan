@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Person;
 
-public class Farmer extends Person {
+import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
+
+public class Farmer extends Person implements Botanist {
 
     public String makeNoise() {
         return "Being an old farm boy myself, chickens coming home to roost never" +
@@ -10,4 +12,11 @@ public class Farmer extends Person {
         return true;
     }
 
+    public void mount() {
+
+    }
+
+    public void dismount() {
+
+    }
 }

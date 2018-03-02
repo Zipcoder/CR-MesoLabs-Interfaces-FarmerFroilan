@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface Produce {
+public interface Harvest {
+
+    public void Harvest();
 
 }
-

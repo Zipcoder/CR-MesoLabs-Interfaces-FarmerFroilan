@@ -7,11 +7,13 @@ public class Horse extends Animal implements Rideable {
     public boolean Rideable() {
         return true;
     }
+
     public boolean eat() {
         return true;
     }
+
     public String makeNoise() {
 
-        return "I'mma say the neigh no, my brotha.";
+        return "Well, I can't say the neigh-no, my brother.";
     }
 }

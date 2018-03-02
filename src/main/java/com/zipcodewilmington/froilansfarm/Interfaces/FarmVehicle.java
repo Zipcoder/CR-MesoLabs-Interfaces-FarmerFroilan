@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface Produce {
+public interface FarmVehicle {
 
+    public void operate();
 }
-

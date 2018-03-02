@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-public abstract class Vehicle {
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+
+public abstract class Vehicle implements Rideable{
+
 }

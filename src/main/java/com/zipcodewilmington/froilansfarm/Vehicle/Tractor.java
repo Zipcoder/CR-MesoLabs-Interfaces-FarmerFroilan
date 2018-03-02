@@ -1,4 +1,19 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-public class Tractor extends FarmVehicle {
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+
+public class Tractor extends Vehicle implements FarmVehicle {
+
+    public void operate() {
+
+    }
+
+    public boolean Rideable() {
+        return false;
+    }
+
+    public void harvest() {
+
+    }
+
 }
