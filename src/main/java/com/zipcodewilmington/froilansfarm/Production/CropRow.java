@@ -14,7 +14,7 @@ public class CropRow {
         aCropRow.add(aCrop);
     }
 
-    public ArrayList<Crop> getCropField() {
+    public ArrayList<Crop> getCropRow() {
         return this.aCropRow;
     }
 

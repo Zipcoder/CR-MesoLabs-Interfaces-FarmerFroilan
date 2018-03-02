@@ -21,7 +21,7 @@ public class CropRowTest {
     public void addCropRowTest() {
         testCropRow.addCrop(testCrop);
         int expected = 1;
-        int actual = testCropRow.getCropField().size();
+        int actual = testCropRow.getCropRow().size();
         Assert.assertEquals(expected, actual);
     }
 }

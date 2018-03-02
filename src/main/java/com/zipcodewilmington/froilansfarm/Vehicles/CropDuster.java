@@ -6,9 +6,27 @@ import com.zipcodewilmington.froilansfarm.Production.CropRow;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
 
+    private boolean isMounted;
+    private boolean isOnFarm;
+
+    public CropDuster() {
+        this.isMounted = false;
+        this.isOnFarm = true;
+    }
+
+    public void toggleIsMounted() {
+        if (isMounted) {
+            this.isMounted = false;
+        } else {
+            this.isMounted = true;
+        }
+    }
+
+    public boolean getIsMounted() {
+        return isMounted;
+    }
 
     public void fertilize(CropRow aCropRow) {
-
 
     }
 
@@ -16,8 +34,8 @@ public class CropDuster extends Aircraft implements FarmVehicle {
 
     }
 
-    public void operate(Farm object) {
-
+    public boolean canOperate() {
+        return isOnFarm;
     }
 
     public void makeNoise() {
