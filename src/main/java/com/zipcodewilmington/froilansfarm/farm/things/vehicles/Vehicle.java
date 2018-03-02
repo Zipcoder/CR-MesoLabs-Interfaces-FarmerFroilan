@@ -21,4 +21,16 @@ public abstract class Vehicle implements NoiseMaker,Rideable {
         return this.ridden;
     }
 
+
+    public void getOn() {
+        this.ridden = true;
+
+    }
+
+
+    public void getOff() {
+        this.ridden = false;
+
+    }
+
 }

@@ -11,5 +11,12 @@ public abstract class Person extends Creature {
         super(name);
     }
 
-    public void eat (Edible food){}
+    public void eat(Edible food){
+        if(food instanceof PeopleFood){
+            this.hasEaten=true;
+            this.energyReserves += food.getEnergyValue();
+        }
+
+    }
+
 }

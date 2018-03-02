@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles;
 
-public abstract class Edible implements AnimalFeed,PeopleFood {
+public abstract class Edible {
     protected  int energyValue;
 
     public Edible(int energyValue){

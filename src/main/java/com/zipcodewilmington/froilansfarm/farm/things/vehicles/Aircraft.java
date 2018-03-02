@@ -4,4 +4,6 @@ import com.zipcodewilmington.froilansfarm.farm.things.Rideable;
 
 public interface Aircraft{
     void fly();
+    void land();
+    boolean isFlying();
 }
