@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.People.Person;
 import com.zipcodewilmington.froilansfarm.Plants.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicles.AirCraft;
 
-public class Pilot extends Person implements Rider {
+public class Pilot extends Person {
 
     public Pilot(String name) {
         super(name);
@@ -17,11 +17,11 @@ public class Pilot extends Person implements Rider {
         return "I'm a pilot";
     }
 
-    public void mount(Rideable thingToMount) {
+    public void mount(AirCraft thingToMount) {
         thingToMount.mounted();
     }
 
-    public void dismount(Rideable thingToMount) {
+    public void dismount(AirCraft thingToMount) {
         thingToMount.dismounted();
     }
 

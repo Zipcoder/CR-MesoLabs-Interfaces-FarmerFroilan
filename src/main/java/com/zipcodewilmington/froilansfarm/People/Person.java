@@ -21,6 +21,10 @@ public abstract class Person implements NoiseMaker, Eater, Rider {
         return name;
     }
 
+    public ArrayList<Edible> getFoodInventory() {
+        return foodInventory;
+    }
+
     public void eat(Edible food) {
         food = null;
     }

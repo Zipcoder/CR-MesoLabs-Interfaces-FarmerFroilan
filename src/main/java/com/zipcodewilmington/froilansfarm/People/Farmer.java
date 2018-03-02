@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.People;
 
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.People.Person;
@@ -8,20 +9,8 @@ import com.zipcodewilmington.froilansfarm.Plants.CropRow;
 
 public class Farmer extends Person implements Botanist {
 
-    private String name;
-
     public Farmer(String name) {
         super(name);
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String getName() {
-        return name;
     }
 
     public void plant(Crop cropToPlant, CropRow rowToPlantIn) {
@@ -34,7 +23,19 @@ public class Farmer extends Person implements Botanist {
     }
 
     public void eat(Edible food) {
+        for (int i = 0; i < getFoodInventory().size(); i++) {
+            if (getFoodInventory().get(i).equals(food)) {
+                getFoodInventory().remove(i);
+            }
+        }
+    }
 
+    public void feed(Animal animalToBeFed, Edible food) {
+        for (int i = 0; i < getFoodInventory().size(); i++) {
+            if (getFoodInventory().get(i).equals(food)) {
+                animalToBeFed.eat(getFoodInventory().remove(i));
+            }
+        }
     }
 
 }
