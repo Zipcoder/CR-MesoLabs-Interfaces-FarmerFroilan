@@ -24,4 +24,12 @@ public abstract class Crop<T> implements Produce {
     public boolean hasBeenHarvested() {
         return harvested;
     }
+
+    public void setFertilized() {
+        fertilized = true;
+    }
+
+    public void setHarvested() {
+        harvested = true;
+    }
 }

@@ -9,7 +9,7 @@ import org.junit.Test;
  * author: https://github.com/vvmk
  * date: 3/2/18
  */
-public class FoodDummyTest {
+public class FoodTest {
     @Test
     public void testConsume() {
         Food dummy = new FoodDummy();

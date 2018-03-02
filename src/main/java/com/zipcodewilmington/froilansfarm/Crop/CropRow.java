@@ -10,7 +10,8 @@ import java.util.List;
  * date: 3/1/18
  */
 public class CropRow {
-    public static final int fDEFAULT_NUMBER_OF_CROPS = 10;
+    private static final int fDEFAULT_NUMBER_OF_CROPS = 10;
+    private int maxCrops;
     List<Crop> crops;
 
     public CropRow() {
@@ -18,10 +19,12 @@ public class CropRow {
     }
 
     public CropRow(int numberOfCrops) {
+        maxCrops = numberOfCrops;
         crops = new ArrayList<>(numberOfCrops);
     }
 
     public void sow(Crop crop) {
+        if (crops.size() == maxCrops)
         crops.add(crop);
     }
 }
