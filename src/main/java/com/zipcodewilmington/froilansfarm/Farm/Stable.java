@@ -9,6 +9,7 @@ import com.zipcodewilmington.froilansfarm.Animal.Horse;
  * date: 3/1/18
  */
 public class Stable extends Enclosure<Horse> {
+    //TODO: feedHorses(Edible... ) -> horses.each( horse.consume(food.totalStaminaValue / numberOfHorses));
     private static final int fDEFAULT_NUMBER_OF_HORSES = 3;
 
 

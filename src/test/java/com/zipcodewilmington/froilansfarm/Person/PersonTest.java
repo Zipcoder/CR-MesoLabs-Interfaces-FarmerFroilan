@@ -16,7 +16,7 @@ public class PersonTest {
 
     @Before
     public void setup() {
-        Rin = new Farmer();
+        Rin = new Farmer("anon", 10);
     }
 
     @Test

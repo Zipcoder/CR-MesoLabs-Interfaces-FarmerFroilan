@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
+import com.zipcodewilmington.froilansfarm.StaminaTooLowException;
+
 /**
  * filename:
  * project: froilans-farm
@@ -8,4 +10,6 @@ package com.zipcodewilmington.froilansfarm.interfaces;
  */
 public interface Eater {
     void eat(Edible food);
+    boolean isHungry();
+    void exert(int stamina) throws StaminaTooLowException;
 }

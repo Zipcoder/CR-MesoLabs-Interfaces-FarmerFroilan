@@ -11,6 +11,9 @@ import com.zipcodewilmington.froilansfarm.interfaces.*;
  * date: 3/1/18
  */
 public class Farmer extends Person implements Botanist, Rider {
+    public Farmer(String name, int startingStamina) {
+        super(name, startingStamina);
+    }
 
     public void feed(Eater eater, Edible edible) {
         eater.eat(edible);

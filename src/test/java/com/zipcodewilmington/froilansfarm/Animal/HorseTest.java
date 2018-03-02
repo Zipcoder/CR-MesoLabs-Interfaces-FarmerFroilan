@@ -15,11 +15,12 @@ import org.junit.Test;
 public class HorseTest {
     private Horse horse;
     private Rider rider;
+    private int defaultStamina = 10;
 
     @Before
     public void setup() {
         horse = new Horse();
-        rider = new Farmer();
+        rider = new Farmer("anon", defaultStamina);
     }
 
     @Test
@@ -30,7 +31,7 @@ public class HorseTest {
     @Test
     public void testStartRide() {
         Assert.assertNull(horse.getRider());
-        horse.startRide(new Farmer());
+        horse.startRide(rider);
         Assert.assertNotNull(horse.getRider());
     }
 
