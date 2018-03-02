@@ -10,7 +10,9 @@ public abstract class Creature implements Eater,NoiseMaker {
     protected int energyReserves;
 
     public Creature(String name){
+
         this.name = name;
+        this.energyReserves = 0;
     }
 
     public String getName(){
@@ -21,7 +23,14 @@ public abstract class Creature implements Eater,NoiseMaker {
         return this.hasEaten;
     }
 
+    public int getEnergyReserves(){
+        return this.energyReserves;
+    }
 
-    public void eat (Edible food){}
+
+    public void eat (Edible food){
+        this.hasEaten = true;
+        this.energyReserves += food.getEnergyValue();
+    }
 
 }

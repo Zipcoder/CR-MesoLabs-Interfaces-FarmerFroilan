@@ -1,22 +1,26 @@
 package com.zipcodewilmington.froilansfarm.farm.field;
 
-import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
-
 import java.util.ArrayList;
 
 public class Field {
-    private ArrayList<CropRow> rows;
+    private ArrayList<CropRow> cropRows;
 
-    public Field (){
+    public Field (CropRow ... rowsToAdd){
+        this.cropRows = new ArrayList<>(0);
+        for(CropRow cr: rowsToAdd){
+            this.cropRows.add(cr);
+        }
 
     }
 
     public CropRow getRow(CropRow rowToGet){
-        return null;
+
+        return this.cropRows.get(this.cropRows.indexOf(rowToGet));
     }
 
     public ArrayList<CropRow> getField(){
-        return null;
+
+        return this.cropRows;
     }
 
 
