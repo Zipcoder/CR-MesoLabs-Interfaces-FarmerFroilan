@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
+import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
@@ -11,6 +12,6 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produce;
  */
 public class TomatoPlant extends Crop<TomatoPlant> implements Produce {
     public Edible yield() {
-        return null;
+        return new Tomato();
     }
 }
