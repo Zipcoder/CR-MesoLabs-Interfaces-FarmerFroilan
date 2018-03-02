@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
-import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
@@ -28,6 +27,6 @@ public class Tractor extends Vehicle implements FarmVehicle, Rideable {
     }
 
     public Edible harvest(Crop crop) {
-       return crop.yield();
+        return crop.yield();
     }
 }

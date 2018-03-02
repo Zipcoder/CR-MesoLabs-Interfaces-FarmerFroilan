@@ -3,8 +3,6 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
-import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 /**
  * filename:

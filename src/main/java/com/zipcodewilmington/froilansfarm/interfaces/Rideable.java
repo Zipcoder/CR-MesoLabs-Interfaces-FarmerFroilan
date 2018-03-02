@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-import com.zipcodewilmington.froilansfarm.Person.Person;
-
 /**
  * filename:
  * project: froilans-farm
@@ -10,5 +8,6 @@ import com.zipcodewilmington.froilansfarm.Person.Person;
  */
 public interface Rideable {
     void startRide(Rider rider);
+
     void stopRide();
 }

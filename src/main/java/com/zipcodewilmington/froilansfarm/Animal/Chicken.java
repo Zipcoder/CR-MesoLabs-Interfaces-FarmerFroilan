@@ -11,6 +11,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produce;
  */
 public class Chicken extends Animal implements Produce {
     private static final String fDEFAULT_NAME = "Lady Kluk";
+
     public Chicken() {
         this(fDEFAULT_NAME);
     }
