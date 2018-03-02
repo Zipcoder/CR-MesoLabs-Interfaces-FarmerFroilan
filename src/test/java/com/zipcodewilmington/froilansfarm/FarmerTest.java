@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
-import com.zipcodewilmington.froilansfarm.Buildings.Farm;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.Plants.Crop;
 import com.zipcodewilmington.froilansfarm.Plants.CropRow;
@@ -71,7 +70,5 @@ public class FarmerTest {
         String expected = farmer.fertilizeOnVehicle(tomatoPlant);
         Assert.assertEquals(expected, "Dude where's my tractor?");
     }
-
-
 
 }

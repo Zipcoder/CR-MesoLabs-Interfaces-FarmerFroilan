@@ -8,6 +8,8 @@ import com.zipcodewilmington.froilansfarm.Vehicles.AirCraft;
 
 public class Pilot extends Person {
 
+    // Only the pilot can mount aircraft
+
     public Pilot(String name) {
         super(name);
     }
@@ -18,11 +20,18 @@ public class Pilot extends Person {
     }
 
     public void mount(AirCraft thingToMount) {
-        thingToMount.mounted();
+        if (!currentlyRidingSomething) {
+            thingToMount.mounted();
+            currentlyRidingSomething = true;
+        }
+        // Need to figure out how to make exclusive
     }
 
     public void dismount(AirCraft thingToMount) {
-        thingToMount.dismounted();
+        if (currentlyRidingSomething) {
+            thingToMount.dismounted();
+            currentlyRidingSomething = false;
+        }
     }
 
     public void takeOff(AirCraft airCraft) {
@@ -43,7 +52,5 @@ public class Pilot extends Person {
             return "We haven't taken off yet!";
         }
     }
-
-    // rider specifically for aircraft
 
 }

@@ -8,7 +8,7 @@ public abstract class Person implements NoiseMaker, Eater, Rider {
 
     private String name;
     private ArrayList<Edible> foodInventory;
-    private boolean currentlyRidingSomething = false;
+    boolean currentlyRidingSomething = false;
 
     public Person(String name) {
         this.name = name;

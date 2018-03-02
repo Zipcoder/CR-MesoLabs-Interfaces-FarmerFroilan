@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public abstract class Crop implements Produce {
 
-    private boolean fertilized = false;
+    boolean fertilized = false;
 
     public Edible yield() {
         // What is yielded is determined by the child, not here

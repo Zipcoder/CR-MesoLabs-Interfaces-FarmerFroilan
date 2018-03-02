@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public class AirCraft extends Vehicle {
+public abstract class AirCraft extends Vehicle {
 
     public boolean inTheAir = false;
 

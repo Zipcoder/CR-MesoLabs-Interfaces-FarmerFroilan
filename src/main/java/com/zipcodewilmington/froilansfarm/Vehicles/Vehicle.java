@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.Vehicles;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
-public class Vehicle implements NoiseMaker, Rideable {
+public abstract class Vehicle implements NoiseMaker, Rideable {
 
     private boolean isMounted = false;
 
