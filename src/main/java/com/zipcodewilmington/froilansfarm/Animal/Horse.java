@@ -16,19 +16,18 @@ public class Horse extends Animal implements Rideable {
 
     public Horse() {
         this(fDEFAULT_NAME);
-        wasRiddenToday = false;
     }
 
     public Horse(String name) {
         super(name);
         rider = null;
+        wasRiddenToday = false;
     }
 
     public void speak() {
         // neeeeeiiiighhh or whatever
     }
 
-    @Override
     public void startRide(Rider rider) {
         wasRiddenToday = true;
         this.rider = rider;
@@ -36,5 +35,13 @@ public class Horse extends Animal implements Rideable {
 
     public void stopRide() {
         rider = null;
+    }
+
+    public Rider getRider() {
+        return rider;
+    }
+
+    public boolean wasRiddenToday() {
+        return wasRiddenToday;
     }
 }
