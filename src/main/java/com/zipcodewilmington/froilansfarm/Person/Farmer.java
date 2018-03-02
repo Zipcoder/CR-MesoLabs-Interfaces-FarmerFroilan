@@ -11,16 +11,25 @@ public class Farmer extends Person implements Eater, Rider, Botanist {
 
     @Override
     public void plant(Crop crop, CropRow cropRow) {
-
+        cropRow.addCrops(crop);
     }
 
     @Override
     public void mount(Rideable object) {
-
+        if(!object.getMountedStatus()) {
+            object.mount();
+        }
     }
 
     @Override
     public void dismount(Rideable object) {
+        if(object.getMountedStatus()) {
+            object.dismount();
+        }
+    }
 
+    @Override
+    public String makeNoise() {
+        return "I'm a farmer...";
     }
 }

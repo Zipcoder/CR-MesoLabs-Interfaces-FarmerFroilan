@@ -17,7 +17,7 @@ public class Person implements NoiseMaker, Eater{
 
     @Override
     public String makeNoise() {
-        return null;
+        return "People sounds";
     }
 
 }

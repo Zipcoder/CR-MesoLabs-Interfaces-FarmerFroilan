@@ -17,9 +17,19 @@ public class HorseTest {
 
     @Test
     public void getMountedStatusTest() {
-        horse.setMountedStatus(true);
+        horse.mount();
 
         boolean expected = true;
+        boolean actual = horse.getMountedStatus();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void dismountTest() {
+        horse.dismount();
+
+        boolean expected = false;
         boolean actual = horse.getMountedStatus();
 
         Assert.assertEquals(expected, actual);

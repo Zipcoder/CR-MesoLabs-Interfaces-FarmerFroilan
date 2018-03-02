@@ -7,11 +7,18 @@ public class Horse extends Animal implements Rideable {
 
     private boolean isMounted;
 
-    protected void setMountedStatus(boolean mountStatus) {
-        this.isMounted = mountStatus;
+    @Override
+    public void mount() {
+        this.isMounted = true;
     }
 
-    protected boolean getMountedStatus() {
+    @Override
+    public void dismount() {
+        this.isMounted = false;
+    }
+
+    @Override
+    public boolean getMountedStatus() {
         return this.isMounted;
     }
 
