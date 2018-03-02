@@ -5,7 +5,14 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
 public class Horse extends Animal implements Rideable {
 
-    public void eat(Edible food) {
+    private boolean isMounted;
 
+    protected void setMountedStatus(boolean mountStatus) {
+        this.isMounted = mountStatus;
     }
+
+    protected boolean getMountedStatus() {
+        return this.isMounted;
+    }
+
 }

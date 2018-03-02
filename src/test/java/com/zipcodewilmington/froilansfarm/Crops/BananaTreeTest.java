@@ -31,15 +31,4 @@ public class BananaTreeTest {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void yieldNullTest() {
-        bananaTree.hasBeenHarvested = true;
-        bananaTree.hasBeenFertilized = false;
-
-        Class expected = null;
-        Class actual = bananaTree.yield().getClass();
-
-        Assert.assertEquals(expected, actual);
-    }
-
 }

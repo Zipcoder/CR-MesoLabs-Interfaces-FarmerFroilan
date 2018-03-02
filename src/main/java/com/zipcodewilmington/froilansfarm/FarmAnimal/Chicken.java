@@ -6,11 +6,19 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class Chicken extends Animal implements Produce, Eater {
 
-    private boolean hasBeenFertilized;
+    private boolean hasBeenFertilized = false;
     private boolean hasBeenHarvested;
 
     @Override
     public Edible yield() {
-        return new Egg();
+        if(hasBeenFertilized == false) {
+            return new Egg();
+        }
+        return null;
+    }
+
+    @Override
+    public String makeNoise() {
+        return "BWAAAK";
     }
 }
