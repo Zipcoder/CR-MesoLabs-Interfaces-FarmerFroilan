@@ -1,3 +1,7 @@
+// Vehicle has been abstracted out, all of these tests exist in tractor
+// This is just here for posterity then I guess
+
+/*
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.People.Farmer;
@@ -39,3 +43,4 @@ public class VehicleTest {
     }
 
 }
+*/

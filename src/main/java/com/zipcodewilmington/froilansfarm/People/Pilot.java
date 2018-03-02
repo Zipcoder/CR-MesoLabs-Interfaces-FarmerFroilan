@@ -35,8 +35,8 @@ public class Pilot extends Person {
 
     public String fertilizeRow(CropRow cropRow, AirCraft airCraft) {
         if (airCraft.inTheAir) {
-            for (int i = 0; i < cropRow.cropArrayList.size(); i++) {
-                cropRow.cropArrayList.get(i).fertilize();
+            for (int i = 0; i < cropRow.getCropArrayList().size(); i++) {
+                cropRow.getCropArrayList().get(i).fertilize();
             }
             return "Crops fertilized!";
         } else {

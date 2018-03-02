@@ -8,7 +8,7 @@ public class Horse extends Animal implements Rideable {
     private boolean isMounted = false;
 
     public void eat(Edible food) {
-
+        food = null;
     }
 
     public String makeNoise() {

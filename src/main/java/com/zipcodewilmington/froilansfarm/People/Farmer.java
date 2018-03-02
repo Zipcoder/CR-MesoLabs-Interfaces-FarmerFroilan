@@ -14,12 +14,21 @@ public class Farmer extends Person implements Botanist {
     }
 
     public void plant(Crop cropToPlant, CropRow rowToPlantIn) {
-        rowToPlantIn.cropArrayList.add(cropToPlant);
+        rowToPlantIn.getCropArrayList().add(cropToPlant);
     }
 
     public String fertilizeOnVehicle(Crop cropToBeFertilized) {
-        return null;
-        // need to figure out how to check for mount in order to tell vehicle to fertilize
+        if (isCurrentlyRidingSomething()) {
+            cropToBeFertilized.fertilize();
+            return "Crop fertilized!";
+        } else {
+            return "Dude where's my tractor?";
+        }
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Howdy";
     }
 
     public void eat(Edible food) {

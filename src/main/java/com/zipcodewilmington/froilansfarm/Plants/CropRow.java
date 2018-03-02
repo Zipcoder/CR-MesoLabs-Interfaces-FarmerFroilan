@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    public ArrayList<Crop> cropArrayList;
+    private ArrayList<Crop> cropArrayList;
+
+    public ArrayList<Crop> getCropArrayList() {
+        return cropArrayList;
+    }
 
 }
