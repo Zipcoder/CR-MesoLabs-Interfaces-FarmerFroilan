@@ -1,0 +1,21 @@
+package com.zipcodewilmington.froilansfarm.Food;
+
+/**
+ * filename:
+ * project: froilans-farm
+ * author: https://github.com/vvmk
+ * date: 3/2/18
+ */
+public enum StaminaValue {
+    EARCORN(2), TOMATO(2), EGG(3), PEPPER(1), ONE(1);
+
+    private int staminaValue;
+
+    StaminaValue(int staminaValue) {
+        this.staminaValue = staminaValue;
+    }
+
+    public int asInteger() {
+        return this.staminaValue;
+    }
+}

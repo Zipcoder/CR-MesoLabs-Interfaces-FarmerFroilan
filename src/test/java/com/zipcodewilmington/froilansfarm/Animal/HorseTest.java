@@ -23,19 +23,19 @@ public class HorseTest {
     }
 
     @Test
-    public void getRiderNull() {
+    public void testGetRiderNull() {
         Assert.assertNull(horse.getRider());
     }
 
     @Test
-    public void startRide() {
+    public void testStartRide() {
         Assert.assertNull(horse.getRider());
         horse.startRide(new Farmer());
         Assert.assertNotNull(horse.getRider());
     }
 
     @Test
-    public void stopRide() {
+    public void testStopRide() {
         horse.startRide(rider);
 
         Assert.assertNotNull(horse.getRider());
@@ -46,12 +46,12 @@ public class HorseTest {
     }
 
     @Test
-    public void wasRiddenTodayNo() {
+    public void testWasRiddenTodayNo() {
         Assert.assertFalse(horse.wasRiddenToday());
     }
 
     @Test
-    public void wasRiddenTodayYes() {
+    public void testWasRiddenTodayYes() {
         horse.startRide(rider);
         Assert.assertTrue(horse.wasRiddenToday());
     }

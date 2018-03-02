@@ -7,4 +7,5 @@ package com.zipcodewilmington.froilansfarm.interfaces;
  * date: 3/1/18
  */
 public interface Edible {
+    void consume();
 }

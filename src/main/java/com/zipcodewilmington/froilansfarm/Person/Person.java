@@ -11,10 +11,13 @@ import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
  * date: 3/1/18
  */
 public abstract class Person implements NoiseMaker, Eater {
+    private static final int fDEFAULT_STARTING_STAMINA = 10;
     private boolean hungry;
+    private int stamina; //TODO: eat(edible) adds edible.staminaVal to stamina, tasks remove task.staminaReq. (i.e. hungry <= 10 slows actions, 0 == starving prevents actions.
 
     public Person() {
         hungry = true;
+        stamina = fDEFAULT_STARTING_STAMINA;
     }
 
     public void makeNoise() {
@@ -23,6 +26,7 @@ public abstract class Person implements NoiseMaker, Eater {
 
     public void eat(Edible food) {
         hungry = false;
+        food.consume();
     }
 
     public boolean isHungry() {

@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Food.Egg;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
 /**
@@ -20,7 +20,7 @@ public class Chicken extends Animal implements Produce {
         super(name);
     }
 
-    public Edible yield() {
+    public Egg yield() {
         return new Egg();
     }
 
