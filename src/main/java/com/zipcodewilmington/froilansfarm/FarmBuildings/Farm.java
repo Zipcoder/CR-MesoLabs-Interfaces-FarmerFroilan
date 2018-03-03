@@ -6,4 +6,5 @@ public class Farm {
     Stable stables = new Stable();
     ChickenCoop chickenCoop = new ChickenCoop();
 
+
 }

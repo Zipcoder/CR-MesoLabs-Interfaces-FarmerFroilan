@@ -6,6 +6,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class FieldTest {
     Field testField;
 
@@ -19,8 +22,8 @@ public class FieldTest {
         Tomato testTomato = new Tomato();
         testRow.getCropRow().add(testTomato);
         testField.getCropRow()[0] = testRow;
-        String actual = testField.getCropRow().getClass().getSimpleName();
-        String expected = "CropRow[]";
+        String actual = testField.getCropRow()[0].getCropRow().toString();
+        String expected = "[com.zipcodewilmington.froilansfarm.Edibles.Tomato@51521cc1]";
         Assert.assertEquals(expected, actual);
 
     }

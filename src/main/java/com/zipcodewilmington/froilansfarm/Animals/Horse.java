@@ -24,6 +24,10 @@ public class Horse extends Animal implements Rideable{
         this.mounted = true;
     }
 
+    public void stopRide() {
+        this.mounted = false;
+    }
+
     public boolean isRiding(){
         return this.mounted;
     }

@@ -8,7 +8,7 @@ public class CropRow<T extends Crop> {
         return cropRow;
     }
 
-    ArrayList<T> cropRow = new ArrayList<T>();
+    private ArrayList<T> cropRow = new ArrayList<T>();
 
 
 }
