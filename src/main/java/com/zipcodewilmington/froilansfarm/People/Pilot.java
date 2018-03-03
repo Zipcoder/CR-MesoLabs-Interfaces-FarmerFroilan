@@ -19,27 +19,12 @@ public class Pilot extends Person {
         return "I'm a pilot";
     }
 
-    public void mount(AirCraft thingToMount) {
-        if (!currentlyRidingSomething) {
-            thingToMount.mounted();
-            currentlyRidingSomething = true;
-        }
-        // Need to figure out how to make exclusive
-    }
-
-    public void dismount(AirCraft thingToMount) {
-        if (currentlyRidingSomething) {
-            thingToMount.dismounted();
-            currentlyRidingSomething = false;
-        }
-    }
-
     public void takeOff(AirCraft airCraft) {
-        airCraft.takeOff();
+        airCraft.inTheAir = true;
     }
 
     public void land(AirCraft airCraft) {
-        airCraft.land();
+        airCraft.inTheAir = false;
     }
 
     public String fertilizeRow(CropRow cropRow, AirCraft airCraft) {

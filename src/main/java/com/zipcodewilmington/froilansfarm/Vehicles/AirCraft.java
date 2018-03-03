@@ -9,12 +9,4 @@ public abstract class AirCraft extends Vehicle {
         return "Brrrrrrr";
     }
 
-    public void takeOff() {
-        inTheAir = true;
-    }
-
-    public void land() {
-        inTheAir = false;
-    }
-
 }

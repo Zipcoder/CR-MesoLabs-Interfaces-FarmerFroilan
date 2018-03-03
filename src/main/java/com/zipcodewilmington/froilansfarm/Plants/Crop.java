@@ -5,6 +5,8 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public abstract class Crop implements Produce {
 
+    // All functionality tested within TomatoPlant and CornStalk
+
     boolean fertilized = false;
 
     public Edible yield() {

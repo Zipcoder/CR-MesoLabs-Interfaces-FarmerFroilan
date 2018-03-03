@@ -5,11 +5,9 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class Chicken extends Animal implements Produce {
 
+    // Already inherits eat() from Animal
+
     private boolean fertilized = false;
-
-    public void eat(Edible food) {
-
-    }
 
     public String makeNoise() {
         return "Cluck";

@@ -1,3 +1,6 @@
+// Functionality transferred to cropduster tests
+
+/*
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.People.Farmer;
@@ -60,3 +63,4 @@ public class AircraftTest {
     }
 
 }
+*/

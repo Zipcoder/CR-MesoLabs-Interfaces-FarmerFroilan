@@ -15,11 +15,20 @@ public class PilotTest {
     }
 
     @Test
-    public void mountAircraft() {
+    public void mountAircraftTest() {
         Pilot pilot = new Pilot("Someone");
         AirCraft airCraft = new CropDuster();
         pilot.mount(airCraft);
         Assert.assertTrue(pilot.isCurrentlyRidingSomething());
+    }
+
+    @Test
+    public void dismountAircraftTest() {
+        Pilot pilot = new Pilot("Someone");
+        AirCraft airCraft = new CropDuster();
+        pilot.mount(airCraft);
+        pilot.dismount(airCraft);
+        Assert.assertTrue(!(pilot.isCurrentlyRidingSomething()));
     }
 
 }
