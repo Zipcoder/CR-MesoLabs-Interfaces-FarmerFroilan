@@ -5,6 +5,8 @@ import com.zipcodewilmington.froilansfarm.Exceptions.NoPilotException;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
+import java.util.List;
+
 /**
  * filename:
  * project: froilans-farm
@@ -19,8 +21,9 @@ public class CropDuster extends Aircraft implements FarmVehicle {
 
     public void operate(Farm farm) throws NoPilotException {
         confirmDriver();
-            //farm.getField.getRows.eachRow {
-            //fertilize(thisRow)
+        List<CropRow> cropRows = farm.getField().getCropRows();
+        for (CropRow row : cropRows)
+            fertilize(row);
     }
 
     protected void fertilize(CropRow cropRow) {

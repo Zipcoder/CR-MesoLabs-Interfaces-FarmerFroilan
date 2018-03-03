@@ -19,9 +19,17 @@ public class Farm {
     private List<Stable> stables;
     private List<ChickenCoop> chickenCoops;
 
+    private Field field;
+
     public Farm() {
         farmHouse = new FarmHouse();
         stables = new ArrayList<>(fDEFAULT_NUMBER_OF_STABLES);
         chickenCoops = new ArrayList<>(fDEFAULT_NUMBER_OF_COOPS);
+
+        field = new Field();
+    }
+
+    public Field getField() {
+        return field;
     }
 }

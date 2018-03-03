@@ -33,4 +33,8 @@ public class CropRow {
             crop.setFertilized();
         }
     }
+
+    public List<Crop> getCrops() {
+        return crops;
+    }
 }

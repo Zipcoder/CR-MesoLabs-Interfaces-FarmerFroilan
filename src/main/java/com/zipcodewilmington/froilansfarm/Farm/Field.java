@@ -23,4 +23,15 @@ public class Field {
         cropRows = new ArrayList<>(numberOfCropRows);
     }
 
+    public List<CropRow> getCropRows() {
+        return cropRows;
+    }
+
+    public void addCropRow(CropRow row) {
+        cropRows.add(row);
+    }
+
+    public int getNumberOfCropRows() {
+        return cropRows.size();
+    }
 }

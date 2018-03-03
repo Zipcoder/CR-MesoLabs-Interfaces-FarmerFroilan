@@ -3,8 +3,6 @@ package com.zipcodewilmington.froilansfarm.Crop;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * filename:
  * project: froilans-farm
