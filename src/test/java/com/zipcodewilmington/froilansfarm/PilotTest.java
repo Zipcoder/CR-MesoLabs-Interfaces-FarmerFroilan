@@ -27,7 +27,7 @@ public class PilotTest {
         Pilot pilot = new Pilot("Someone");
         AirCraft airCraft = new CropDuster();
         pilot.mount(airCraft);
-        pilot.dismount(airCraft);
+        pilot.dismount();
         Assert.assertTrue(!(pilot.isCurrentlyRidingSomething()));
     }
 

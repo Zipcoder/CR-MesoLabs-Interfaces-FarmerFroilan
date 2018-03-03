@@ -26,7 +26,7 @@ public class HorseTest {
         Farmer farmer = new Farmer("Someone");
         Horse horse = new Horse();
         farmer.mount(horse);
-        farmer.dismount(horse);
+        farmer.dismount();
         Assert.assertTrue(!(farmer.isCurrentlyRidingSomething()));
     }
 
@@ -42,7 +42,7 @@ public class HorseTest {
         Horse horse = new Horse();
         farmer.mount(horse);
         horse.gallop();
-        farmer.dismount(horse);
+        farmer.dismount();
         Assert.assertTrue(horse.isDailyExercise());
     }
 

@@ -36,7 +36,7 @@ public class TractorTest {
         Tractor vehicle = new Tractor();
         Farmer farmer = new Farmer("Steve");
         farmer.mount(vehicle);
-        farmer.dismount(vehicle);
+        farmer.dismount();
         Assert.assertTrue(!(vehicle.getIsMounted()));
     }
 

@@ -6,7 +6,6 @@ public interface Rideable {
     boolean isMounted = false;
 
     public boolean mounted();
-
     public boolean dismounted();
 
 }

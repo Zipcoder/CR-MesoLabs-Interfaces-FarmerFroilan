@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
-import com.zipcodewilmington.froilansfarm.Buildings.Farm;
 import com.zipcodewilmington.froilansfarm.Buildings.Stable;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.Plants.Crop;
@@ -40,7 +39,7 @@ public class FarmerTest {
         Farmer farmer = new Farmer("Froilan");
         Horse horse = new Horse();
         farmer.mount(horse);
-        farmer.dismount(horse);
+        farmer.dismount();
         Assert.assertTrue(!(farmer.isCurrentlyRidingSomething()));
     }
 
@@ -79,10 +78,10 @@ public class FarmerTest {
         Horse horse = new Horse();
         farmer.mount(horse);
         horse.gallop();
-        farmer.dismount(horse);
+        farmer.dismount();
         Assert.assertTrue(horse.isDailyExercise());
     }
-    
+
     @Test
     public void exerciseEntireStableTest() {
         Farmer farmer = new Farmer("Dat boi");
@@ -90,7 +89,7 @@ public class FarmerTest {
         stable.addHorse(new Horse());
         stable.addHorse(new Horse());
         stable.addHorse(new Horse());
-        farmer.excerciseHorses(stable);
+        farmer.exerciseHorses(stable);
         for (int i = 0; i < stable.getHorses().size(); i++) {
             Assert.assertTrue(stable.getHorses().get(i).isDailyExercise());
         }

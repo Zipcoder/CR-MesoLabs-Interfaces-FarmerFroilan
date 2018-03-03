@@ -9,7 +9,8 @@ public abstract class Person implements NoiseMaker, Eater, Rider {
 
     private String name;
     private ArrayList<Edible> foodInventory = new ArrayList<Edible>();
-    boolean currentlyRidingSomething = false;
+    private boolean currentlyRidingSomething = false;
+    private Rideable thingBeingRidden;
 
     public Person(String name) {
         this.name = name;
@@ -27,6 +28,10 @@ public abstract class Person implements NoiseMaker, Eater, Rider {
         return foodInventory;
     }
 
+    public Rideable getThingBeingRidden() {
+        return thingBeingRidden;
+    }
+
     public void eat(Edible food) {
         food = null;
     }
@@ -42,23 +47,25 @@ public abstract class Person implements NoiseMaker, Eater, Rider {
     public void mount(Rideable thingToMount) {
         if (!currentlyRidingSomething) {
             thingToMount.mounted();
+            thingBeingRidden = thingToMount;
             currentlyRidingSomething = true;
         }
     }
 
-    public void dismount(Rideable thingToMount) {
+    public void dismount() {
         if (currentlyRidingSomething) {
-            thingToMount.dismounted();
+            thingBeingRidden.dismounted();
+            thingBeingRidden = null;
             currentlyRidingSomething = false;
         }
     }
 
     // Horse exercise tested in FarmerTest
-    public void excerciseHorses(Stable stable) {
+    public void exerciseHorses(Stable stable) {
         for (int i = 0; i < stable.getHorses().size(); i++) {
             mount(stable.getHorses().get(i));
             stable.getHorses().get(i).gallop();
-            dismount(stable.getHorses().get(i));
+            dismount();
         }
     }
 
