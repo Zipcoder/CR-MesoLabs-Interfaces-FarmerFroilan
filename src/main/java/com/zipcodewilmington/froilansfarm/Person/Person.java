@@ -68,7 +68,7 @@ public abstract class Person implements NoiseMaker, Eater {
             throw new StaminaTooLowException();
     }
 
-    protected boolean canExertStamina(int staminaRequired) {
-        return (staminaRequired > getStamina());
+    protected boolean canExertStamina(int staminaToConsume) {
+        return (staminaToConsume <= getStamina());
     }
 }
