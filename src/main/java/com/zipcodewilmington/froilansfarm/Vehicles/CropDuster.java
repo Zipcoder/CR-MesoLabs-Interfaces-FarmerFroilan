@@ -5,11 +5,6 @@ import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
 
-    @Override
-    public void fly() {
-
-    }
-
     public String makeNoise() {
         return "Swoosh";
     }

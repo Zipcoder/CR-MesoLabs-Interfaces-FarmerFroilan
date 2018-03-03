@@ -16,4 +16,12 @@ public class CornStalk extends Crop{
         }
         return null;
     }
+
+    public boolean getHasBeenHarvested() {
+        return this.hasBeenHarvested;
+    }
+
+    public boolean getHasBeenFertilized() {
+        return this.hasBeenFertilized;
+    }
 }

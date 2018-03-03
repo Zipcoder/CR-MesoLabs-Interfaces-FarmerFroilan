@@ -13,5 +13,4 @@ public class CropRow {
     public ArrayList<Crop> getCropRow() {
         return this.cropsInRow;
     }
-
 }

@@ -20,4 +20,8 @@ public class Person implements NoiseMaker, Eater{
         return "People sounds";
     }
 
+    public ArrayList<Edible> lookInStomach() {
+        return this.humanStomach;
+    }
+
 }

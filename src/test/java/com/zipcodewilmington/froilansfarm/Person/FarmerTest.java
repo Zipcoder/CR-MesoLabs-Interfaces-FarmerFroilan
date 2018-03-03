@@ -35,7 +35,7 @@ public class FarmerTest {
     }
 
     @Test
-    public void inhereitanceTest() {
+    public void inheritanceTest() {
         Assert.assertTrue(joe instanceof Person);
     }
 
@@ -85,6 +85,17 @@ public class FarmerTest {
         String actual = joe.makeNoise();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void fillCropRow() {
+        joe.fillCropRow(cropRow, crop2);
+
+        int expected = 30;
+        int actual = cropRow.getCropRow().size();
+
+        Assert.assertEquals(expected, actual);
+
     }
 
 }

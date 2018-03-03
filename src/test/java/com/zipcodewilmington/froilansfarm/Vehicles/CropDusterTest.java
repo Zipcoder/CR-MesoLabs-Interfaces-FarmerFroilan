@@ -1,13 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
-import com.zipcodewilmington.froilansfarm.Crops.Crop;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class CropDusterTest {
 
@@ -36,6 +33,22 @@ public class CropDusterTest {
         String actual = cropDuster.makeNoise();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void flyTest() {
+        cropDuster.fly();
+
+        Assert.assertTrue(cropDuster.getIsFlying());
+    }
+
+    @Test
+    public void landTest() {
+        cropDuster.fly();
+        cropDuster.land();
+
+        Assert.assertFalse(cropDuster.getIsFlying());
+    }
+
 
     @Test
     public void fertilizeTest() {

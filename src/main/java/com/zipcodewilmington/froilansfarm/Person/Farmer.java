@@ -28,6 +28,13 @@ public class Farmer extends Person implements Eater, Rider, Botanist {
         }
     }
 
+    public void fillCropRow(CropRow cropRow, Crop crop) {
+        for(int i = 0; i < 30; i++) {
+            plant(crop, cropRow);
+        }
+
+    }
+
     @Override
     public String makeNoise() {
         return "I'm a farmer...";
