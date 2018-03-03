@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class Farmer extends Person implements Rider, Botanist{
 
-    private final ArrayList<Edible> eggHarvest = new ArrayList<Edible>();
 
     public Farmer(){
         this.name = "Froilan";
@@ -49,6 +48,5 @@ public class Farmer extends Person implements Rider, Botanist{
         this.eat(silo.removeAnEgg());
         this.eat(silo.removeAnEgg());
         this.eat(silo.removeAnEgg());
-
     }
 }
