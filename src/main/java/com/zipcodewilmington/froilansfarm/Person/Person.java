@@ -18,7 +18,7 @@ public abstract class Person implements NoiseMaker, Eater {
     private String name;
 
     public Person() {
-        this("anon");
+        this("anonymous");
     }
 
     public Person(String name) {
