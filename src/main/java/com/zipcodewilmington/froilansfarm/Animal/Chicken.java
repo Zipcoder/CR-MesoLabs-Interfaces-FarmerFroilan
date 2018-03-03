@@ -9,7 +9,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produce;
  * author: https://github.com/vvmk
  * date: 3/1/18
  */
-public class Chicken extends Animal implements Produce {
+public class Chicken extends Animal<Chicken> implements Produce {
     private static final String fDEFAULT_NAME = "Lady Kluk";
 
     public Chicken() {

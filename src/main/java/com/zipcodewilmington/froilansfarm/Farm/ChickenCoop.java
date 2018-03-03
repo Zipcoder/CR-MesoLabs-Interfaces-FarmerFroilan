@@ -2,6 +2,9 @@ package com.zipcodewilmington.froilansfarm.Farm;
 
 import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * filename:
  * project: froilans-farm
@@ -15,7 +18,16 @@ public class ChickenCoop extends Enclosure<Chicken> {
         this(fDEFAULT_NUMBER_OF_CHICKENS);
     }
 
-    public ChickenCoop(int numberOfHorses) {
-        super(numberOfHorses);
+    public ChickenCoop(int numberOfChickens) {
+        super(populate(numberOfChickens));
+    }
+
+    protected static List<Chicken> populate(int numberOfAnimals) {
+        List<Chicken> ret = new ArrayList<>();
+
+        for (int i = 0; i < numberOfAnimals; i++)
+            ret.add(new Chicken());
+
+        return ret;
     }
 }

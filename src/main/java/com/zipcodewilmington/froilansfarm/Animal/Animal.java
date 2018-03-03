@@ -11,7 +11,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
  * author: https://github.com/vvmk
  * date: 3/1/18
  */
-public abstract class Animal implements NoiseMaker, Eater {
+public abstract class Animal<T> implements NoiseMaker, Eater {
     private static final int fDEFAULT_STAMINA = 10;
     private int stamina;
     private boolean hungry;
