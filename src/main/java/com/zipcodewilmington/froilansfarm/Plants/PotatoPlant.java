@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class PotatoPlant extends Crop {
 
+    public PotatoPlant() {}
+
     @Override
     public Edible yield() {
         if (fertilized) {

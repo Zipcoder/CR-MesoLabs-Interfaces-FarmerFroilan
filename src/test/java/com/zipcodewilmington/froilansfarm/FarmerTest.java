@@ -47,8 +47,9 @@ public class FarmerTest {
     public void plantTest() {
         Farmer farmer = new Farmer("Someone");
         CropRow cropRow = new CropRow();
-        farmer.plant(new TomatoPlant(), cropRow);
-        Crop expected = new TomatoPlant();
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        farmer.plant(tomatoPlant, cropRow);
+        Crop expected = tomatoPlant;
         Crop actual = cropRow.getCropArrayList().get(0);
         Assert.assertEquals(expected, actual);
     }

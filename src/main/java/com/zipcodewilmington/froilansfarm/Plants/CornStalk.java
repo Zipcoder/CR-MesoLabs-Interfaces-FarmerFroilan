@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class CornStalk extends Crop {
 
+    public CornStalk() {}
+
     @Override
     public Edible yield() {
         if (fertilized) {
