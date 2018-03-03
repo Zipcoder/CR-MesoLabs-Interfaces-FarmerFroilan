@@ -12,7 +12,7 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
  */
 public class MainApplication {
 
-    // ESTABLISHING THE PLOT
+    // ESTABLISHING THE PLOT!!
 
     private Farm froilansFarm = new Farm(4,3,5);
     private Farmer froilan = new Farmer("Froilan");
@@ -34,6 +34,10 @@ public class MainApplication {
 
     public Tractor getFroilansTractor() {
         return froilansTractor;
+    }
+
+    public CropDuster getFroilandasCropDuster() {
+        return froilandasCropDuster;
     }
 
 }
