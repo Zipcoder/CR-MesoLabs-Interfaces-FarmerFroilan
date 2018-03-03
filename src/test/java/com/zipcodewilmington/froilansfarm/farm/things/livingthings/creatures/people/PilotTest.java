@@ -1,5 +1,12 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people;
 
+import com.zipcodewilmington.froilansfarm.farm.buildings.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.farm.buildings.Stable;
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Chicken;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Horse;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.CropDuster;
 import org.junit.Assert;
 import org.junit.Before;
@@ -83,6 +90,36 @@ public class PilotTest {
         Assert.assertFalse(badLarry.isFlying());
 
     }
+
+    @Test
+    public void feedChickensTest(){
+        //Given
+        WareHouse house = new WareHouse(new ChickenFeed(), new ChickenFeed(), new ChickenFeed());
+        ChickenCoop coop = new ChickenCoop(new Chicken(), new Chicken());
+
+        //When
+        froilanda.feedChickens(coop,house);
+
+        //Then
+        Assert.assertTrue(coop.getChicken(0).hasBeenFed());
+        Assert.assertTrue(house.getStorageSize() == 1);
+    }
+
+    @Test
+    public void feedHorsesTest(){
+        //Given
+        WareHouse house = new WareHouse(new Hay(), new Hay(), new Hay(), new Hay());
+        Stable stable = new Stable(new Horse(""), new Horse(""), new Horse(""), new Horse(""));
+
+        //When
+        froilanda.feedHorses(stable,house);
+
+        //Then
+        Assert.assertTrue(stable.getHorse(0).hasBeenFed());
+        Assert.assertTrue(stable.getHorse(3).hasBeenFed());
+        Assert.assertTrue(house.getStorageSize() == 0);
+    }
+
 
 
 

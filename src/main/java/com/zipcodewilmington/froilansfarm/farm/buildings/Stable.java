@@ -25,6 +25,10 @@ public class Stable {
 
     }
 
+    public ArrayList<Horse> getAllHorses(){
+        return this.horses;
+    }
+
     public Horse getHorse(Horse horseToGet){
 
         return this.horses.get(this.horses.indexOf(horseToGet));

@@ -1,12 +1,14 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people;
 
 import com.zipcodewilmington.froilansfarm.farm.buildings.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.farm.buildings.Stable;
 import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Horse;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CornStalk;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Egg;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
 import org.junit.Assert;
@@ -131,6 +133,36 @@ public class FarmerTest {
         Assert.assertEquals(expected,actual);
 
     }
+
+    @Test
+    public void feedChickensTest(){
+        //Given
+        WareHouse house = new WareHouse(new ChickenFeed(), new ChickenFeed(), new ChickenFeed());
+        ChickenCoop coop = new ChickenCoop(new Chicken(), new Chicken());
+
+        //When
+        froilan.feedChickens(coop,house);
+
+        //Then
+        Assert.assertTrue(coop.getChicken(0).hasBeenFed());
+        Assert.assertTrue(house.getStorageSize() == 1);
+    }
+
+    @Test
+    public void feedHorsesTest(){
+        //Given
+        WareHouse house = new WareHouse(new Hay(), new Hay(), new Hay(), new Hay());
+        Stable stable = new Stable(new Horse(""), new Horse(""), new Horse(""), new Horse(""));
+
+        //When
+        froilan.feedHorses(stable,house);
+
+        //Then
+        Assert.assertTrue(stable.getHorse(0).hasBeenFed());
+        Assert.assertTrue(stable.getHorse(3).hasBeenFed());
+        Assert.assertTrue(house.getStorageSize() == 0);
+    }
+
 
 
 }

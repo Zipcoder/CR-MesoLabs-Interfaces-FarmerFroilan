@@ -23,6 +23,7 @@ public class PersonTest {
         //Then
         Assert.assertEquals(expected,actual);
         Assert.assertTrue(froilan.hasBeenFed());
+        Assert.assertTrue(testHouse.getStorageSize()==0);
 
     }
 
@@ -40,6 +41,7 @@ public class PersonTest {
         //Then
         Assert.assertEquals(expected,actual);
         Assert.assertFalse(froilan.hasBeenFed());
+        Assert.assertTrue(testHouse.getStorageSize() == 2);
     }
 
 }
