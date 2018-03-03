@@ -1,8 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals;
 
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Egg;
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +23,8 @@ public class ChickenTest {
     @Test
     public void eatTest(){
         //Given
-        larry.eat(food);
+        WareHouse testHouse = new WareHouse(new ChickenFeed());
+        larry.eat(EdibleType.CHICKENFEED, testHouse);
 
         //When
         int expected = 2;
@@ -38,7 +38,8 @@ public class ChickenTest {
     @Test
     public void dontEatHayTest(){
         //Given
-        larry.eat(food2);
+        WareHouse testHouse = new WareHouse(new ChickenFeed());
+        larry.eat(EdibleType.HAY, testHouse);
 
         //When
         int expected = 0;

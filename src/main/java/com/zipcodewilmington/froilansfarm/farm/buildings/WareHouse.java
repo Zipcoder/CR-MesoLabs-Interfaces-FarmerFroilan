@@ -20,6 +20,15 @@ public class WareHouse <E extends Edible> {
         return this.foodStorage.get(edibleIndex);
     }
 
+    public E getEdibleByType(EdibleType typeToGet){
+        for(E e : foodStorage){
+            if(isTypeOfEdible(typeToGet,e)){
+                return e;
+            }
+        }
+        return null;
+    }
+
 
     public Edible[] getFoodStorageArray(){
         return this.foodStorage.toArray(new Edible[0]);

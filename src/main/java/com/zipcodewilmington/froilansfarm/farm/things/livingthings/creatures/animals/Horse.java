@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals;
 
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.things.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleType;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
 
 public class Horse extends Animal implements Rideable {
@@ -12,10 +14,12 @@ public class Horse extends Animal implements Rideable {
         super(name);
     }
 
-    public void eat(Edible food) {
-        if(food instanceof Hay){
-            this.hasEaten=true;
-            this.energyReserves += food.getEnergyValue();
+    public void eat(EdibleType food, WareHouse storageToEatFrom) {
+        if(food == EdibleType.HAY){
+            Edible meal = storageToEatFrom.getEdibleByType(food);
+            this.hasEaten = true;
+            this.energyReserves += meal.getEnergyValue();
+            storageToEatFrom.removeEdibleByType(food);
         }
     }
 

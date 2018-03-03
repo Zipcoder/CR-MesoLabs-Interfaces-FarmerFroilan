@@ -1,8 +1,10 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures;
 
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleType;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,11 +13,13 @@ public class CreatureTest {
 
     Creature spanky;
     Edible food;
+    WareHouse testHouse;
 
     @Before
     public void setUp(){
         spanky = new Chicken("Spanky");
         food = new ChickenFeed();
+        testHouse = new WareHouse(food);
     }
 
     @Test
@@ -39,7 +43,7 @@ public class CreatureTest {
 
         //When
         boolean expected = true;
-        spanky.eat(food);
+        spanky.eat(EdibleType.CHICKENFEED,testHouse);
         boolean actual = spanky.hasBeenFed();
 
         //Then
@@ -54,7 +58,7 @@ public class CreatureTest {
 
         //When
         int expected = 2;
-        spanky.eat(food);
+        spanky.eat(EdibleType.CHICKENFEED,testHouse);
         int actual = spanky.getEnergyReserves();
 
         //Then
@@ -69,7 +73,7 @@ public class CreatureTest {
         //ChickenFeed food
 
         //When
-        spanky.eat(food);
+        spanky.eat(EdibleType.CHICKENFEED,testHouse);
         int expected =2;
         int actual = spanky.getEnergyReserves();
 

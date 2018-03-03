@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals;
 
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleType;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Egg;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
 import org.junit.Assert;
@@ -24,9 +27,10 @@ public class HorseTest {
     public void eatHayTest(){
         //Given
         //Horse shadowfax
+        WareHouse testHouse = new WareHouse(new Hay());
 
         //When
-        shadowfax.eat(food);
+        shadowfax.eat(EdibleType.HAY, testHouse);
         int expected = 2;
         int actual = shadowfax.getEnergyReserves();
 
@@ -39,9 +43,10 @@ public class HorseTest {
     public void dontEatPeopleFoodTest(){
         //Given
         //Horse shadowfax
+        WareHouse testHouse = new WareHouse(new Hay());
 
         //When
-        shadowfax.eat(food2);
+        shadowfax.eat(EdibleType.TOMATO,testHouse);
         int expected = 0;
         int actual = shadowfax.getEnergyReserves();
 
