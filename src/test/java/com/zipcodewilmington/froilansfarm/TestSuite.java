@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.farm.field.FieldTestSuite;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.CreatureTestSuite;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropTestSuite;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleTest;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleTestSuite;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.VehicleTestSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -18,7 +19,7 @@ import org.junit.runners.Suite;
         FieldTestSuite.class,
         CreatureTestSuite.class,
         CropTestSuite.class,
-        EdibleTest.class,
+        EdibleTestSuite.class,
         VehicleTestSuite.class,
         FarmTest.class,
 

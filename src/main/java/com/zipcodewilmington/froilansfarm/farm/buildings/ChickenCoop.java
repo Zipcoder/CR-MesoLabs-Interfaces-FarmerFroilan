@@ -25,6 +25,8 @@ public class ChickenCoop {
 
     }
 
+    public ArrayList<Chicken> getAllChickens(){return this.chickens;}
+
     public Chicken getChicken(Chicken chickenToGet){
 
         return this.chickens.get(this.chickens.indexOf(chickenToGet));

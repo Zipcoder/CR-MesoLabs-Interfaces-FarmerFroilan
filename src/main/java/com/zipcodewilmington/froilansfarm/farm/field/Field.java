@@ -18,6 +18,11 @@ public class Field {
         return this.cropRows.get(this.cropRows.indexOf(rowToGet));
     }
 
+    public CropRow getRow(int rowIndex){
+
+        return this.cropRows.get(rowIndex);
+    }
+
     public ArrayList<CropRow> getField(){
 
         return this.cropRows;

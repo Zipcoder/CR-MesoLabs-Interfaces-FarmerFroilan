@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.things.vehicles;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CornStalk;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.TomatoPlant;
@@ -27,14 +28,16 @@ public class TractorTest {
         //Given
         Tractor badLenny = new Tractor("Bad Lenny");
         CropRow row = new CropRow(new TomatoPlant(), new TomatoPlant(), new TomatoPlant());
+        WareHouse testHouse = new WareHouse();
 
         //When
-        badLenny.harvestCrop(row);
+        badLenny.fertilize(row);
+        badLenny.harvestCrop(row,testHouse);
+        int expected = 3;
+        int actual = testHouse.getStorageSize();
 
         //Then
-        Assert.assertTrue(row.getCrop(0).isHarvested());
-        Assert.assertTrue(row.getCrop(1).isHarvested());
-        Assert.assertTrue(row.getCrop(2).isHarvested());
+        Assert.assertEquals(expected,actual);
     }
 
     @Test

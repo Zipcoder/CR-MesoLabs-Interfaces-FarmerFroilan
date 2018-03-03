@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.things.vehicles;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 
@@ -32,10 +33,12 @@ public class Tractor extends Vehicle implements FarmVehicle {
         return "baRUMPBUMPbumpbumpBUMPBUMP!!!";
     }
 
-    public void harvestCrop (CropRow targetRow){
+    public void harvestCrop (CropRow targetRow, WareHouse targetWareHouse){
         for(Crop c : targetRow.getAllCrops()){
             c.harvest();
+            targetWareHouse.addEdible(c.yield());
         }
+        targetWareHouse.removeNulls();
 
     }
 

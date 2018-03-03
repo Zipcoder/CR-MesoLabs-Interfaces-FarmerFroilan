@@ -1,10 +1,16 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people;
 
+import com.zipcodewilmington.froilansfarm.farm.buildings.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.things.Rideable;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Egg;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.PeopleFood;
+
+import java.util.ArrayList;
 
 public class Farmer extends Person implements Botanist,Rider {
     public Farmer(String name) {
@@ -29,6 +35,18 @@ public class Farmer extends Person implements Botanist,Rider {
     public void dismount(Rideable ride) {
         ride.getOff();
 
+    }
+
+    public Egg harvestEgg (Chicken targetChicken){
+        targetChicken.harvest();
+        return targetChicken.yield();
+    }
+
+    public void collectEggs (ChickenCoop targetCoop, WareHouse wareHouseToDepositWith){
+        for (Chicken c : targetCoop.getAllChickens()){
+            wareHouseToDepositWith.addEdible(this.harvestEgg(c));
+        }
+        wareHouseToDepositWith.removeNulls();
     }
 
 

@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.farm;
 import com.zipcodewilmington.froilansfarm.farm.buildings.Stable;
 import com.zipcodewilmington.froilansfarm.farm.buildings.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.farm.buildings.FarmHouse;
+import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.field.Field;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Chicken;
@@ -12,6 +13,9 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.peo
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropFactory;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropType;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Edible;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleFactory;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleType;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.Tractor;
@@ -23,6 +27,7 @@ public class Farm {
     private ArrayList<ChickenCoop> chickenCoops;
     private Field field;
     private FarmHouse farmHouse;
+    private WareHouse wareHouse;
     private ArrayList<FarmVehicle> operatingVehicles;
 
     private Farmer froilan;
@@ -53,6 +58,8 @@ public class Farm {
         this.stables = new ArrayList<>(0);
         this.chickenCoops = new ArrayList<>(0);
         this.farmHouse = new FarmHouse();
+
+        this.wareHouse = new WareHouse(populateWareHouse().toArray(new Edible[0]));
 
         CropRow row1 = new CropRow(populateCropRow(CropType.CORN_STALK, 100));
         CropRow row2 = new CropRow(populateCropRow(CropType.TOMATO_PLANT, 100));
@@ -118,12 +125,39 @@ public class Farm {
 
     public Field getField(){return this.field;}
 
+    public WareHouse getWareHouse(){
+        return this.wareHouse;
+    }
+
     public static Crop[] populateCropRow (CropType typeOfCrop, int numberOfCrops){
         Crop[] arrayOfCrops = new Crop[numberOfCrops];
         for(int i = 0; i< numberOfCrops; i++){
             arrayOfCrops[i] = CropFactory.createCrop(typeOfCrop);
         }
         return arrayOfCrops;
+    }
+
+    public static ArrayList<Edible> populateWareHouse(){
+        ArrayList<Edible> storage =new  ArrayList <> (0);
+        for(int i = 0; i<100; i++) {
+            storage.add(EdibleFactory.createEdible(EdibleType.HAY));
+        }
+        for(int i = 0; i<50; i++) {
+            storage.add(EdibleFactory.createEdible(EdibleType.EGG));
+        }
+        for(int i = 0; i<200; i++) {
+            storage.add(EdibleFactory.createEdible(EdibleType.CHICKENFEED));
+        }
+        for(int i = 0; i<50; i++) {
+            storage.add(EdibleFactory.createEdible(EdibleType.EARCORN));
+        }
+        for(int i = 0; i<50; i++) {
+            storage.add(EdibleFactory.createEdible(EdibleType.TOMATO));
+        }
+        for(int i = 0; i<50; i++) {
+            storage.add(EdibleFactory.createEdible(EdibleType.VEGETABLE));
+        }
+        return storage;
     }
 
 

@@ -11,7 +11,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         ChickenCoopTest.class,
         FarmHouseTest.class,
-        StableTest.class
+        StableTest.class,
+        WareHouseTest.class,
 
 })
 public class BuildingTestSuite {
