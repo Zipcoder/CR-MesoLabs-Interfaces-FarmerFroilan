@@ -20,15 +20,15 @@ public class Farm {
 
     }
 
-    private void addVehicle(FarmVehicle vehicle){
+    public void addVehicle(FarmVehicle vehicle){
         this.operatingVehicles.add(vehicle);
     }
 
-    private void removeVehicle(FarmVehicle vehicle){
+    public void removeVehicle(FarmVehicle vehicle){
         this.operatingVehicles.remove(vehicle);
     }
 
-    private ArrayList<FarmVehicle> getVehicles(){
+    public ArrayList<FarmVehicle> getVehicles(){
         return this.operatingVehicles;
     }
 

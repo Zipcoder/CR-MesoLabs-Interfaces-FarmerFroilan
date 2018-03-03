@@ -11,17 +11,20 @@ public class Tractor extends Vehicle implements FarmVehicle {
     }
 
     public void operate(Farm homeFarm) {
+        homeFarm.addVehicle(this);
 
     }
 
-    @Override
-    public void shutDown(Farm homeFarm) {
 
+    public void shutDown(Farm homeFarm) {
+        homeFarm.removeVehicle(this);
     }
 
 
     public void fertilize(CropRow targetRow) {
-
+        for(Crop c : targetRow.getAllCrops()){
+            c.fertilize();
+        }
     }
 
 
@@ -33,13 +36,4 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
     }
 
-    @Override
-    public void getOn() {
-
-    }
-
-    @Override
-    public void getOff() {
-
-    }
 }

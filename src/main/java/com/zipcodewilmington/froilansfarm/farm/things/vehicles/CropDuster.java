@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.farm.things.vehicles;
 
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.Farm;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
 
 public class CropDuster extends Vehicle implements FarmVehicle,Aircraft {
     private boolean flying;
@@ -30,19 +31,24 @@ public class CropDuster extends Vehicle implements FarmVehicle,Aircraft {
     }
 
     public void operate(Farm homeFarm) {
+        homeFarm.addVehicle(this);
 
     }
 
-    @Override
     public void shutDown(Farm homeFarm) {
+        homeFarm.removeVehicle(this);
 
     }
 
     public String makeNoise() {
-        return null;
+
+        return "mmmmmmmrrrrRRRRRROOOOOOOWWWWWWwwwwwww!!!";
     }
 
     public void fertilize (CropRow targetRow){
+        for(Crop c : targetRow.getAllCrops()){
+            c.fertilize();
+        }
 
     }
 
