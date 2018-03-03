@@ -24,10 +24,13 @@ public class Farm {
     private Field field;
     private FarmHouse farmHouse;
     private ArrayList<FarmVehicle> operatingVehicles;
+
     private Farmer froilan;
     private Pilot froilanda;
+
     private Tractor badLenny;
     private CropDuster badLarry;
+
     private Horse shadowfax;
     private Horse steve;
     private Horse guido;
@@ -47,6 +50,9 @@ public class Farm {
 
     public Farm(){
         this.operatingVehicles = new ArrayList<>(0);
+        this.stables = new ArrayList<>(0);
+        this.chickenCoops = new ArrayList<>(0);
+        this.farmHouse = new FarmHouse();
 
         CropRow row1 = new CropRow(populateCropRow(CropType.CORN_STALK, 100));
         CropRow row2 = new CropRow(populateCropRow(CropType.TOMATO_PLANT, 100));
@@ -54,6 +60,7 @@ public class Farm {
         CropRow row4 = new CropRow();
         CropRow row5 = new CropRow();
         this.field = new Field(row1,row2,row3,row4,row5);
+
         shadowfax = new Horse("Shadowfax");
         steve = new Horse("Steve");
         guido = new Horse("Guido");
@@ -70,8 +77,12 @@ public class Farm {
         stables.add(friendStable);
         stables.add(workStable);
         stables.add(eliteStable);
+
+        badLarry = new CropDuster("Bad Larry");
+        badLenny = new Tractor("Bad Lenny");
         badLarry.operate(this);
         badLenny.operate(this);
+
         ChickenCoop coop1 = new ChickenCoop(new Chicken("Steve"),new Chicken(),new Chicken(), new Chicken(), new Chicken());
         ChickenCoop coop2 = new ChickenCoop(new Chicken(), new Chicken(), new Chicken());
         ChickenCoop coop3 = new ChickenCoop(new Chicken(), new Chicken(), new Chicken());
@@ -80,6 +91,7 @@ public class Farm {
         chickenCoops.add(coop2);
         chickenCoops.add(coop3);
         chickenCoops.add(coop4);
+
         froilan = new Farmer("Froilan");
         froilanda = new Pilot("Froilanda");
         farmHouse.addPerson(froilan);

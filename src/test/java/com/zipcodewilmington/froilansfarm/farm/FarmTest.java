@@ -53,9 +53,21 @@ public class FarmTest {
     }
 
     @Test
-    public void newFarmTest1(){
+    public void newFarmGetSpecificHorseTest(){
         //Given
         Farm froilandia = new Farm();
+
+        //When
+        String expected = "Shadowfax";
+        String actual = froilandia.getStables().get(2).getHorse(0).getName();
+
+        //Then
+        Assert.assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void newFarmGetSpecificCropTest(){
 
     }
 
