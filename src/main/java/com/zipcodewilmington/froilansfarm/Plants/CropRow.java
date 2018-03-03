@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    private ArrayList<Crop> cropArrayList;
+    private ArrayList<Crop> cropArrayList = new ArrayList<Crop>();
 
     public ArrayList<Crop> getCropArrayList() {
         return cropArrayList;

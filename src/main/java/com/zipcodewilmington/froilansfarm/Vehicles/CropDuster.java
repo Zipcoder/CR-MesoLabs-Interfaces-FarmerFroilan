@@ -1,11 +1,18 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
 import com.zipcodewilmington.froilansfarm.Plants.Crop;
+import com.zipcodewilmington.froilansfarm.Plants.CropRow;
 
 public class CropDuster extends AirCraft implements FarmVehicle{
 
     public void fertilize(Crop crop) {
-        crop.fertilize();
+        // Cropduster cannot precision fertilize
+    }
+
+    public void fertilize(CropRow cropRow) {
+        for (int i = 0; i < cropRow.getCropArrayList().size(); i++) {
+            cropRow.getCropArrayList().get(i).fertilize();
+        }
     }
 
 }
