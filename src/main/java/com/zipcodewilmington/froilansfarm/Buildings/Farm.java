@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Buildings;
 
 import com.zipcodewilmington.froilansfarm.Plants.Field;
-
 import java.util.ArrayList;
 
 public class Farm {

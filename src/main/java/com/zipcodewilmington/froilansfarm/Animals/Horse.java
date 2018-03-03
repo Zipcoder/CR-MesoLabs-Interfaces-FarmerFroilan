@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 public class Horse extends Animal implements Rideable {
 
     private boolean isMounted = false;
+    private boolean dailyExcercise = false;
 
     public void eat(Edible food) {
         food = null;
@@ -23,6 +24,12 @@ public class Horse extends Animal implements Rideable {
     public boolean dismounted() {
         isMounted = false;
         return isMounted;
+    }
+
+    public void gallop() {
+        if (isMounted) {
+            this.dailyExcercise = true;
+        }
     }
 
 }

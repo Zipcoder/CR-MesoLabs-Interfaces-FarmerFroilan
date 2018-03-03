@@ -6,6 +6,15 @@ import java.util.ArrayList;
 
 public class ChickenCoop {
 
-    public ArrayList<Chicken> chickens;
+    private ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+
+    public ArrayList<Chicken> getChickens() {
+        return chickens;
+    }
+
+    public void addChicken(Chicken newChicken) {
+        chickens.add(newChicken);
+    }
 
 }
+
