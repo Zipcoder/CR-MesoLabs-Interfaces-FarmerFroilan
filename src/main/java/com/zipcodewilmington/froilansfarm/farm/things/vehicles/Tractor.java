@@ -29,10 +29,13 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
 
     public String makeNoise() {
-        return null;
+        return "baRUMPBUMPbumpbumpBUMPBUMP!!!";
     }
 
-    public void harvestCrop (Crop targetCrop){
+    public void harvestCrop (CropRow targetRow){
+        for(Crop c : targetRow.getAllCrops()){
+            c.harvest();
+        }
 
     }
 

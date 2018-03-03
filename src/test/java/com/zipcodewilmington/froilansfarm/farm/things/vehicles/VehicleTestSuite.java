@@ -10,6 +10,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         CropDusterTest.class,
         VehicleTest.class,
+        TractorTest.class
 
 
 
