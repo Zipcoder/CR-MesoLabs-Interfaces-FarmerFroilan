@@ -40,6 +40,14 @@ public class Pilot extends Person implements Rider,AnimalFeeder {
 
     }
 
+    public void exerciseHorses(Stable stableToExercise) {
+        for(Horse h : stableToExercise.getAllHorses()){
+            this.mount(h);
+            h.goForRide();
+            this.dismount(h);
+        }
+    }
+
     public void feedChickens (ChickenCoop targetCoop, WareHouse wareHouseToFeedFrom){
         for(Chicken c : targetCoop.getAllChickens()){
             c.eat(EdibleType.CHICKENFEED, wareHouseToFeedFrom);

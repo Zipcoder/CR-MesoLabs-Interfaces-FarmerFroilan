@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals;
 
 import com.zipcodewilmington.froilansfarm.farm.buildings.WareHouse;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.Creature;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.ChickenFeed;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleType;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Egg;
@@ -93,6 +94,23 @@ public class HorseTest {
 
         //Then
         Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void sleepTest(){
+        //Given
+        Horse spanky = new Horse("Spanky");
+        WareHouse testHouse = new WareHouse (new Hay());
+
+        //When
+        spanky.eat(EdibleType.HAY,testHouse);
+        spanky.sleep();
+
+        //Then
+        Assert.assertFalse(spanky.hasBeenFed());
+        Assert.assertTrue (spanky.getEnergyReserves() == 0);
+        Assert.assertFalse(spanky.wasExercised());
+
     }
 
 }

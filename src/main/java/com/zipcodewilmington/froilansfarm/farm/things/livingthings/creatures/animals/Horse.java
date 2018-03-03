@@ -9,6 +9,7 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
 public class Horse extends Animal implements Rideable {
 
     private boolean ridden;
+    private boolean exercised;
 
     public Horse(String name) {
         super(name);
@@ -28,6 +29,12 @@ public class Horse extends Animal implements Rideable {
         this.ridden = true;
     }
 
+    public void goForRide(){
+        if(this.isBeingRidden()) {
+            this.exercised = true;
+        }
+    }
+
     public void getOff(){
         this.ridden = false;
     }
@@ -36,8 +43,19 @@ public class Horse extends Animal implements Rideable {
         return this.ridden;
     }
 
+    public boolean wasExercised(){
+            return this.exercised;}
+
     public String makeNoise() {
 
         return "neeeeEEEEIIIIIIGGGGGGGhhhhhhh!!!";
     }
+
+    @Override
+    public void sleep(){
+        this.hasEaten = false;
+        this.energyReserves = 0;
+        this.exercised = false;
+    }
+
 }

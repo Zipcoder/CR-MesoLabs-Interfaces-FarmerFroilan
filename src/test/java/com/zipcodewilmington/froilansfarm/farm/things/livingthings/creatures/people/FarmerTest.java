@@ -163,6 +163,20 @@ public class FarmerTest {
         Assert.assertTrue(house.getStorageSize() == 0);
     }
 
+    @Test
+    public void exerciseHorsesTest(){
+        //Given
+        Stable stable = new Stable(new Horse(""), new Horse(""), new Horse(""), new Horse(""));
+
+        //When
+        froilan.exerciseHorses(stable);
+
+        //Then
+        Assert.assertTrue(stable.getHorse(3).wasExercised());
+
+
+    }
+
 
 
 }

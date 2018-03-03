@@ -40,6 +40,15 @@ public class Farmer extends Person implements Botanist,Rider,AnimalFeeder {
 
     }
 
+
+    public void exerciseHorses(Stable stableToExercise) {
+        for(Horse h : stableToExercise.getAllHorses()){
+            this.mount(h);
+            h.goForRide();
+            this.dismount(h);
+        }
+    }
+
     public Egg harvestEgg (Chicken targetChicken){
         targetChicken.harvest();
         return targetChicken.yield();

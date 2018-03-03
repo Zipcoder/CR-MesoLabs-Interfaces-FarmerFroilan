@@ -40,6 +40,10 @@ public class FarmHouse {
         return null;
     }
 
+    public ArrayList<Person> getAllPeople(){
+        return this.people;
+    }
+
     public int getFarmHouseSize(){
         return this.people.size();
     }

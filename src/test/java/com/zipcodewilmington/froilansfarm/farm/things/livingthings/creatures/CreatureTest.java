@@ -94,4 +94,20 @@ public class CreatureTest {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void sleepTest(){
+        //Given
+        Creature spanky = new Chicken();
+        WareHouse testHouse = new WareHouse (new ChickenFeed());
+
+        //When
+        spanky.eat(EdibleType.CHICKENFEED,testHouse);
+        spanky.sleep();
+
+        //Then
+        Assert.assertFalse(spanky.hasBeenFed());
+        Assert.assertTrue (spanky.getEnergyReserves() == 0);
+
+    }
+
 }

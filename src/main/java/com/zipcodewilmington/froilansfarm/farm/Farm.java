@@ -9,6 +9,7 @@ import com.zipcodewilmington.froilansfarm.farm.field.Field;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Horse;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people.Farmer;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people.Person;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people.Pilot;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropFactory;
@@ -158,6 +159,22 @@ public class Farm {
             storage.add(EdibleFactory.createEdible(EdibleType.VEGETABLE));
         }
         return storage;
+    }
+
+    public void nightFall(){
+        for (Stable s : this.stables){
+            for(Horse h : s.getAllHorses()){
+                h.sleep();
+            }
+        }
+        for (ChickenCoop cp : this.chickenCoops){
+            for(Chicken ch : cp.getAllChickens()){
+                ch.sleep();
+            }
+        }
+        for(Person p :this.farmHouse.getAllPeople()){
+            p.sleep();
+        }
     }
 
 

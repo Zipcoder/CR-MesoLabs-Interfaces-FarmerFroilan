@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
 import com.zipcodewilmington.froilansfarm.farm.field.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people.Farmer;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CornStalk;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropType;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.Hay;
@@ -128,6 +129,23 @@ public class FarmTest {
 
         //Then
         Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void nightFallTest(){
+        //Given
+        Farm froilandia = new Farm();
+
+        //When
+        Farmer froilan = (Farmer) froilandia.getFarmHouse().getPerson("Froilan");
+        froilan.exerciseHorses(froilandia.getStables().get(0));
+        froilan.feedHorses(froilandia.getStables().get(0), froilandia.getWareHouse());
+        froilandia.nightFall();
+
+        //Then
+        Assert.assertFalse(froilandia.getStables().get(0).getHorse(0).wasExercised());
+        Assert.assertFalse(froilandia.getStables().get(0).getHorse(0).hasBeenFed());
+
     }
 
 }

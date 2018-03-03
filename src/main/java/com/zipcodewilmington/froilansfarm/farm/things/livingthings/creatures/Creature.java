@@ -29,4 +29,9 @@ public abstract class Creature implements Eater,NoiseMaker {
         return this.energyReserves;
     }
 
+    public void sleep(){
+        this.energyReserves=0;
+        this.hasEaten=false;
+    }
+
 }
