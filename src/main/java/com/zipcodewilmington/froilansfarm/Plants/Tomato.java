@@ -10,6 +10,4 @@ public class Tomato implements Edible {
         this.hasBeenEaten = true;
     }
 
-    // made by TomatoPlant
-
 }
