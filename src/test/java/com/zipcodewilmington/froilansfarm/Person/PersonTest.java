@@ -11,6 +11,7 @@ import org.junit.Test;
  * author: https://github.com/vvmk
  * date: 3/2/18
  */
+@SuppressWarnings("all")
 public class PersonTest {
     private static final String expectedName = "dummy";
     private static final int expectedStartingStamina = 10;
@@ -102,7 +103,6 @@ public class PersonTest {
         try {
             stock.exert(staminaToExert);
         } catch (StaminaTooLowException stle) {
-            System.out.println("catch block");
             Assert.fail();
         }
         int actual = stock.getStamina();
