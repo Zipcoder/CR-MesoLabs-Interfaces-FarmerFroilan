@@ -16,11 +16,16 @@ public class EdibleStorage {
         return this.edibleStorage;
     }
 
+    public int getSize() {
+        return getEdibleStorage().size();
+    }
+
     public void removeFromEdibleStorage(Edible object) {
         edibleStorage.remove(object);
     }
 
     public void addToEdibleStorage(Edible object) {
+        if (object != null)
         getEdibleStorage().add(object);
     }
 

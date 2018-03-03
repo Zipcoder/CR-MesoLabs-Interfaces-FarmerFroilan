@@ -36,8 +36,8 @@ public class Tractor extends Vehicle implements FarmVehicle {
     public void harvestCropRow(CropRow aCropRow, EdibleStorage storage) {
 
         if (canOperate()) {
-            for (int i = 0; i < aCropRow.getCropRow().size(); i++) {
-                storage.getEdibleStorage().add(aCropRow.getCropRow().get(i).yield());
+            for (int i = 0; i < aCropRow.getSize(); i++) {
+                storage.addToEdibleStorage(aCropRow.getCropRow().get(i).yield());
                 aCropRow.getCropRow().get(i).beHarvested();
             }
             aCropRow.removeHarvestedCrops();
@@ -49,7 +49,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
     public void harvestField(Field farmField, EdibleStorage storage) {
 
         if (canOperate()) {
-            for (int i = 0; i < farmField.getCropField().size(); i++) {
+            for (int i = 0; i < farmField.getSize(); i++) {
                 harvestCropRow(farmField.getCropField().get(i), storage);
             }
         } else {

@@ -20,15 +20,27 @@ public class CropRow {
     }
 
     public void removeHarvestedCrops() {
+
+        int counter = 0;
+
         for (int i = 0; i < getCropRow().size(); i++) {
-            if (getCropRow().get(i).getHasBeenHarvested()) {
-                removeCrop(getCropRow().get(i));
+            if (!getCropRow().get(i).getHasBeenHarvested()) {
+                counter++;
             }
+        }
+        if (counter == 0) {
+            getCropRow().clear();
+        } else {
+            System.out.println("Cannot clear crop row as there are " + counter + " unharvested crops.");
         }
     }
 
     public ArrayList<Crop> getCropRow() {
         return this.aCropRow;
+    }
+
+    public int getSize() {
+        return getCropRow().size();
     }
 
 //    public ArrayList<Edible> harvestCropRow() {

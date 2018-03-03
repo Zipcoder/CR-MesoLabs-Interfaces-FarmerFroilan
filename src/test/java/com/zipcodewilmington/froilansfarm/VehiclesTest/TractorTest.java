@@ -29,11 +29,17 @@ public class TractorTest {
         cropRow1 = new CropRow();
         cropRow2 = new CropRow();
         crop1 = new CornStalk();
+        crop1.beFertilized();
         crop2 = new CornStalk();
+        crop2.beFertilized();
         crop3 = new CornStalk();
+        crop3.beFertilized();
         crop4 = new TomatoPlant();
+        crop4.beFertilized();
         crop5 = new TomatoPlant();
+        crop5.beFertilized();
         crop6 = new TomatoPlant();
+        crop6.beFertilized();
         aFarmer = new Farmer();
         aFarmer.plant(crop1, cropRow1);
         aFarmer.plant(crop2, cropRow1);
@@ -105,7 +111,7 @@ public class TractorTest {
         aFarmer.mount(testTractor);
         testTractor.harvestField(aTestField, testEdibleStorage);
         int expected = 0;
-        int actual = aTestField.getCropField().get(0).getCropRow().size();
+        int actual = aTestField.getCropField().get(0).getSize();
         Assert.assertEquals(expected, actual);
     }
 
@@ -114,14 +120,14 @@ public class TractorTest {
         aFarmer.mount(testTractor);
         testTractor.harvestField(aTestField, testEdibleStorage);
         int expected = 6;
-        int actual = testEdibleStorage.getEdibleStorage().size();
+        int actual = testEdibleStorage.getSize();
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void harvestFieldTest3() {
         testTractor.harvestField(aTestField, testEdibleStorage);
         int expected = 0;
-        int actual = testEdibleStorage.getEdibleStorage().size();
+        int actual = testEdibleStorage.getSize();
         Assert.assertEquals(expected, actual);
     }
 

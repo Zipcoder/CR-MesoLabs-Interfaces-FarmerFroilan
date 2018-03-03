@@ -19,5 +19,9 @@ public class Field {
         return this.cropField;
     }
 
+    public int getSize() {
+        return getCropField().size();
+    }
+
 
 }
