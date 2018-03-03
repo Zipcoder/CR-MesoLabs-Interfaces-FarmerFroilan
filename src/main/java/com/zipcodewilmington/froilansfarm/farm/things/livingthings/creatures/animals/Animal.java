@@ -13,5 +13,9 @@ public abstract class Animal extends Creature {
         super(name);
     }
 
+    public Animal(){
+        super();
+    }
+
 
 }

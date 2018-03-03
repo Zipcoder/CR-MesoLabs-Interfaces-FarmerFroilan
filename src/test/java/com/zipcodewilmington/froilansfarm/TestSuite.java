@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.farm.FarmTest;
 import com.zipcodewilmington.froilansfarm.farm.buildings.BuildingTestSuite;
 import com.zipcodewilmington.froilansfarm.farm.field.FieldTestSuite;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.CreatureTestSuite;
@@ -18,7 +19,8 @@ import org.junit.runners.Suite;
         CreatureTestSuite.class,
         CropTestSuite.class,
         EdibleTest.class,
-        VehicleTestSuite.class
+        VehicleTestSuite.class,
+        FarmTest.class,
 
 
 })

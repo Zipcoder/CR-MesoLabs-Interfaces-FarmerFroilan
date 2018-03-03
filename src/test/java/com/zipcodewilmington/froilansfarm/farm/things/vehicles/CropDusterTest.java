@@ -59,7 +59,7 @@ public class CropDusterTest {
     @Test
     public void operateTest(){
         //Given
-        Farm froilandia = new Farm();
+        Farm froilandia = new Farm(true);
 
         //When
         badLarry.operate(froilandia);
@@ -71,7 +71,7 @@ public class CropDusterTest {
     @Test
     public void shutDownTest(){
         //Given
-        Farm froilandia = new Farm();
+        Farm froilandia = new Farm(true);
         badLarry.operate(froilandia);
 
         //When

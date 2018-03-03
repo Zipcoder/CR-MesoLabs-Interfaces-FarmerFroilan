@@ -15,6 +15,8 @@ public abstract class Creature implements Eater,NoiseMaker {
         this.energyReserves = 0;
     }
 
+    public Creature(){this.energyReserves=0;}
+
     public String getName(){
         return this.name;
     }

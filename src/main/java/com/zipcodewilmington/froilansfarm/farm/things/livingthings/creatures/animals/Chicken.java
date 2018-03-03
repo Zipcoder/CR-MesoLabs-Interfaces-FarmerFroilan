@@ -14,6 +14,10 @@ public class Chicken extends Animal implements Produce {
         super(name);
     }
 
+    public Chicken(){
+        super();
+    }
+
 
     public void eat(Edible food) {
         if(food instanceof ChickenFeed){

@@ -41,7 +41,7 @@ public class TractorTest {
     public void operateTest(){
         //Given
         Tractor badLenny = new Tractor("Bad Lenny");
-        Farm froilandia = new Farm();
+        Farm froilandia = new Farm(true);
 
 
         //When
@@ -55,7 +55,7 @@ public class TractorTest {
     public void shutDownTest(){
         //Given
         Tractor badLenny = new Tractor("Bad Lenny");
-        Farm froilandia = new Farm();
+        Farm froilandia = new Farm(true);
         badLenny.operate(froilandia);
 
         //When

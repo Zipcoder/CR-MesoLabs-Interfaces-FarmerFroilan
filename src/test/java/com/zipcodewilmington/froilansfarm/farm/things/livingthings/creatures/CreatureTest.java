@@ -77,4 +77,17 @@ public class CreatureTest {
 
     }
 
+    @Test
+    public void nullConstructorTest(){
+        //Given
+        Creature spanky = new Chicken();
+
+        //When
+        int expected = 0;
+        int actual = spanky.getEnergyReserves();
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
 }
