@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.People;
 
+import com.zipcodewilmington.froilansfarm.Buildings.Stable;
 import com.zipcodewilmington.froilansfarm.Interfaces.*;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 public abstract class Person implements NoiseMaker, Eater, Rider {
 
     private String name;
-    private ArrayList<Edible> foodInventory;
+    private ArrayList<Edible> foodInventory = new ArrayList<Edible>();
     boolean currentlyRidingSomething = false;
 
     public Person(String name) {
@@ -52,6 +53,13 @@ public abstract class Person implements NoiseMaker, Eater, Rider {
         }
     }
 
-    // Can be abstract? Only two people, Farmer and Pilot
+    // Horse exercise tested in FarmerTest
+    public void excerciseHorses(Stable stable) {
+        for (int i = 0; i < stable.getHorses().size(); i++) {
+            mount(stable.getHorses().get(i));
+            stable.getHorses().get(i).gallop();
+            dismount(stable.getHorses().get(i));
+        }
+    }
 
 }

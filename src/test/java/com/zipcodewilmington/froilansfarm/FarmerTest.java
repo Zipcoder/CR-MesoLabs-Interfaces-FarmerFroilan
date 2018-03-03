@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import com.zipcodewilmington.froilansfarm.Buildings.Farm;
+import com.zipcodewilmington.froilansfarm.Buildings.Stable;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.Plants.Crop;
 import com.zipcodewilmington.froilansfarm.Plants.CropRow;
@@ -69,6 +71,29 @@ public class FarmerTest {
         TomatoPlant tomatoPlant = new TomatoPlant();
         String expected = farmer.fertilizeOnVehicle(tomatoPlant);
         Assert.assertEquals(expected, "Dude where's my tractor?");
+    }
+
+    @Test
+    public void exerciseHorseTest() {
+        Farmer farmer = new Farmer("Uh");
+        Horse horse = new Horse();
+        farmer.mount(horse);
+        horse.gallop();
+        farmer.dismount(horse);
+        Assert.assertTrue(horse.isDailyExercise());
+    }
+    
+    @Test
+    public void exerciseEntireStableTest() {
+        Farmer farmer = new Farmer("Dat boi");
+        Stable stable = new Stable();
+        stable.addHorse(new Horse());
+        stable.addHorse(new Horse());
+        stable.addHorse(new Horse());
+        farmer.excerciseHorses(stable);
+        for (int i = 0; i < stable.getHorses().size(); i++) {
+            Assert.assertTrue(stable.getHorses().get(i).isDailyExercise());
+        }
     }
 
 }

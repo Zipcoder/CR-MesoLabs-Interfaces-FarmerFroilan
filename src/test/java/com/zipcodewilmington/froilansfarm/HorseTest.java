@@ -30,4 +30,20 @@ public class HorseTest {
         Assert.assertTrue(!(farmer.isCurrentlyRidingSomething()));
     }
 
+    @Test
+    public void hasntExercisedYetTest() {
+        Horse horse = new Horse();
+        Assert.assertFalse(horse.isDailyExercise());
+    }
+
+    @Test
+    public void gallopTest() {
+        Farmer farmer = new Farmer("Theresa");
+        Horse horse = new Horse();
+        farmer.mount(horse);
+        horse.gallop();
+        farmer.dismount(horse);
+        Assert.assertTrue(horse.isDailyExercise());
+    }
+
 }
