@@ -8,6 +8,5 @@ package com.zipcodewilmington.froilansfarm.interfaces;
  */
 public interface Flying {
     void takeOff(Pilot pilot);
-
     void land();
 }

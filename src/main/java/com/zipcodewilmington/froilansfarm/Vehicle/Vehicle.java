@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Exceptions.NoDriverException;
 import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
@@ -27,5 +28,10 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
 
     public Rider getRider() {
         return rider;
+    }
+
+    public void confirmDriver() throws NoDriverException {
+        if (rider==null)
+            throw new NoDriverException();
     }
 }

@@ -10,6 +10,8 @@ import java.util.List;
  * date: 3/1/18
  */
 public class Farm {
+    //TODO: Tasks charge a stamina cost, and a time cost. May need Task interface.
+
     private static final int fDEFAULT_NUMBER_OF_COOPS = 4;
     private static final int fDEFAULT_NUMBER_OF_STABLES = 3;
 

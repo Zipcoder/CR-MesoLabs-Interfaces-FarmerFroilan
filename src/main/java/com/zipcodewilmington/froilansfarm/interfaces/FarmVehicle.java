@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
+import com.zipcodewilmington.froilansfarm.Exceptions.NoDriverException;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 
 /**
@@ -9,5 +10,5 @@ import com.zipcodewilmington.froilansfarm.Farm.Farm;
  * date: 3/1/18
  */
 public interface FarmVehicle {
-    void operate(Farm farm);
+    void operate(Farm farm) throws NoDriverException;
 }

@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Exceptions.NoPilotException;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
@@ -16,17 +17,14 @@ public class CropDuster extends Aircraft implements FarmVehicle {
         super();
     }
 
-    public void operate(Farm farm) {
-        try {
-            //get the cropRows
-            //fertilize the cropRows
-        } catch (NullPointerException npe) {
-            // this machine is not self operating. where's the driver?
-        }
+    public void operate(Farm farm) throws NoPilotException {
+        confirmDriver();
+            //farm.getField.getRows.eachRow {
+            //fertilize(thisRow)
     }
 
-    public void fertilize(CropRow cropRow) {
-        //copRow.fertilizeAll
+    protected void fertilize(CropRow cropRow) {
+        cropRow.fertilizeRow();
     }
 
     @Override

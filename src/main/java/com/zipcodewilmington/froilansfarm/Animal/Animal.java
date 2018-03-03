@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.StaminaTooLowException;
+import com.zipcodewilmington.froilansfarm.Exceptions.StaminaTooLowException;
 import com.zipcodewilmington.froilansfarm.interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;

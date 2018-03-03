@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Exceptions.NoPilotException;
 import com.zipcodewilmington.froilansfarm.interfaces.Flying;
 import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 
@@ -27,5 +28,15 @@ public abstract class Aircraft extends Vehicle implements Flying {
 
     public void land() {
         pilot = null;
+    }
+
+    public Pilot getPilot() {
+        return pilot;
+    }
+
+    @Override
+    public void confirmDriver() throws NoPilotException {
+        if (pilot == null)
+            throw new NoPilotException();
     }
 }

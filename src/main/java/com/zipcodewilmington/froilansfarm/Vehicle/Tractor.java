@@ -14,12 +14,10 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
  */
 public class Tractor extends Vehicle implements FarmVehicle, Rideable {
     public void operate(Farm farm) {
-        try {
-            //get the crops
-            //harvest the crops
-        } catch (NullPointerException npe) {
-            // this machine is not self-operating, where's the driver?
-        }
+
+        //farm.getField()
+            //field.getRows.each()
+                //crops.each -> harvest()
     }
 
     public void makeNoise() {

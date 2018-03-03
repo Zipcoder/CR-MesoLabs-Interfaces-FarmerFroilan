@@ -27,4 +27,10 @@ public class CropRow {
         if (crops.size() == maxCrops)
         crops.add(crop);
     }
+
+    public void fertilizeRow() {
+        for (Crop crop : crops) {
+            crop.setFertilized();
+        }
+    }
 }

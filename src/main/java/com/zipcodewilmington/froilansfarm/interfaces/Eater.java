@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-import com.zipcodewilmington.froilansfarm.StaminaTooLowException;
+import com.zipcodewilmington.froilansfarm.Exceptions.StaminaTooLowException;
 
 /**
  * filename:

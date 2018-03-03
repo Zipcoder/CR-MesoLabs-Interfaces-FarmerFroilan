@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.StaminaTooLowException;
+import com.zipcodewilmington.froilansfarm.Exceptions.StaminaTooLowException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
