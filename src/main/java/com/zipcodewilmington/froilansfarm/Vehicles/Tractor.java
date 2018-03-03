@@ -38,8 +38,9 @@ public class Tractor extends Vehicle implements FarmVehicle {
         if (canOperate()) {
             for (int i = 0; i < aCropRow.getCropRow().size(); i++) {
                 storage.getEdibleStorage().add(aCropRow.getCropRow().get(i).yield());
+                aCropRow.getCropRow().get(i).beHarvested();
             }
-            aCropRow.getCropRow().clear();
+            aCropRow.removeHarvestedCrops();
         } else {
             System.out.println("Tractor not currently operable.");
         }

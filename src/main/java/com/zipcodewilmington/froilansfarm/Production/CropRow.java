@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Production;
 
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 import java.util.ArrayList;
 
@@ -20,18 +19,26 @@ public class CropRow {
         aCropRow.remove(aCrop);
     }
 
+    public void removeHarvestedCrops() {
+        for (int i = 0; i < getCropRow().size(); i++) {
+            if (getCropRow().get(i).getHasBeenHarvested()) {
+                removeCrop(getCropRow().get(i));
+            }
+        }
+    }
+
     public ArrayList<Crop> getCropRow() {
         return this.aCropRow;
     }
 
-    public ArrayList<Edible> harvestCropRow() {
-
-        ArrayList<Edible> harvestedEdibleObjects = new ArrayList<Edible>();
-
-        for (int i = 0; i < this.aCropRow.size(); i++) {
-            harvestedEdibleObjects.add(this.aCropRow.get(i).yield());
-        }
-        return harvestedEdibleObjects;
-    }
+//    public ArrayList<Edible> harvestCropRow() {
+//
+//        ArrayList<Edible> harvestedEdibleObjects = new ArrayList<Edible>();
+//
+//        for (int i = 0; i < this.aCropRow.size(); i++) {
+//            harvestedEdibleObjects.add(this.aCropRow.get(i).yield());
+//        }
+//        return harvestedEdibleObjects;
+//    }
 
 }
