@@ -8,11 +8,11 @@ public class Stable {
     private ArrayList<Horse> horses;
 
     public Stable(){
-        this.horses = new ArrayList<Horse>();
+        this.horses = new ArrayList<>();
     }
 
     public Stable(Horse... horses){
-        this.horses = new ArrayList<Horse>();
+        this.horses = new ArrayList<>();
         for (Horse horse:horses) {
             this.addHorse(horse);
         }
