@@ -1,12 +1,23 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.util.ArrayList;
+
 public class Person implements NoiseMaker, Eater {
 
-    public void eat() {
+    String name;
+    ArrayList<Person> people;
 
+    public Person() {
+        this.name = "";
+        this.people = new ArrayList<Person>();
     }
 
-    public void makeNoise() {
-
+    public void eat(Edible typeOfProduce) {
+        eat(typeOfProduce);
     }
+    @Override
+    public String makeNoise() {
+        return "Hiya";
+    }
+
 }

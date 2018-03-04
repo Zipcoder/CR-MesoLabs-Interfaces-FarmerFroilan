@@ -2,12 +2,17 @@ package com.zipcodewilmington.froilansfarm;
 
 public class Crop extends CropRow{
 
+    public Crop() {}
 
-    public void hasBeenHarvested(){
-
+    public Crop(Produce typeOfProduce) {
+        super(typeOfProduce);
     }
-    public void hasBeenFertilized(){
 
+    public boolean hasBeenHarvested(){
+        return false;
+    }
+    public boolean hasBeenFertilized(){
+        return false;
     }
 
 

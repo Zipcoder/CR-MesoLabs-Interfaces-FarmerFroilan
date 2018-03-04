@@ -3,11 +3,11 @@ package com.zipcodewilmington.froilansfarm;
 public class Animal implements NoiseMaker, Eater {
 
 
-    public void eat() {
-
+    public String makeNoise() {
+        return null;
     }
 
-    public void makeNoise() {
+    public void eat(Edible typeOfProduce) {
 
     }
 }

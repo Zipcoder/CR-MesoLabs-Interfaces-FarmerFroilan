@@ -1,8 +1,20 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.util.ArrayList;
+
 public class Field {
 
-    public void cropRowAmount(){
+     ArrayList<CropRow> cropRows;
 
+     public Field(){
+
+     }
+
+
+    public void addCropToCropRow(Produce typeOfProduce){
+
+        cropRows.add(new CropRow(typeOfProduce));
     }
+
 }
+

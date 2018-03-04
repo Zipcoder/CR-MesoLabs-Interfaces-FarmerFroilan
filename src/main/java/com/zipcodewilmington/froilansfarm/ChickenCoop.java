@@ -1,12 +1,27 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class ChickenCoop extends Farm {
+import java.util.ArrayList;
+
+public class ChickenCoop  {
+
+    ArrayList<Chicken> chickensInCoop;
 
 
-    public void numberOFChickens(){
+    public  ChickenCoop(int numberOfChickens){
 
+        chickensInCoop = new ArrayList<Chicken>();
+
+        setNumberOFChickens(numberOfChickens);
     }
-    public void numberOfCoops(){
 
+
+    public void setNumberOFChickens(int numberOfChickens){
+
+        chickensInCoop.clear();
+
+        for(int i = 0; i < numberOfChickens; i++){
+            chickensInCoop.add(new Chicken());
+        }
     }
+
 }
