@@ -8,7 +8,7 @@ public class CropFactoryTest {
     @Test
     public void createCornStalkTest(){
         //Given
-        CropType type = CropType.CORN_STALK;
+        CropType type = CropType.CORNSTALK;
 
         //When
         Crop actual = CropFactory.createCrop(type);
@@ -20,7 +20,7 @@ public class CropFactoryTest {
     @Test
     public void createTomatoPlantTest(){
         //Given
-        CropType type = CropType.TOMATO_PLANT;
+        CropType type = CropType.TOMATOPLANT;
 
         //When
         Crop actual = CropFactory.createCrop(type);
@@ -32,7 +32,7 @@ public class CropFactoryTest {
     @Test
     public void createArbitraryVegetationTest(){
         //Given
-        CropType type = CropType.ARBITRARY_VEGETATION;
+        CropType type = CropType.ARBITRARYVEGETATION;
 
         //When
         Crop actual = CropFactory.createCrop(type);

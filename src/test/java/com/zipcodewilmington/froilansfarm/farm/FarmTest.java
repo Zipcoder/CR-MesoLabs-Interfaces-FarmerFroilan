@@ -17,7 +17,7 @@ public class FarmTest {
         CropRow row1;
 
         //When
-        row1 = new CropRow(Farm.populateCropRow(CropType.CORN_STALK, 100));
+        row1 = new CropRow(Farm.populateCropRow(CropType.CORNSTALK, 100));
 
         //Then
         Assert.assertTrue(row1.getCrop(55) instanceof CornStalk);
@@ -124,7 +124,7 @@ public class FarmTest {
 
 
         //When
-        int expected = 500;
+        int expected = 550;
         int actual = Farm.populateWareHouse().size();
 
         //Then

@@ -38,6 +38,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
             c.harvest();
             targetWareHouse.addEdible(c.yield());
         }
+        targetRow.getAllCrops().clear();
         targetWareHouse.removeNulls();
 
     }

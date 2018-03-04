@@ -49,17 +49,7 @@ public class Farmer extends Person implements Botanist,Rider,AnimalFeeder {
         }
     }
 
-    public Egg harvestEgg (Chicken targetChicken){
-        targetChicken.harvest();
-        return targetChicken.yield();
-    }
 
-    public void collectEggs (ChickenCoop targetCoop, WareHouse wareHouseToDepositWith){
-        for (Chicken c : targetCoop.getAllChickens()){
-            wareHouseToDepositWith.addEdible(this.harvestEgg(c));
-        }
-        wareHouseToDepositWith.removeNulls();
-    }
 
     public void feedChickens (ChickenCoop targetCoop, WareHouse wareHouseToFeedFrom){
         for(Chicken c : targetCoop.getAllChickens()){

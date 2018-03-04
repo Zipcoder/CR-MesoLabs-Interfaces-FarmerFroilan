@@ -5,10 +5,10 @@ public class CropFactory {
     public static Crop createCrop(CropType cropToCreate){
 
         switch(cropToCreate){
-            case CORN_STALK:
+            case CORNSTALK:
                 return new CornStalk();
 
-            case TOMATO_PLANT:
+            case TOMATOPLANT:
                 return new TomatoPlant();
 
             default:

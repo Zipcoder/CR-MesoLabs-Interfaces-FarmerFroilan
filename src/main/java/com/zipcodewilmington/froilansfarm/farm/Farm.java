@@ -62,9 +62,9 @@ public class Farm {
 
         this.wareHouse = new WareHouse(populateWareHouse().toArray(new Edible[0]));
 
-        CropRow row1 = new CropRow(populateCropRow(CropType.CORN_STALK, 100));
-        CropRow row2 = new CropRow(populateCropRow(CropType.TOMATO_PLANT, 100));
-        CropRow row3 = new CropRow(populateCropRow(CropType.ARBITRARY_VEGETATION, 100));
+        CropRow row1 = new CropRow(populateCropRow(CropType.CORNSTALK, 100));
+        CropRow row2 = new CropRow(populateCropRow(CropType.TOMATOPLANT, 100));
+        CropRow row3 = new CropRow(populateCropRow(CropType.ARBITRARYVEGETATION, 100));
         CropRow row4 = new CropRow();
         CropRow row5 = new CropRow();
         this.field = new Field(row1,row2,row3,row4,row5);
@@ -143,7 +143,7 @@ public class Farm {
         for(int i = 0; i<100; i++) {
             storage.add(EdibleFactory.createEdible(EdibleType.HAY));
         }
-        for(int i = 0; i<50; i++) {
+        for(int i = 0; i<100; i++) {
             storage.add(EdibleFactory.createEdible(EdibleType.EGG));
         }
         for(int i = 0; i<200; i++) {
