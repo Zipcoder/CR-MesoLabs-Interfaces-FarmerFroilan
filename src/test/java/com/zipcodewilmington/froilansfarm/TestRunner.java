@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import org.junit.extensions.cpsuite.ClasspathSuite;
 import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
 
 /**
  * filename:
@@ -9,11 +9,6 @@ import org.junit.runners.Suite;
  * author: https://github.com/vvmk
  * date: 3/4/18
  */
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-
-})
-
-
+@RunWith(ClasspathSuite.class)
 public class TestRunner {
 }
