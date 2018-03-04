@@ -10,10 +10,7 @@ import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.ani
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.animals.Horse;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people.Farmer;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.creatures.people.Pilot;
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.ArbitrayVegetation;
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.Crop;
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropFactory;
-import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.CropType;
+import com.zipcodewilmington.froilansfarm.farm.things.livingthings.crops.*;
 import com.zipcodewilmington.froilansfarm.farm.things.livingthings.edibles.EdibleType;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.farm.things.vehicles.Tractor;
@@ -218,14 +215,209 @@ public class WorkWeekTest {
         allHorsesHaveBeenExercised();
         allCropsAreFertilized(veggieRow1);
 
+
+        Assert.assertTrue(cornRow.getCrop(0) instanceof CornStalk);
+        Assert.assertTrue(cornRow.getCrop(99) instanceof CornStalk);
+        Assert.assertFalse(cornRow.getCrop(50).isFertilized());
+        Assert.assertFalse(cornRow.getCrop(22).isHarvested());
+
         //NightTime Comes to reset the booleans on the creatures...
         froilandia.nightFall();
     }
 
     @Test
     public void h_thursdayMorning(){
+        //When
+        froilanEatsBreakfast();
+        froilandaEatsBreakfast();
+        froilanFeedsChickens();
+        froilandaFeedsHorses();
+        froilandaCollectsEggs();
+        froilan.exerciseHorses(friendStable);
+        froilan.exerciseHorses(workStable);
+        froilan.exerciseHorses(eliteStable);
+        int expectedStorage = 558;
+        int actualStorage = wareHouse.getStorageSize();
+
+        //Then
+        Assert.assertTrue(froilan.getEnergyReserves()==27);
+        Assert.assertTrue(froilanda.getEnergyReserves()==16);
+
+        Assert.assertEquals(expectedStorage,actualStorage);
+
+        allChickensHaveBeenFed();
+        allHorsesHaveBeenFed();
+        allHorsesHaveBeenExercised();
+    }
+
+    @Test
+    public void j_thursdayAfternoon(){
+        //When
+        froilandaFertilzesARow(veggieRow2);
+        froilanHarvestsARow(veggieRow1);
+        int expectedStorage = 658;
+        int actualStorage = wareHouse.getStorageSize();
+
+        //Then
+        Assert.assertEquals(expectedStorage,actualStorage);
+        Assert.assertTrue(veggieRow1.getRowSize() == 0);
+        allCropsAreFertilized(veggieRow2);
+
+        //NightTime Comes to reset the booleans on the creatures...
+        froilandia.nightFall();
+    }
+
+    @Test
+    public void k_fridayMorning(){
+        //When
+        froilanEatsBreakfast();
+        froilandaEatsBreakfast();
+        froilandaFeedsChickens();
+        froilandaFeedsHorses();
+        froilan.exerciseHorses(friendStable);
+        froilan.exerciseHorses(workStable);
+        froilan.exerciseHorses(eliteStable);
+        int expectedStorage = 620;
+        int actualStorage = wareHouse.getStorageSize();
+
+
+        //Then
+        Assert.assertTrue(froilan.getEnergyReserves()==27);
+        Assert.assertTrue(froilanda.getEnergyReserves()==16);
+
+        Assert.assertEquals(expectedStorage,actualStorage);
+
+        allChickensHaveBeenFed();
+        allHorsesHaveBeenFed();
+        allHorsesHaveBeenExercised();
+    }
+
+    @Test
+    public void l_fridayAfternoon(){
+        //When
+        froilandaFertilzesARow(veggieRow3);
+        froilandaCollectsEggs();
+        froilanHarvestsARow(tomatoRow);
+        int expectedStorage = 735;
+        int actualStorage = wareHouse.getStorageSize();
+
+        //Then
+        Assert.assertEquals(expectedStorage,actualStorage);
+        allCropsAreFertilized(veggieRow3);
+        Assert.assertTrue(tomatoRow.getRowSize()==0);
+
+        //NightTime Comes to reset the booleans on the creatures...
+        froilandia.nightFall();
 
     }
+
+    @Test
+    public void m_saturdayMorning(){
+        //When
+        froilanEatsBreakfast();
+        froilandaEatsBreakfast();
+        froilandaFeedsChickens();
+        froilandaFeedsHorses();
+        froilan.exerciseHorses(friendStable);
+        froilan.exerciseHorses(workStable);
+        froilan.exerciseHorses(eliteStable);
+        int expectedStorage = 697;
+        int actualStorage = wareHouse.getStorageSize();
+
+        //Then
+        Assert.assertTrue(froilan.getEnergyReserves()==27);
+        Assert.assertTrue(froilanda.getEnergyReserves()==16);
+
+        Assert.assertEquals(expectedStorage,actualStorage);
+
+        allChickensHaveBeenFed();
+        allHorsesHaveBeenFed();
+        allHorsesHaveBeenExercised();
+
+    }
+
+    @Test
+    public void n_saturdayAfternoon(){
+        //When
+        froilanda.mount(badLarry);
+        String actualPlaneNoise = badLarry.makeNoise();
+        badLarry.shutDown(froilandia);
+        badLarry.operate(froilandia);
+        froilanda.dismount(badLarry);
+        froilan.mount(badLenny);
+        String actualTractorNoise = badLenny.makeNoise();
+        badLenny.shutDown(froilandia);
+        badLenny.operate(froilandia);
+        froilan.dismount(badLenny);
+        coop1.removeChicken(coop1.getChicken("Steve"));
+        coop2.addChicken(new Chicken("Steve"));
+        workStable.removeHorse(workStable.getHorse("Vince"));
+        workStable.removeHorse(workStable.getHorse(2));
+        eliteStable.removeHorse(americanPharoh);
+        workStable.addHorse(new Horse("A Horse With No Name"));
+        Horse[] expectedHorses = {shadowfax};
+        Horse[] actualHorses = eliteStable.getAllHorses().toArray(new Horse[0]);
+        String expectedTractorNoise = "baRUMPBUMPbumpbumpBUMPBUMP!!!";
+        String expectedPlaneNoise = "mmmmmmmrrrrRRRRRROOOOOOOWWWWWWwwwwwww!!!";
+
+        //Then
+        Assert.assertArrayEquals(expectedHorses,actualHorses);
+        Assert.assertEquals(expectedPlaneNoise,actualPlaneNoise);
+        Assert.assertEquals(expectedTractorNoise,actualTractorNoise);
+        Assert.assertTrue(workStable.getStableSize() == 3);
+        Assert.assertTrue(coop1.getChickenCoopSize() == 4);
+        Assert.assertTrue(coop2.getChickenCoopSize() == 4);
+
+        //NightTime Comes to reset the booleans on the creatures...
+        froilandia.nightFall();
+    }
+
+    @Test
+    public void o_sundayMorning(){
+        //When
+        froilanEatsBreakfast();
+        froilandaEatsBreakfast();
+        froilandaFeedsChickens();
+        froilandaFeedsHorses();
+        froilan.exerciseHorses(friendStable);
+        froilan.exerciseHorses(workStable);
+        froilan.exerciseHorses(eliteStable);
+        froilandaCollectsEggs();
+        int expectedStorage = 676;
+        int actualStorage = wareHouse.getStorageSize();
+
+        //Then
+        Assert.assertTrue(froilan.getEnergyReserves()==27);
+        Assert.assertTrue(froilanda.getEnergyReserves()==16);
+
+        Assert.assertEquals(expectedStorage,actualStorage);
+
+        allChickensHaveBeenFed();
+        allHorsesHaveBeenFed();
+        allHorsesHaveBeenExercised();
+
+    }
+
+    @Test
+    public void p_sundayNight(){
+        //When
+        String actualFarmerNoise = froilan.makeNoise();
+        String actualPilotNoise = froilanda.makeNoise();
+        String actualChickenNoise = coop1.getChicken(0).makeNoise();
+        String actualHorseNoise = shadowfax.makeNoise();
+        String expectedFarmerNoise = "E I E I O";
+        String expectedPilotNoise = "Talk to me Goose";
+        String expectedChickenNoise = "bucKAW!!!";
+        String expectedHorseNoise = "neeeeEEEEIIIIIIGGGGGGGhhhhhhh!!!";
+
+        //Then
+        Assert.assertEquals(expectedChickenNoise,actualChickenNoise);
+        Assert.assertEquals(expectedFarmerNoise,actualFarmerNoise);
+        Assert.assertEquals(expectedHorseNoise,actualHorseNoise);
+        Assert.assertEquals(expectedPilotNoise,actualPilotNoise);
+
+    }
+
 
 
     //Just some methods to help clean up the readability of the tests
