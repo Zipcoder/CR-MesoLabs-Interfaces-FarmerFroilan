@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.FarmBuildings;
 
+import com.zipcodewilmington.froilansfarm.Crops.Crop;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 
 import java.lang.reflect.Array;
@@ -7,20 +8,20 @@ import java.util.ArrayList;
 
 public class Field {
 
-    CropRow[] cropRow = new CropRow[5];
+    public ArrayList<CropRow> cropRow;
 
-    public Field(){
-        cropRow[0] = new CropRow();
-        cropRow[1] = new CropRow();
-        cropRow[2] = new CropRow();
-        cropRow[3] = new CropRow();
-        cropRow[4] = new CropRow();
+    public Field(CropRow... cropRows){
+        this.cropRow = new ArrayList<>();
+        for (CropRow miniCropRow : cropRows){
+            this.cropRow.add(miniCropRow);
+        }
     }
 
-
-    public CropRow[] getCropRow() {
-        return cropRow;
+    public CropRow getCropRow(int i) {
+        return this.cropRow.get(i);
     }
 
-
+    public ArrayList<CropRow> getEntireCropRow() {
+        return this.cropRow;
+    }
 }

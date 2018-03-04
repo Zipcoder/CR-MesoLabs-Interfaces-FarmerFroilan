@@ -2,13 +2,24 @@ package com.zipcodewilmington.froilansfarm.Crops;
 
 import java.util.ArrayList;
 
-public class CropRow<T extends Crop> {
+public class CropRow <T extends Crop> {
 
-    public ArrayList<T> getCropRow() {
-        return cropRow;
+    private T crops;
+
+    ArrayList<T> cropRow = new ArrayList<T>();
+
+    public T getCrops() {
+        return crops;
     }
 
-    private ArrayList<T> cropRow = new ArrayList<T>();
+    public CropRow(T crop){
+        this.crops = crop;
+    }
+
+    public ArrayList<T> getCropsInRow() {
+        //dont use for field
+        return cropRow;
+    }
 
 
 }

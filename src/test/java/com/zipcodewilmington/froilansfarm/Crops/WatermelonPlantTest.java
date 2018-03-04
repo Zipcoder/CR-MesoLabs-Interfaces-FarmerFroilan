@@ -35,6 +35,7 @@ public class WatermelonPlantTest {
     @Test
     public void testYield(){
         testWatermelonPlant.setHasBeenFertilized(true);
+        testWatermelonPlant.setHasBeenHarvested(true);
         Watermelon actual = testWatermelonPlant.yield();
         Assert.assertTrue(actual instanceof Watermelon);
     }

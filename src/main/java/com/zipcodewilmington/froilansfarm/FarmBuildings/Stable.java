@@ -12,5 +12,9 @@ public class Stable {
 
     ArrayList<Horse> horses = new ArrayList<Horse>();
 
-
+    public void addHorse(Horse horse){
+       for (int i = 0; i < 3; i++){
+        horses.add(horse);
+    }
+    }
 }

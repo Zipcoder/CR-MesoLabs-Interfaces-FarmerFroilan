@@ -39,6 +39,7 @@ public class TomatoPlantTest {
     @Test
     public void testYield(){
         testTomatoPlant.setHasBeenFertilized(true);
+        testTomatoPlant.setHasBeenHarvested(true);
         Tomato actual = testTomatoPlant.yield();
         Assert.assertTrue(actual instanceof Tomato);
     }

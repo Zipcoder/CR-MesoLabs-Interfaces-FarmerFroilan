@@ -23,7 +23,7 @@ public class Farmer extends Person implements Rider, Botanist {
     }
 
     public void plantCrop(CropRow cropRow, Crop crop) {
-       cropRow.getCropRow().add(crop);
+       cropRow.getCropsInRow().add(crop);
     }
 
     public void mount(Rideable rideable){

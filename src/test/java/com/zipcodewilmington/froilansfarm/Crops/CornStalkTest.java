@@ -37,6 +37,7 @@ public class CornStalkTest {
     @Test
     public void testYield(){
         testCornStalk.setHasBeenFertilized(true);
+        testCornStalk.setHasBeenHarvested(true);
         EarCorn actual = testCornStalk.yield();
         Assert.assertTrue(actual instanceof EarCorn);
     }

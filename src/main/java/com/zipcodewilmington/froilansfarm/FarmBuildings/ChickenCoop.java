@@ -12,4 +12,9 @@ public class ChickenCoop {
 
     ArrayList<Chicken> chickens = new ArrayList<Chicken>();
 
+    public void addChickens(Chicken chicken) {
+        for (int i = 0; i < 5; i++) {
+            chickens.add(chicken);
+        }
+    }
 }

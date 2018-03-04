@@ -5,8 +5,7 @@ import com.zipcodewilmington.froilansfarm.Edibles.Watermelon;
 public class WatermelonPlant extends Crop{
 
     public Watermelon yield() {
-        if (this.hasBeenFertilized && !this.hasBeenHarvested){
-            this.hasBeenHarvested = true;
+        if (this.hasBeenFertilized && this.hasBeenHarvested){
             return new Watermelon();
         }
         return null;

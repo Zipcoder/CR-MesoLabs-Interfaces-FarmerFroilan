@@ -11,25 +11,26 @@ public class CropRowTest {
 
     @Before
     public void setUp(){
-        testCropRow = new CropRow();
+        CornStalk testCorn = new CornStalk();
+        testCropRow = new CropRow(testCorn);
     }
 
     @Test
     public void testCropRow(){
         TomatoPlant tomatoPlant = new TomatoPlant();
-        testCropRow.getCropRow().add(tomatoPlant);
+        testCropRow.getCropsInRow().add(tomatoPlant);
         int expected = 1;
-        int actual = testCropRow.getCropRow().size();
+        int actual = testCropRow.getCropsInRow().size();
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void testCropRow2(){
         TomatoPlant tomatoPlant = new TomatoPlant();
         WatermelonPlant watermelonPlant = new WatermelonPlant();
-        testCropRow.getCropRow().add(tomatoPlant);
-        testCropRow.getCropRow().add(watermelonPlant);
+        testCropRow.getCropsInRow().add(tomatoPlant);
+        testCropRow.getCropsInRow().add(watermelonPlant);
         int expected = 2;
-        int actual = testCropRow.getCropRow().size();
+        int actual = testCropRow.getCropsInRow().size();
         Assert.assertEquals(expected, actual);
     }
 

@@ -39,11 +39,11 @@ public class FarmerTest {
     }
     @Test
     public void plantTest(){
-        CropRow testCropRow = new CropRow();
         WatermelonPlant testWatermelonP = new WatermelonPlant();
+        CropRow testCropRow = new CropRow(testWatermelonP);
         testFarmer.plantCrop(testCropRow, testWatermelonP);
         int expected = 1;
-        int actual = testCropRow.getCropRow().size();
+        int actual = testCropRow.getCropsInRow().size();
         Assert.assertEquals(expected, actual);
     }
     @Test
