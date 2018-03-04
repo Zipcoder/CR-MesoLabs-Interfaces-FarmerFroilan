@@ -24,8 +24,8 @@ public class CropRow {
     }
 
     public void sow(Crop crop) {
-        if (crops.size() == maxCrops)
-        crops.add(crop);
+        if (crops.size() < maxCrops)
+            crops.add(crop);
     }
 
     public void fertilizeRow() {

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
+import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 
 import java.util.ArrayList;
@@ -24,11 +25,15 @@ public class FarmHouse {
         people = new ArrayList<>(Arrays.asList(e));
     }
 
-    public void addResident(Person p) {
+    public void enter(Person p) {
         people.add(p);
     }
 
-    public void evictResident(Person p) {
-        people.remove(p);
+    public Person getPerson(String name) {
+        for (Person p : people) {
+            if (p.getName().equalsIgnoreCase(name))
+                return p;
+        }
+        return null;
     }
 }

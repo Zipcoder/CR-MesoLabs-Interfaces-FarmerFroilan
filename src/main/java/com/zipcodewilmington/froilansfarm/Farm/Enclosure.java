@@ -17,19 +17,7 @@ public abstract class Enclosure<E extends Animal> {
         this.animals = animals;
     }
 
-    public void add(E e) {
-        animals.add(e);
-    }
-
-    public void remove(E e) {
-        animals.remove(e);
-    }
-
-    public E getAnimalByName(String name) {
-        for (E e : animals) {
-            if (e.getName().equals(name))
-                return e;
-        }
-        return null;
+    public List<E> getAll() {
+        return animals;
     }
 }

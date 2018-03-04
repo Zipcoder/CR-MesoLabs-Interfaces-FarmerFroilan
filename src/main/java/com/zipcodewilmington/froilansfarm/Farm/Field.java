@@ -21,6 +21,9 @@ public class Field {
 
     public Field(int numberOfCropRows) {
         cropRows = new ArrayList<>(numberOfCropRows);
+        addCropRow(new CropRow(10));
+        addCropRow(new CropRow(10));
+        addCropRow(new CropRow(10));
     }
 
     public List<CropRow> getCropRows() {
