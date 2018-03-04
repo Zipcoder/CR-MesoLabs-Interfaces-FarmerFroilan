@@ -42,5 +42,4 @@ public class FarmerTest {
         Assert.assertEquals(expected, actual);
     }
 
-
 }

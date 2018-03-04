@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class ChickenCoopTest {
     ChickenCoop chickenCoop;
 
@@ -33,5 +35,14 @@ public class ChickenCoopTest {
         chickenCoop = new ChickenCoop(chicken);
         chickenCoop.removeChicken(chicken);
         Assert.assertFalse(chickenCoop.getChickens().contains(chicken));
+    }
+
+    @Test
+    public void setChickenCoopTest(){
+        ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+        chickens.add(new Chicken());
+        chickens.add(new Chicken());
+        chickenCoop.setChickens(chickens);
+        Assert.assertEquals(chickens, chickenCoop.getChickens());
     }
 }
