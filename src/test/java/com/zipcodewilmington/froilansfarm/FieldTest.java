@@ -8,7 +8,7 @@ public class FieldTest {
 
     @Test
     public void fieldConstructTest() {
-        Field field = new Field(5);
+        Field field = new Field();
         Assert.assertEquals(5, field.getCropRows().length);
     }
 

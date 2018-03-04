@@ -12,21 +12,21 @@ public class FarmTest {
 
     @Test
     public void constructorTest1() {
-        Farm farm = new Farm(4, 3, 5);
+        Farm farm = new Farm(4, 3);
         Assert.assertEquals(farm.getChickenCoops().size(), 4);
         Assert.assertTrue(farm.getFarmHouse() instanceof FarmHouse);
     }
 
     @Test
     public void constructorTest2() {
-        Farm farm = new Farm(4, 3, 5);
+        Farm farm = new Farm(4, 3);
         Assert.assertEquals(farm.getHorseStables().size(), 3);
         Assert.assertTrue(farm.getFarmHouse() instanceof FarmHouse);
     }
 
     @Test
     public void constructorTest3() {
-        Farm farm = new Farm(4, 3, 5);
+        Farm farm = new Farm(4, 3);
         Assert.assertEquals(farm.getField().getCropRows().length, 5);
         Assert.assertTrue(farm.getFarmHouse() instanceof FarmHouse);
     }

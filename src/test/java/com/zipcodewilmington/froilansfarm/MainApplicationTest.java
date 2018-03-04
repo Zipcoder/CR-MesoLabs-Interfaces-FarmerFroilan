@@ -43,4 +43,13 @@ public class MainApplicationTest {
         Assert.assertTrue(mainApplication.getFroilandasCropDuster() instanceof CropDuster);
     }
 
+    @Test
+    public void addFoodsToInventoryUtilityTest() {
+        MainApplication mainApplication = new MainApplication();
+        mainApplication.beginDay();
+        int expected = 150;
+        int actual = mainApplication.getFroilan().getFoodInventory().size();
+        Assert.assertEquals(expected, actual);
+    }
+
 }

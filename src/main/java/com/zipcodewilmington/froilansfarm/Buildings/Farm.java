@@ -10,14 +10,14 @@ public class Farm {
     private FarmHouse froilansHouse = new FarmHouse();
     private Field field;
 
-    public Farm(int amountOfChickenCoops, int amountOfHorseStables, int amountOfRowsInField) {
+    public Farm(int amountOfChickenCoops, int amountOfHorseStables) {
         for (int i = 0; i < amountOfChickenCoops; i++) {
             chickenCoops.add(new ChickenCoop());
         }
         for (int i = 0; i < amountOfHorseStables; i++) {
             horseStables.add(new Stable());
         }
-        this.field = new Field(amountOfRowsInField);
+        this.field = new Field();
     }
 
     public ArrayList<ChickenCoop> getChickenCoops() {
