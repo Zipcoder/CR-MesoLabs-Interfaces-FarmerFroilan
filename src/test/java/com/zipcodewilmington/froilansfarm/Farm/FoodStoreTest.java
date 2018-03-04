@@ -1,14 +1,15 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
-import com.zipcodewilmington.froilansfarm.Food.*;
+import com.zipcodewilmington.froilansfarm.Food.EarCorn;
+import com.zipcodewilmington.froilansfarm.Food.Egg;
+import com.zipcodewilmington.froilansfarm.Food.Pepper;
+import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * filename:
@@ -18,6 +19,7 @@ import static org.junit.Assert.*;
  */
 public class FoodStoreTest {
     private FoodStore store;
+
     @Before
     public void setup() {
         store = new FoodStore();

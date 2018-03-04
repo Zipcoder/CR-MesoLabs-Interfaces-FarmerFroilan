@@ -2,9 +2,7 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Exceptions.NoPilotException;
 import com.zipcodewilmington.froilansfarm.Person.Duster;
-import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
-import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

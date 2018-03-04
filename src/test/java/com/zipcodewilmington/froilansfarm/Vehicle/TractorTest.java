@@ -19,6 +19,7 @@ import org.junit.Test;
 public class TractorTest {
     Rider rider;
     Tractor tractor;
+
     @Before
     public void setup() {
         rider = new Farmer("rin", 10);

@@ -10,6 +10,8 @@ import com.zipcodewilmington.froilansfarm.Exceptions.StaminaTooLowException;
  */
 public interface Eater {
     void eat(Edible food);
+
     boolean isHungry();
+
     void exert(int stamina) throws StaminaTooLowException;
 }

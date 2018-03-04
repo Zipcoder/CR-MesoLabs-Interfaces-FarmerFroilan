@@ -75,7 +75,7 @@ public class FoodStore {
     public int getTotalStamina() {
         int sum = 0;
         for (Map.Entry<String, Integer> e : foodstore.entrySet()) {
-           sum += (StaminaValue.getStamina(e.getKey()) * e.getValue());
+            sum += (StaminaValue.getStamina(e.getKey()) * e.getValue());
         }
         return sum;
     }

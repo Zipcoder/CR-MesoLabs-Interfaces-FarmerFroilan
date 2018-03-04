@@ -31,7 +31,7 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
     }
 
     public void confirmDriver() throws NoDriverException {
-        if (rider==null)
+        if (rider == null)
             throw new NoDriverException();
     }
 }

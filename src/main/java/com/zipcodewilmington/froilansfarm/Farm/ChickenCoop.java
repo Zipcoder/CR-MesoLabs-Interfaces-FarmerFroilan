@@ -24,7 +24,7 @@ public class ChickenCoop extends Enclosure<Chicken> {
 
     protected static List<Chicken> populate(int numberOfChickens) {
         List<Chicken> ret = new ArrayList<>(numberOfChickens);
-        for (int i=0;i<numberOfChickens;i++)
+        for (int i = 0; i < numberOfChickens; i++)
             ret.add(new Chicken());
         return ret;
     }

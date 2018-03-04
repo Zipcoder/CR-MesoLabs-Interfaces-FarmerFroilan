@@ -2,8 +2,6 @@ package com.zipcodewilmington.froilansfarm.Farm;
 
 import org.junit.Before;
 
-import static org.junit.Assert.*;
-
 /**
  * filename:
  * project: froilans-farm
@@ -12,6 +10,7 @@ import static org.junit.Assert.*;
  */
 public class ChickenCoopTest {
     private Farm farm;
+
     @Before
     public void setup() {
     }

@@ -7,6 +7,7 @@ package com.zipcodewilmington.froilansfarm.interfaces;
  * date: 3/1/18
  */
 public interface Rideable {
-    void startRide(Rider rider) ;
+    void startRide(Rider rider);
+
     void stopRide();
 }

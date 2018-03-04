@@ -4,7 +4,6 @@ import com.zipcodewilmington.froilansfarm.Person.Duster;
 import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 /**

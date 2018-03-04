@@ -11,8 +11,8 @@ import java.util.List;
  */
 public class CropRow {
     private static final int fDEFAULT_NUMBER_OF_CROPS = 10;
-    private int maxCrops;
     List<Crop> crops;
+    private int maxCrops;
 
     public CropRow() {
         this(fDEFAULT_NUMBER_OF_CROPS);

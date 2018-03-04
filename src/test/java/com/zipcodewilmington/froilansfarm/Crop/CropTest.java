@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * filename:
  * project: froilans-farm
@@ -15,11 +13,6 @@ import static org.junit.Assert.*;
  */
 public class CropTest {
 
-    private class CropDummy extends Crop<Edible> {
-        public Edible yield() {
-            return null;
-        }
-    }
     private CropDummy dummy;
 
     @Before
@@ -39,5 +32,11 @@ public class CropTest {
         Assert.assertFalse(dummy.hasBeenHarvested());
         dummy.setHarvested();
         Assert.assertTrue(dummy.hasBeenHarvested());
+    }
+
+    private class CropDummy extends Crop<Edible> {
+        public Edible yield() {
+            return null;
+        }
     }
 }

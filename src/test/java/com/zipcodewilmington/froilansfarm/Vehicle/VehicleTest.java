@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Exceptions.NoDriverException;
-import com.zipcodewilmington.froilansfarm.Exceptions.NoPilotException;
 import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 import org.junit.Assert;
@@ -17,9 +16,6 @@ import org.junit.Test;
 public class VehicleTest {
     private VehicleDummy dummy;
     private Rider rider;
-    private class VehicleDummy extends Vehicle {
-        public void makeNoise() {}
-    }
 
     @Before
     public void setup() {
@@ -61,6 +57,11 @@ public class VehicleTest {
             Assert.fail();
         } catch (NoDriverException e) {
             e.printStackTrace();
+        }
+    }
+
+    private class VehicleDummy extends Vehicle {
+        public void makeNoise() {
         }
     }
 }
