@@ -66,4 +66,19 @@ public class FarmerTest {
         Assert.assertTrue(tomatoPlant.isFertilized);
     }
 
+    @Test
+    public void mountTest(){
+        Horse horse = new Horse();
+        farmer.mount(horse);
+        Assert.assertNotNull(farmer.getRide());
+    }
+
+    @Test
+    public void dismountTest(){
+        Horse horse = new Horse();
+        farmer.mount(horse);
+        farmer.dismount();
+        Assert.assertNull(farmer.getRide());
+    }
+
 }

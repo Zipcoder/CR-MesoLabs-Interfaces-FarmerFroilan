@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Farmer extends Person implements Rider, Botanist {
 
     private Farm farm;
+    private Rideable currentRide;
 
     public Farmer(String name){
         super(name);
@@ -40,11 +41,15 @@ public class Farmer extends Person implements Rider, Botanist {
     }
 
     public void mount(Rideable rideable){
-
+        this.currentRide = rideable;
     }
 
-    public void dismount(Rideable rideable){
+    public void dismount(){
+        this.currentRide = null;
+    }
 
+    public Rideable getRide(){
+        return this.currentRide;
     }
 
     public void fertilize(){
