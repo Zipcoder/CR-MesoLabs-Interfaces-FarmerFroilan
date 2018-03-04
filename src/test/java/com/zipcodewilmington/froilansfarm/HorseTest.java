@@ -30,7 +30,8 @@ public class HorseTest {
 
     @Test
     public void rideTest(){
-        
+        horse.setRider(farmer);
+        Assert.assertEquals(farmer, horse.getRider());
     }
 
 }
