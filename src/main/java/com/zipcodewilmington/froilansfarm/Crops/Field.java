@@ -7,11 +7,11 @@ public class Field <T extends Crop>{
     protected ArrayList<CropRow> rows;
 
     public Field(){
-        this.rows = new ArrayList<CropRow>();
+        this.rows = new ArrayList<>();
     }
 
-    public ArrayList<T> getRowsList(){
-        return null;
+    public ArrayList<CropRow> getRowsList(){
+        return this.rows;
     }
 
     public CropRow getRow(int index){

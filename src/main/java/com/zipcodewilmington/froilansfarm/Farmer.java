@@ -1,14 +1,28 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Crops.Crop;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Field;
 import com.zipcodewilmington.froilansfarm.Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
+import java.util.ArrayList;
+
 public class Farmer extends Person implements Rider, Botanist {
+
+    private Farm farm;
 
     public Farmer(String name){
         super(name);
+        this.farm = null;
+    }
+
+    public Farmer(String name, Farm farm){
+        super(name);
+        this.farm = farm;
     }
 
     public String makeNoise() {
@@ -34,6 +48,15 @@ public class Farmer extends Person implements Rider, Botanist {
     }
 
     public void fertilize(){
+        for (Field field:farm.getFields()) {
+            ArrayList<CropRow> rowsList = field.getRowsList();
+            for (CropRow cropRow:rowsList) {
+                fertilize(cropRow.getCrops());
+            }
+        }
+    }
 
+    public void fertilize(Crop crop){
+        crop.isFertilized = true;
     }
 }
