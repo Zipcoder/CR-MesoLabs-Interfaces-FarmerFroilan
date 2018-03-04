@@ -22,12 +22,10 @@ public class ChickenCoop extends Enclosure<Chicken> {
         super(populate(numberOfChickens));
     }
 
-    protected static List<Chicken> populate(int numberOfAnimals) {
-        List<Chicken> ret = new ArrayList<>();
-
-        for (int i = 0; i < numberOfAnimals; i++)
+    protected static List<Chicken> populate(int numberOfChickens) {
+        List<Chicken> ret = new ArrayList<>(numberOfChickens);
+        for (int i=0;i<numberOfChickens;i++)
             ret.add(new Chicken());
-
         return ret;
     }
 }

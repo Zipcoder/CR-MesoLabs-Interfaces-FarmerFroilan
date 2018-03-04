@@ -18,4 +18,12 @@ public enum StaminaValue {
     public int asInteger() {
         return this.staminaValue;
     }
+
+    public static int getStamina(String name) {
+        for (StaminaValue sv : StaminaValue.values()) {
+            if (sv.toString().equalsIgnoreCase(name))
+                return sv.asInteger();
+        }
+        return 0;
+    }
 }
