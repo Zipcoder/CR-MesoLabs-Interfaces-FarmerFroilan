@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Edible {
-    boolean isEdible();
+    void beEaten();
+
+    boolean isEaten();
 }

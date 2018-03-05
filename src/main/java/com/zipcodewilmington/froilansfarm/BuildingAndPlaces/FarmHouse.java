@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.BuildingsAndPlaces;
+package com.zipcodewilmington.froilansfarm.BuildingAndPlaces;
 
 public class FarmHouse{
     private static FarmHouse ourInstance = new FarmHouse();

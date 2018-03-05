@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Rideable {
-    boolean isRideable();
+    boolean mounted();
+
+    boolean dismounted();
 }

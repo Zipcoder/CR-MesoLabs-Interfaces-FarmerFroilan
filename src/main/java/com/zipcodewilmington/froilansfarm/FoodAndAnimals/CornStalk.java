@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.FoodAndAnimals;
 
-import java.util.ArrayList;
-
 public class CornStalk extends Crop{
     private EarOfCorn earOfCorn;
 
@@ -9,5 +7,13 @@ public class CornStalk extends Crop{
     public Object yield() {
         earOfCorn = new EarOfCorn();
         return earOfCorn;
+    }
+
+    public boolean hasBeenHarvested() {
+        return false;
+    }
+
+    public boolean hasBeenFertilized() {
+        return false;
     }
 }
