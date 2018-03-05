@@ -63,7 +63,7 @@ public class Farm {
     }
 
     public Field getField() {
-        return field;
+        return this.field;
     }
 
     public ArrayList<Stable> getStables() {
