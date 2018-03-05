@@ -7,6 +7,10 @@ public abstract class Crop extends Produce {
 
     public Crop(){}
 
+    public boolean isHarvested() {
+        return isHarvested;
+    }
+
     public void harvest(){
         this.isHarvested = true;
     }
