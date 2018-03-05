@@ -6,10 +6,7 @@ import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Buildings.Farm;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.People.Pilot;
-import com.zipcodewilmington.froilansfarm.Plants.CornStalk;
-import com.zipcodewilmington.froilansfarm.Plants.EarCorn;
-import com.zipcodewilmington.froilansfarm.Plants.Tomato;
-import com.zipcodewilmington.froilansfarm.Plants.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Plants.*;
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 
@@ -76,7 +73,7 @@ public class MainApplication {
         getFroilansFarm().getChickenCoops().get(3).addChicken(new Chicken());
         getFroilansFarm().getChickenCoops().get(3).addChicken(new Chicken());
         TomatoPlant tomatoPlant1 = new TomatoPlant();
-        getFroilan().plant(tomatoPlant1, getFroilansFarm().getField().getCropRows()[0]);
+        getFroilansFarm().getField().getCropRows()[0].getCropArrayList().add(tomatoPlant1);
         TomatoPlant tomatoPlant2 = new TomatoPlant();
         getFroilansFarm().getField().getCropRows()[0].getCropArrayList().add(tomatoPlant2);
         CornStalk cornStalk1 = new CornStalk();
@@ -158,6 +155,29 @@ public class MainApplication {
                 if (getFroilan().getFoodInventory().get(j) instanceof Egg) {
                     getFroilan().feed(getFroilanda(), getFroilan().getFoodInventory().get(j));
                 }
+            }
+        }
+    }
+
+    public void sundayRoutine() {
+        getFroilan().plant(new TomatoPlant(), getFroilansFarm().getField().getCropRows()[0]);
+        getFroilan().plant(new CornStalk(), getFroilansFarm().getField().getCropRows()[1]);
+        getFroilan().plant(new PotatoPlant(), getFroilansFarm().getField().getCropRows()[2]);
+    }
+
+    public void mondayRoutine() {
+        getFroilanda().mount(getFroilandasCropDuster());
+        getFroilanda().takeOff(getFroilandasCropDuster());
+        for (int i = 0; i < getFroilansFarm().getField().getCropRows().length; i++) {
+            getFroilanda().fertilizeRow(getFroilansFarm().getField().getCropRows()[i], getFroilandasCropDuster());
+        }
+    }
+
+    public void tuesdayRoutine() {
+        getFroilan().mount(getFroilansTractor());
+        for (int i = 0; i < getFroilansFarm().getField().getCropRows().length; i++) {
+            for (int j = 0; j < getFroilansFarm().getField().getCropRows()[i].getCropArrayList().size(); i++) {
+                getFroilan().fertilizeOnVehicle(getFroilansFarm().getField().getCropRows()[i].getCropArrayList().get(i));
             }
         }
     }

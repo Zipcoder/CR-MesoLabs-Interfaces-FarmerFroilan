@@ -4,19 +4,14 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    private ArrayList<Crop> cropArrayList = new ArrayList<Crop>();
+    private final ArrayList<Crop> cropArrayList = new ArrayList<>();
 
     public CropRow() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        acceptPlant(tomatoPlant);
+        getCropArrayList().add(0, null);
     }
 
     public ArrayList<Crop> getCropArrayList() {
-        return cropArrayList;
-    }
-
-    public void acceptPlant(Crop crop) {
-        getCropArrayList().add(crop);
+        return this.cropArrayList;
     }
 
 }

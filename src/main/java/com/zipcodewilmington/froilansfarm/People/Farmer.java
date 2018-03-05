@@ -17,7 +17,9 @@ public class Farmer extends Person implements Botanist {
     }
 
     public void plant(Crop cropToPlant, CropRow rowToPlantIn) {
-        rowToPlantIn.getCropArrayList().add(cropToPlant);
+        rowToPlantIn
+                .getCropArrayList()
+                .add(cropToPlant);
     }
 
     public String fertilizeOnVehicle(Crop cropToBeFertilized) {
