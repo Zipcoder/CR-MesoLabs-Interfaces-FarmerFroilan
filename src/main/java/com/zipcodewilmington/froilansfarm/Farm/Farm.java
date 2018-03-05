@@ -15,8 +15,8 @@ public class Farm {
     private final ArrayList<ChickenCoop> chickenCoops = new ArrayList<>();
     private final Tractor tractor = new Tractor();
     private final CropDuster cropDuster = new CropDuster();
-    private final Farmer froilan = new Farmer("Froilan");
-    private final Farmer froilanda = new Farmer("Froilanda");
+    private final Farmer froilan = new Farmer("Froilan", this);
+    private final Farmer froilanda = new Farmer("Froilanda", this);
     private static final Farm INSTANCE = new Farm();
 
     private Farm(){
@@ -52,7 +52,6 @@ public class Farm {
         this.getStables().add(new Stable(horse0, horse1, horse2));
         this.getStables().add(new Stable(horse3, horse4, horse5));
         this.getStables().add(new Stable(horse6, horse7, horse8, horse9));
-        this.field.plantCrop(new CornStalk(), new TomatoPlant(), new PotatoPlant(), new CornStalk(), new TomatoPlant());
     }
 
     public static Farm getINSTANCE() {
@@ -75,4 +74,19 @@ public class Farm {
         return chickenCoops;
     }
 
+    public Tractor getTractor() {
+        return tractor;
+    }
+
+    public CropDuster getCropDuster() {
+        return cropDuster;
+    }
+
+    public Farmer getFroilan() {
+        return froilan;
+    }
+
+    public Farmer getFroilanda() {
+        return froilanda;
+    }
 }
