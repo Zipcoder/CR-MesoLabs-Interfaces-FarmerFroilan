@@ -6,16 +6,14 @@ import java.util.ArrayList;
 
 public class Stable {
 
-    protected ArrayList<Horse> horseList = new ArrayList<Horse>();
+    private final ArrayList<Horse> horsesInStable = new ArrayList<Horse>();
 
-    public Stable(){
-
+    public void addHorse(){
+        horsesInStable.add(new Horse());
     }
 
-    public void addHorseToStable(){
-    }
-
-    public void removeHorseFromStable(){
+    public ArrayList<Horse> getHorsesInStable(){
+        return horsesInStable;
     }
 
 }

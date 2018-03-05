@@ -4,18 +4,20 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    CropRow cropRow;
+    private ArrayList<Crop> row = new ArrayList<Crop>();
 
-    public CropRow(){
+    public void addCrop(Crop crop){
+        row.add(crop);
     }
 
-
-    public void addCrop(){
-
+    public ArrayList<Crop> getCropRow(){
+        return row;
     }
 
-    public void growArbitraryVegetation(){
-
+    public int getCropRowSize(){
+        return row.size();
     }
 
 }
+
+

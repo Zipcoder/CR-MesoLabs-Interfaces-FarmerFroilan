@@ -1,18 +1,15 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class CornStalk extends Crop {
 
-    protected EarCorn earCorn = new EarCorn();
-
-    public CornStalk(){
-
-    }
-
-
-    public Object yields(){
-        return earCorn;
+    public EarCorn yields(){
+        if(!this.getHasBeenHarvested() && this.getHasBeenFertilized()){
+            return new EarCorn();
+        }
+        return null;
     }
 
 }

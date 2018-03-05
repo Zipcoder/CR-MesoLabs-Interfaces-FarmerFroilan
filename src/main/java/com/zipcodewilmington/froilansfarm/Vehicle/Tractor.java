@@ -5,9 +5,6 @@ import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
-    public Tractor(){
-
-    }
 
     public void operate() {
 
@@ -15,5 +12,17 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
     public void harvestCrop(Crop crop){
 
+    }
+
+    public void riding() {
+        this.hasFarmerRiding = true;
+    }
+
+    public void endRiding() {
+        this.hasFarmerRiding = false;
+    }
+
+    public String makeNoise() {
+        return "Rumble";
     }
 }

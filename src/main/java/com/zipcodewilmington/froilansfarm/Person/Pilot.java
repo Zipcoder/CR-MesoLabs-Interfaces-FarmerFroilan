@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Person;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 
 public class Pilot extends Person implements FarmVehicle{
@@ -15,4 +16,7 @@ public class Pilot extends Person implements FarmVehicle{
     }
 
 
+    public void eat(Edible food) {
+
+    }
 }

@@ -6,18 +6,14 @@ import java.util.ArrayList;
 
 public class ChickenCoop {
 
-    protected ArrayList<Chicken> chickenList = new ArrayList<Chicken>();
+    protected final ArrayList<Chicken> chickensInCoop = new ArrayList<Chicken>();
 
-    public ChickenCoop(){
-
+    public void addChicken(){
+        chickensInCoop.add(new Chicken());
     }
 
-    public void addChickenToCoop(){
-
-    }
-
-    public Chicken removeChickenFromCoop(){
-        return null;
+    public ArrayList<Chicken> getChickensInCoop(){
+        return chickensInCoop;
     }
 
 }

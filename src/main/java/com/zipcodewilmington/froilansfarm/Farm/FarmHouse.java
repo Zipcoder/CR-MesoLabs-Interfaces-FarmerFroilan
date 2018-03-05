@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class FarmHouse {
 
-    protected ArrayList<Person> personList = new ArrayList<Person>();
+    private final ArrayList<Person> personList = new ArrayList<Person>();
 
     public FarmHouse(){
 

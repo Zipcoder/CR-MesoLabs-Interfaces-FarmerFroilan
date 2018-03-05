@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Farm {
 
-    protected ArrayList<Stable> stableList = new ArrayList<Stable>();
-    protected ArrayList<ChickenCoop> chickenCoopList = new ArrayList<ChickenCoop>();
-    protected ArrayList<FarmHouse> farmHouse = new ArrayList<FarmHouse>();
-    protected ArrayList<Field> fieldList = new ArrayList<Field>();
+    private final ArrayList<Stable> stableList = new ArrayList<Stable>();
+    private final ArrayList<ChickenCoop> chickenCoopList = new ArrayList<ChickenCoop>();
+    private final  ArrayList<FarmHouse> farmHouse = new ArrayList<FarmHouse>();
+    private final ArrayList<Field> fieldList = new ArrayList<Field>();
 
     private Farm farm;
 

@@ -5,11 +5,14 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
 public abstract class Vehicle implements Rideable, NoiseMaker {
 
-    public String makeNoise() {
-        return null;
+    public boolean hasFarmerRiding;
+
+    public void setHasFarmerRiding(){
+        this.hasFarmerRiding = true;
     }
 
-    public boolean isRideable() {
-        return false;
+    public boolean getHasFarmerRiding(){
+        return hasFarmerRiding;
     }
+
 }

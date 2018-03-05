@@ -2,12 +2,11 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
-public class EdibleEgg extends Egg implements Edible {
+public class EdibleEgg implements Edible {
 
-    EdibleEgg edibleEgg;
+    private boolean isEdible = true;
 
-    public EdibleEgg(){
-
+    public boolean IsEdible() {
+        return this.isEdible;
     }
-
 }

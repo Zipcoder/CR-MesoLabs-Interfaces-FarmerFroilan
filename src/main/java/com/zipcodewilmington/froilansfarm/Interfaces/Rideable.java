@@ -2,5 +2,7 @@ package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Rideable {
 
-    public boolean isRideable();
+    void riding();
+    void endRiding();
+
 }

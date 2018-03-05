@@ -4,14 +4,9 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class Tomato implements Edible{
 
-    private Tomato tomato;
+    private boolean isEdible = true;
 
-    public Tomato(int id){
-        this.tomato = new Tomato(id);
+    public boolean IsEdible() {
+        return this.isEdible;
     }
-
-    public boolean isEdible() {
-        return false;
-    }
-
 }
