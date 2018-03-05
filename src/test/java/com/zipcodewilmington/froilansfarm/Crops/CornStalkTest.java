@@ -28,5 +28,15 @@ public class CornStalkTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void getHasBeenHarvestedTest() {
+        cornStalk.hasBeenHarvested = false;
+        cornStalk.hasBeenFertilized = true;
+
+        Assert.assertFalse(cornStalk.getHasBeenHarvested());
+        Assert.assertTrue(cornStalk.getHasBeenFertilized());
+    }
+
 }
 

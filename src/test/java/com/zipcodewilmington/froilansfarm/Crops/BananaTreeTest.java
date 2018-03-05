@@ -31,4 +31,19 @@ public class BananaTreeTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void getHasBeenHarvestedTest() {
+        bananaTree.hasBeenHarvested = false;
+        Assert.assertFalse(bananaTree.getHasBeenHarvested());
+    }
+
+    @Test
+    public void getHasBeenFertilizedTest() {
+        bananaTree.hasBeenFertilized = false;
+        bananaTree.hasBeenHarvested = true;
+
+        Assert.assertFalse(bananaTree.getHasBeenFertilized());
+        Assert.assertTrue(bananaTree.getHasBeenHarvested());
+    }
+
 }
