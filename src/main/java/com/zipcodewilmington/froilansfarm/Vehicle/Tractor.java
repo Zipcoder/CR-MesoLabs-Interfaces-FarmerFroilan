@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Field.Crop;
+import com.zipcodewilmington.froilansfarm.Field.CropRow;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 
 public class Tractor extends Vehicle implements FarmVehicle {
@@ -8,12 +10,12 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
     }
 
-    public boolean Rideable() {
-        return false;
+    public void harvest(Crop crop, CropRow CropRow) {
+
     }
 
-    public void harvest() {
-
+    public String makeNoise() {
+        return "Tractor Sounds";
     }
 
 }

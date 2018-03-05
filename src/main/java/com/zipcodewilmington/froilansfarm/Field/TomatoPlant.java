@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
-import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
-
 public class TomatoPlant extends Crop {
+
+    public Tomato tomato = new Tomato();
 
     public boolean hasBeenFertilized() {
         return false;
@@ -10,5 +10,9 @@ public class TomatoPlant extends Crop {
 
     public boolean hasBeenHarvested() {
         return false;
+    }
+
+    public Object yields() {
+        return tomato;
     }
 }

@@ -12,7 +12,8 @@ public class CropDuster extends Aircraft implements FarmVehicle {
 
     }
 
-    public boolean Rideable() {
-        return false;
+    @Override
+    public String makeNoise() {
+        return "BBRRRRRRRRRTTTTTTTTTTTTTTTTTT";
     }
 }

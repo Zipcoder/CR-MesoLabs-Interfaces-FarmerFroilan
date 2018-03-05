@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Field;
 
-public class EarCorn extends Edible{
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
+public class EarCorn implements Edible{
 
 }

@@ -4,12 +4,12 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 
 public class Horse extends Animal implements Rideable {
 
-    public boolean Rideable() {
-        return true;
+    public Horse() {
+
     }
 
-    public boolean eat() {
-        return true;
+    public void eat() {
+
     }
 
     public String makeNoise() {

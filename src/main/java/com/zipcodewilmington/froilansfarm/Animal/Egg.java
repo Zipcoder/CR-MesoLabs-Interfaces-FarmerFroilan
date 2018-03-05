@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public class Egg {
+public abstract class Egg {
 
 }
