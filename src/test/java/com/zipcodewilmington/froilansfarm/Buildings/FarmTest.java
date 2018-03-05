@@ -42,7 +42,6 @@ public class FarmTest{
     public void mondayTest() {
         for(Stable stable : stables) {
             froilan.rideAllHorses(stable);
-            froilan.feedAnimals(stable.getHorses());
         }
     }
 }
