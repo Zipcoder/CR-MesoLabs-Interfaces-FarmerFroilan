@@ -57,11 +57,9 @@ public class FarmerTest {
     public void fertilizeFieldTest(){
         Farm farm = Farm.getINSTANCE();
         farmer = new Farmer("farmer", farm);
-        Field field = new Field();
         TomatoPlant tomatoPlant = new TomatoPlant();
         CropRow cropRow = new CropRow(tomatoPlant);
-        field.getRowsList().add(cropRow);
-        farm.getFields().add(field);
+        farm.getField().getRowsList().add(cropRow);
         farmer.fertilize();
         Assert.assertTrue(tomatoPlant.isFertilized);
     }

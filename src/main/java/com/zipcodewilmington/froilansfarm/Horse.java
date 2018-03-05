@@ -8,6 +8,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 public class Horse implements Animal, Rideable{
     protected int calories;
     protected Rider rider;
+    protected boolean hasBeenRidden = false;
 
     public int getCalories() {
         return calories;
@@ -17,7 +18,7 @@ public class Horse implements Animal, Rideable{
         return "Neigh";
     }
 
-    public void setRider(){
+    public void removeRider(){
         this.rider = null;
     }
 
@@ -31,5 +32,9 @@ public class Horse implements Animal, Rideable{
 
     public void eat(Edible edible) {
         this.calories += edible.calories;
+    }
+
+    public void ride() {
+        this.hasBeenRidden = true;
     }
 }

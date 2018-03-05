@@ -29,11 +29,10 @@ public class FarmTest {
 
     @Test
     public void fieldControlTest(){
-        Field field = new Field();
+        Field field = farm.getField();
         TomatoPlant tomatoPlant = new TomatoPlant();
         field.plantCrop(tomatoPlant);
-        farm.getFields().add(field);
-        Assert.assertEquals(farm.getFields().get(0).getRow(0).getCrops(), tomatoPlant);
+        Assert.assertEquals(farm.getField().getRow(0).getCrops(), tomatoPlant);
     }
 
     @Test

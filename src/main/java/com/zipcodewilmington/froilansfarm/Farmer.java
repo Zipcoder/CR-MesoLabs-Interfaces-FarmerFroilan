@@ -54,11 +54,9 @@ public class Farmer extends Person implements Rider, Botanist {
     }
 
     public void fertilize(){
-        for (Field field:farm.getFields()) {
-            ArrayList<CropRow> rowsList = field.getRowsList();
-            for (CropRow cropRow:rowsList) {
-                fertilize(cropRow.getCrops());
-            }
+        ArrayList<CropRow> rowsList = farm.getField().getRowsList();
+        for (CropRow cropRow:rowsList) {
+            fertilize(cropRow.getCrops());
         }
     }
 
