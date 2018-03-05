@@ -42,6 +42,7 @@ public class Farmer extends Person implements Rider, Botanist {
 
     public void mount(Rideable rideable){
         this.currentRide = rideable;
+        rideable.setRider(this);
     }
 
     public void dismount(){

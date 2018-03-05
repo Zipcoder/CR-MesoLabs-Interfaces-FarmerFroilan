@@ -26,7 +26,7 @@ public class Tractor implements Vehicle{
         return fuelPercent;
     }
 
-    @Override
+
     public void setRider() {
         this.rider = null;
     }

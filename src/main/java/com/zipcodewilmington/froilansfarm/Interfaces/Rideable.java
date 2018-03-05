@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Rideable {
-    void setRider();
+    void setRider(Rider rider);
 }

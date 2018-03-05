@@ -5,9 +5,9 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Animal;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
-public class Horse <T extends Rider> implements Animal, Rideable{
+public class Horse implements Animal, Rideable{
     protected int calories;
-    protected T rider;
+    protected Rider rider;
 
     public int getCalories() {
         return calories;
@@ -21,11 +21,11 @@ public class Horse <T extends Rider> implements Animal, Rideable{
         this.rider = null;
     }
 
-    public T getRider() {
+    public Rider getRider() {
         return rider;
     }
 
-    public void setRider(T rider) {
+    public void setRider(Rider rider) {
         this.rider = rider;
     }
 
