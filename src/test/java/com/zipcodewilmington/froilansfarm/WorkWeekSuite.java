@@ -18,7 +18,7 @@ import org.junit.runners.Suite;
         Sunday.class
 })
 
-public class MainApplicationTest {
+public class WorkWeekSuite {
 
 }
 

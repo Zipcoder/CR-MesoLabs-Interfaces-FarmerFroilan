@@ -1,14 +1,20 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Exceptions.NoDriverException;
+import com.zipcodewilmington.froilansfarm.Farm.Farm;
+import com.zipcodewilmington.froilansfarm.Farm.FoodStore;
+import com.zipcodewilmington.froilansfarm.Food.StaminaValue;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 /**
  * filename:
@@ -17,13 +23,17 @@ import org.junit.Test;
  * date: 3/3/18
  */
 public class TractorTest {
-    Rider rider;
+    Farmer rider;
     Tractor tractor;
+    FoodStore store;
+    Farm farm;
 
     @Before
     public void setup() {
         rider = new Farmer("rin", 10);
-        tractor = new Tractor();
+        farm = new Farm();
+        store = new FoodStore();
+        tractor = new Tractor(store);
     }
 
     @Test
@@ -40,6 +50,29 @@ public class TractorTest {
 
     @Test
     public void testOperate() {
-        Assert.fail();
+        rider.mount(tractor);
+        List<CropRow> rows = farm.getField().getCropRows();
+
+        int expectedStamina = 0;
+        for (CropRow row : rows) {
+            for (int i = 0; i < 3; i++) {
+                rider.plant(new TomatoPlant(), row);
+                expectedStamina += StaminaValue.TOMATO.asInteger();
+            }
+        }
+
+        int totalStaminaBefore = store.getTotalStamina();
+
+        Assert.assertNotEquals(expectedStamina, totalStaminaBefore);
+
+        try {
+            tractor.operate(farm);
+        } catch (NoDriverException e) {
+            Assert.fail();
+        }
+
+        int actual = store.getTotalStamina();
+
+        Assert.assertEquals(expectedStamina, actual);
     }
 }
