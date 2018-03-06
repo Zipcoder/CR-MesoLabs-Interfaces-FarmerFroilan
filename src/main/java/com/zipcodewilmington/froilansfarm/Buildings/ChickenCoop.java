@@ -9,7 +9,7 @@ public class ChickenCoop {
     private ArrayList<Chicken> chickensInCoop;
 
     public ChickenCoop() {
-        chickensInCoop = new ArrayList<Chicken>();
+        this.chickensInCoop = new ArrayList<Chicken>();
     }
 
     public ArrayList<Chicken> getChickensInCoop() {
