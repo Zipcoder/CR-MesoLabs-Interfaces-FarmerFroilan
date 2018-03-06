@@ -73,7 +73,11 @@ public class MainApplication {
         getFroilansFarm().getChickenCoops().get(3).addChicken(new Chicken());
         getFroilansFarm().getChickenCoops().get(3).addChicken(new Chicken());
         TomatoPlant tomatoPlant1 = new TomatoPlant();
-        getFroilansFarm().getField().getCropRows()[0].getCropArrayList().add(tomatoPlant1);
+        getFroilansFarm()
+                .getField()
+                .getCropRows()[0]
+                .getCropArrayList()
+                .add(tomatoPlant1);
         TomatoPlant tomatoPlant2 = new TomatoPlant();
         getFroilansFarm().getField().getCropRows()[0].getCropArrayList().add(tomatoPlant2);
         CornStalk cornStalk1 = new CornStalk();
