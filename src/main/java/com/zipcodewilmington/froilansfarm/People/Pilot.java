@@ -1,18 +1,15 @@
 package com.zipcodewilmington.froilansfarm.People;
 
-import com.zipcodewilmington.froilansfarm.Buildings.Stable;
-import com.zipcodewilmington.froilansfarm.Interfaces.*;
-import com.zipcodewilmington.froilansfarm.Production.Crop;
-import com.zipcodewilmington.froilansfarm.Production.CropRow;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
-public class Farmer extends Person implements Botanist {
+public class Pilot extends Person {
 
 
-    public Farmer() {
+    public Pilot() {
 
     }
-
-
 
     public void mount(Rideable object) {
 
@@ -34,11 +31,6 @@ public class Farmer extends Person implements Botanist {
         }
     }
 
-    public void plant(Crop someCrop, CropRow someCropRow) {
-        someCropRow.addCrop(someCrop);
-
-    }
-
     public void makeNoise() {
         System.out.println("Hello");
     }
@@ -46,5 +38,7 @@ public class Farmer extends Person implements Botanist {
     public void eat(Edible object) {
         System.out.println("yum");
     }
+
+
 
 }

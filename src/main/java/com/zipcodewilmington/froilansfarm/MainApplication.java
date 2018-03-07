@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import com.zipcodewilmington.froilansfarm.Buildings.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.Buildings.Stable;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
+import com.zipcodewilmington.froilansfarm.People.Pilot;
 import com.zipcodewilmington.froilansfarm.Production.CornStalk;
 import com.zipcodewilmington.froilansfarm.Production.CropRow;
 import com.zipcodewilmington.froilansfarm.Production.TomatoPlant;
@@ -17,19 +18,17 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 public class MainApplication {
 
     private Farm froilansFarm;
-    private CropDuster froilansDuster;
+    private CropDuster froilandasCropDuster;
     private Tractor froilansTractor;
     private Farmer froilan;
-    private Farmer froilanda;
+    private Pilot froilanda;
 
     public MainApplication() {
         this.froilansFarm = new Farm();
-        this.froilansDuster = new CropDuster();
+        this.froilandasCropDuster = new CropDuster();
         this.froilansTractor = new Tractor();
         this.froilan = new Farmer();
-        this.froilanda = new Farmer();
-
-
+        this.froilanda = new Pilot();
     }
 
 
@@ -41,14 +40,46 @@ public class MainApplication {
     }
 
 
-    public void establishThePlot() {
+    protected void establishThePlot() {
         establishTheField();
         establishTheChickenCoops();
         establishTheStables();
+    }
+
+    public void sunday() {
+
 
     }
 
+    public void monday() {
 
+
+    }
+
+    public void tuesday() {
+
+
+    }
+
+    public Farm getFroilansFarm() {
+        return this.froilansFarm;
+    }
+
+    public CropDuster getFroilandasCropDuster() {
+        return this.froilandasCropDuster;
+    }
+
+    public Tractor getFroilansTractor() {
+        return this.froilansTractor;
+    }
+
+    public Farmer getFroilan() {
+        return this.froilan;
+    }
+
+    public Pilot getFroilanda() {
+        return this.froilanda;
+    }
 
     private void establishTheField() {
         CropRow row1 = new CropRow();

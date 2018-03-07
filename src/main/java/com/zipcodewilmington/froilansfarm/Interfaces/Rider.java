@@ -6,4 +6,6 @@ public interface Rider {
     public void dismount(Rideable object);
 
 
+
+
 }
