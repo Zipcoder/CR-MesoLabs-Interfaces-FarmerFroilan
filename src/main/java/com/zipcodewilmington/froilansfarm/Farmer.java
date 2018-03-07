@@ -16,8 +16,9 @@ public class Farmer implements Person, Rider, Botanist  {
         edible.eat();
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
 
+        return null;
     }
     public void mount(Rideable rideable) {
         rideable.mount();

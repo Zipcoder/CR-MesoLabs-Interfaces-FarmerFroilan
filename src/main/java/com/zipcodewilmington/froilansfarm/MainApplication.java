@@ -51,14 +51,15 @@ public class MainApplication {
         for(int i = 0; i < 15; i++) {
             chickenCoop1.addChicken(new Chicken(true));
             chickenCoop2.addChicken(new Chicken(true));
-            chickenCoop3.addChicken(new Chicken(true));
-            chickenCoop4.addChicken(new Chicken(true));
+            chickenCoop3.addChicken(new Chicken(false));
+            chickenCoop4.addChicken(new Chicken(false));
         }
 //add the chickenCoops to the arrayList. so now we have 3 chickencoops
         ArrayList<ChickenCoop> chickenCoops = new ArrayList<ChickenCoop>();
         chickenCoops.add(chickenCoop1);
         chickenCoops.add(chickenCoop2);
         chickenCoops.add(chickenCoop3);
+        chickenCoops.add(chickenCoop4);
 
 //create 3 stables
         Stable stable1 = new Stable();
@@ -90,5 +91,7 @@ public class MainApplication {
         Farm froilanFarm  = new Farm(stables, chickenCoops, farmhouse);
 
         Farmer froilan = new Farmer(froilanFarm);
-    }
+
+
+        }
 }

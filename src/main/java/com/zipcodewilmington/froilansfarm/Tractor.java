@@ -2,16 +2,18 @@ package com.zipcodewilmington.froilansfarm;
 
 public class Tractor implements FarmVehicle {
 
+    //check method
     public Crop harvest(Crop crop) {
-        return new Crop();
+        return (Crop) crop.yield();
     }
 
     public void operate(Farm farm) {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
 
+        return null;
     }
 
     public void mount() {

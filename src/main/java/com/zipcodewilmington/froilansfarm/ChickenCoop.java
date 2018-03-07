@@ -8,4 +8,12 @@ public class ChickenCoop {
     public void addChicken(Chicken chicken){
         chickens.add(chicken);
     }
+
+    public ArrayList<Chicken> getChickens() {
+        return chickens;
+    }
+
+    public void setChickens(ArrayList<Chicken> chickens) {
+        this.chickens = chickens;
+    }
 }

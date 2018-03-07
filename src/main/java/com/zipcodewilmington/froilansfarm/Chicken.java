@@ -7,7 +7,7 @@ public class Chicken extends Produce implements Animal {
     }
 
     Edible yield() {
-        if(this.isHasBeenFertilized()) {
+        if(!this.isHasBeenFertilized()) {
             return new EdibleEgg();
         }
         return null;
@@ -17,7 +17,8 @@ public class Chicken extends Produce implements Animal {
         edible.eat();
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return "cluck";
 
     }
 

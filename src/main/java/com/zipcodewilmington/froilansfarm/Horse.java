@@ -5,8 +5,9 @@ public class Horse implements Animal, Rideable {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
 
+        return null;
     }
 
     public void mount() {
