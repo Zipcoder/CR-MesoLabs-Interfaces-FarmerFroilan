@@ -7,6 +7,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.*;
 public class Farmer extends Person implements Botanist, Rider {
 
     public void plant(CropRow cropRow, Crop crop) {
+
         cropRow.getCropRow().add(crop);
     }
 

@@ -8,10 +8,12 @@ public abstract class Vehicle implements Rideable, NoiseMaker {
     public boolean hasFarmerRiding;
 
     public void setHasFarmerRiding(){
+
         this.hasFarmerRiding = true;
     }
 
     public boolean getHasFarmerRiding(){
+
         return hasFarmerRiding;
     }
 

@@ -2,10 +2,7 @@ package com.zipcodewilmington.froilansfarm.Person;
 
 import com.zipcodewilmington.froilansfarm.Animal.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.Animal.Horse;
-import com.zipcodewilmington.froilansfarm.Field.Crop;
-import com.zipcodewilmington.froilansfarm.Field.CropRow;
-import com.zipcodewilmington.froilansfarm.Field.EarCorn;
-import com.zipcodewilmington.froilansfarm.Field.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Field.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,14 +23,25 @@ public class FarmerTest {
         Assert.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void PlantCropTest(){
-//        //Given
-//        Farmer farmerTest = new Farmer();
-//        farmerTest.plant();
-//        //When
-//
-//    }
+    @Test
+    public void PlantCropTest(){
+        //Given
+        Farmer farmerTest = new Farmer();
+
+        CropRow cropRowTest = new CropRow();
+        cropRowTest.addCrop(new TomatoPlant());
+        cropRowTest.addCrop(new TomatoPlant());
+        cropRowTest.addCrop(new TomatoPlant());
+
+        farmerTest.plant(cropRowTest, new CornStalk());
+
+        //When
+        int expected = 4;
+        int actual = cropRowTest.getCropRowSize();
+
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void mountTest(){
