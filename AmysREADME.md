@@ -3,6 +3,10 @@
 * **Purpose:** To demonstrate [multi-inheritence design issues](https://www.geeksforgeeks.org/java-and-multiple-inheritance/)
 * **Prerequesites:** A `UML` approved by an instructor.
 
+UML Below:
+
+
+
 
 ![alt text](sshots/Screen Shot 2018-03-05 at 2.34.02 PM.png "my uml")
 
