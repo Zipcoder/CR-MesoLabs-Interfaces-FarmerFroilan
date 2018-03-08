@@ -12,4 +12,7 @@ public class Farm {
         this.chickenCoops = chickenCoops;
         this.farmhouse = farmhouse;
     }
+
+
+
 }
