@@ -44,4 +44,12 @@ public class Farm {
     public Field getField() {
         return this.theField;
     }
+
+    public int countHorses() {
+        int count = 0;
+        for (int i = 0; i < getStablesOnFarm().size(); i++) {
+            count += getStablesOnFarm().get(i).getHorsesInStable().size();
+        }
+        return count;
+    }
 }

@@ -17,6 +17,11 @@ public class MainApplicationTest {
         testApp.establishThePlot();
     }
 
+    @Test
+    public void morningRoutineTest() {
+        testApp.morningRoutine();
+    }
+
 
     @Test
     public void sundayTest1() {

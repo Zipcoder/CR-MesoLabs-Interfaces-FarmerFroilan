@@ -6,9 +6,7 @@ import com.zipcodewilmington.froilansfarm.Buildings.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.Buildings.Stable;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.People.Pilot;
-import com.zipcodewilmington.froilansfarm.Production.CornStalk;
-import com.zipcodewilmington.froilansfarm.Production.CropRow;
-import com.zipcodewilmington.froilansfarm.Production.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Production.*;
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 
@@ -47,18 +45,48 @@ public class MainApplication {
     }
 
     public void sunday() {
+        morningRoutine();
 
 
     }
 
     public void monday() {
+        morningRoutine();
 
 
     }
 
     public void tuesday() {
+        morningRoutine();
 
 
+    }
+
+    public void morningRoutine() {
+        for (int i = 0; i < getFroilansFarm().getStablesOnFarm().size(); i++) {
+            for (int j = 0; j < getFroilansFarm().getStablesOnFarm().get(i).getHorsesInStable().size(); j++) {
+                froilan.mount(getFroilansFarm().getStablesOnFarm().get(i).getHorsesInStable().get(j));
+                froilan.dismount(getFroilansFarm().getStablesOnFarm().get(i).getHorsesInStable().get(j));
+                getFroilansFarm().getStablesOnFarm().get(i).getHorsesInStable().get(j).eat(new EarCorn());
+                getFroilansFarm().getStablesOnFarm().get(i).getHorsesInStable().get(j).eat(new EarCorn());
+                getFroilansFarm().getStablesOnFarm().get(i).getHorsesInStable().get(j).eat(new EarCorn());
+            }
+        }
+
+        froilan.eat(new EarCorn());
+        froilan.eat(new Tomato());
+        froilan.eat(new Tomato());
+        froilan.eat(new EdibleEgg());
+        froilan.eat(new EdibleEgg());
+        froilan.eat(new EdibleEgg());
+        froilan.eat(new EdibleEgg());
+        froilan.eat(new EdibleEgg());
+
+        froilanda.eat(new EarCorn());
+        froilanda.eat(new EarCorn());
+        froilanda.eat(new Tomato());
+        froilanda.eat(new EdibleEgg());
+        froilanda.eat(new EdibleEgg());
     }
 
     public Farm getFroilansFarm() {
@@ -206,8 +234,6 @@ public class MainApplication {
         froilansFarm.getStablesOnFarm().add(stable2);
         froilansFarm.getStablesOnFarm().add(stable3);
     }
-
-
 
 
 }
