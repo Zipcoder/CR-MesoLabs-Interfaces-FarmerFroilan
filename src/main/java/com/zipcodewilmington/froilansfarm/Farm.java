@@ -5,4 +5,8 @@ public class Farm {
     private com.zipcodewilmington.froilansfarm.Storage.ChickenCoops chickenCoops;
     private com.zipcodewilmington.froilansfarm.Storage.Farmhouse farmhouse;
     private com.zipcodewilmington.froilansfarm.Storage.Field field;
+
+    public void executeRoutine(Weekdays weekday) {
+    }
+
 }
