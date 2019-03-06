@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Storage;
 
-import com.zipcodewilmington.froilansfarm.Farm;
-
-public class Farmhouse extends Farm {
+public class Farmhouse {
+    private com.zipcodewilmington.froilansfarm.People.Person people;
 }
