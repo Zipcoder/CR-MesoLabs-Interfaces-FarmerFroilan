@@ -1,5 +1,11 @@
-package com.zipcodewilmington.froilansfarm.Storage;
+package com.zipcodewilmington.froilansfarm.storage;
 
-public class Stables {
-    private com.zipcodewilmington.froilansfarm.Animals.Horse horses;
+import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Horse;
+
+public class Stables implements  Storage {
+    private Horse horses;
+
+    public void add(Object storageObject) {
+
+    }
 }
