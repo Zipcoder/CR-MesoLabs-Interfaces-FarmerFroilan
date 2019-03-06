@@ -1,4 +1,5 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.interfaceBehaviors;
 
 public interface Rideable {
+    void ride();
 }

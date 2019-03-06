@@ -1,5 +1,12 @@
-package com.zipcodewilmington.froilansfarm.Storage;
+package com.zipcodewilmington.froilansfarm.storage;
 
-public class ChickenCoops {
-    private com.zipcodewilmington.froilansfarm.Animals.Chicken chickens;
+import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
+
+public class ChickenCoops implements  Storage {
+    private Chicken chickens;
+
+
+    public void add(Object storageObject) {
+
+    }
 }

@@ -1,5 +1,10 @@
-package com.zipcodewilmington.froilansfarm.Storage;
+package com.zipcodewilmington.froilansfarm.storage;
 
-public class Farmhouse {
-    private com.zipcodewilmington.froilansfarm.People.Person people;
+public class Farmhouse implements Storage{
+    private com.zipcodewilmington.froilansfarm.animals.people.Person people;
+
+
+    public void add(Object storageObject) {
+
+    }
 }

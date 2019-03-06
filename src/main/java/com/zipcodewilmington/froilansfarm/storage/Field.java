@@ -1,5 +1,11 @@
-package com.zipcodewilmington.froilansfarm.Storage;
+package com.zipcodewilmington.froilansfarm.storage;
 
-public class Field {
-    private com.zipcodewilmington.froilansfarm.Produce.CropRows cropRows;
+import com.zipcodewilmington.froilansfarm.producers.producerFactories.CropRows;
+
+public class Field implements Storage{
+    private CropRows cropRows;
+
+    public void add(Object storageObject) {
+
+    }
 }
