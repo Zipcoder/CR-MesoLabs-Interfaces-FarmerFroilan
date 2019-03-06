@@ -1,7 +1,15 @@
-package com.zipcodewilmington.froilansfarm.People;
+package com.zipcodewilmington.froilansfarm.animals.people;
 
-import com.zipcodewilmington.froilansfarm.Eater;
-import com.zipcodewilmington.froilansfarm.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.animals.Eater;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.NoiseMaker;
 
-public class Person implements Eater, NoiseMaker {
+public class Person  implements  NoiseMaker, Eater {
+
+    public void eat() {
+
+    }
+
+    public void makeNoise() {
+
+    }
 }

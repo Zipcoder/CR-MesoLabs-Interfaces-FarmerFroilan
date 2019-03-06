@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.Vehicles;
+package com.zipcodewilmington.froilansfarm.vehicles;
 
 public class FarmVehicle extends Vehicle {
     public void operate() {
