@@ -23,4 +23,5 @@ public class Stables implements  Storage<Horse> {
         return this.horses.size();
     }
 
+
 }
