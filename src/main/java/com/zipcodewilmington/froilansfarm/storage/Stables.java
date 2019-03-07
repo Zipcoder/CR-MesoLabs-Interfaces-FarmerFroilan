@@ -8,4 +8,8 @@ public class Stables implements  Storage {
     public void add(Object storageObject) {
 
     }
+
+    public Horse retrieve(Integer objectId) {
+        return null;
+    }
 }
