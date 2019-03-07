@@ -15,7 +15,8 @@ public class Chicken extends Animal implements ProduceInterface  {
         return null;
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return null;
 
     }
 }
