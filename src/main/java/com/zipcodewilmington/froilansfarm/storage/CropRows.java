@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.producers.producerFactories;
+package com.zipcodewilmington.froilansfarm.storage;
 
 import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
 import com.zipcodewilmington.froilansfarm.storage.Storage;
