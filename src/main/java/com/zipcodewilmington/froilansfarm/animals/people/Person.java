@@ -10,7 +10,7 @@ public class Person extends Animal {
 
     }
 
-    public void makeNoise() {
-
+    public String makeNoise() {
+        return null;
     }
 }
