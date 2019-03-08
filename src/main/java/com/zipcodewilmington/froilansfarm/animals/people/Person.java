@@ -18,7 +18,6 @@ public class Person extends Animal {
     }
 
 
-    // change
     public void eat(Edible edible) {
         Integer currentAmount = currentEatenAmount(edible);
         currentAmount++;
@@ -50,4 +49,6 @@ public class Person extends Animal {
         return retVal;
 
     }
+
+    public void eat(){}
 }

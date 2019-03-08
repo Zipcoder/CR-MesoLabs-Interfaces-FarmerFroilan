@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.animalTest.farmAnimalTest;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Horse;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -41,6 +42,7 @@ public class horseTest {
         // Given
         Integer expected = 1;
         Horse horse = new Horse();
+
 
         // When
         horse.eat();
