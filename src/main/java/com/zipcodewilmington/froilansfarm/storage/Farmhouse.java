@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 public class Farmhouse implements Storage{
+
     private com.zipcodewilmington.froilansfarm.animals.people.Person people;
 
 
