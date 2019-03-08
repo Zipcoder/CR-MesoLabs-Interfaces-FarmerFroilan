@@ -7,6 +7,6 @@ public class Pilot extends Person implements Rider {
 
 
     public void mount(Rideable ride) {
-
+        ride.ride();
     }
 }
