@@ -63,7 +63,6 @@ public class CornStalkTests {
     @Test
     public void getIdTest(){
         // given
-
         // when
         // then
     }

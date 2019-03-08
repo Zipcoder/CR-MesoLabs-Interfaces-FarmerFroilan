@@ -12,4 +12,8 @@ public class Farmhouse implements Storage{
     public Object retrieve(Integer objectId) {
         return null;
     }
+
+    public Integer getCount() {
+        return null;
+    }
 }
