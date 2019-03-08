@@ -47,4 +47,8 @@ public class CropRows implements Storage<Crop> {
     public Crop retrieve(Integer objectId) {
         return null;
     }
+
+    public Integer getCount() {
+        return null;
+    }
 }
