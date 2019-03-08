@@ -50,8 +50,4 @@ public class Person extends Animal {
         return retVal;
 
     }
-
-    public void eat() {
-
-    }
 }

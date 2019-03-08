@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.animals.farmAnimal;
 
 import com.zipcodewilmington.froilansfarm.animals.Animal;
 import com.zipcodewilmington.froilansfarm.animals.Eater;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Rideable;
 import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
@@ -18,7 +19,7 @@ public class Horse  extends Animal implements  Rideable {
         hasBeenRiddenToday = false;
     }
 
-    public void eat() {
+    public void eat(Edible e) {
         foodEaten++;
     }
 
