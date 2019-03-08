@@ -10,7 +10,19 @@ public class CornStalk extends Crop {
 
     public CornStalk(){}
 
-    public CornStalk(Boolean isFertilized){}
+    public CornStalk(Boolean isFertilized, Integer numberOfCorn, Long id){}
+
+    public Boolean getIsFertilized(){
+        return null;
+    }
+
+    public Integer getNumberOfCorn(){
+        return null;
+    }
+
+    public Long getId(){
+        return null;
+    }
 
     @Override
     public Corn yield(){
