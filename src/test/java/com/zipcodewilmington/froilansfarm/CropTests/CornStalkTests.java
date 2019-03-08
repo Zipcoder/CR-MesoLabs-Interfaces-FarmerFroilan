@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.CropTests;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.zipcodewilmington.froilansfarm.producers.producerFactories.CornStalk;
+import com.zipcodewilmington.froilansfarm.storage.CornSilo;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -92,7 +93,7 @@ public class CornStalkTests {
         cornStalk.setNumberOfCorn(5);
         Integer newValue = cornStalk.getNumberOfCorn();
         // then
-        Assert.assertEquals(initial, newValue);
+        Assert.assertNotEquals(initial, newValue);
     }
 
     @Test
@@ -110,7 +111,12 @@ public class CornStalkTests {
     @Test
     public void yieldTest(){
         // given
+        CornStalk cornStalk = new CornStalk(true, 4, 8L);
+        Integer initial = cornStalk.getNumberOfCorn();
         // when
+        cornStalk.yield();
+        Integer newValue = cornStalk.getNumberOfCorn();
         // then
+        Assert.assertNotEquals(initial, newValue);
     }
 }
