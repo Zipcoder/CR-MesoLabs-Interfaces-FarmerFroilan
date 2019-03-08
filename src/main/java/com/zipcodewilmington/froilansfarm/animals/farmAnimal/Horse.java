@@ -19,7 +19,7 @@ public class Horse  extends Animal implements  Rideable {
         hasBeenRiddenToday = false;
     }
 
-    public void eat(Edible e) {
+    public void eat() {
         foodEaten++;
     }
 
