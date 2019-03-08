@@ -1,9 +1,6 @@
 package com.zipcodewilmington.froilansfarm.producers.producerFactories;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
 import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
-import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
 
 public class CornStalk extends Crop {
     private Boolean isFertilized;
@@ -24,9 +21,14 @@ public class CornStalk extends Crop {
         return null;
     }
 
+    public void setIsFertilized(Boolean isFertilized){}
+
+    public void setNumberOfCorn(Integer numberOfCorn){}
+
+    public void setId(Long id){}
+
     @Override
-    public Corn yield(){
-        return null;
+    public void yield(){
     }
 
 
