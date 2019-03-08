@@ -2,24 +2,32 @@ package com.zipcodewilmington.froilansfarm.animalTest.farmAnimalTest;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Horse;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
+import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-public class horseTest {
+import java.util.HashMap;
+
+public class HorseTest {
+
+    private Edible edible ;
+
+    @Before
+    public void prepEdibles(){
+        edible = new Corn();
+    }
 
     @Test
     public void testNullaryHorseConstructor(){
         // given
         Boolean expectedRiddenValue = false;
-        Integer expectedFoodEaten = 0;
 
         // When
         Horse horse = new Horse();
         Boolean actualRiddenValue = horse.getHasBeenRiddenToday();
-        Integer actualFoodEaten = horse.getFoodEaten();
 
         // then
-        Assert.assertEquals(expectedFoodEaten, actualFoodEaten);
         Assert.assertEquals(expectedRiddenValue, actualRiddenValue);
     }
 
@@ -37,16 +45,19 @@ public class horseTest {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void testGetSetFoodEaten(){
-        // Given
-        Integer expected = 1;
-        Horse horse = new Horse();
 
+
+    @Test
+    public void testEatTwoFoodSameFood(){
+        // Given
+        Horse horse = new Horse();
+        Integer expected = 2;
 
         // When
-        horse.eat();
-        Integer actual = horse.getFoodEaten();
+        horse.eat(edible);
+        horse.eat(edible);
+        HashMap<Edible, Integer> foodEaten = horse.getFood();
+        Integer actual = foodEaten.get(edible);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -62,6 +73,20 @@ public class horseTest {
         String actual = horse.makeNoise();
 
         // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testRide(){
+        // Given
+        Horse horse = new Horse();
+        Boolean expected = true;
+
+        // When
+        horse.ride();
+        Boolean actual = horse.getHasBeenRiddenToday();
+
+        //
         Assert.assertEquals(expected, actual);
     }
 
