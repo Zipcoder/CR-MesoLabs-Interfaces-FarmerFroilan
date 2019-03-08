@@ -1,8 +1,6 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
-public class Field implements Storage{
-    private CropRows cropRows;
-
+public class CornSilo implements Storage {
     public void add(Object storageObject) {
 
     }
