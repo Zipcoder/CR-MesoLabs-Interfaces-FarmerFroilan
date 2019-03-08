@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.interfaceBehaviors.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
 
 public class Chicken extends Animal implements ProduceInterface  {
-    public void eat() {
+    public void eat(Edible e) {
 
     }
 
