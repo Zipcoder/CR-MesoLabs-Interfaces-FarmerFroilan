@@ -83,16 +83,54 @@ public class CropRowsTest {
     }
 
     @Test
-    public void addCropTest1(){
+    public void addCornStalkTest(){
         // given
+        CropRows cropRows = new CropRows(0, 0);
+        CornStalk cornStalk = new CornStalk(false, 0);
+        Integer expected = 1;
         // when
+        cropRows.add(cornStalk);
+        Integer actual = cropRows.getNumberOfCornStalks();
         // then
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void addCropTest2(){
+    public void addTomatoPlantTest(){
         // given
+        CropRows cropRows = new CropRows(0, 0);
+        TomatoPlant tomatoPlant = new TomatoPlant(false , 0);
+        Integer expected = 1;
         // when
+        cropRows.add(tomatoPlant);
+        Integer actual = cropRows.getNumberOfTomatoPlants();
         // then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void removeCornStalkTest(){
+        // given
+        CropRows cropRows = new CropRows(1, 0);
+        CornStalk cornStalk = new CornStalk(true, 5);
+        Integer expected = 0;
+        // when
+        cropRows.remove(cornStalk);
+        Integer actual = cropRows.getNumberOfCornStalks();
+        // then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void removeTomatoPlantTest(){
+        // given
+        CropRows cropRows = new CropRows(0, 1);
+        TomatoPlant tomatoPlant = new TomatoPlant(true, 5);
+        Integer expected = 0;
+        // when
+        cropRows.remove(tomatoPlant);
+        Integer actual = cropRows.getNumberOfTomatoPlants();
+        // then
+        Assert.assertEquals(expected, actual);
     }
 }
