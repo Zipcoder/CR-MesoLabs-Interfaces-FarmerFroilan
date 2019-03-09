@@ -1,18 +1,20 @@
 package com.zipcodewilmington.froilansfarm.producers.producerFactories;
 
 import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
+import com.zipcodewilmington.froilansfarm.storage.CornSilo;
 
 public class CornStalk extends Crop {
     private Boolean isFertilized;
     private Integer numberOfCorn;
-    private Long id;
 
-    public CornStalk(){}
+    public CornStalk(){
+        this.isFertilized = false;
+        this.numberOfCorn = 0;
+    }
 
-    public CornStalk(Boolean isFertilized, Integer numberOfCorn, Long id){
+    public CornStalk(Boolean isFertilized, Integer numberOfCorn){
         this.isFertilized = isFertilized;
         this.numberOfCorn = numberOfCorn;
-        this.id = id;
     }
 
     public Boolean getIsFertilized(){
@@ -23,10 +25,6 @@ public class CornStalk extends Crop {
         return this.numberOfCorn;
     }
 
-    public Long getId(){
-        return this.id;
-    }
-
     public void setIsFertilized(Boolean isFertilized){
         this.isFertilized = isFertilized;
     }
@@ -35,12 +33,9 @@ public class CornStalk extends Crop {
         this.numberOfCorn = numberOfCorn;
     }
 
-    public void setId(Long id){
-        this.id = id;
-    }
-
     @Override
     public void yield(){
+        this.numberOfCorn = numberOfCorn + 1;
     }
 
 
