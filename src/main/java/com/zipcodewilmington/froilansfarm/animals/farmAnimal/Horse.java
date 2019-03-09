@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.animals.Eater;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Rideable;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Rider;
 import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
 
 import java.util.HashMap;
@@ -23,7 +24,7 @@ public class Horse  extends Animal implements  Rideable {
         return "Neigh!";
     }
 
-    public void ride() {
+    public void ride(Rider rider) {
         hasBeenRiddenToday = true;
     }
 

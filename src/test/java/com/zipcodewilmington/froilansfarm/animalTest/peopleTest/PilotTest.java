@@ -1,23 +1,39 @@
 package com.zipcodewilmington.froilansfarm.animalTest.peopleTest;
 
 import com.zipcodewilmington.froilansfarm.animals.people.Pilot;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Rider;
 import com.zipcodewilmington.froilansfarm.vehicles.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class PilotTest {
 
-    // Failing without sytnax issues - once CropDuster is created - update testCase
     @Test
     public void testPilotRide(){
         // Given
-        Pilot pilot = new Pilot();
+        Pilot expected = new Pilot();
+        CropDuster cropDuster = new CropDuster();
 
         // When
-        pilot.mount(new CropDuster());
-
+        expected.mount(cropDuster);
+        Rider actual = cropDuster.getOperator();
 
         // Then
-        Assert.assertTrue(false);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPilotExitVehicle(){
+        // Given
+        Pilot expected = new Pilot();
+        CropDuster cropDuster = new CropDuster();
+
+        // When
+        expected.mount(cropDuster);
+        cropDuster.exitVehicle();
+        Rider actual = cropDuster.getOperator();
+
+        // Then
+        Assert.assertNull(actual);
     }
 }
