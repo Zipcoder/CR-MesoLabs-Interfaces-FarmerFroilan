@@ -6,31 +6,24 @@ import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
 
 public class Chicken extends Animal implements ProduceInterface  {
     private Egg egg;
-    private boolean female;
+    private Boolean fertilized = false;
 
-    public Chicken(String gender){
+    public Chicken(){ }
+
+    public boolean hasBeenFertilized(){
+        fertilized = true;
+        return true;
     }
 
 
-    public void yield() {
-        egg.hasBeenFertilized();
-
+    public void yield() { if (hasBeenFertilized() == true){
+        egg = new Egg();
+        fertilized = false;
+    }
     }
 
     public String makeNoise() { return "Cluck!"; }
 
-    public Boolean isNotFemale(Chicken chicken){
-        if (female == true){
-            return false;
-        } else
-            return false;
-    }
-
-    public Boolean isEdible(boolean defeatheredAndPrepared) {
-      if ( defeatheredAndPrepared == true ){
-          return true;}
-      return false;
-    }
 
 }
 

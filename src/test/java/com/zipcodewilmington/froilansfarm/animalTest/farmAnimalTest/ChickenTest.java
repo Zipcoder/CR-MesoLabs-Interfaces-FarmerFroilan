@@ -13,9 +13,8 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class ChickenTest {
-    private String gender;
-    private Edible food;
-    private Boolean defeatheredAndPrepared = true;
+    private Edible edible;
+
 
 
     // TODO - Create tests for `makeNoise`
@@ -24,8 +23,7 @@ public class ChickenTest {
     public void makeNoiseTest() {
         //given
         ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = new Chicken(gender);
-        chickenFactory.createChicken(chicken, gender);
+        Chicken chicken = chickenFactory.createChicken();
         String expected = "Cluck!";
 
         //when
@@ -43,15 +41,14 @@ public class ChickenTest {
     public void eatTest() {
         // Given
         ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = new Chicken(gender);
-        chickenFactory.createChicken(chicken, gender);
+        Chicken chicken = chickenFactory.createChicken();
         Integer expected = 2;
 
         // When
-        chicken.eat(food);
-        chicken.eat(food);
+        chicken.eat(edible);
+        chicken.eat(edible);
         HashMap<Edible, Integer> foodEaten = chicken.getFood();
-        Integer actual = foodEaten.get(food);
+        Integer actual = foodEaten.get(edible);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -65,8 +62,8 @@ public class ChickenTest {
     public void testAnimalInheritance() {
         //given
         ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = new Chicken(gender);
-        chickenFactory.createChicken(chicken, gender);
+        Chicken chicken = new Chicken();
+        chickenFactory.createChicken();
         boolean expected = true;
 
         //when
@@ -76,35 +73,5 @@ public class ChickenTest {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void testIsEdible(){
-        //Given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = new Chicken(gender);
-        chickenFactory.createChicken(chicken, gender);
-        Boolean expected = true;
-
-        //When
-        Boolean actual = chicken.isEdible(defeatheredAndPrepared);
-
-        //Then
-        Assert.assertEquals(expected,actual);
-
-    }
-
-    @Test
-    public void testIsEdible2(){
-        //Given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = new Chicken(gender);
-        chickenFactory.createChicken(chicken, gender);
-        Boolean expected = false;
-
-        //When
-        Boolean actual = chicken.isEdible(false);
-
-        //Then
-        Assert.assertEquals(expected,actual);
-    }
 
 }

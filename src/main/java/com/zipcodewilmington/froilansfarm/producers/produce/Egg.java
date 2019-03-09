@@ -1,35 +1,34 @@
 package com.zipcodewilmington.froilansfarm.producers.produce;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
-import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
 import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
 
 import java.util.ArrayList;
-import java.util.concurrent.BlockingQueue;
 
 public class Egg implements Edible {
-    String male;
-    String female;
-
-    ArrayList<Chicken> chickenCoop = new ArrayList<Chicken>();
-    Chicken chicken = new Chicken(male);
-
-
+    private ArrayList<Chicken> chickenCoop1;
+    private Chicken rooster;
 
     public Egg(){
 
     }
 
+
+    public Egg(ArrayList<Chicken> chickenCoop1, Chicken rooster){
+
+        this.chickenCoop1 = chickenCoop1;
+        this.rooster = rooster;
+    }
+
     public Boolean hasBeenHarvested() {
-        ChickenFactory chickenFactory = new ChickenFactory();
 
-
-        if(chickenCoop.contains(chickenFactory.createChicken(chicken, male)) ){ return false;} else
-            return true; }
+        return !chickenCoop1.contains(rooster);
+    }
 
     public Boolean hasBeenFertilized() {
-        ChickenFactory chickenFactory = new ChickenFactory();
 
-        if(chickenCoop.contains(chickenFactory.createChicken(chicken, male)) == true){ return true;} return false; }
+        return chickenCoop1.contains(rooster);
+    }
 }
+
