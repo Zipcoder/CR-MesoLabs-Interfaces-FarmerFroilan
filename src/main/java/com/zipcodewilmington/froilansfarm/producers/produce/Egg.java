@@ -8,27 +8,33 @@ import java.util.ArrayList;
 
 public class Egg implements Edible {
     private ArrayList<Chicken> chickenCoop1;
-    private Chicken rooster;
+    private Chicken chicken;
+    private Boolean fertilized;
+    private Integer collectedEggs;
 
     public Egg(){
 
     }
 
 
-    public Egg(ArrayList<Chicken> chickenCoop1, Chicken rooster){
+    public Egg(ArrayList<Chicken> chickenCoop1, Chicken chicken){
 
         this.chickenCoop1 = chickenCoop1;
-        this.rooster = rooster;
+        this.chicken = chicken;
+        this.collectedEggs = 0;
     }
 
     public Boolean hasBeenHarvested() {
-
-        return !chickenCoop1.contains(rooster);
+        if (fertilized = true){
+           Egg egg = new Egg();
+           collectedEggs++;
+        }
+        return false;
     }
 
     public Boolean hasBeenFertilized() {
 
-        return chickenCoop1.contains(rooster);
+        return chicken.hasBeenFertilized();
     }
 }
 

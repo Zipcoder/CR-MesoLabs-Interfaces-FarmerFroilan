@@ -9,30 +9,24 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ChickenCoops implements  Storage<Chicken> {
-    private Chicken[] chickensInCoop;
-    private volatile ArrayList<Chicken> chickenCoop = new ArrayList<Chicken>(Arrays.asList(chickensInCoop));
+    List<Chicken> chickenList = new ArrayList<Chicken>();
     private Chicken rooster = new Chicken();
     private Egg egg;
 
+    public ChickenCoops(List<Chicken> chickenCoop){
+        this.chickenList = chickenCoop;
 
-
-    public void add(Chicken chicken) { chickenCoop.add(chicken); }
-
-    public void remove(Chicken chicken){ chickenCoop.remove(chicken); }
-
-    public Integer getCount() { return chickenCoop.size(); }
-
-
-    public void clear() { chickenCoop.clear(); }
-
-    public boolean contains() {
-        if (chickenCoop.contains(rooster)){
-            egg.hasBeenFertilized();
-        } else
-            egg.hasBeenHarvested();
-
-        return false;
     }
+
+
+    public void add(Chicken chicken) { this.chickenList.add(chicken); }
+
+    public void remove(Chicken chicken){ chickenList.remove(chicken); }
+
+    public Integer getCount() { return chickenList.size(); }
+
+
+    public void clear() { chickenList.clear(); }
 
     public void gatherEggs() {
 
