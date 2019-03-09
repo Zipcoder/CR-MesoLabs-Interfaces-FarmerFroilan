@@ -16,14 +16,6 @@ public class Egg implements Edible {
 
     }
 
-
-    public Egg(ArrayList<Chicken> chickenCoop1, Chicken chicken){
-
-        this.chickenCoop1 = chickenCoop1;
-        this.chicken = chicken;
-        this.collectedEggs = 0;
-    }
-
     public Boolean hasBeenHarvested() {
         if (fertilized = true){
            Egg egg = new Egg();

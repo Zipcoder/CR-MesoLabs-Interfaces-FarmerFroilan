@@ -17,12 +17,6 @@ public class ChickenCoops implements  Storage<Chicken> {
         this.chickenList = chickenCoop;
 
     }
-
-    public ChickenCoops() {
-
-    }
-
-
     public void add(Chicken chicken) { this.chickenList.add(chicken); }
 
     public void remove(Chicken chicken){ chickenList.remove(chicken); }

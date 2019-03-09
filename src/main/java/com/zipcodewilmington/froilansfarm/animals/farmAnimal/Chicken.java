@@ -6,13 +6,22 @@ import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
 
 public class Chicken extends Animal implements ProduceInterface  {
     private Egg egg;
-    private Boolean fertilized = false;
+    private Boolean fertilized;
 
-    public Chicken(){ }
+    public Chicken(){ fertilized = false;}
+
+    public Boolean isFertilized() {
+        return fertilized;
+    }
 
     public boolean hasBeenFertilized(){
         fertilized = true;
         return true;
+    }
+
+
+    public void setIsFertilized(Boolean fertilized) {
+        this.fertilized = fertilized;
     }
 
 

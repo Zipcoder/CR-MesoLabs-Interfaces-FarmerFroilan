@@ -14,8 +14,32 @@ import static org.junit.Assert.assertEquals;
 
 public class ChickenTest {
     private Edible edible;
+    @Test
+    public void testNullaryChickenConstructor(){
+        // given
+        Boolean expectedFertilizedStatus = false;
+
+        // When
+        Chicken chicken = new Chicken();
+        Boolean actualFertilizedStatus = chicken.isFertilized();
+
+        // then
+        Assert.assertEquals(expectedFertilizedStatus, actualFertilizedStatus);
+    }
 
 
+    @Test
+    public void getIsFertilizedTest(){
+        // given
+        Boolean expectedFertilizedStatus = true;
+
+        // When
+        Chicken chicken = new Chicken();
+        Boolean actualFertilizedStatus = chicken.hasBeenFertilized();
+
+        // then
+        Assert.assertEquals(expectedFertilizedStatus, actualFertilizedStatus);
+    }
 
     // TODO - Create tests for `makeNoise`
 
