@@ -35,6 +35,9 @@ public class PumpkinPlant extends Crop {
 
     @Override
     public Pumpkin yield(){
+        if (numberOfPumpkins != 0 && isFertilized) {
+            return new Pumpkin();
+        }
         return null;
     }
 

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.CropTests;
 
+import com.zipcodewilmington.froilansfarm.producers.produce.Pumpkin;
 import com.zipcodewilmington.froilansfarm.producers.producerFactories.PumpkinPlant;
 import com.zipcodewilmington.froilansfarm.producers.producerFactories.TomatoPlant;
 import org.junit.Assert;
@@ -81,14 +82,22 @@ public class PumpkinPlantTests {
     }
 
     @Test
-    public void yieldTest(){
+    public void yieldTest1(){
         // given
         PumpkinPlant pumpkinPlant = new PumpkinPlant(true, 4);
-        Integer expected = 5;
         // when
-        pumpkinPlant.yield();
-        Integer actual = pumpkinPlant.getNumberOfPumpkins();
+        Pumpkin product = pumpkinPlant.yield();
         // then
-        Assert.assertEquals(expected, actual);
+        Assert.assertNotNull(product);
+    }
+
+    @Test
+    public void yieldTest2(){
+        // given
+        PumpkinPlant pumpkinPlant = new PumpkinPlant(false, 0);
+        // when
+        Pumpkin product = pumpkinPlant.yield();
+        // then
+        Assert.assertNull(product);
     }
 }

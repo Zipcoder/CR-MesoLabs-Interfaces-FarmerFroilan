@@ -36,6 +36,9 @@ public class TomatoPlant extends Crop {
 
         @Override
         public Tomato yield(){
+            if (numberOfTomatoes != 0 && isFertilized) {
+                return new Tomato();
+            }
             return null;
         }
 
