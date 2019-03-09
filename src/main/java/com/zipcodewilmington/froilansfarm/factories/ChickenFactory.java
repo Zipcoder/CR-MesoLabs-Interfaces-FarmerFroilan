@@ -10,13 +10,13 @@ import java.util.List;
 public class ChickenFactory {
 
 
-    public Chicken createChicken() {
+    public static Chicken createChicken() {
         Chicken chicken = new Chicken();
         return chicken;
     }
 
 
-    public List<Chicken> createChickenList(Integer numberOFChickens){
+    public static List<Chicken> createChickenList(Integer numberOFChickens){
         Chicken chicken = createChicken();
         List<Chicken> chickenList = new ArrayList<Chicken>();
 
