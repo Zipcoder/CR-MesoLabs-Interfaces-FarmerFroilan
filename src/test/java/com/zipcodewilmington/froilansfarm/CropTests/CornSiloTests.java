@@ -1,18 +1,18 @@
 package com.zipcodewilmington.froilansfarm.CropTests;
 
-import com.zipcodewilmington.froilansfarm.storage.CropRows;
-import com.zipcodewilmington.froilansfarm.storage.Field;
+import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
+import com.zipcodewilmington.froilansfarm.storage.CornSilo;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FieldTests {
+public class CornSiloTests {
     @Test
     public void nullaryConstructorTest(){
         // given
-        Field field = new Field();
+        CornSilo cornSilo = new CornSilo();
         Integer expected = 0;
         // when
-        Integer actual = field.getNumberOfCropRows();
+        Integer actual = cornSilo.getNumberOfCorn();
         // then
         Assert.assertEquals(expected, actual);
     }
@@ -20,33 +20,33 @@ public class FieldTests {
     @Test
     public void constructorTest(){
         // given
-        Field field = new Field(5);
+        CornSilo cornSilo = new CornSilo(5);
         Integer expected = 5;
         // when
-        Integer actual = field.getNumberOfCropRows();
+        Integer actual = cornSilo.getNumberOfCorn();
         // then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void getNumberOfCropRowsTest(){
+    public void getNumberOfCornTest(){
         // given
-        Field field = new Field(4);
+        CornSilo cornSilo = new CornSilo(4);
         Integer expected = 4;
         // when
-        Integer actual = field.getNumberOfCropRows();
+        Integer actual = cornSilo.getNumberOfCorn();
         // then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void setNumberOfCropRowsTest(){
+    public void setNumberOfCornTest(){
         // given
-        Field field = new Field();
-        Integer expected = 7;
+        CornSilo cornSilo = new CornSilo(0);
+        Integer expected = 3;
         // when
-        field.setNumberOfCropRows(7);
-        Integer actual = field.getNumberOfCropRows();
+        cornSilo.setNumberOfCorn(3);
+        Integer actual = cornSilo.getNumberOfCorn();
         // then
         Assert.assertEquals(expected, actual);
     }
@@ -54,12 +54,12 @@ public class FieldTests {
     @Test
     public void addTest(){
         // given
-        Field field = new Field();
-        CropRows cropRows = new CropRows();
+        CornSilo cornSilo = new CornSilo(0);
+        Corn corn = new Corn();
         Integer expected = 1;
         // when
-        field.add(cropRows);
-        Integer actual = field.getNumberOfCropRows();
+        cornSilo.add(corn);
+        Integer actual = cornSilo.getNumberOfCorn();
         // then
         Assert.assertEquals(expected, actual);
     }
