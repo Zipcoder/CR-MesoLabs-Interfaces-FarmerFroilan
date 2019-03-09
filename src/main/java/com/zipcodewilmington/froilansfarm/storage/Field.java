@@ -7,11 +7,4 @@ public class Field implements Storage{
 
     }
 
-    public Object retrieve(Integer objectId) {
-        return null;
-    }
-
-    public Integer getCount() {
-        return null;
-    }
 }
