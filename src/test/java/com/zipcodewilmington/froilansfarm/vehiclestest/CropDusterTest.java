@@ -29,7 +29,7 @@ public class CropDusterTest {
     public void testFertilizeRow(){
         // Given
         CropDuster cropDuster = new CropDuster();
-        CropRows cropRowsCorn = new CropRows(1, 0);
+        CropRows cropRowsCorn = new CropRows(1, 0, 0);
         Boolean expected = false;
 
         // When
