@@ -1,6 +1,8 @@
-package com.zipcodewilmington.froilansfarm.dailyactivitesexecution;
+package com.zipcodewilmington.froilansfarm.dailyactivitesexecution.daysofweek;
 
-public class Tuesday implements DayInterface{
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.DayInterface;
+
+public class Saturday implements DayInterface {
     @Override
     public void doFarmWork() {
         // ride each horse
@@ -15,7 +17,6 @@ public class Tuesday implements DayInterface{
         //    1 tomato
         //    2 eggs
 
-        // Froilan uses tractor
-        //     harvest each crop in cropRow
+
     }
 }

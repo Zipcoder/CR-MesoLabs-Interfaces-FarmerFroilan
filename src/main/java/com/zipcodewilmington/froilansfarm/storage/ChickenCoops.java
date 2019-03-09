@@ -1,11 +1,9 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
-import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
 import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ChickenCoops implements  Storage<Chicken> {

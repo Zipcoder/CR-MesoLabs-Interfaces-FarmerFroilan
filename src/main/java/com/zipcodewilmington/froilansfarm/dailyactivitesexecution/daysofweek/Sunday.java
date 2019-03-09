@@ -1,6 +1,8 @@
-package com.zipcodewilmington.froilansfarm.dailyactivitesexecution;
+package com.zipcodewilmington.froilansfarm.dailyactivitesexecution.daysofweek;
 
-public class Sunday implements DayInterface{
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.DayInterface;
+
+public class Sunday implements DayInterface {
     @Override
     public void doFarmWork() {
         // ride each horse
