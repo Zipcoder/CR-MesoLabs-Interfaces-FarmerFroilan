@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.stablesTest;
+package com.zipcodewilmington.froilansfarm.storageTest;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Horse;
 import com.zipcodewilmington.froilansfarm.storage.Stables;

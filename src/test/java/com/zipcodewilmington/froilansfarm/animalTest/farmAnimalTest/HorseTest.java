@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.animalTest.farmAnimalTest;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Horse;
+import com.zipcodewilmington.froilansfarm.animals.people.Farmer;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Rider;
 import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
 import org.junit.Assert;
 import org.junit.Before;
@@ -81,9 +83,10 @@ public class HorseTest {
         // Given
         Horse horse = new Horse();
         Boolean expected = true;
+        Rider rider = new Farmer();
 
         // When
-        horse.ride();
+        horse.ride(rider);
         Boolean actual = horse.getHasBeenRiddenToday();
 
         //
