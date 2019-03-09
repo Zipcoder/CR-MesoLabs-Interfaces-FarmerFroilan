@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm.animalTest.ChickenCoopsTest;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
-import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
 import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +9,6 @@ import org.junit.Test;
 import java.util.List;
 
 public class ChickenCoopTest {
-    ChickenFactory chickenFactory = new ChickenFactory();
     List<Chicken> chickenList = AnimalFactory.createChickenList(5);
     Chicken newchicken = new Chicken();
     ChickenCoops chickenCoops = new ChickenCoops(chickenList);

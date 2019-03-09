@@ -4,7 +4,6 @@ import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 
 import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.Weekdays;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
-import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
 import com.zipcodewilmington.froilansfarm.factories.VehicleFactory;
 import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
 import com.zipcodewilmington.froilansfarm.storage.Farmhouse;

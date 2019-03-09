@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.weekdayTest;
 
 import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.*;
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.daysofweek.*;
 import org.junit.Assert;
 import org.junit.Test;
 

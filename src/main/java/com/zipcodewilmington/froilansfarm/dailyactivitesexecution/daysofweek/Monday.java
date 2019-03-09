@@ -1,4 +1,6 @@
-package com.zipcodewilmington.froilansfarm.dailyactivitesexecution;
+package com.zipcodewilmington.froilansfarm.dailyactivitesexecution.daysofweek;
+
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.DayInterface;
 
 public class Monday implements DayInterface {
 

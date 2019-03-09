@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.dailyactivitesexecution;
 
 
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.daysofweek.*;
+
 import java.util.function.Supplier;
 
 public enum Weekdays {
