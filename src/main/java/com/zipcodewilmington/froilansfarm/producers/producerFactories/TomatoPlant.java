@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.producers.producerFactories;
 
 import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
+import com.zipcodewilmington.froilansfarm.producers.produce.Tomato;
 import com.zipcodewilmington.froilansfarm.storage.TomatoSilo;
 
 public class TomatoPlant extends Crop {
@@ -34,8 +35,8 @@ public class TomatoPlant extends Crop {
         }
 
         @Override
-        public void yield(){
-            this.numberOfTomatoes = numberOfTomatoes + 1;
+        public Tomato yield(){
+            return null;
         }
 
     }

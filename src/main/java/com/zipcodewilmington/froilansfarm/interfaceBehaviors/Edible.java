@@ -1,7 +1,3 @@
 package com.zipcodewilmington.froilansfarm.interfaceBehaviors;
 
-public interface Edible {
-    Boolean hasBeenHarvested();
-
-    Boolean hasBeenFertilized();
-}
+public interface Edible {}
