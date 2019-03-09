@@ -58,7 +58,7 @@ public class VehicleFactoryTest {
 
 
     @Test
-    public void TractorFactoryMultiTest(){
+    public void tractorFactoryMultiTest(){
         // Given
         Integer expected = 3;
         ArrayList<Tractor> actual ;
