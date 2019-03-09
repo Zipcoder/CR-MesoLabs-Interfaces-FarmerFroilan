@@ -8,19 +8,10 @@ public class Chicken extends Animal implements ProduceInterface  {
     private Egg egg;
     private Boolean fertilized = false;
 
-    public Chicken(){ }
-
-    public boolean hasBeenFertilized(){
-        fertilized = true;
-        return true;
+    public Egg yield() {
+        return null;
     }
 
-
-    public void yield() { if (hasBeenFertilized() == true){
-        egg = new Egg();
-        fertilized = false;
-    }
-    }
 
     public String makeNoise() { return "Cluck!"; }
 

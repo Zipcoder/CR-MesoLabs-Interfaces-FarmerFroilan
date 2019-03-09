@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.producers.producerFactories;
 
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
+import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
 import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
 import com.zipcodewilmington.froilansfarm.storage.CornSilo;
 
@@ -34,8 +36,11 @@ public class CornStalk extends Crop {
     }
 
     @Override
-    public void yield(){
-        this.numberOfCorn = numberOfCorn + 1;
+    public Corn yield(){
+        if (numberOfCorn != 0 && isFertilized) {
+            return new Corn();
+        }
+        return null;
     }
 
 

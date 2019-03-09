@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.CropTests;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
+import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
 import com.zipcodewilmington.froilansfarm.producers.producerFactories.CornStalk;
 import com.zipcodewilmington.froilansfarm.storage.CornSilo;
 import org.junit.Assert;
@@ -83,14 +85,22 @@ public class CornStalkTests {
     }
 
     @Test
-    public void yieldTest(){
+    public void yieldTest1(){
         // given
         CornStalk cornStalk = new CornStalk(true, 4);
-        Integer expected = 5;
         // when
-        cornStalk.yield();
-        Integer actual = cornStalk.getNumberOfCorn();
+        Corn product = cornStalk.yield();
         // then
-        Assert.assertEquals(expected, actual);
+        Assert.assertNotNull(product);
+    }
+
+    @Test
+    public void yieldTest2(){
+        // given
+        CornStalk cornStalk = new CornStalk(false, 0);
+        // when
+        Corn product = cornStalk.yield();
+        // then
+        Assert.assertNull(product);
     }
 }
