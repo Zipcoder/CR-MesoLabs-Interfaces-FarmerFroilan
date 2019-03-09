@@ -81,14 +81,22 @@ public class TomatoPlantTests {
     }
 
     @Test
-    public void yieldTest(){
+    public void yieldTest1(){
         // given
         TomatoPlant tomatoPlant = new TomatoPlant(true, 4);
-        Integer expected = 5;
         // when
-        tomatoPlant.yield();
-        Integer actual = tomatoPlant.getNumberOfTomatoes();
+        Tomato product = tomatoPlant.yield();
         // then
-        Assert.assertEquals(expected, actual);
+        Assert.assertNotNull(product);
+    }
+
+    @Test
+    public void yieldTest2(){
+        // given
+        TomatoPlant tomatoPlant = new TomatoPlant(false, 0);
+        // when
+        Tomato product = tomatoPlant.yield();
+        // then
+        Assert.assertNull(product);
     }
 }
