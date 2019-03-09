@@ -12,11 +12,12 @@ public class Farmer extends Person implements Botanist, Rider {
     }
 
     public void harvest(Crop crop) {
+
         crop.yield();
     }
 
     public void mount(Rideable rideable ) {
-        rideable.ride();
+        rideable.ride(this);
     }
 
 }

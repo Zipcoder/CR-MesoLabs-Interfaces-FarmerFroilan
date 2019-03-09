@@ -1,19 +1,27 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
-public class Farmhouse implements Storage{
+import com.zipcodewilmington.froilansfarm.animals.people.Person;
 
-    private com.zipcodewilmington.froilansfarm.animals.people.Person people;
+import java.util.ArrayList;
 
+public class Farmhouse implements Storage<Person>{
 
-    public void add(Object storageObject) {
+    private ArrayList<Person> people;
 
+    public Farmhouse(){
+        people = new ArrayList<Person>();
     }
 
-    public Object retrieve(Integer objectId) {
-        return null;
+
+    public void add(Person person) {
+        people.add(person);
+    }
+
+    public Person retrieveAtIndex(Integer index) {
+        return this.people.get(index);
     }
 
     public Integer getCount() {
-        return null;
+        return people.size();
     }
 }
