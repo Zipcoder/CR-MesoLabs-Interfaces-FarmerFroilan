@@ -2,6 +2,8 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.Weekdays;
+import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
 import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
 import com.zipcodewilmington.froilansfarm.factories.VehicleFactory;
 import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
@@ -30,7 +32,7 @@ public  class Farm {
         farmhouse = new Farmhouse();
         field = new Field();
         cropDuster = VehicleFactory.createSingleCropDuster();
-        chickenList = ChickenFactory.createChickenList(2);
+        chickenList = AnimalFactory.createChickenList(2);
         tractors = VehicleFactory.createMultiTractor(2);
         stablesBuildings.add(new Stables());
         chickenCoopsBuildings.add(new ChickenCoops(chickenList));

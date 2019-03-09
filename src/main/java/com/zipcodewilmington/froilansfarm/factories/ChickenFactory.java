@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ChickenFactory {
 
-
+/*
     public static Chicken createChicken() {
         Chicken chicken = new Chicken();
         return chicken;
@@ -24,6 +24,6 @@ public class ChickenFactory {
             chickenList.add(i, chicken);
         }
         return chickenList;
-    }
+    }*/
 
 }
