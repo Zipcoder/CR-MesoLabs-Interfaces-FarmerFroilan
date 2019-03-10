@@ -57,5 +57,5 @@ public class ChickenCoopTest {
         //Then
         Assert.assertEquals(expected,actual);
     }
-
 }
+

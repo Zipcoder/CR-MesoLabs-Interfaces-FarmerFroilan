@@ -10,8 +10,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EggBasket implements Storage<Egg> {
-    private static ArrayList<Egg> eggBasket = new ArrayList<Egg>();
+    private List<Egg> eggBaskets;
 
-    public void add(Egg edibleEgg) { eggBasket.add(edibleEgg); }
+    public EggBasket(){
+        this.eggBaskets = null;
+    }
+
+    public void add(Egg edibleEgg) {this.eggBaskets.add(edibleEgg); }
+
+    public Integer getNumberOfEggs(){return eggBaskets.size();}
+
+    public List<Egg> takeEggsFromBasket(EggBasket eggBasket, Integer numberOfEggsToCollect){
+        List<Egg> groceryList =new ArrayList<>();
+        for (int i = 0; i < numberOfEggsToCollect; i++) {
+            groceryList.add(eggBaskets.remove(getNumberOfEggs() - 1));
+        }
+        return groceryList;
+    }
+
+    public void removeAllEggs(EggBasket eggBasket){ this.eggBaskets.clear();}
 
 }
