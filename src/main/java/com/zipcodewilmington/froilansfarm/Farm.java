@@ -51,8 +51,7 @@ public final class Farm {
 
 
     public void executeRoutine(Weekdays weekday) {
-         DayInterface day = Weekdays.FRIDAY.newDay();
-         day.doFarmWork(this);
+   
     }
 
     private void generatePilot(){
@@ -63,7 +62,7 @@ public final class Farm {
 
     private void generateFarmer(){
         Farmer farmer = AnimalFactory.createFarmer();
-        farmer.setName("Froilanda");
+        farmer.setName("Froilan");
         addPeopleToFarmHouse(farmer);
     }
 
