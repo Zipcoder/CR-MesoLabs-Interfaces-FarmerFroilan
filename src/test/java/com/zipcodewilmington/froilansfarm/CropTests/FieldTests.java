@@ -40,18 +40,6 @@ public class FieldTests {
     }
 
     @Test
-    public void setNumberOfCropRowsTest(){
-        // given
-        Field field = new Field();
-        Integer expected = 7;
-        // when
-        field.setNumberOfCropRows(7);
-        Integer actual = field.getNumberOfCropRows();
-        // then
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void addTest(){
         // given
         Field field = new Field();

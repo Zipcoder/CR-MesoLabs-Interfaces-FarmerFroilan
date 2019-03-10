@@ -1,7 +1,10 @@
 package com.zipcodewilmington.froilansfarm.CropTests.produceTest;
 
-public class eggTest {
+import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
+import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
+import org.junit.Assert;
+import org.junit.Test;
 
-    private Integer eggCount = 0;
+public class eggTest {
 
 }

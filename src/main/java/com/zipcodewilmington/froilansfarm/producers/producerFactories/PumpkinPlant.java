@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.producers.producerFactories;
 
 import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
+import com.zipcodewilmington.froilansfarm.producers.produce.Pumpkin;
 
 public class PumpkinPlant extends Crop {
     private Boolean isFertilized;
@@ -33,8 +34,8 @@ public class PumpkinPlant extends Crop {
     }
 
     @Override
-    public void yield(){
-        this.numberOfPumpkins = numberOfPumpkins + 1;
+    public Pumpkin yield(){
+        return null;
     }
 
 }
