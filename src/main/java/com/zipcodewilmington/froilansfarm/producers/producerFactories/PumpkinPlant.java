@@ -4,30 +4,24 @@ import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
 import com.zipcodewilmington.froilansfarm.producers.produce.Pumpkin;
 
 public class PumpkinPlant extends Crop {
-    private Boolean isFertilized;
+  //  private Boolean isFertilized;
     private Integer numberOfPumpkins;
 
     public PumpkinPlant(){
-        this.isFertilized = false;
+        super.setIsFertilized(false);
         this.numberOfPumpkins = 0;
     }
 
     public PumpkinPlant(Boolean isFertilized, Integer numberOfPumpkins){
-        this.isFertilized = isFertilized;
+        super.setIsFertilized(isFertilized);
         this.numberOfPumpkins = numberOfPumpkins;
     }
 
-    public Boolean getIsFertilized(){
-        return this.isFertilized;
-    }
 
     public Integer getNumberOfPumpkins(){
         return this.numberOfPumpkins;
     }
 
-    public void setIsFertilized(Boolean isFertilized){
-        this.isFertilized = isFertilized;
-    }
 
     public void setNumberOfPumpkins (Integer numberOfPumpkins){
         this.numberOfPumpkins = numberOfPumpkins;
@@ -35,7 +29,7 @@ public class PumpkinPlant extends Crop {
 
     @Override
     public Pumpkin yield(){
-        if (numberOfPumpkins != 0 && isFertilized) {
+        if (numberOfPumpkins != 0 && super.getIsFertilized()) {
             return new Pumpkin();
         }
         return null;

@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
-public class FarmVehicle extends Vehicle {
-    public void operate() {
-    }
+public abstract  class FarmVehicle extends Vehicle {
+
 }
