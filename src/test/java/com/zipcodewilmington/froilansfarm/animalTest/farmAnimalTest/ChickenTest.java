@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.animals.Animal;
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
+import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ChickenTest {
     private Edible edible;
+    private Egg edibleEgg;
     @Test
     public void testNullaryChickenConstructor(){
         // given
@@ -76,6 +78,22 @@ public class ChickenTest {
         // Then
         Assert.assertEquals(expected, actual);
 
+
+    }
+
+    @Test
+    public void edibleEggTest(){
+        //Given
+        Chicken chicken = AnimalFactory.createChicken();
+        chicken.hasBeenFertilized();
+        chicken.setIsFertilized(chicken.hasBeenFertilized());
+        Egg expected = edibleEgg;
+
+        //When
+        Egg actual = chicken.yield();
+
+        //Then
+        Assert.assertEquals(expected,actual);
 
     }
 

@@ -22,6 +22,10 @@ public class CropRows implements Storage<Crop> {
         this.cropList = cropList;
     }
 
+    public List<Crop> getCropList(){
+        return this.cropList;
+    }
+
     public Integer getNumberOfCrops(){
         if (cropList.size() != 0) {
             return cropList.size();

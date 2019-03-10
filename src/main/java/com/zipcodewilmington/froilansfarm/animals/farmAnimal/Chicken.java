@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
 
 public class Chicken extends Animal implements ProduceInterface  {
-    private Egg egg;
+    private Egg edibleEgg;
     private Boolean fertilized;
 
 
@@ -27,14 +27,14 @@ public class Chicken extends Animal implements ProduceInterface  {
     }
 
     public Egg yield() {
-        while (hasBeenFertilized()){
-           Egg egg = new Egg();
+        if (hasBeenFertilized()){
+           return edibleEgg;
         }
-        return egg;
+        return null;
     }
 
     public Egg getEgg(){
-        return this.egg;
+        return edibleEgg;
     }
 
 

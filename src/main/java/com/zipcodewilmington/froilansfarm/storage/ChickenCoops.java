@@ -26,8 +26,6 @@ public class ChickenCoops implements  Storage<Chicken> {
 
     public void clear() { chickenList.clear(); }
 
-    public collectEggs()
-
 }
 
 
