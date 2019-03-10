@@ -1,20 +1,22 @@
 package com.zipcodewilmington.froilansfarm.CropTests.produceTest;
 
+import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
+import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
 import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
+import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
+import com.zipcodewilmington.froilansfarm.storage.EggBasket;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class EggBasketTest {
-    ArrayList<Egg> eggBasket = new ArrayList<Egg>();
+    EggBasket eggBasket = new EggBasket();
     Egg edibleEgg = new Egg();
-    Egg[] bunchOfEggs = {edibleEgg, edibleEgg, edibleEgg, edibleEgg, edibleEgg};
-
-
-
-
+    Egg[] eggs = {edibleEgg,edibleEgg,edibleEgg,edibleEgg,edibleEgg};
+    List<Egg> eggsList = Arrays.asList(eggs);
 
         @Test
         public void addTest() {
@@ -22,7 +24,7 @@ public class EggBasketTest {
             eggBasket.add(edibleEgg);
             Boolean expected = false;
             //When
-            Boolean actual = eggBasket.isEmpty();
+            Boolean actual = eggBasket.isEmpty(eggBasket);
             //Then
             Assert.assertEquals(expected,actual);
 
@@ -36,22 +38,36 @@ public class EggBasketTest {
             Integer expected = 1;
 
             //When
-            eggBasket.remove(edibleEgg);
-            Integer actual = eggBasket.size();
+            eggBasket.removeEgg(edibleEgg);
+            Integer actual = eggBasket.getNumberOfEggs();
 
             //Then
             Assert.assertEquals(expected,actual);
         }
 
         @Test
-        public void emptyBasket(){
+        public void getNumberOfEggsTest(){
             //Given
-            eggBasket.addAll(Arrays.asList(bunchOfEggs));
-            Integer expected = 0;
+            eggBasket.add(edibleEgg);
+            eggBasket.add(edibleEgg);
+            eggBasket.add(edibleEgg);
+            Integer expected = 3;
 
             //When
-            eggBasket.clear();
-            Integer actual = eggBasket.size();
+            Integer actual = eggBasket.getNumberOfEggs();
+
+            //Then
+            Assert.assertEquals(expected,actual);
+        }
+
+        @Test
+        public void addEdibleEggsFromCoopTest(){
+            //Given
+            eggBasket.addEdibleEggsFromCoop(eggsList);
+            Integer expected = 5;
+
+            //When
+            Integer actual = eggBasket.getNumberOfEggs();
 
             //Then
             Assert.assertEquals(expected,actual);
@@ -59,4 +75,17 @@ public class EggBasketTest {
 
 
 
+    @Test
+    public void removeAllEggs() {
+            //Given
+        eggBasket.addEdibleEggsFromCoop(eggsList);
+        Boolean expected = true;
+
+        //When
+        eggBasket.removeAllEggs();
+        Boolean actual = eggBasket.isEmpty(eggBasket);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
 }

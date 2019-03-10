@@ -4,6 +4,7 @@ package com.zipcodewilmington.froilansfarm.factories;
 import com.zipcodewilmington.froilansfarm.storage.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class StorageFactory {
 
@@ -21,6 +22,15 @@ public class StorageFactory {
         ChickenCoops chickenCoop = createMultiChickenCoops(1).get(0);
 
         return chickenCoop;
+    }
+
+    public static EggBasket createEggBasket(Integer amountOfEggs){
+        List<EggBasket> eggBasket = new ArrayList<>();
+
+        for(int i = 0; i < amountOfEggs; i++){
+            eggBasket.add(new EggBasket());
+        }
+        return (EggBasket) eggBasket;
     }
 
     public static ArrayList<CornSilo> createMultiCornSilos(Integer amount) {
