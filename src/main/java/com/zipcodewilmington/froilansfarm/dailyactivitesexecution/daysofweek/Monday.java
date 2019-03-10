@@ -34,7 +34,7 @@ public class Monday implements DayInterface {
         Field field = this.FarmInstance.getField();
         Integer amountOfCropRows = field.getNumberOfCropRows();
         for(int i=0 ; i<amountOfCropRows; i++) {
-     //       cropDuster.fertilize(field.getCropRows(i));
+            cropDuster.fertilize(field.getCropRow(i));
         }
         cropDuster.exitVehicle();
 
