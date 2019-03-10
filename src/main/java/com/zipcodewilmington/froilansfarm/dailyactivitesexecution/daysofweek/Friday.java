@@ -7,6 +7,8 @@ import com.zipcodewilmington.froilansfarm.storage.Stables;
 import java.util.ArrayList;
 
 public class Friday implements DayInterface {
+    private Farm instance;
+
     @Override
     public void doFarmWork(Farm farm) {
 
@@ -22,10 +24,12 @@ public class Friday implements DayInterface {
         //    1 tomato
         //    2 eggs
 
-        ArrayList<Stables> stablesBuildings = farm.getStablesBuildings();
+        /* Syntax for instance
+        this.instance = farm.getInstance();
+        ArrayList<Stables> stablesBuildings = instance.getStablesBuildings();
         Integer i = stablesBuildings.size();
         System.out.println(i);
-
+        */
 
     }
 }

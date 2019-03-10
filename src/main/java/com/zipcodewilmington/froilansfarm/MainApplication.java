@@ -9,7 +9,7 @@ public class MainApplication {
 
 
     public static void main(String[] args) {
-        Farm farm=new Farm();
+        Farm farm= Farm.getInstance();
         farm.executeRoutine(Weekdays.MONDAY);
         farm.executeRoutine(Weekdays.TUESDAY);
         farm.executeRoutine(Weekdays.WEDNESDAY);
