@@ -15,33 +15,27 @@ public class CornStalkTests {
         // given
         CornStalk cornStalk = new CornStalk();
         Boolean expectedFertilized = false;
-        Integer expectedNumberOfCorn = 0;
         // when
         Boolean actualFertilized = cornStalk.getIsFertilized();
-        Integer actualNumberOfCorn = cornStalk.getNumberOfCorn();
         // then
         Assert.assertEquals(expectedFertilized, actualFertilized);
-        Assert.assertEquals(expectedNumberOfCorn, actualNumberOfCorn);
     }
 
     @Test
     public void constructorTest(){
         // given
-        CornStalk cornStalk = new CornStalk(true, 4);
+        CornStalk cornStalk = new CornStalk(true);
         Boolean expectedFertilized = true;
-        Integer expectedNumberOfCorn = 4;
         // when
         Boolean actualFertilized = cornStalk.getIsFertilized();
-        Integer actualNumberOfCorn = cornStalk.getNumberOfCorn();
         // then
         Assert.assertEquals(expectedFertilized, actualFertilized);
-        Assert.assertEquals(expectedNumberOfCorn, actualNumberOfCorn);
     }
 
     @Test
     public void getIsFertilizedTest(){
         // given
-        CornStalk cornStalk = new CornStalk(false, 6);
+        CornStalk cornStalk = new CornStalk(false);
         Boolean expected = false;
         // when
         Boolean actual = cornStalk.getIsFertilized();
@@ -50,20 +44,9 @@ public class CornStalkTests {
     }
 
     @Test
-    public void getNumberOfCornTest(){
-        // given
-        CornStalk cornStalk = new CornStalk(true, 3);
-        Integer expected = 3;
-        // when
-        Integer actual = cornStalk.getNumberOfCorn();
-        // then
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void setIsFertilizedTest(){
         // given
-        CornStalk cornStalk = new CornStalk(false, 3);
+        CornStalk cornStalk = new CornStalk(false);
         Boolean initial = cornStalk.getIsFertilized();
         // when
         cornStalk.setIsFertilized(true);
@@ -73,21 +56,9 @@ public class CornStalkTests {
     }
 
     @Test
-    public void setNumberOfCornTest(){
-        // given
-        CornStalk cornStalk = new CornStalk(true, 2);
-        Integer initial = cornStalk.getNumberOfCorn();
-        // when
-        cornStalk.setNumberOfCorn(5);
-        Integer newValue = cornStalk.getNumberOfCorn();
-        // then
-        Assert.assertNotEquals(initial, newValue);
-    }
-
-    @Test
     public void yieldTest1(){
         // given
-        CornStalk cornStalk = new CornStalk(true, 4);
+        CornStalk cornStalk = new CornStalk(true);
         // when
         Corn product = cornStalk.yield();
         // then
@@ -97,7 +68,7 @@ public class CornStalkTests {
     @Test
     public void yieldTest2(){
         // given
-        CornStalk cornStalk = new CornStalk(false, 0);
+        CornStalk cornStalk = new CornStalk(false);
         // when
         Corn product = cornStalk.yield();
         // then
