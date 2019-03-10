@@ -21,41 +21,31 @@ public class CornStalkTests {
         Assert.assertEquals(expectedFertilized, actualFertilized);
     }
 
-    @Test
-    public void constructorTest(){
-        // given
-   /*     CornStalk cornStalk = new CornStalk(true);
-        Boolean expectedFertilized = true;
-        // when
-        Boolean actualFertilized = cornStalk.getIsFertilized();
-        // then
-        Assert.assertEquals(expectedFertilized, actualFertilized);
-        */
-    }
+
 
     @Test
     public void getIsFertilizedTest(){
         // given
-   /*     CornStalk cornStalk = new CornStalk(false);
+        CornStalk cornStalk = new CornStalk();
         Boolean expected = false;
         // when
         Boolean actual = cornStalk.getIsFertilized();
         // then
         Assert.assertEquals(expected, actual);
-        */
+
     }
 
     @Test
     public void setIsFertilizedTest(){
         // given
-    /*    CornStalk cornStalk = new CornStalk(false);
+        CornStalk cornStalk = new CornStalk();
         Boolean initial = cornStalk.getIsFertilized();
         // when
         cornStalk.setIsFertilized(true);
         Boolean newValue = cornStalk.getIsFertilized();
         // then
         Assert.assertNotEquals(initial, newValue);
-        */
+
     }
 
     @Test

@@ -1,11 +1,15 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
+import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
+
+import java.util.ArrayList;
+
 public class Field implements Storage<CropRows>{
-    private CropRows cropRows;
+    private ArrayList<CropRows> cropRows;
     private Integer numberOfCropRows;
 
     public Field(){
-        this.numberOfCropRows = 0;
+        cropRows = new ArrayList<CropRows>();
     }
 
     public Field(Integer numberOfCropRows){
@@ -13,14 +17,19 @@ public class Field implements Storage<CropRows>{
     }
 
     public Integer getNumberOfCropRows(){
-        return numberOfCropRows;
+
+        return this.cropRows.size();
     }
 
     public void setNumberOfCropRows(Integer numberOfCropRows){
         this.numberOfCropRows = numberOfCropRows;
     }
 
-    public void add(CropRows storageObject) {
-        this.numberOfCropRows = numberOfCropRows + 1;
+    public void add(CropRows cropRow) {
+        this.cropRows.add(cropRow);
+    }
+
+    public CropRows getCropRow(Integer index){
+        return cropRows.get(index);
     }
 }
