@@ -1,11 +1,13 @@
 package com.zipcodewilmington.froilansfarm.CropTests;
 
+import com.zipcodewilmington.froilansfarm.factories.StorageFactory;
 import com.zipcodewilmington.froilansfarm.storage.CropRows;
 import com.zipcodewilmington.froilansfarm.storage.Field;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class FieldTests {
+    /*
     @Test
     public void nullaryConstructorTest(){
         // given
@@ -28,6 +30,7 @@ public class FieldTests {
         Assert.assertEquals(expected, actual);
     }
 
+
     @Test
     public void getNumberOfCropRowsTest(){
         // given
@@ -38,12 +41,13 @@ public class FieldTests {
         // then
         Assert.assertEquals(expected, actual);
     }
-
+*/
     @Test
     public void addTest(){
         // given
         Field field = new Field();
-        CropRows cropRows = new CropRows();
+        //CropRows cropRows = new CropRows();
+        CropRows cropRows = StorageFactory.createSingleCropRow();
         Integer expected = 1;
         // when
         field.add(cropRows);
