@@ -16,11 +16,11 @@ public class ChickenCoopTest {
     @Test
     public void addTest(){
         //Given
-        chickenList.add(newchicken);
+        chickenCoops.add(newchicken);
         Integer expected = 6;
 
         //When
-        Integer actual = chickenList.size();
+        Integer actual = chickenCoops.getCount();
 
         //Then
         Assert.assertEquals(expected,actual);
@@ -28,4 +28,34 @@ public class ChickenCoopTest {
 
 
     }
+
+    @Test
+    public void removeTest(){
+        //Given
+        chickenCoops.add(newchicken);
+        chickenCoops.add(newchicken);
+        chickenCoops.add(newchicken);
+        chickenCoops.remove(newchicken);
+        Integer expected = 7;
+
+        //When
+        Integer actual = chickenCoops.getCount();
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void clearTest(){
+        //Given
+        Integer expected = 0;
+
+        //When
+        chickenCoops.clear();
+        Integer actual = chickenCoops.getCount();
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
 }
+

@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.animals.Animal;
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
+import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,8 +15,34 @@ import static org.junit.Assert.assertEquals;
 
 public class ChickenTest {
     private Edible edible;
+    private Egg edibleEgg;
+    @Test
+    public void testNullaryChickenConstructor(){
+        // given
+        Boolean expectedFertilizedStatus = false;
+
+        // When
+        Chicken chicken = new Chicken();
+        Boolean actualFertilizedStatus = chicken.isFertilized();
+
+        // then
+        Assert.assertEquals(expectedFertilizedStatus, actualFertilizedStatus);
+    }
 
 
+    @Test
+    public void getIsFertilizedTest(){
+        // given
+        Boolean expectedFertilizedStatus = true;
+
+        // When
+        Chicken chicken = new Chicken();
+        Boolean actualFertilizedStatus = chicken.hasBeenFertilized();
+        chicken.setIsFertilized(chicken.hasBeenFertilized());
+
+        // then
+        Assert.assertEquals(expectedFertilizedStatus, actualFertilizedStatus);
+    }
 
     // TODO - Create tests for `makeNoise`
 
@@ -51,6 +78,22 @@ public class ChickenTest {
         // Then
         Assert.assertEquals(expected, actual);
 
+
+    }
+
+    @Test
+    public void edibleEggTest(){
+        //Given
+        Chicken chicken = AnimalFactory.createChicken();
+        chicken.hasBeenFertilized();
+        chicken.setIsFertilized(chicken.hasBeenFertilized());
+        Egg expected = edibleEgg;
+
+        //When
+        Egg actual = chicken.yield();
+
+        //Then
+        Assert.assertEquals(expected,actual);
 
     }
 
