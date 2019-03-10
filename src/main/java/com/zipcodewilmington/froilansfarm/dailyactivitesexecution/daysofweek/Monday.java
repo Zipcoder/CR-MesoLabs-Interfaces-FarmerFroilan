@@ -1,11 +1,12 @@
 package com.zipcodewilmington.froilansfarm.dailyactivitesexecution.daysofweek;
 
+import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.DayInterface;
 
 public class Monday implements DayInterface {
 
     @Override
-    public void doFarmWork() {
+    public void doFarmWork(Farm farm) {
          // ride each horse
          // feed each horse
          //      3 ears of corn
