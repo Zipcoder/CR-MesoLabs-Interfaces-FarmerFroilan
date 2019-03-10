@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 public class Field implements Storage<CropRows>{
-    private   cropRows;
+    private CropRows cropRows;
     private Integer numberOfCropRows;
 
     public Field(){
