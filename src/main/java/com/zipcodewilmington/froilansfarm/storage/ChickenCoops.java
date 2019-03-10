@@ -1,11 +1,9 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
-import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
 import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ChickenCoops implements  Storage<Chicken> {
@@ -17,19 +15,19 @@ public class ChickenCoops implements  Storage<Chicken> {
         this.chickenList = chickenCoop;
 
     }
+    public ChickenCoops(){
+
+    }
     public void add(Chicken chicken) { this.chickenList.add(chicken); }
 
     public void remove(Chicken chicken){ chickenList.remove(chicken); }
 
     public Integer getCount() { return chickenList.size(); }
 
-
     public void clear() { chickenList.clear(); }
 
-    public void gatherEggs() {
+    public collectEggs()
 
-
-    }
 }
 
 

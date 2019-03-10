@@ -1,10 +1,12 @@
 package com.zipcodewilmington.froilansfarm.factories;
 
+import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Horse;
 import com.zipcodewilmington.froilansfarm.animals.people.Farmer;
 import com.zipcodewilmington.froilansfarm.animals.people.Pilot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AnimalFactory  {
 
@@ -54,6 +56,22 @@ public class AnimalFactory  {
         Farmer farmer = createFarmers(1).get(0);
 
         return farmer;
+    }
+
+    public static Chicken createChicken() {
+        Chicken chicken = new Chicken();
+        return chicken;
+    }
+
+
+    public static List<Chicken> createChickenList(Integer numberOFChickens){
+        Chicken chicken = createChicken();
+        List<Chicken> chickenList = new ArrayList<Chicken>();
+
+        for (int i = 0; i < numberOFChickens; i++){
+            chickenList.add(i, chicken);
+        }
+        return chickenList;
     }
 
 }

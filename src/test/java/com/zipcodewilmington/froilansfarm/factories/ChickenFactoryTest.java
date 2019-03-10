@@ -33,8 +33,7 @@ public class ChickenFactoryTest {
     @Test
     public void createChickenList(){
         //Given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        List<Chicken> chickList = chickenFactory.createChickenList(15);
+        List<Chicken> chickList = AnimalFactory.createChickenList(15);
 
         //When
         Boolean actual = chickList.isEmpty();
@@ -46,8 +45,7 @@ public class ChickenFactoryTest {
     @Test
     public void createChickenList2(){
         //Given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        List<Chicken> chickList = chickenFactory.createChickenList(15);
+        List<Chicken> chickList = AnimalFactory.createChickenList(15);
 
         //When
         chickList.clear();
@@ -60,8 +58,7 @@ public class ChickenFactoryTest {
     @Test
     public void createChickenList3(){
         //Given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        List<Chicken> chickList = chickenFactory.createChickenList(15);
+        List<Chicken> chickList = AnimalFactory.createChickenList(15);
         Integer expected = 17;
 
         //When

@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.animalTest.farmAnimalTest;
 
 import com.zipcodewilmington.froilansfarm.animals.Animal;
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
-import com.zipcodewilmington.froilansfarm.factories.ChickenFactory;
+import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
 import org.junit.Assert;
 import org.junit.Test;
@@ -36,6 +36,7 @@ public class ChickenTest {
         // When
         Chicken chicken = new Chicken();
         Boolean actualFertilizedStatus = chicken.hasBeenFertilized();
+        chicken.setIsFertilized(chicken.hasBeenFertilized());
 
         // then
         Assert.assertEquals(expectedFertilizedStatus, actualFertilizedStatus);
@@ -46,8 +47,7 @@ public class ChickenTest {
     @Test
     public void makeNoiseTest() {
         //given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = chickenFactory.createChicken();
+        Chicken chicken = AnimalFactory.createChicken();
         String expected = "Cluck!";
 
         //when
@@ -64,8 +64,7 @@ public class ChickenTest {
     @Test
     public void eatTest() {
         // Given
-        ChickenFactory chickenFactory = new ChickenFactory();
-        Chicken chicken = chickenFactory.createChicken();
+        Chicken chicken = AnimalFactory.createChicken();
         Integer expected = 2;
 
         // When
@@ -85,9 +84,8 @@ public class ChickenTest {
     @Test
     public void testAnimalInheritance() {
         //given
-        ChickenFactory chickenFactory = new ChickenFactory();
         Chicken chicken = new Chicken();
-        chickenFactory.createChicken();
+        AnimalFactory.createChicken();
         boolean expected = true;
 
         //when
