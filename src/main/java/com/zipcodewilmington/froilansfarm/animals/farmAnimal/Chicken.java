@@ -28,10 +28,7 @@ public class Chicken extends Animal implements ProduceInterface  {
     }
 
     public Egg yield() {
-        if (hasBeenFertilized()){
-           return edibleEgg;
-        }
-        return null;
+        return edibleEgg;
     }
 
     public Egg getEgg(){

@@ -1,8 +1,6 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
-import com.zipcodewilmington.froilansfarm.animals.people.Farmer;
-import com.zipcodewilmington.froilansfarm.animals.people.Person;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
 import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 
@@ -10,25 +8,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EggBasket implements Storage<Egg> {
-    private List<Egg> eggBaskets;
+    List<Egg> eggBasket = new ArrayList<>();
+    Integer numberOfEggs;
 
-    public EggBasket(){
-        this.eggBaskets = null;
-    }
+    public EggBasket(){ this.numberOfEggs = 0; }
 
-    public Boolean isEmpty(EggBasket eggBaskets) {
-        return this.eggBaskets.isEmpty();
-    }
+    public EggBasket(Integer numberOfEggs){ this.numberOfEggs = numberOfEggs; }
 
-    public void add(Egg edibleEgg) {this.eggBaskets.add(edibleEgg); }
+    public Boolean isEmpty(EggBasket eggBasket) { return this.eggBasket.isEmpty(); }
 
-    public void removeEgg(Egg edibleEgg){this.eggBaskets.remove(edibleEgg);}
+    public void add(Egg edibleEgg) {this.eggBasket.add(edibleEgg); }
 
-    public Integer getNumberOfEggs(){return eggBaskets.size();}
+    public void removeEgg(Egg edibleEgg){this.eggBasket.remove(edibleEgg);}
 
-    public void addEdibleEggsFromCoop(List<Chicken> fertilizedChickens){
-        eggBaskets.addAll(ChickenCoops.collectEdibleEggs(fertilizedChickens));
-    }
+    public Integer getNumberOfEggs(){return eggBasket.size();}
 
-    public void removeAllEggs(){ this.eggBaskets.clear();}
+    public void addEdibleEggsFromCoop(List<Egg> edibleEggs){ eggBasket.addAll(edibleEggs); }
+
+    public void removeAllEggs(){ this.eggBasket.clear();}
 }

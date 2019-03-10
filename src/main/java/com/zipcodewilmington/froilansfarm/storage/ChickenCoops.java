@@ -8,7 +8,6 @@ import java.util.List;
 
 public class ChickenCoops implements  Storage<Chicken> {
     List<Chicken> chickenList = new ArrayList<Chicken>();
-    private Chicken rooster = new Chicken();
     private Egg egg;
 
     public ChickenCoops(List<Chicken> chickenCoop){
@@ -30,22 +29,20 @@ public class ChickenCoops implements  Storage<Chicken> {
 
     public void clear() { chickenList.clear(); }
 
-    public static List<Chicken> checkChickenFertilization(List<Chicken> chickenList){
-
-        List<Chicken> fertilizedChickens = new ArrayList<>();
-        for (Chicken c: chickenList ) {
+    public static Boolean checkChickenFertilization(List<Chicken> chickenCoop){
+        for (Chicken c: chickenCoop ) {
             c.hasBeenFertilized();
-            fertilizedChickens.add(c);
         }
-        return fertilizedChickens;
+        return true;
     }
 
-    public static List<Egg> collectEdibleEggs(List<Chicken> chickenList){
-        checkChickenFertilization(chickenList);
+    public static List<Egg> collectEdibleEggs(List<Chicken> chickenCoop) {
         List<Egg> edibleEggs = new ArrayList<>();
-        for (Chicken c: checkChickenFertilization(chickenList)) {
+        if (checkChickenFertilization(chickenCoop) == true) {
+            for (Chicken c : chickenCoop) {
                 edibleEggs.add(c.yield());
             }
+        }
         return edibleEggs;
     }
 
