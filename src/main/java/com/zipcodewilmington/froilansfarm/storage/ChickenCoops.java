@@ -18,6 +18,10 @@ public class ChickenCoops implements  Storage<Chicken> {
     public ChickenCoops(){
 
     }
+    public List<Chicken> getChickenList(){ return chickenList; }
+
+    public void setChickenList(List<Chicken> chickenList){ this.chickenList = chickenList;}
+
     public void add(Chicken chicken) { this.chickenList.add(chicken); }
 
     public void remove(Chicken chicken){ chickenList.remove(chicken); }
@@ -25,6 +29,25 @@ public class ChickenCoops implements  Storage<Chicken> {
     public Integer getCount() { return chickenList.size(); }
 
     public void clear() { chickenList.clear(); }
+
+    public static List<Chicken> checkChickenFertilization(List<Chicken> chickenList){
+
+        List<Chicken> fertilizedChickens = new ArrayList<>();
+        for (Chicken c: chickenList ) {
+            c.hasBeenFertilized();
+            fertilizedChickens.add(c);
+        }
+        return fertilizedChickens;
+    }
+
+    public static List<Egg> collectEdibleEggs(List<Chicken> chickenList){
+        checkChickenFertilization(chickenList);
+        List<Egg> edibleEggs = new ArrayList<>();
+        for (Chicken c: checkChickenFertilization(chickenList)) {
+                edibleEggs.add(c.yield());
+            }
+        return edibleEggs;
+    }
 
 }
 

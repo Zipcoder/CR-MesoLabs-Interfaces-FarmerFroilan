@@ -16,18 +16,19 @@ public class EggBasket implements Storage<Egg> {
         this.eggBaskets = null;
     }
 
+    public Boolean isEmpty(EggBasket eggBaskets) {
+        return this.eggBaskets.isEmpty();
+    }
+
     public void add(Egg edibleEgg) {this.eggBaskets.add(edibleEgg); }
+
+    public void removeEgg(Egg edibleEgg){this.eggBaskets.remove(edibleEgg);}
 
     public Integer getNumberOfEggs(){return eggBaskets.size();}
 
-    public List<Egg> takeEggsFromBasket(EggBasket eggBasket, Integer numberOfEggsToCollect){
-        List<Egg> groceryList =new ArrayList<>();
-        for (int i = 0; i < numberOfEggsToCollect; i++) {
-            groceryList.add(eggBaskets.remove(getNumberOfEggs() - 1));
-        }
-        return groceryList;
+    public void addEdibleEggsFromCoop(List<Chicken> fertilizedChickens){
+        eggBaskets.addAll(ChickenCoops.collectEdibleEggs(fertilizedChickens));
     }
 
-    public void removeAllEggs(EggBasket eggBasket){ this.eggBaskets.clear();}
-
+    public void removeAllEggs(){ this.eggBaskets.clear();}
 }

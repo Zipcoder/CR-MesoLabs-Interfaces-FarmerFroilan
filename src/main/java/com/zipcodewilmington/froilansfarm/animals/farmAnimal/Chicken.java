@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.animals.Animal;
 import com.zipcodewilmington.froilansfarm.interfaceBehaviors.Edible;
 import com.zipcodewilmington.froilansfarm.producers.produce.Egg;
 import com.zipcodewilmington.froilansfarm.producers.produce.ProduceInterface;
+import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
 
 public class Chicken extends Animal implements ProduceInterface  {
     private Egg edibleEgg;
@@ -36,8 +37,6 @@ public class Chicken extends Animal implements ProduceInterface  {
     public Egg getEgg(){
         return edibleEgg;
     }
-
-
 
     public String makeNoise() { return "Cluck!"; }
 
