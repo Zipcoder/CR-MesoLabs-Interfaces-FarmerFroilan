@@ -1,10 +1,15 @@
 package com.zipcodewilmington.froilansfarm.vehiclestest;
 
 import com.zipcodewilmington.froilansfarm.producers.produce.Corn;
+import com.zipcodewilmington.froilansfarm.producers.produce.Crop;
+import com.zipcodewilmington.froilansfarm.producers.producerFactories.CornStalk;
 import com.zipcodewilmington.froilansfarm.storage.CropRows;
 import com.zipcodewilmington.froilansfarm.vehicles.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CropDusterTest {
@@ -24,21 +29,26 @@ public class CropDusterTest {
 
     }
 
-    // Failing without sytnax issues - once Need getCrop from cropRow and Corn methods created - then will update testCase
     @Test
     public void testFertilizeRow(){
         // Given
         CropDuster cropDuster = new CropDuster();
-        Boolean expected = false;
+
+
+        List<Crop> cropList = new ArrayList<Crop>();
+        Crop cornStalk = new CornStalk();
+        cropList.add(cornStalk);
+        CropRows cropRows = new CropRows(cropList);
+
 
         // When
-      //  cropDuster.fertilize(cropRowsCorn);
-        //Corn corn =  cropRowsCorn.getCrop;
-     //   Corn corn = new Corn();
-       // expected = corn.hasBeenFertilized();
+        cropDuster.fertilize(cropRows);
+        List<Crop> cropListActual = cropRows.getCropList();
+        Crop crop = cropListActual.get(0);
+        Boolean actual = crop.getIsFertilized();
 
         // Then
-        Assert.assertTrue(expected);
+        Assert.assertTrue(actual);
 
     }
 }

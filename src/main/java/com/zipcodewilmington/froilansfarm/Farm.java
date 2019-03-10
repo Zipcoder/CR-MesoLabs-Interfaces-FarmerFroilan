@@ -2,6 +2,9 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 
+import com.zipcodewilmington.froilansfarm.animals.people.Farmer;
+import com.zipcodewilmington.froilansfarm.animals.people.Person;
+import com.zipcodewilmington.froilansfarm.animals.people.Pilot;
 import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.DayInterface;
 import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.Weekdays;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
@@ -17,7 +20,7 @@ import com.zipcodewilmington.froilansfarm.vehicles.Tractor;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class Farm {
+public final class Farm {
     private ArrayList<Stables> stablesBuildings;
     private ArrayList<ChickenCoops> chickenCoopsBuildings;
     private ArrayList<Tractor> tractors;
@@ -26,10 +29,13 @@ public  class Farm {
     private Field field;
     private CropDuster cropDuster;
 
+    private static final Farm instance = new Farm();
+
+    public static Farm getInstance() {return instance;};
 
 
 
-    public Farm() {
+    private Farm() {
         farmhouse = new Farmhouse();
         field = new Field();
         cropDuster = VehicleFactory.createSingleCropDuster();
@@ -37,6 +43,9 @@ public  class Farm {
         tractors = VehicleFactory.createMultiTractor(2);
         stablesBuildings = StorageFactory.createMultiStables(3);
         chickenCoopsBuildings = StorageFactory.createMultiChickenCoops(3);
+
+        generatePilot();
+        generateFarmer();
     }
 
 
@@ -44,6 +53,22 @@ public  class Farm {
     public void executeRoutine(Weekdays weekday) {
          DayInterface day = Weekdays.FRIDAY.newDay();
          day.doFarmWork(this);
+    }
+
+    private void generatePilot(){
+        Pilot pilot = AnimalFactory.createPilot();
+        pilot.setName("Froilanda");
+        addPeopleToFarmHouse(pilot);
+    }
+
+    private void generateFarmer(){
+        Farmer farmer = AnimalFactory.createFarmer();
+        farmer.setName("Froilanda");
+        addPeopleToFarmHouse(farmer);
+    }
+
+    private void addPeopleToFarmHouse(Person person){
+            farmhouse.add(person);
     }
 
     public ArrayList<Stables> getStablesBuildings()

@@ -34,7 +34,7 @@ public class Egg implements Edible {
 
     public Boolean hasBeenFertilized() {
 
-        return chicken.hasBeenFertilized();
+        return null;
     }
 }
 
