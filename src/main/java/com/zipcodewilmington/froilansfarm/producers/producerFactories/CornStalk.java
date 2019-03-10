@@ -7,37 +7,26 @@ import com.zipcodewilmington.froilansfarm.storage.CornSilo;
 
 public class CornStalk extends Crop {
     private Boolean isFertilized;
-    private Integer numberOfCorn;
 
     public CornStalk(){
         this.isFertilized = false;
-        this.numberOfCorn = 0;
     }
 
-    public CornStalk(Boolean isFertilized, Integer numberOfCorn){
+    public CornStalk(Boolean isFertilized){
         this.isFertilized = isFertilized;
-        this.numberOfCorn = numberOfCorn;
     }
 
     public Boolean getIsFertilized(){
         return this.isFertilized;
     }
 
-    public Integer getNumberOfCorn(){
-        return this.numberOfCorn;
-    }
-
     public void setIsFertilized(Boolean isFertilized){
         this.isFertilized = isFertilized;
     }
 
-    public void setNumberOfCorn(Integer numberOfCorn){
-        this.numberOfCorn = numberOfCorn;
-    }
-
     @Override
     public Corn yield(){
-        if (numberOfCorn != 0 && isFertilized) {
+        if (isFertilized) {
             return new Corn();
         }
         return null;
