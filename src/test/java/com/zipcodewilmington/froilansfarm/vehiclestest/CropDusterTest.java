@@ -28,6 +28,7 @@ public class CropDusterTest {
     @Test
     public void testFertilizeRow(){
         // Given
+
         //CropDuster cropDuster = new CropDuster();
         //CropRows cropRowsCorn = new CropRows(1, 0, 0);
         Boolean expected = false;
@@ -38,7 +39,6 @@ public class CropDusterTest {
         //Corn corn = new Corn();
 
         //expected = corn.hasBeenFertilized();
-
         // Then
         Assert.assertTrue(expected);
 
