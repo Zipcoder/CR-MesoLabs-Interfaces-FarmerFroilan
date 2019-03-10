@@ -2,8 +2,10 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.animals.farmAnimal.Chicken;
 
+import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.DayInterface;
 import com.zipcodewilmington.froilansfarm.dailyactivitesexecution.Weekdays;
 import com.zipcodewilmington.froilansfarm.factories.AnimalFactory;
+import com.zipcodewilmington.froilansfarm.factories.StorageFactory;
 import com.zipcodewilmington.froilansfarm.factories.VehicleFactory;
 import com.zipcodewilmington.froilansfarm.storage.ChickenCoops;
 import com.zipcodewilmington.froilansfarm.storage.Farmhouse;
@@ -33,13 +35,43 @@ public  class Farm {
         cropDuster = VehicleFactory.createSingleCropDuster();
         chickenList = AnimalFactory.createChickenList(2);
         tractors = VehicleFactory.createMultiTractor(2);
-        stablesBuildings.add(new Stables());
-        chickenCoopsBuildings.add(new ChickenCoops(chickenList));
+        stablesBuildings = StorageFactory.createMultiStables(3);
+        chickenCoopsBuildings = StorageFactory.createMultiChickenCoops(3);
     }
 
 
 
     public void executeRoutine(Weekdays weekday) {
+         DayInterface day = Weekdays.FRIDAY.newDay();
+         day.doFarmWork(this);
     }
+
+    public ArrayList<Stables> getStablesBuildings()
+    {
+        return  this.stablesBuildings;
+    }
+
+    public ArrayList<ChickenCoops> getChickenCoops()
+    {
+        return  this.chickenCoopsBuildings;
+    }
+
+    public ArrayList<Tractor> getTractors()
+    {
+        return this.tractors;
+    }
+
+    public Farmhouse getFarmhouse(){
+        return this.farmhouse;
+    }
+
+    public Field getField(){
+        return this.field;
+    }
+
+    public CropDuster getCropDuster(){
+        return this.cropDuster;
+    }
+
 
 }
