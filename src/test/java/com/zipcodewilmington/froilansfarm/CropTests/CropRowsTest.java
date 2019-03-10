@@ -31,6 +31,17 @@ public class CropRowsTest {
     }
 
     @Test
+    public void getCropListTest(){
+        // given
+        List<Crop> cropList = new ArrayList<Crop>();
+        CropRows cropRows = new CropRows(cropList);
+        // when
+        List<Crop> receivedCropList = cropRows.getCropList();
+        // then
+        Assert.assertNotNull(receivedCropList);
+    }
+
+    @Test
     public void getNumberOfCropsTest(){
         // given
         List<Crop> cropList = new ArrayList<Crop>();
