@@ -86,6 +86,11 @@ public final class Farm {
         return this.tractors;
     }
 
+    public Tractor getTractor(Integer index)
+    {
+        return this.tractors.get(index);
+    }
+
     public Farmhouse getFarmhouse(){
         return this.farmhouse;
     }
