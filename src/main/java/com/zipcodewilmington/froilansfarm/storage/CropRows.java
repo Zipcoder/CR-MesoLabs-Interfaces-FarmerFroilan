@@ -16,6 +16,7 @@ public class CropRows implements Storage<Crop> {
     private List<Crop> cropList;
 
     public CropRows(){
+        cropList = new ArrayList<>();
     }
 
     public CropRows(List<Crop> cropList){
