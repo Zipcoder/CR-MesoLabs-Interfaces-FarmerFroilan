@@ -34,11 +34,10 @@ public class CropDusterTest {
         Boolean expected = false;
 
         // When
-      //  cropDuster.fertilize(cropRowsCorn);
+       //  cropDuster.fertilize(cropRowsCorn);
         //Corn corn =  cropRowsCorn.getCrop;
-     //   Corn corn = new Corn();
+        //  Corn corn = new Corn();
        // expected = corn.hasBeenFertilized();
-
         // Then
         Assert.assertTrue(expected);
 
