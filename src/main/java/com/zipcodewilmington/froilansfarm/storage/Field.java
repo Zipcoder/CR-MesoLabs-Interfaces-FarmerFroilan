@@ -10,7 +10,6 @@ public class Field implements Storage<CropRows>{
 
     public Field(){
         cropRows = new ArrayList<CropRows>();
-       // this.numberOfCropRows = cropRows.size();
     }
 
     public Field(Integer numberOfCropRows){
@@ -19,7 +18,6 @@ public class Field implements Storage<CropRows>{
 
     public Integer getNumberOfCropRows(){
 
-        //return numberOfCropRows;
         return this.cropRows.size();
     }
 
@@ -28,7 +26,6 @@ public class Field implements Storage<CropRows>{
     }
 
     public void add(CropRows cropRow) {
-       // this.numberOfCropRows = numberOfCropRows + 1;
         this.cropRows.add(cropRow);
     }
 
