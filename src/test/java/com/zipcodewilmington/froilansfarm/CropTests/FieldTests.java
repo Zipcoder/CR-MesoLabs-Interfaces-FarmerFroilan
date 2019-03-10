@@ -7,46 +7,26 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FieldTests {
-    /*
-    @Test
-    public void nullaryConstructorTest(){
-        // given
-        Field field = new Field();
-        Integer expected = 0;
-        // when
-        Integer actual = field.getNumberOfCropRows();
-        // then
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void constructorTest(){
-        // given
-        Field field = new Field(5);
-        Integer expected = 5;
-        // when
-        Integer actual = field.getNumberOfCropRows();
-        // then
-        Assert.assertEquals(expected, actual);
-    }
-
 
     @Test
     public void getNumberOfCropRowsTest(){
         // given
-        Field field = new Field(4);
-        Integer expected = 4;
+        Field field = new Field();
+        CropRows cropRows1 = StorageFactory.createSingleCropRow();
+        CropRows cropRows2 = StorageFactory.createSingleCropRow();
+        field.add(cropRows1);
+        field.add(cropRows2);
+        Integer expected = 2;
         // when
         Integer actual = field.getNumberOfCropRows();
         // then
         Assert.assertEquals(expected, actual);
     }
-*/
+
     @Test
     public void addTest(){
         // given
         Field field = new Field();
-        //CropRows cropRows = new CropRows();
         CropRows cropRows = StorageFactory.createSingleCropRow();
         Integer expected = 1;
         // when
