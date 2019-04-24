@@ -30,10 +30,10 @@
 			* `CornStalk` is a `Crop` which can `yield` a `EarCorn`
 			* `TomatoPlant` is a `Crop` which can `yield` a `Tomato`
 
-	* `Person` can `makeNoise` and can `eat` an `Edible` object.
-	* `Farmer` is an `Eater`, a `Rider`, a `Botanist`, and a `Person`.
+	* `com.zipcodewilmington.froilansfarm.Person` can `makeNoise` and can `eat` an `Edible` object.
+	* `Farmer` is an `Eater`, a `Rider`, a `Botanist`, and a `com.zipcodewilmington.froilansfarm.Person`.
 	* `Stable` stores many `Horse`.
-	* `FarmHouse` stores many `Person`
+	* `FarmHouse` stores many `com.zipcodewilmington.froilansfarm.Person`
 	* `ChickenCoop` stores many `Chicken`
 	* `Farm` stores many `Stable`, many `ChickenCoop`, and a single `FarmHouse`
 
