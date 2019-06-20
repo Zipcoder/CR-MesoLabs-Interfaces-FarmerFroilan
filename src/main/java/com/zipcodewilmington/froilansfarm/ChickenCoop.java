@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class ChickenCoop {
+public class ChickenCoop implements Shelter {
 }

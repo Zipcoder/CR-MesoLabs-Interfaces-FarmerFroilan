@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class FoodStorage {
+public class FoodStorage implements Shelter {
 }

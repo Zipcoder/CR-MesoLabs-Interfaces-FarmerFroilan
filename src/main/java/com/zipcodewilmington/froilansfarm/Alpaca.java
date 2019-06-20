@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Alpaca {
+public class Alpaca implements Animal {
 }
