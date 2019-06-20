@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class TomatoPlant {
+import com.sun.scenario.effect.Crop;
+
+public class TomatoPlant extends Crops {
 }

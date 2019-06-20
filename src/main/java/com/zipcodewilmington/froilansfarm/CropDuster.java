@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class CropDuster {
+public class CropDuster implements FarmVehicle {
 }

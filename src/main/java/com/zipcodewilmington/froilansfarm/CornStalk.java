@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class CornStalk {
+import com.sun.scenario.effect.Crop;
+
+public class CornStalk extends Crops {
 }

@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class FarmHouse {
+public class FarmHouse implements Shelter {
 }

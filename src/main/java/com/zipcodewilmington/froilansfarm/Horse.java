@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Horse {
+public class Horse implements Animal, Rideable, NoiseMaker, Eater {
 }

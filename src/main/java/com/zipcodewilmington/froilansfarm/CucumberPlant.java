@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class CucumberPlant {
+public class CucumberPlant extends Crops {
 }
