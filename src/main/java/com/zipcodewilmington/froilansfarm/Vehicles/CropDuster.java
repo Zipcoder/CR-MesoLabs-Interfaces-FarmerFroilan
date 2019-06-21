@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public class CropDuster implements FarmVehicle {
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+
+public class CropDuster implements FarmVehicle, NoiseMaker {
 }
