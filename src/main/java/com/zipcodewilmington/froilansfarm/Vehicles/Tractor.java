@@ -1,8 +1,15 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Produce.Tomatoes;
+import com.zipcodewilmington.froilansfarm.Tomato;
+
 import java.util.List;
 
-public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable,NoiseMaker {
+public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseMaker {
 
     public boolean isFarmVehicle() {
         return true;
