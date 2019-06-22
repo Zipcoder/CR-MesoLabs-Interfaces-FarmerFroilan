@@ -8,4 +8,16 @@ public class  Stable implements Shelter {
     public Boolean atCapacity() {
         return null;
     }
+
+    public Boolean add() {
+        return null;
+    }
+
+    public Boolean remove() {
+        return null;
+    }
+
+    public Integer itemCount() {
+        return null;
+    }
 }
