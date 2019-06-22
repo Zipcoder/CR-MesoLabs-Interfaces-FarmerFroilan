@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
-public class FarmHouse implements Shelter {
+public class Barn implements Shelter {
     public Boolean isEmpty() {
         return null;
     }

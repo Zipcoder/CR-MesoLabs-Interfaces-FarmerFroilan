@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+<<<<<<< HEAD
 
 import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
@@ -25,5 +26,10 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
         return null;//croprow method is fetilized true
     }
 
+=======
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+
+public class CropDuster implements FarmVehicle, NoiseMaker {
+>>>>>>> master
 }
 
