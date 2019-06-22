@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Vehicles.Aircraft;
 import org.junit.Assert;
 
 import static org.junit.Assert.*;
@@ -13,7 +14,7 @@ Aircraft aircraft=new Aircraft();
     }
 
     @org.junit.Test
-    public void canFy() {
+    public void canFly() {
         Assert.assertTrue(aircraft.canFly());
     }
 

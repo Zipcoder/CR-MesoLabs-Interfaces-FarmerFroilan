@@ -4,7 +4,7 @@ import com.zipcodewilmington.froilansfarm.Field;
 
 import java.util.List;
 
-    public class CropRow<T> extends Field {
+    public class CropRow<T> {
 
         private List<T> tplant;
 
