@@ -37,14 +37,3 @@ public class FoodStorage<T>  {
 
 
 }
-
-//    public void setTomatoStorage(){
-//        Tomatoes tomatoes=new Tomatoes();
-//        FoodStorage<Tomato> tomatoStorage= new FoodStorage<Tomato>();
-//                tomatoStorage.add(tomatoes.getTomatoes());
-//       // farmer.harvest()
-//    }
-
-
-//FoodStorage<tomato> tomnotostorage;
-//tomnotostorage.add(tomato)
