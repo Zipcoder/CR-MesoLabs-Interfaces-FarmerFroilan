@@ -2,9 +2,9 @@ package com.zipcodewilmington.froilansfarm.Produce;
 
 public class Milk implements Edible {
 
-        com.zipcodewilmington.froilansfarm.Produce.Milk milk;
+        Milk milk;
 
         public Milk() {
-            this.milk = new com.zipcodewilmington.froilansfarm.Produce.Milk();
+            this.milk = new Milk();
         }
 }

@@ -11,7 +11,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
     import java.util.ArrayList;
     import java.util.List;
 
-    public class Farmer implements Botanist, Rider {
+    public class Farmer implements Person, Botanist, Rider, NoiseMaker {
 
             com.zipcodewilmington.froilansfarm.Animal.Farmer farmer;
             List<Edible> foodEaten = new ArrayList<Edible>();
@@ -70,7 +70,11 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 return "Howdy! Welcome to Froilan's farm!";
             }
 
-            public void operateVehicle() {
+        public boolean makesNoise() {
+            return false;
+        }
+
+        public void operateVehicle() {
 
             }
 
