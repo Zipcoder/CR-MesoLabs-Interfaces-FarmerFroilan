@@ -10,7 +10,7 @@ import com.zipcodewilmington.froilansfarm.Tomato;
 import java.util.List;
 
 public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseMaker {
-
+    Crops crops;
     public boolean isFarmVehicle() {
         return true;
     }
@@ -26,8 +26,9 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
     public boolean vehicleRideable() {
         return true;
     }
-    public Crops harvested(CropRow cropRow){
-        return null;//croprow amount of crop  takes croprow.crop-harvest crop. crops return
+    public boolean harvested(CropRow cropRow){
+     crops.getHarvested();
+        return true;//croprow amount of crop  takes croprow.crop-harvest crop. crops return
     }
 
     public boolean makesNoise() {

@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
 import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Crops.*;
+import com.zipcodewilmington.froilansfarm.Tomato;
 
 public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
 
@@ -21,12 +21,26 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public boolean operate() {
         return true;
     }
-    public Crops fertilize(CropRow cropRow){
-        return null;//croprow method is fetilized true
-    }
 
+    public CropRow fertilize(CropRow cropRow){
+        cropRow.fertilize();
+        return cropRow;//croprow method is fetilized true
+    }
+//    public CropRow fertilize(CropRow<CucumberPlant> cropRow){
+//        cropRow.Fertilize();
+//        return cropRow;//croprow method is fetilized true
+//    }
+//    public CropRow fertilize(CropRow<StringBeanPlant> cropRow){
+//        cropRow.Fertilize();
+//        return cropRow;//croprow method is fetilized true
+//    }
+//    public CropRow fertilize(CropRow<CornStalk> cropRow){
+//        cropRow.Fertilize();
+//        return cropRow;//croprow method is fetilized true
+//    }
 
     public boolean fertilized(CropRow cropRow) {
-        return true;//croprow method is fetilized true
+       cropRow.fertilize();
+        return true;
     }
 }

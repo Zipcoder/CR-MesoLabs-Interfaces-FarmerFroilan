@@ -11,4 +11,5 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
         public boolean vehicleRideable() {
             return false;
         }
+
 }

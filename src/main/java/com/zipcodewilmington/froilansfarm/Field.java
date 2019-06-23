@@ -21,4 +21,17 @@ public  class Field {
     private List<FarmVehicle> farmVehicles;
     private List<Aircraft> aircraft;
     private Pilot pilot;
+
+    public Field(List<CropRow> cropRows, Map<Chicken, ChickenCoop> chickenChickenCoopMap, Map<Horse, Stable> horseStableMap, List<FarmVehicle> farmVehicles, List<Aircraft> aircraft, Pilot pilot) {
+        this.cropRows = cropRows;
+        this.chickenChickenCoopMap = chickenChickenCoopMap;
+        this.horseStableMap = horseStableMap;
+        this.farmVehicles = farmVehicles;
+        this.aircraft = aircraft;
+        this.pilot = pilot;
+    }
+
+    public Field() {
+
+    }
 }

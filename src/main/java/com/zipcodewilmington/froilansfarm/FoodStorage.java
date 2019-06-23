@@ -10,8 +10,9 @@ import java.util.List;
 
 public class FoodStorage<T>  {
 
-   // Farmer farmer = new Farmer();
-    TomatoPlant tp=new TomatoPlant();
+  // Farmer farmer = new Farmer();
+
+   // TomatoPlant tp=new TomatoPlant();
 
     private List<T> foodStorage;
 
@@ -45,8 +46,8 @@ public class FoodStorage<T>  {
         return null;
     }
 
-    public Boolean add() { return null; }
-    public Boolean remove() { return null; }
+    public Boolean add() { return true; }
+    public Boolean remove() { return true; }
     public Integer itemCount() { return null; }
 }
 

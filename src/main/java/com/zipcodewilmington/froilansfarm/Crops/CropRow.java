@@ -8,6 +8,13 @@ import java.util.List;
 
         private List<T> tplant;
 
+        private boolean fertilized = false;
+
+        public boolean fertilize() {
+            fertilized = true;
+            return true;
+        }
+
         public CropRow(List<T> tplantsInACropRow) {
             this.tplant = tplantsInACropRow;
         }

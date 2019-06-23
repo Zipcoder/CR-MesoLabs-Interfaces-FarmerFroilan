@@ -28,10 +28,10 @@ Tractor tractor=new Tractor();
         Assert.assertTrue(tractor.vehicleRideable());
     }
 
-    @Test
-    public void harvested() {
-
-    }
+//    @Test
+//    public void harvested() {
+//        Assert.assertTrue(tractor.harvested());
+//    }
 
     @Test
     public void makesNoise() {
