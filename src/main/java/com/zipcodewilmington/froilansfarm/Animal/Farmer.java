@@ -74,7 +74,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public String makeNoise() {
-                return "Howdy! Welcome to Froilan's farm!";
+                return "Hey there y'all Sassafras! Welcome to Froilan's farm!";
             }
 
             public void operateVehicle() {
@@ -82,11 +82,11 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public void mount(Rideable rideable) {
-
+                rideable.setMounted(true);
             }
 
             public void dismount(Rideable rideable) {
-
+                rideable.setMounted(false);
             }
 
             public void plant(Crops crops, CropRow cropRow) {
