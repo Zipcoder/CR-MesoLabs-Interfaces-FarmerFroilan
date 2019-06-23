@@ -39,4 +39,12 @@ public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle
     public void setMounted(boolean mounted) {
 
     }
+
+    public boolean operatingVehicle() {
+        return false;
+    }
+
+    public void setOperateVehicle(boolean operating) {
+
+    }
 }

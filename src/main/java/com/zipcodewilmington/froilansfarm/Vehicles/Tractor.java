@@ -38,4 +38,24 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
         Tomatoes harvestedtomatoes = new Tomatoes();
         return (List<Tomato>) harvestedtomatoes;
     }
+
+    public String makeNoise() {
+        return null;
+    }
+
+    public boolean isMounted() {
+        return false;
+    }
+
+    public void setMounted(boolean mounted) {
+
+    }
+
+    public boolean operatingVehicle() {
+        return false;
+    }
+
+    public void setOperateVehicle(boolean operating) {
+
+    }
 }

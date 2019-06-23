@@ -2,12 +2,10 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     import com.zipcodewilmington.froilansfarm.Crops.CropRow;
     import com.zipcodewilmington.froilansfarm.Crops.Crops;
-    import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
     import com.zipcodewilmington.froilansfarm.Farm;
+    import com.zipcodewilmington.froilansfarm.FoodStorage;
     import com.zipcodewilmington.froilansfarm.Produce.*;
-    import com.zipcodewilmington.froilansfarm.Tomato;
     import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
-    import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 
     import java.util.ArrayList;
     import java.util.List;
@@ -35,18 +33,27 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 return "Hey there y'all Sassafrases! Welcome to Froilan's farm!";
             }
 
-//            public void harvest() {
-//                for (CropRow plants : CropRow.getTplant()) {
-//
-//                }
-//            }
+            public List<Edible> harvest() {
+                //insert condition to check if plants are ready for harvest.
+                List<Edible> harvestCrops = new ArrayList<Edible>();
+                Tomatoes tomatoes = new Tomatoes();
+                StringBeans stringbeans = new StringBeans();
+                Cucumbers cucumbers = new Cucumbers();
+                EarOfCorn corn = new EarOfCorn();
+                harvestCrops.add(tomatoes);
+                harvestCrops.add(stringbeans);
+                harvestCrops.add(cucumbers);
+                harvestCrops.add(corn);
+                return harvestCrops;
+            }
 
             public List<Edible> getFoodFromStorage() {
-                return null;
+
+                return (List<Edible>) FoodStorage.getT();
             }
 
             public List reproduce(Integer increaseBy) {
-                List<Farmer> farmers = new ArrayList();
+                List<Farmer> farmers = new ArrayList<Farmer>();
                 for (int i = 0; i < increaseBy; i++) {
                     farmers.add(farmer);
                 } return farmers;
@@ -101,19 +108,6 @@ package com.zipcodewilmington.froilansfarm.Animal;
     }
 
 
-//        Tomato tomato=new Tomato();
-//        public Tomatoes harvest(CropRow<TomatoPlant> tomatorow){
-//            Tractor tractor = new Tractor();
-//            Tomatoes tomatoes = new Tomatoes();
-//            List<TomatoPlant> tomatoPlantsInTheRow = tomatorow.getTplant();
-//            for (TomatoPlant tomatoPlantInTheRow:tomatoPlantsInTheRow)
-//            {
-//               // tomatoes.addTomatoes(tractor.harvest(tomatoPlantInTheRow));
-//            }return tomatoes;
-//        }
-        // public Tomatoes tomatoesStorage(){
-        // FoodStorage<tomato> tomnotostorage;
-//tomnotostorage.add(tomato)
 
 
 

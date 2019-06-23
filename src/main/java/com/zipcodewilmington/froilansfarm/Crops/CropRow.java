@@ -15,7 +15,7 @@ import java.util.List;
         public static void addCrops(Crops crops) {
         }
 
-        public CropRow getTplant() {
+        public List<T> getTplant() {
             return tplant;
         }
 
