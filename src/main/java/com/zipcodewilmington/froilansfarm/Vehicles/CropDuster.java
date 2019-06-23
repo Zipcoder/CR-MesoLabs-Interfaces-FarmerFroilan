@@ -21,8 +21,12 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public boolean operate() {
         return true;
     }
+    public Crops fertilize(CropRow cropRow){
+        return null;//croprow method is fetilized true
+    }
 
-    public boolean fertilize(CropRow cropRow) {
+
+    public boolean fertilized(CropRow cropRow) {
         return true;//croprow method is fetilized true
     }
 }

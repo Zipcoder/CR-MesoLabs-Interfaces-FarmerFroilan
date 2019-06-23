@@ -36,4 +36,20 @@ public class FoodStorage<T>  {
     }
 
 
+    public Boolean isEmpty() {
+        return foodStorage.isEmpty();
+    }
+
+    public Boolean atCapacity() {
+        //TODO needs a proper return
+        return null;
+    }
+
+    public Boolean add() { return null; }
+    public Boolean remove() { return null; }
+    public Integer itemCount() { return null; }
 }
+
+
+
+
