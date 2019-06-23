@@ -13,6 +13,7 @@ public class Cow implements Animal, NoiseMaker, Eater {
         Milk milk;
         List<Edible> milkCartons = new ArrayList<Edible>();
         List<Edible> foodEaten = new ArrayList<Edible>();
+        List<Cow> cows = new ArrayList();
 
         public Cow() {
             super();
@@ -29,12 +30,12 @@ public class Cow implements Animal, NoiseMaker, Eater {
                 milkCartons.add(milk);
                 return milkCartons;
             } else throw new Exception
-                    ("This cow is not producing milk at the moment. May yield milk later.");
+                    ("This cow is not producing milk at the moment. May yield milk later, after she has been well fed.");
         }
 
         public String makeNoise() {
             if (!hasEaten() && isHungry()) {
-                return "Mooo mooo!";
+                return "Mooo!! Mooooo!!";
             } return null;
         }
 
@@ -45,7 +46,6 @@ public class Cow implements Animal, NoiseMaker, Eater {
         }
 
         public List reproduce(Integer increaseBy) {
-            List<com.zipcodewilmington.froilansfarm.Animal.Cow> cows = new ArrayList();
             for (int i = 0; i < increaseBy; i++) {
                 cows.add(cow);
             } return cows;

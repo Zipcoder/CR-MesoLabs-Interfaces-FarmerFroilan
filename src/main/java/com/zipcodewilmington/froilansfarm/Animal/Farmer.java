@@ -16,6 +16,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
             Farmer farmer;
             Farm farm;
             List<Edible> foodEaten = new ArrayList<Edible>();
+            List<Farmer> froilanFarmers = new ArrayList<Farmer>();
 
             public Farmer(Person person, Farm farm){
                 super();
@@ -31,7 +32,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public String makeNoise() {
-                return "Hey there y'all Sassafrases! Welcome to Froilan's farm!";
+                return "Hey there y'all Sassafrases! Welcome to mah farm!";
             }
 
             public List<Edible> harvest() {
@@ -48,16 +49,15 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 return harvestCrops;
             }
 
-            public List<Edible> getFoodFromStorage() {
-
-                return (List<Edible>) FoodStorage.getT();
-            }
+//            public List<Edible> getFoodFromStorage() {
+//
+//                return (List<Edible>) FoodStorage.getT();
+//            }
 
             public List reproduce(Integer increaseBy) {
-                List<Farmer> farmers = new ArrayList<Farmer>();
                 for (int i = 0; i < increaseBy; i++) {
-                    farmers.add(farmer);
-                } return farmers;
+                    froilanFarmers.add(farmer);
+                } return froilanFarmers;
             }
 
             public boolean isHungry() {
@@ -73,9 +73,9 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 } return true;
             }
 
-            public void eatEdible(Edible e) {
+            public void eatEdible(Edible food) {
                 if (isHungry() && !hasEaten()) {
-                    foodEaten.add(e);
+                    foodEaten.add(food);
                 }
             }
 
