@@ -25,7 +25,10 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public boolean isHungry() {
-                return false;
+
+                if (!hasEaten() && foodEaten.isEmpty()) {
+                    return true;
+                } return false;
             }
 
             public List reproduce(Integer increaseBy) {
@@ -55,11 +58,15 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 
             public void eatEdible(Edible e) {
-
+                if (isHungry() && !hasEaten()) {
+                    foodEaten.add(e);
+                }
             }
 
             public boolean hasEaten() {
-                return false;
+                if (foodEaten.isEmpty()) {
+                    return false;
+                } return true;
             }
 
             public List<Edible> getFoodEaten() {
