@@ -10,7 +10,7 @@ import java.util.List;
 public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
 
 
-    com.zipcodewilmington.froilansfarm.Animal.Chicken chicken;
+    Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
     List<Edible> eggBasket = new ArrayList<Edible>();
 
@@ -41,7 +41,7 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
     }
 
     public List reproduce(Integer increaseBy) {
-        List<com.zipcodewilmington.froilansfarm.Animal.Chicken> chickens = new ArrayList();
+        List<Chicken> chickens = new ArrayList();
         for (int i = 0; i < increaseBy; i++) {
             chickens.add(chicken);
         }
@@ -72,22 +72,15 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
         return null;
     }
 
+    @Override
+    public Boolean hasEdible() {
+        return !fertilized;
+    }
 
+    @Override
+    public Edible yield() {
+        if (hasEdible()) return new Egg();
 
-        public boolean makesNoise() {
-            return false;
-        }
-
-        @Override
-        public Boolean hasEdible() {
-            return !fertilized;
-        }
-
-        @Override
-        public Edible yield() {
-            if (hasEdible()) return new Egg();
-
-            return null;
-        }
-
+        return null;
+    }
 }

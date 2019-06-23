@@ -13,7 +13,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     public class Farmer implements Person, Botanist, Rider, NoiseMaker {
 
-            com.zipcodewilmington.froilansfarm.Animal.Farmer farmer;
+            Farmer farmer;
             List<Edible> foodEaten = new ArrayList<Edible>();
 
             public Farmer(Person person){
@@ -25,11 +25,14 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public boolean isHungry() {
-                return false;
+
+                if (!hasEaten() && foodEaten.isEmpty()) {
+                    return true;
+                } return false;
             }
 
             public List reproduce(Integer increaseBy) {
-                List<com.zipcodewilmington.froilansfarm.Animal.Farmer> farmers = new ArrayList();
+                List<Farmer> farmers = new ArrayList();
                 for (int i = 0; i < increaseBy; i++) {
                     farmers.add(farmer);
                 } return farmers;
@@ -55,11 +58,15 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 
             public void eatEdible(Edible e) {
-
+                if (isHungry() && !hasEaten()) {
+                    foodEaten.add(e);
+                }
             }
 
             public boolean hasEaten() {
-                return false;
+                if (foodEaten.isEmpty()) {
+                    return false;
+                } return true;
             }
 
             public List<Edible> getFoodEaten() {
@@ -67,7 +74,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public String makeNoise() {
-                return "Howdy! Welcome to Froilan's farm!";
+                return "Hey there y'all Sassafras! Welcome to Froilan's farm!";
             }
 
         public boolean makesNoise() {
@@ -79,11 +86,11 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public void mount(Rideable rideable) {
-
+                rideable.setMounted(true);
             }
 
             public void dismount(Rideable rideable) {
-
+                rideable.setMounted(false);
             }
 
             public void plant(Crops crops, CropRow cropRow) {
