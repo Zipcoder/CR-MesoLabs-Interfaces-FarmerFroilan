@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
 public interface Driveable {
-    public boolean isDriveable();
+
+    public boolean operatingVehicle();
+    public void setOperateVehicle(boolean operating);
 }
