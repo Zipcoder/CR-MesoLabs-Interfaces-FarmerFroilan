@@ -66,7 +66,4 @@ public class Cow implements Animal, NoiseMaker, Eater {
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
-
-        public boolean makesNoise() { return false; }
-
 }

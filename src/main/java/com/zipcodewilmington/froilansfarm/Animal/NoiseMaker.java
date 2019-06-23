@@ -5,6 +5,4 @@ public interface NoiseMaker {
 
         public String makeNoise();
 
-    boolean makesNoise();
-
 }
