@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle,NoiseMaker {
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+
+public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle, NoiseMaker {
     public boolean isFarmVehicle() {
         return true;
     }
