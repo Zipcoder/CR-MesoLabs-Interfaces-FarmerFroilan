@@ -5,6 +5,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
     import com.zipcodewilmington.froilansfarm.Farm;
     import com.zipcodewilmington.froilansfarm.FoodStorage;
     import com.zipcodewilmington.froilansfarm.Produce.*;
+    import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
     import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
 
     import java.util.ArrayList;
@@ -82,7 +83,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 return foodEaten;
             }
 
-            public void operateVehicle(Rideable vehicle) {
+            public void operateVehicle(Driveable vehicle) {
                 vehicle.setOperateVehicle(true);
             }
 
@@ -90,7 +91,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 farmer.feedFarmAnimals(animal, food);
             }
 
-            public void stopOperatingVehicle(Rideable vehicle) {
+            public void stopOperatingVehicle(Driveable vehicle) {
                     vehicle.setOperateVehicle(false);
                 }
 
