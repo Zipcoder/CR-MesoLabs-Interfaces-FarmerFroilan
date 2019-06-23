@@ -6,7 +6,6 @@ public abstract class Produce{
 
     protected Boolean fertilized = false;
 
-    abstract Edible yield();
 
     public Boolean hasEdible() {
         return fertilized;
@@ -19,4 +18,6 @@ public abstract class Produce{
     public void setFertilized(Boolean fertilized) {
         this.fertilized = fertilized;
     }
+
+    public Edible yield() { return null; }
 }

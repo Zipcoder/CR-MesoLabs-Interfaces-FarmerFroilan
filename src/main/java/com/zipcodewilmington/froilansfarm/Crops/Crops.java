@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.Crops;
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Produce;
 
-public abstract class Crop extends Produce {
+public abstract class Crops extends Produce {
 
     protected Boolean harvested = false;
 
@@ -20,5 +20,6 @@ public abstract class Crop extends Produce {
         this.harvested = harvested;
     }
 
-    abstract Edible yield();
+    @Override
+    public Edible yield() { return null; }
 }
