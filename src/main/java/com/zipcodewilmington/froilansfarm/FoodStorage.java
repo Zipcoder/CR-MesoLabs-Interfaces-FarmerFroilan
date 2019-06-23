@@ -30,6 +30,19 @@ public class FoodStorage<T> implements Shelter {
     public void setT(List<T> t) {
         this.foodStorage = foodStorage;
     }
+
+    public Boolean isEmpty() {
+        return foodStorage.isEmpty();
+    }
+
+    public Boolean atCapacity() {
+        //TODO needs a proper return
+        return null;
+    }
+
+    public Boolean add() { return null; }
+    public Boolean remove() { return null; }
+    public Integer itemCount() { return null; }
 }
 
 //    public void setTomatoStorage(){

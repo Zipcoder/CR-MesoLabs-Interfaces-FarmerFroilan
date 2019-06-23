@@ -64,4 +64,8 @@ public class Alpaca implements Animal {
                 return "Mehh! Mehh!";
             } return null;
         }
+
+    public boolean makesNoise() {
+        return false;
+    }
 }

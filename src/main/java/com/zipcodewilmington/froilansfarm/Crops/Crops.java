@@ -1,4 +1,25 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
-public abstract class Crops {
+import com.zipcodewilmington.froilansfarm.Produce.Edible;
+import com.zipcodewilmington.froilansfarm.Produce.Produce;
+
+public abstract class Crops extends Produce {
+
+    protected Boolean harvested = false;
+
+    @Override
+    public Boolean hasEdible() {
+        return (fertilized && harvested);
+    }
+
+    public Boolean getHarvested() {
+        return harvested;
+    }
+
+    public void setHarvested(Boolean harvested) {
+        this.harvested = harvested;
+    }
+
+    @Override
+    public Edible yield() { return null; }
 }

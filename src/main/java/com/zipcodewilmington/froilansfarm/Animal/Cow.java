@@ -66,4 +66,6 @@ public class Cow implements Animal {
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
+
+    public boolean makesNoise() { return false; }
 }
