@@ -11,7 +11,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
     import java.util.ArrayList;
     import java.util.List;
 
-    public class Farmer implements Person, Botanist, Rider, NoiseMaker {
+    public abstract class Farmer implements Person, Botanist, Rider, NoiseMaker {
 
             com.zipcodewilmington.froilansfarm.Animal.Farmer farmer;
             List<Edible> foodEaten = new ArrayList<Edible>();
