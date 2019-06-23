@@ -27,11 +27,22 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 super();
             }
 
-            public boolean isHungry() {
+            public Farm fetchFarm() {
+                return new Farm();
+            }
 
-                if (!hasEaten() && foodEaten.isEmpty()) {
-                    return true;
-                } return false;
+            public String makeNoise() {
+                return "Hey there y'all Sassafrases! Welcome to Froilan's farm!";
+            }
+
+//            public void harvest() {
+//                for (CropRow plants : CropRow.getTplant()) {
+//
+//                }
+//            }
+
+            public List<Edible> getFoodFromStorage() {
+                return null;
             }
 
             public List reproduce(Integer increaseBy) {
@@ -41,29 +52,11 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 } return farmers;
             }
 
-            public List<Edible> harvest() {
-                //insert condition to check if plants are ready for harvest.
-                List<Edible> harvestCrops = new ArrayList<Edible>();
-                Tomatoes tomatoes = new Tomatoes();
-                StringBeans stringbeans = new StringBeans();
-                Cucumbers cucumbers = new Cucumbers();
-                EarOfCorn corn = new EarOfCorn();
-                harvestCrops.add(tomatoes);
-                harvestCrops.add(stringbeans);
-                harvestCrops.add(cucumbers);
-                harvestCrops.add(corn);
-                return harvestCrops;
-            }
+            public boolean isHungry() {
 
-            public List<Edible> getFoodFromStorage() {
-                return null;
-            }
-
-
-            public void eatEdible(Edible e) {
-                if (isHungry() && !hasEaten()) {
-                    foodEaten.add(e);
-                }
+                if (!hasEaten() && foodEaten.isEmpty()) {
+                    return true;
+                } return false;
             }
 
             public boolean hasEaten() {
@@ -72,22 +65,27 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 } return true;
             }
 
+            public void eatEdible(Edible e) {
+                if (isHungry() && !hasEaten()) {
+                    foodEaten.add(e);
+                }
+            }
+
             public List<Edible> getFoodEaten() {
                 return foodEaten;
             }
-
-            public String makeNoise() {
-                return "Hey there y'all Sassafrases! Welcome to Froilan's farm!";
-            }
-
 
             public void operateVehicle(Rideable vehicle) {
                 vehicle.setOperateVehicle(true);
             }
 
-            public void stopOperatingVehicle(Rideable vehicle) {
-                vehicle.setOperateVehicle(false);
+            public void feedFarmAnimals(Eater animal, Edible food) {
+                farmer.feedFarmAnimals(animal, food);
             }
+
+            public void stopOperatingVehicle(Rideable vehicle) {
+                    vehicle.setOperateVehicle(false);
+                }
 
             public void mount(Rideable rideable) {
                 rideable.setMounted(true);
