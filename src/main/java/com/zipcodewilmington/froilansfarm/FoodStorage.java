@@ -23,7 +23,7 @@ public class FoodStorage<T> implements Shelter {
         return consumption;
     }
 
-    public static List<T> getT() {
+    public List<T> getT() {
         return foodStorage;
     }
 

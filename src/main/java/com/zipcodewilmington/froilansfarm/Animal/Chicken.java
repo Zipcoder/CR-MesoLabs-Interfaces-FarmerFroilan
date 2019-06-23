@@ -13,6 +13,7 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
     Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
     List<Edible> eggBasket = new ArrayList<Edible>();
+    List<Chicken> chickens = new ArrayList();
 
     public Chicken() {
         super();
@@ -41,11 +42,9 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
     }
 
     public List reproduce(Integer increaseBy) {
-        List<Chicken> chickens = new ArrayList();
         for (int i = 0; i < increaseBy; i++) {
             chickens.add(chicken);
-        }
-        return chickens;
+        } return chickens;
     }
 
     public void eatEdible(Edible e) {
@@ -67,7 +66,7 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
 
     public String makeNoise() {
         if (!hasEaten() && isHungry()) {
-            return "Cluck! Cluck! Cluck-a-cluck!";
+            return "Cluck! Cluck! Cluck-a-luck!";
         }
         return null;
     }
@@ -77,6 +76,8 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
         return !fertilized;
     }
 
+
+    //Yield individual eggs.
     @Override
     public Edible yield() {
         if (hasEdible()) return new Egg();
