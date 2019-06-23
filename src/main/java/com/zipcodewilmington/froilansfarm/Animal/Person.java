@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public interface Person {
+public interface Person extends Animal {
+
+        public void operateVehicle();
 }
+
