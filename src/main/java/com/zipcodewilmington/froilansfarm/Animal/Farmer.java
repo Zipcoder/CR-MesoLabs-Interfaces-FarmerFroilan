@@ -13,7 +13,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     public class Farmer implements Botanist, Rider {
 
-            com.zipcodewilmington.froilansfarm.Animal.Farmer farmer;
+            Farmer farmer;
             List<Edible> foodEaten = new ArrayList<Edible>();
 
             public Farmer(Person person){
@@ -29,7 +29,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public List reproduce(Integer increaseBy) {
-                List<com.zipcodewilmington.froilansfarm.Animal.Farmer> farmers = new ArrayList();
+                List<Farmer> farmers = new ArrayList();
                 for (int i = 0; i < increaseBy; i++) {
                     farmers.add(farmer);
                 } return farmers;
