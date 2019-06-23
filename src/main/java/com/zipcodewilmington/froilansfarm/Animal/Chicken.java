@@ -89,8 +89,4 @@ public class Chicken extends Produce implements Animal {
 
             return null;
         }
-//    public Edible yield() {
-//        if(hasEdible()) return new Egg();
-//        return null;
-//    }
 }
