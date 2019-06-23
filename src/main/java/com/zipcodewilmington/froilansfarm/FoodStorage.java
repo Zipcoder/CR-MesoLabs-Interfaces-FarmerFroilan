@@ -9,11 +9,6 @@ import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import java.util.List;
 
 public class FoodStorage<T>  {
-
-  // Farmer farmer = new Farmer();
-
-   // TomatoPlant tp=new TomatoPlant();
-
     private List<T> foodStorage;
 
 

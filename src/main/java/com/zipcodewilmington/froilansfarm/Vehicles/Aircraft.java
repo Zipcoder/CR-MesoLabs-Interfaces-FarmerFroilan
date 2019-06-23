@@ -24,7 +24,19 @@ public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle
     }
 
 
+    public String makeNoise() {
+        return null;
+    }
+
     public boolean makesNoise() {
         return true;
+    }
+
+    public boolean isMounted() {
+        return false;
+    }
+
+    public void setMounted(boolean mounted) {
+
     }
 }
