@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
+import com.zipcodewilmington.froilansfarm.Produce.Milk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,5 +66,4 @@ public class Cow implements Animal {
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
-    }
 }

@@ -14,13 +14,4 @@ public class Froilan extends Farmer {
         public Froilan() {
             super();
         }
-    }
-
-    public boolean canDrive() {
-        return true;
-    }
-
-    public boolean makesNoise() {
-        return true;
-    }
 }

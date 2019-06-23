@@ -66,5 +66,4 @@ public class Chicken extends Produce implements Animal {
                 return "Cluck! Cluck! Cluck-a-cluck!";
             } return null;
         }
-    }
 }

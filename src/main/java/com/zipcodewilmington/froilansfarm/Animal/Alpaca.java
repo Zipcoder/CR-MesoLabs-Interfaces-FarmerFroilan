@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
+import com.zipcodewilmington.froilansfarm.Produce.Wool;
 
 import java.util.ArrayList;
 import java.util.List;
