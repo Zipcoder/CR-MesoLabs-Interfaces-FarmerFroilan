@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
 public interface Rideable {
-    public boolean vehicleRideable();
+
+        public boolean isMounted();
+        public void setMounted(boolean mounted);
 }

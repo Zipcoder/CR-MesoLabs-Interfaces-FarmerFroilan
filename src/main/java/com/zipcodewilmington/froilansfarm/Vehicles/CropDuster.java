@@ -13,7 +13,8 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public boolean canFly() {
         return true;
     }
-
+   // public boolean makeNoise(){return  true;}
+   public String makeNoise(){return "";}
     public boolean makesNoise() {
         return true;
     }

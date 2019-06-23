@@ -4,29 +4,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class FarmerTest {
+public class HorseTest {
 
     @Test
-<<<<<<< HEAD
-    public void farmerHarvest() {
-    }
-
-    @Test
-    public void foodStore() {
-=======
     public void isHungry() {
     }
 
     @Test
     public void reproduce() {
-    }
-
-    @Test
-    public void harvest() {
-    }
-
-    @Test
-    public void getFoodFromStorage() {
     }
 
     @Test
@@ -46,15 +31,10 @@ public class FarmerTest {
     }
 
     @Test
-    public void operateVehicle() {
+    public void isMounted() {
     }
 
     @Test
-    public void mount() {
-    }
-
-    @Test
-    public void dismount() {
->>>>>>> f8472b3a77ce866c9c38035455ddfbd54d1a547d
+    public void setMounted() {
     }
 }
