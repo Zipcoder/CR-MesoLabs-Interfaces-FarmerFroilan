@@ -6,8 +6,8 @@ import com.zipcodewilmington.froilansfarm.Produce.Milk;
 import java.util.ArrayList;
 import java.util.List;
 
+public class Cow implements Animal, NoiseMaker, Eater {
 
-public class Cow implements Animal {
 
         private com.zipcodewilmington.froilansfarm.Animal.Cow cow;
         Milk milk;
@@ -57,7 +57,7 @@ public class Cow implements Animal {
             }
         }
 
-        public boolean hasEaten() {
+       public boolean hasEaten() {
             if (foodEaten.isEmpty()) {
                 return false;
             } return true;

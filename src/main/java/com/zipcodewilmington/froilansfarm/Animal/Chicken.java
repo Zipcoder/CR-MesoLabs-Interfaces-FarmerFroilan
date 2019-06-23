@@ -4,11 +4,11 @@ import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Egg;
 import com.zipcodewilmington.froilansfarm.Produce.Produce;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Chicken extends Produce implements Animal {
+public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
+
 
     Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
@@ -68,10 +68,19 @@ public class Chicken extends Produce implements Animal {
     public String makeNoise() {
         if (!hasEaten() && isHungry()) {
             return "Cluck! Cluck! Cluck-a-cluck!";
-        } return null;
-    }
-        @Override
-        public Boolean hasEdible() {
-            return !fertilized;
         }
+        return null;
+    }
+
+    @Override
+    public Boolean hasEdible() {
+        return !fertilized;
+    }
+
+    @Override
+    public Edible yield() {
+        if (hasEdible()) return new Egg();
+
+        return null;
+    }
 }
