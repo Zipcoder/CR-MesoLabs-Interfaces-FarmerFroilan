@@ -34,8 +34,8 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
         return true;
     }
 
-    public List<Tomato> harvest(TomatoPlant tomatoPlant){
+    public List<Tomatoes> harvest(TomatoPlant tomatoPlant){
         Tomatoes harvestedtomatoes = new Tomatoes();
-        return (List<Tomato>) harvestedtomatoes;
+        return (List<Tomatoes>) harvestedtomatoes;
     }
 }

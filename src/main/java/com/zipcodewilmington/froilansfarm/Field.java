@@ -19,6 +19,6 @@ public  class Field {
     private Map<Chicken, ChickenCoop> chickenChickenCoopMap = new HashMap<Chicken, ChickenCoop>();
     private Map<Horse, Stable> horseStableMap = new HashMap<Horse, Stable>();
     private List<FarmVehicle> farmVehicles;
-    private List<Aircraft> aircrafts;
+    private List<Aircraft> aircraft;
     private Pilot pilot;
 }
