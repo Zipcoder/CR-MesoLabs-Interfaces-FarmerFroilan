@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 
-public interface Driver extends Animal{
+public interface Driver extends Animal, Person{
 
-        public void drive();
 }

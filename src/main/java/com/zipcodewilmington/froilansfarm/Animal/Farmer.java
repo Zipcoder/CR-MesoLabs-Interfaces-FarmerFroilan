@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
     import com.zipcodewilmington.froilansfarm.Crops.CropRow;
     import com.zipcodewilmington.froilansfarm.Crops.Crops;
     import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
+    import com.zipcodewilmington.froilansfarm.Farm;
     import com.zipcodewilmington.froilansfarm.Produce.*;
     import com.zipcodewilmington.froilansfarm.Tomato;
     import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
@@ -14,10 +15,12 @@ package com.zipcodewilmington.froilansfarm.Animal;
     public class Farmer implements Person, Botanist, Rider, NoiseMaker {
 
             Farmer farmer;
+            Farm farm;
             List<Edible> foodEaten = new ArrayList<Edible>();
 
-            public Farmer(Person person){
+            public Farmer(Person person, Farm farm){
                 super();
+                this.farm = farm;
             }
 
             public Farmer() {
@@ -74,15 +77,16 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public String makeNoise() {
-                return "Hey there y'all Sassafras! Welcome to Froilan's farm!";
+                return "Hey there y'all Sassafrases! Welcome to Froilan's farm!";
             }
 
-        public boolean makesNoise() {
-            return false;
-        }
 
-        public void operateVehicle() {
+            public void operateVehicle(Rideable vehicle) {
+                vehicle.setOperateVehicle(true);
+            }
 
+            public void stopOperatingVehicle(Rideable vehicle) {
+                vehicle.setOperateVehicle(false);
             }
 
             public void mount(Rideable rideable) {
