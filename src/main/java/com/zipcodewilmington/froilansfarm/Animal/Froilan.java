@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 
 import java.util.ArrayList;
@@ -11,7 +12,8 @@ public class Froilan extends Farmer {
         Froilan froilan;
         List<Edible> foodEaten = new ArrayList<Edible>();
 
-        public Froilan() {
+        public Froilan(Farm farm) {
             super();
+            this.farm = new Farm();
         }
 }
