@@ -9,7 +9,7 @@ import java.util.List;
 public class Cow implements Animal, NoiseMaker, Eater {
 
 
-        private com.zipcodewilmington.froilansfarm.Animal.Cow cow;
+        private Cow cow;
         Milk milk;
         List<Edible> milkCartons = new ArrayList<Edible>();
         List<Edible> foodEaten = new ArrayList<Edible>();

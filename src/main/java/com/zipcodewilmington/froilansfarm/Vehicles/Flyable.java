@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public interface Flyable {
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+
+public interface Flyable extends Vehicle {
 
     public boolean flyingAirCraft();
     public void setFlyAirCraft(boolean flying);

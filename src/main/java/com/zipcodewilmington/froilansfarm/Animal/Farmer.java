@@ -11,7 +11,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
     import java.util.ArrayList;
     import java.util.List;
 
-    public class Farmer implements Person, Botanist, Rider, NoiseMaker {
+    public class Farmer implements Person, Botanist, Rider, Driver {
 
             Farmer farmer;
             Farm farm;
@@ -83,17 +83,9 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 return foodEaten;
             }
 
-            public void operateVehicle(Driveable vehicle) {
-                vehicle.setOperateVehicle(true);
-            }
-
             public void feedFarmAnimals(Eater animal, Edible food) {
                 farmer.feedFarmAnimals(animal, food);
             }
-
-            public void stopOperatingVehicle(Driveable vehicle) {
-                    vehicle.setOperateVehicle(false);
-                }
 
             public void mount(Rideable rideable) {
                 rideable.setMounted(true);
@@ -105,6 +97,13 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
             public void plant(Crops crops, CropRow cropRow) {
                 CropRow.addCrops(crops);
+            }
+
+            public void drive(Driveable vehicle) {
+                vehicle.setOperateVehicle(true);
+            }
+            public void ceaseDrive(Driveable vehicle) {
+                vehicle.setOperateVehicle(false);
             }
     }
 
