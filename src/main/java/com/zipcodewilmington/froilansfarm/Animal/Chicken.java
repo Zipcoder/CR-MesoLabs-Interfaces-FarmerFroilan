@@ -1,8 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.Produce.Edible;
-import com.zipcodewilmington.froilansfarm.Produce.Egg;
-import com.zipcodewilmington.froilansfarm.Produce.Produce;
+import com.zipcodewilmington.froilansfarm.Produce.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,5 +62,8 @@ public class Chicken extends Produce implements Animal {
     public Boolean hasEdible() {
         return !fertilized;
     }
+
+    @Override
+    public Bounty yield() { return null; }
 
 }

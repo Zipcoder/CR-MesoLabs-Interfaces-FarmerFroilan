@@ -1,7 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
-import com.zipcodewilmington.froilansfarm.Produce.Edible;
+
 import com.zipcodewilmington.froilansfarm.Produce.Produce;
+import com.zipcodewilmington.froilansfarm.Produce.Bounty;
 
 public abstract class Crops extends Produce {
 
@@ -20,6 +21,6 @@ public abstract class Crops extends Produce {
         this.harvested = harvested;
     }
 
-    @Override
-    public Edible yield() { return null; }
+
+
 }
