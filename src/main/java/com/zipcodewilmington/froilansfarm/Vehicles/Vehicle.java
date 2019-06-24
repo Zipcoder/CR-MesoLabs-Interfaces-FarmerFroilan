@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public interface Vehicle {
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+
+public interface Vehicle extends NoiseMaker {
+
     public boolean operate();
 }
