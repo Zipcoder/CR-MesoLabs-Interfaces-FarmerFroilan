@@ -36,7 +36,7 @@ public class Alpaca implements Animal {
         }
 
         public List reproduce(Integer increaseBy) {
-            List<com.zipcodewilmington.froilansfarm.Animal.Alpaca> alpacas = new ArrayList();
+            List<Alpaca> alpacas = new ArrayList();
             for (int i = 0; i < increaseBy; i++) {
                 alpacas.add(alpaca);
                 return alpacas;
