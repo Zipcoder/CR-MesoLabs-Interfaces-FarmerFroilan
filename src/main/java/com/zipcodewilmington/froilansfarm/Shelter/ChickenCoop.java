@@ -5,32 +5,36 @@ import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChickenCoop<Chicken> implements Shelter {
-   ChickenCoop chickenCoop1 = new ChickenCoop();
-    ChickenCoop chickenCoop2 = new ChickenCoop();
-    ChickenCoop chickenCoop3 = new ChickenCoop();
-    ChickenCoop chickenCoop4 = new ChickenCoop();
+public class ChickenCoop implements Shelter {
+    List<Chicken> chickenCoop = new ArrayList<>();
+
+    public ChickenCoop() {
+    }
+
     public Boolean isEmpty() {
-        return null;
+        return chickenCoop.isEmpty();
     }
 
-    public Boolean atCapacity() {
-        return true;
+    public void add(Chicken chicken) {
+        chickenCoop.add(chicken);
     }
 
-    public Boolean add() {
-        return true;
+    public void remove(Chicken chicken) {
+        chickenCoop.remove(chicken);
     }
 
-    public Boolean remove() {
-        return true;
-    }
+    public Integer itemCount() {
 
-    public Integer itemCount(List<Chicken> chickenCoop) {
         return chickenCoop.size();
     }
-    public Integer totalAllCoops(){
-        Integer total = chickenCoop1.size() + chickenCoop2.size() + chickenCoop3.size() + chickenCoop4.size();
-        return total;
+
+    @Override
+    public void add() {
+
+    }
+
+    @Override
+    public void remove() {
+
     }
 }
