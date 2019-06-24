@@ -1,13 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Field<CropRow> implements Shelter {
-    List<CropRow> field = new ArrayList<>();
+public class Field<CropRow> {
+    List<CropRow> field = new ArrayList();
 
     public Boolean isEmpty() {
         return null;
@@ -32,3 +30,4 @@ public class Field<CropRow> implements Shelter {
         return null;
     }
 }
+
