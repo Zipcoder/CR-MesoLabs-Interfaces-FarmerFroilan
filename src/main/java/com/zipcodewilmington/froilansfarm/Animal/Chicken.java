@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Egg;
 import com.zipcodewilmington.froilansfarm.Produce.Produce;
@@ -9,20 +10,14 @@ import java.util.List;
 
 public class Chicken extends Produce implements Animal {
 
-
-    Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
-    List<Edible> eggBasket = new ArrayList<Edible>();
-    List<Chicken> chickens = new ArrayList();
 
     public Chicken() {
-        super();
     }
 
     public boolean fertilized() {
-        if (!isHungry()) {
-            return true;
-        } return false;
+        //Establish conditions later
+        return true;
     }
 
     public Egg yieldEgg() throws Exception {
@@ -32,22 +27,8 @@ public class Chicken extends Produce implements Animal {
                 ("This chicken has been fertilized and cannot produce edible eggs.");
     }
 
-    public boolean isHungry() {
-        if (foodEaten.isEmpty())
-            return true;
-        return false;
-    }
-
-    public List reproduce(Integer increaseBy) {
-        for (int i = 0; i < increaseBy; i++) {
-            chickens.add(chicken);
-        } return chickens;
-    }
-
-    public void eatEdible(Edible e) {
-        if (isHungry()) {
-            foodEaten.add(e);
-        }
+    public void eatEdible(Edible food) {
+            foodEaten.add(food);
     }
 
     public List<Edible> getFoodEaten() {
@@ -55,9 +36,7 @@ public class Chicken extends Produce implements Animal {
     }
 
     public String makeNoise() {
-        if (isHungry()) {
             return "Cluck! Cluck! Cluck-a-luck!";
-        } return null;
     }
 
     @Override

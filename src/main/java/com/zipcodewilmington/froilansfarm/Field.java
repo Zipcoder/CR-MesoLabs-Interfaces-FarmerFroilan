@@ -1,10 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
+
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Field {
     private CropRow cropRow;
@@ -31,3 +32,4 @@ public class Field {
         field.remove(cropRow);
     }
 }
+
