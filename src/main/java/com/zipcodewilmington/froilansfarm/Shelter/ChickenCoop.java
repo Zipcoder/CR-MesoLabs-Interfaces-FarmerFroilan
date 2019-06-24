@@ -1,6 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
-public class ChickenCoop implements Shelter {
+import com.zipcodewilmington.froilansfarm.Animal.Chicken;
+
+import java.util.List;
+
+public class ChickenCoop<Chicken> implements Shelter {
+
+
     public Boolean isEmpty() {
         return null;
     }
@@ -18,6 +24,6 @@ public class ChickenCoop implements Shelter {
     }
 
     public Integer itemCount() {
-        return null;
+        return ;
     }
 }

@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Field implements Shelter {
+public abstract class Field<CropRow> implements Shelter {
     List<CropRow> field = new ArrayList<>();
 
     public Boolean isEmpty() {
