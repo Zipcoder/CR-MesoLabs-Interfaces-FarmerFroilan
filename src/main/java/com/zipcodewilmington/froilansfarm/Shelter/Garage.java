@@ -24,17 +24,12 @@ public class Garage implements Shelter {
         return farmVehicles.isEmpty();
     }
 
-    public Boolean atCapacity() {
+    public void add() {
 
-        return null;
     }
 
-    public Boolean add() {
-        return null;
-    }
+    public void remove() {
 
-    public Boolean remove() {
-        return null;
     }
 
     public Integer itemCount() {

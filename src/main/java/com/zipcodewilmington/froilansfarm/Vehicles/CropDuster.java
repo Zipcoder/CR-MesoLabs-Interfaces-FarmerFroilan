@@ -15,8 +15,9 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
         return true;
     }
 
-    public boolean operate() {
-        return true;
+    @Override
+    public void operate() {
+
     }
     public Crops fertilize(CropRow cropRow){
         return null;//croprow method is fetilized true
@@ -32,6 +33,14 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     }
 
     public void setFlyAirCraft(boolean flying) {
+
+    }
+
+    public boolean isMounted() {
+        return false;
+    }
+
+    public void setMounted(boolean mounted) {
 
     }
 }

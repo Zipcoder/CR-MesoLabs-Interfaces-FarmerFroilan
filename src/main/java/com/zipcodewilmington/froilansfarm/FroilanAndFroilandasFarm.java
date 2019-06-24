@@ -40,17 +40,17 @@ public class FroilanAndFroilandasFarm {
             return INSTANCE;
         }
 
-        public Froilan fetchFroilan() {
-            return new Froilan(new Farm());
-        }
+//        public Froilan fetchFroilan() {
+//            return new Froilan(new Farm());
+//        }
 
         public Froilanda fetchFroilanda() {
             return new Froilanda();
         }
 
-        public void farmCreation() {
-            farm = froilan.fetchFarm();
-        }
+//        public void farmCreation() {
+//            farm = froilan.fetchFarm();
+//        }
 
         public FarmHouse addFarmHouse() {
             FarmHouse farmHouse = farm.getFarmHouse();
@@ -66,3 +66,7 @@ public class FroilanAndFroilandasFarm {
 
 
 }
+
+/*
+TODO this class needs to be deleted.
+ */
