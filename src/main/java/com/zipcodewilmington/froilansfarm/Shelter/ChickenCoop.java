@@ -6,15 +6,15 @@ public class ChickenCoop implements Shelter {
     }
 
     public Boolean atCapacity() {
-        return null;
+        return true;
     }
 
     public Boolean add() {
-        return null;
+        return true;
     }
 
     public Boolean remove() {
-        return null;
+        return true;
     }
 
     public Integer itemCount() {

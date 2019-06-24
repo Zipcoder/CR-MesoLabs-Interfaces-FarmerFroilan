@@ -1,5 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public interface Pilot {
-    public boolean canFly();
+import com.zipcodewilmington.froilansfarm.Vehicles.Flyable;
+
+public interface Pilot extends Person {
+
+        public void flyAirCraft(Flyable airCraft);
+        public void ceaseFlying(Flyable airCraft);
 }

@@ -1,4 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public interface Botanist {
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Crops;
+
+public interface Botanist extends Person {
+
+        public void plant(Crops crops, CropRow cropRow);
 }

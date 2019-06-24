@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public interface Rider {
-    public boolean canMoutn();
-    public boolean canDismount();
+import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
+
+
+public interface Rider extends Person{
+
+        public void mount(Rideable rideable);
+        public void dismount(Rideable rideable);
 }
