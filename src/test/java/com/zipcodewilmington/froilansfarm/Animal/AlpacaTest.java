@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Wool;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,6 +14,7 @@ public class AlpacaTest {
 
     Alpaca alpaca = new Alpaca();
     Wool wool = new Wool();
+    List<Edible> foodEaten = new ArrayList<Edible>();
 
     @Test
     public void collectWool() {
@@ -28,6 +30,16 @@ public class AlpacaTest {
 
     @Test
     public void isHungry() {
+        //Given
+        Boolean expected = true;
+
+        //When
+        if (foodEaten.isEmpty() == true) {
+            Boolean actual = alpaca.isHungry();
+            //Then
+            Assert.assertEquals(expected, actual);
+        }
+
     }
 
     @Test

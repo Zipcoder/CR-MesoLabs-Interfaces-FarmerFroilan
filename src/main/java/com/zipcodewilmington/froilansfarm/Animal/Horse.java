@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Horse implements Animal, Rideable {
 
-        com.zipcodewilmington.froilansfarm.Animal.Horse horse;
+        Horse horse;
         boolean isMounted;
         List<Edible> foodEaten = new ArrayList<Edible>();
         List<Horse> horses = new ArrayList();

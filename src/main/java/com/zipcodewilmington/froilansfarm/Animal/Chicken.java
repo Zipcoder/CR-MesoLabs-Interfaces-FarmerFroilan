@@ -12,7 +12,6 @@ public class Chicken extends Produce implements Animal {
 
     Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
-    List<Edible> eggBasket = new ArrayList<Edible>();
     List<Chicken> chickens = new ArrayList();
 
     public Chicken() {

@@ -10,14 +10,14 @@ public class Alpaca implements Animal {
 
         Alpaca alpaca;
         List<Edible> foodEaten = new ArrayList<Edible>();
-        List alpacaWoolBasket = new ArrayList();
 
         public Alpaca() {
             super();
         }
 
         public Wool collectWool() {
-            return new Wool();
+            Wool wool = new Wool();
+            return wool;
         }
 
         public boolean isHungry () {

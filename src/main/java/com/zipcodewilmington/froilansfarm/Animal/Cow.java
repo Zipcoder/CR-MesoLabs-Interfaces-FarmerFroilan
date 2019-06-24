@@ -11,7 +11,6 @@ public class Cow implements Animal {
 
         private Cow cow;
         Milk milk;
-        List<Edible> milkCartons = new ArrayList<Edible>();
         List<Edible> foodEaten = new ArrayList<Edible>();
         List<Cow> cows = new ArrayList();
 
