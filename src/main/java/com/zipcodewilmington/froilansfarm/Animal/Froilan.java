@@ -21,7 +21,7 @@ public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater
     }
     FoodStorage foodStorage=new FoodStorage();
 
-        com.zipcodewilmington.froilansfarm.Animal.Froilan froilan;
+        Froilan froilan;
         List<Edible> foodEaten = new ArrayList<Edible>();
 
         public Froilan() {

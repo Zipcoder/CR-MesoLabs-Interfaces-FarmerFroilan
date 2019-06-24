@@ -30,11 +30,6 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
      crops.getHarvested();
         return true;//croprow amount of crop  takes croprow.crop-harvest crop. crops return
     }
-
-    public String makeNoise() {
-        return null;
-    }
-
     public boolean makesNoise() {
         return true;
     }
@@ -49,6 +44,18 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
     }
 
     public void setMounted(boolean mounted) {
+
+    }
+
+    public String makeNoise() {
+        return null;
+    }
+
+    public boolean operatingVehicle() {
+        return false;
+    }
+
+    public void setOperateVehicle(boolean operating) {
 
     }
 }

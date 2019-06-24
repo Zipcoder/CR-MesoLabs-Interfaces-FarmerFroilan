@@ -9,65 +9,71 @@ import java.util.List;
 public class Cow implements Animal, NoiseMaker, Eater {
 
 
-        private com.zipcodewilmington.froilansfarm.Animal.Cow cow;
-        Milk milk;
-        List<Edible> milkCartons = new ArrayList<Edible>();
-        List<Edible> foodEaten = new ArrayList<Edible>();
+    private com.zipcodewilmington.froilansfarm.Animal.Cow cow;
+    Milk milk;
+    List<Edible> milkCartons = new ArrayList<Edible>();
+    List<Edible> foodEaten = new ArrayList<Edible>();
+    List<Cow> cows = new ArrayList();
 
-        public Cow() {
-            super();
-        }
+    public Cow() {
+        super();
+    }
 
-        public boolean isMilkable() {
-            if (!isHungry() && hasEaten()) {
-                return true;
-            } return false;
-        }
-
-        public List yieldMilk() throws Exception {
-            if (isMilkable()) {
-                milkCartons.add(milk);
-                return milkCartons;
-            } else throw new Exception
-                    ("This cow is not producing milk at the moment. May yield milk later.");
-        }
-
-        public String makeNoise() {
-            if (!hasEaten() && isHungry()) {
-                return "Mooo mooo!";
-            } return null;
-        }
-
-        public boolean isHungry() {
-            if (!hasEaten() && foodEaten.isEmpty())
-                return false;
+    public boolean isMilkable() {
+        if (!isHungry() && hasEaten()) {
             return true;
         }
+        return false;
+    }
 
-        public List reproduce(Integer increaseBy) {
-            List<com.zipcodewilmington.froilansfarm.Animal.Cow> cows = new ArrayList();
-            for (int i = 0; i < increaseBy; i++) {
-                cows.add(cow);
-            } return cows;
+    public List yieldMilk() throws Exception {
+        if (isMilkable()) {
+            milkCartons.add(milk);
+            return milkCartons;
+        } else throw new Exception
+                ("This cow is not producing milk at the moment. May yield milk later, after she has been well fed.");
+    }
+
+    public String makeNoise() {
+        if (!hasEaten() && isHungry()) {
+            return "Mooo!! Mooooo!!";
         }
+        return null;
+    }
 
-        public void eatEdible(Edible e) {
-            if (isHungry()) {
-                foodEaten.add(e);
-            }
+    public boolean isHungry() {
+        if (!hasEaten() && foodEaten.isEmpty())
+            return false;
+        return true;
+    }
+
+    public List reproduce(Integer increaseBy) {
+        for (int i = 0; i < increaseBy; i++) {
+            cows.add(cow);
         }
+        return cows;
+    }
 
-       public boolean hasEaten() {
-            if (foodEaten.isEmpty()) {
-                return false;
-            } return true;
+    public void eatEdible(Edible e) {
+        if (isHungry()) {
+            foodEaten.add(e);
         }
+    }
 
-        public List<Edible> getFoodEaten() {
-            return foodEaten;
+    public boolean hasEaten() {
+        if (foodEaten.isEmpty()) {
+            return false;
         }
+        return true;
+    }
 
-        public boolean makesNoise() { return false; }
+    public List<Edible> getFoodEaten() {
+        return foodEaten;
+    }
 
+
+    public boolean makesNoise() {
+        return false;
+    }
 
 }

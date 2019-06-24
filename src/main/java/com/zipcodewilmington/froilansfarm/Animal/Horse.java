@@ -11,6 +11,7 @@ public class Horse implements Animal, Rideable {
         com.zipcodewilmington.froilansfarm.Animal.Horse horse;
         boolean isMounted;
         List<Edible> foodEaten = new ArrayList<Edible>();
+        List<Horse> horses = new ArrayList();
 
         public Horse(){
             super();
@@ -23,7 +24,6 @@ public class Horse implements Animal, Rideable {
         }
 
         public List reproduce(Integer increaseBy) {
-            List<com.zipcodewilmington.froilansfarm.Animal.Horse> horses = new ArrayList();
             for (int i = 0; i < increaseBy; i++) {
                 horses.add(horse);
             } return horses;

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Alpaca implements Animal {
 
-        com.zipcodewilmington.froilansfarm.Animal.Alpaca alpaca;
+        Alpaca alpaca;
         List<Edible> foodEaten = new ArrayList<Edible>();
         List alpacaWoolBasket = new ArrayList();
 
@@ -60,12 +60,8 @@ public class Alpaca implements Animal {
         }
 
         public String makeNoise() {
-            if (!hasEaten() && isHungry()) {
-                return "Mehh! Mehh!";
-            } return null;
+                if (!hasEaten() && isHungry()) {
+                    return "Mehh! Mehh!";
+                } return null;
         }
-
-    public boolean makesNoise() {
-        return false;
-    }
 }

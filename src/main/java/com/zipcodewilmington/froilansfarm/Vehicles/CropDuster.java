@@ -13,11 +13,13 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public boolean canFly() {
         return true;
     }
+
    // public boolean makeNoise(){return  true;}
    public String makeNoise(){return "";}
     public boolean makesNoise() {
         return true;
     }
+
 
     public boolean operate() {
         return true;
@@ -43,5 +45,13 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public boolean fertilized(CropRow cropRow) {
        cropRow.fertilize();
         return true;
+    }
+
+    public boolean flyingAirCraft() {
+        return false;
+    }
+
+    public void setFlyAirCraft(boolean flying) {
+
     }
 }
