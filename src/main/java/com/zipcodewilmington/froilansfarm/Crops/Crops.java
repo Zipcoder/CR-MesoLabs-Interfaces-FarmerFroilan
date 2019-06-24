@@ -9,7 +9,7 @@ public abstract class Crops extends Produce {
 
     @Override
     public Boolean hasEdible() {
-        return (fertilized && harvested);
+        return (fertilized && !harvested);
     }
 
     public Boolean getHarvested() {
