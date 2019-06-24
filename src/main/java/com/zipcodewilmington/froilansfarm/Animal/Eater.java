@@ -8,6 +8,6 @@ import java.util.List;
 public interface Eater {
 
         public void eatEdible(Edible food);
-        public boolean hasEaten();
+        public boolean isHungry();
         public List<Edible> getFoodEaten();
 }
