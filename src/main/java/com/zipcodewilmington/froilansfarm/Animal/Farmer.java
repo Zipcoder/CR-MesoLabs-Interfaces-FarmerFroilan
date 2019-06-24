@@ -61,20 +61,13 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public boolean isHungry() {
-
-                if (!hasEaten() && foodEaten.isEmpty()) {
+                if (foodEaten.isEmpty()) {
                     return true;
                 } return false;
             }
 
-            public boolean hasEaten() {
-                if (foodEaten.isEmpty()) {
-                    return false;
-                } return true;
-            }
-
             public void eatEdible(Edible food) {
-                if (isHungry() && !hasEaten()) {
+                if (isHungry()) {
                     foodEaten.add(food);
                 }
             }

@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.Produce.Milk;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cow implements Animal, NoiseMaker, Eater {
+public class Cow implements Animal {
 
 
         private Cow cow;
@@ -20,29 +20,27 @@ public class Cow implements Animal, NoiseMaker, Eater {
         }
 
         public boolean isMilkable() {
-            if (!isHungry() && hasEaten()) {
+            if (!isHungry()) {
                 return true;
             } return false;
         }
 
-        public List yieldMilk() throws Exception {
+        public Milk yieldMilk() throws Exception {
             if (isMilkable()) {
-                milkCartons.add(milk);
-                return milkCartons;
+                return new Milk();
             } else throw new Exception
                     ("This cow is not producing milk at the moment. May yield milk later, after she has been well fed.");
         }
 
         public String makeNoise() {
-            if (!hasEaten() && isHungry()) {
-                return "Mooo!! Mooooo!!";
-            } return null;
+            if (isHungry()) {
+            } return "Mooo!! Mooooo!!";
         }
 
         public boolean isHungry() {
-            if (!hasEaten() && foodEaten.isEmpty())
-                return false;
-            return true;
+            if (foodEaten.isEmpty())
+                return true;
+            return false;
         }
 
         public List reproduce(Integer increaseBy) {
@@ -55,12 +53,6 @@ public class Cow implements Animal, NoiseMaker, Eater {
             if (isHungry()) {
                 foodEaten.add(e);
             }
-        }
-
-       public boolean hasEaten() {
-            if (foodEaten.isEmpty()) {
-                return false;
-            } return true;
         }
 
         public List<Edible> getFoodEaten() {

@@ -18,9 +18,9 @@ public class Horse implements Animal, Rideable {
         }
 
         public boolean isHungry() {
-            if (!hasEaten()) {
-                return false;
-            } return true;
+            if (foodEaten.isEmpty()) {
+                return true;
+            } return false;
         }
 
         public List reproduce(Integer increaseBy) {
@@ -29,16 +29,10 @@ public class Horse implements Animal, Rideable {
             } return horses;
         }
 
-        public void eatEdible(Edible e) {
+        public void eatEdible(Edible food) {
             if (foodEaten.isEmpty()) {
-                foodEaten.add(e);
+                foodEaten.add(food);
             }
-        }
-
-        public boolean hasEaten() {
-            if (isHungry() || foodEaten.isEmpty()) {
-                return true;
-            } return false;
         }
 
         public List<Edible> getFoodEaten() {
@@ -46,7 +40,7 @@ public class Horse implements Animal, Rideable {
         }
 
         public String makeNoise() {
-            if (!hasEaten() && isHungry()) {
+            if (isHungry()) {
                 return "Neigh! Neigh!";
             } return null;
         }

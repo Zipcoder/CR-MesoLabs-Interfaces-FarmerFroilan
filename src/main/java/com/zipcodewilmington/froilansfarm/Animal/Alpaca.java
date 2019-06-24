@@ -16,21 +16,12 @@ public class Alpaca implements Animal {
             super();
         }
 
-        public List collectWool() {
-            Wool wool = new Wool();
-            if (isShearable()) {
-                alpacaWoolBasket.add(wool);
-            } return alpacaWoolBasket;
+        public Wool collectWool() {
+            return new Wool();
         }
 
-        public boolean isShearable() {
-            if (hasEaten() && !isHungry()) {
-                return true;
-            } return false;
-        }
-
-        public boolean isHungry() {
-            if (!hasEaten()) {
+        public boolean isHungry () {
+            if (foodEaten.isEmpty()) {
                 return true;
             } return false;
         }
@@ -49,18 +40,12 @@ public class Alpaca implements Animal {
             }
         }
 
-        public boolean hasEaten() {
-            if (foodEaten.isEmpty()) {
-                return false;
-            } return true;
-        }
-
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
 
         public String makeNoise() {
-                if (!hasEaten() && isHungry()) {
+                if (isHungry()) {
                     return "Mehh! Mehh!";
                 } return null;
         }

@@ -26,5 +26,13 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public String makeNoise() {
         return null;
     }
+
+    public boolean flyingAirCraft() {
+        return false;
+    }
+
+    public void setFlyAirCraft(boolean flying) {
+
+    }
 }
 
