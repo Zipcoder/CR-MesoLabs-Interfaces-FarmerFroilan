@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Flyable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Froilanda implements Pilot, Person {
+public class Froilanda extends Farmer implements Pilot, Person {
 
         Froilanda froilanda;
         List<Edible> foodEaten = new ArrayList<Edible>();

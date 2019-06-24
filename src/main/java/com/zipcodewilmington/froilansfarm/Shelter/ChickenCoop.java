@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChickenCoop<Chicken> implements Shelter {
-    List<Chicken> chickenCoop1 = new ArrayList<>();
-    List<Chicken> chickenCoop2 = new ArrayList<>();
-    List<Chicken> chickenCoop3 = new ArrayList<>();
-    List<Chicken> chickenCoop4 = new ArrayList<>();
-
+   ChickenCoop chickenCoop1 = new ChickenCoop();
+    ChickenCoop chickenCoop2 = new ChickenCoop();
+    ChickenCoop chickenCoop3 = new ChickenCoop();
+    ChickenCoop chickenCoop4 = new ChickenCoop();
     public Boolean isEmpty() {
         return null;
     }
@@ -26,7 +25,7 @@ public class ChickenCoop<Chicken> implements Shelter {
     public Boolean remove() {
         return true;
     }
-    @Override
+
     public Integer itemCount(List<Chicken> chickenCoop) {
         return chickenCoop.size();
     }

@@ -28,7 +28,7 @@ public class ChickenCoopTest {
 
     @Test
     public void remove() {
-        
+
 
     }
 

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Froilan extends Farmer {
+public class Froilan extends Farmer implements Driver{
 
         Froilan froilan;
         List<Edible> foodEaten = new ArrayList<Edible>();
