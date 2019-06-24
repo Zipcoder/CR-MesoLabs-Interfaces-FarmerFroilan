@@ -7,45 +7,41 @@ import com.zipcodewilmington.froilansfarm.Produce.Produce;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
+public class Chicken extends Produce implements Animal {
 
 
     Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
     List<Edible> eggBasket = new ArrayList<Edible>();
+    List<Chicken> chickens = new ArrayList();
 
     public Chicken() {
         super();
     }
 
     public boolean fertilized() {
-        if (hasEaten() && !isHungry()) {
-            return false;
-        }
-        return true;
+        if (!isHungry()) {
+            return true;
+        } return false;
     }
 
-    public List<Edible> yieldEggs() throws Exception {
-        Egg egg = new Egg();
+    public Egg yieldEgg() throws Exception {
         if (!fertilized()) {
-            eggBasket.add(egg);
-            return eggBasket;
+            return new Egg();
         } else throw new Exception
                 ("This chicken has been fertilized and cannot produce edible eggs.");
     }
 
     public boolean isHungry() {
-        if (!hasEaten() && foodEaten.isEmpty())
-            return false;
-        return true;
+        if (foodEaten.isEmpty())
+            return true;
+        return false;
     }
 
     public List reproduce(Integer increaseBy) {
-        List<Chicken> chickens = new ArrayList();
         for (int i = 0; i < increaseBy; i++) {
             chickens.add(chicken);
-        }
-        return chickens;
+        } return chickens;
     }
 
     public void eatEdible(Edible e) {
@@ -54,22 +50,14 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
         }
     }
 
-    public boolean hasEaten() {
-        if (foodEaten.isEmpty()) {
-            return false;
-        }
-        return true;
-    }
-
     public List<Edible> getFoodEaten() {
         return foodEaten;
     }
 
     public String makeNoise() {
-        if (!hasEaten() && isHungry()) {
-            return "Cluck! Cluck! Cluck-a-cluck!";
-        }
-        return null;
+        if (isHungry()) {
+            return "Cluck! Cluck! Cluck-a-luck!";
+        } return null;
     }
 
     @Override
@@ -77,10 +65,4 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
         return !fertilized;
     }
 
-    @Override
-    public Edible yield() {
-        if (hasEdible()) return new Egg();
-
-        return null;
-    }
 }

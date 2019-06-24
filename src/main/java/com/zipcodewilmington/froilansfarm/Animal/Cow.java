@@ -6,46 +6,44 @@ import com.zipcodewilmington.froilansfarm.Produce.Milk;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cow implements Animal, NoiseMaker, Eater {
+public class Cow implements Animal {
 
 
-        private com.zipcodewilmington.froilansfarm.Animal.Cow cow;
+        private Cow cow;
         Milk milk;
         List<Edible> milkCartons = new ArrayList<Edible>();
         List<Edible> foodEaten = new ArrayList<Edible>();
+        List<Cow> cows = new ArrayList();
 
         public Cow() {
             super();
         }
 
         public boolean isMilkable() {
-            if (!isHungry() && hasEaten()) {
+            if (!isHungry()) {
                 return true;
             } return false;
         }
 
-        public List yieldMilk() throws Exception {
+        public Milk yieldMilk() throws Exception {
             if (isMilkable()) {
-                milkCartons.add(milk);
-                return milkCartons;
+                return new Milk();
             } else throw new Exception
-                    ("This cow is not producing milk at the moment. May yield milk later.");
+                    ("This cow is not producing milk at the moment. May yield milk later, after she has been well fed.");
         }
 
         public String makeNoise() {
-            if (!hasEaten() && isHungry()) {
-                return "Mooo mooo!";
-            } return null;
+            if (isHungry()) {
+            } return "Mooo!! Mooooo!!";
         }
 
         public boolean isHungry() {
-            if (!hasEaten() && foodEaten.isEmpty())
-                return false;
-            return true;
+            if (foodEaten.isEmpty())
+                return true;
+            return false;
         }
 
         public List reproduce(Integer increaseBy) {
-            List<com.zipcodewilmington.froilansfarm.Animal.Cow> cows = new ArrayList();
             for (int i = 0; i < increaseBy; i++) {
                 cows.add(cow);
             } return cows;
@@ -55,12 +53,6 @@ public class Cow implements Animal, NoiseMaker, Eater {
             if (isHungry()) {
                 foodEaten.add(e);
             }
-        }
-
-       public boolean hasEaten() {
-            if (foodEaten.isEmpty()) {
-                return false;
-            } return true;
         }
 
         public List<Edible> getFoodEaten() {

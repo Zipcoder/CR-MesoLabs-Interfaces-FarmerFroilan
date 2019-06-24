@@ -11,34 +11,28 @@ public class Horse implements Animal, Rideable {
         com.zipcodewilmington.froilansfarm.Animal.Horse horse;
         boolean isMounted;
         List<Edible> foodEaten = new ArrayList<Edible>();
+        List<Horse> horses = new ArrayList();
 
         public Horse(){
             super();
         }
 
         public boolean isHungry() {
-            if (!hasEaten()) {
-                return false;
-            } return true;
+            if (foodEaten.isEmpty()) {
+                return true;
+            } return false;
         }
 
         public List reproduce(Integer increaseBy) {
-            List<com.zipcodewilmington.froilansfarm.Animal.Horse> horses = new ArrayList();
             for (int i = 0; i < increaseBy; i++) {
                 horses.add(horse);
             } return horses;
         }
 
-        public void eatEdible(Edible e) {
+        public void eatEdible(Edible food) {
             if (foodEaten.isEmpty()) {
-                foodEaten.add(e);
+                foodEaten.add(food);
             }
-        }
-
-        public boolean hasEaten() {
-            if (isHungry() || foodEaten.isEmpty()) {
-                return true;
-            } return false;
         }
 
         public List<Edible> getFoodEaten() {
@@ -46,7 +40,7 @@ public class Horse implements Animal, Rideable {
         }
 
         public String makeNoise() {
-            if (!hasEaten() && isHungry()) {
+            if (isHungry()) {
                 return "Neigh! Neigh!";
             } return null;
         }

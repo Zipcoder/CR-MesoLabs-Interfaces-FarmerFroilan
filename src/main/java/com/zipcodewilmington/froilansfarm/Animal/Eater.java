@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface Eater {
 
-        public void eatEdible(Edible e);
-        public boolean hasEaten();
+        public void eatEdible(Edible food);
+        public boolean isHungry();
         public List<Edible> getFoodEaten();
 }
