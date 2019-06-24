@@ -9,8 +9,6 @@ import java.util.List;
 
 public class Chicken extends Produce implements Animal {
 
-
-    Chicken chicken;
     List<Edible> foodEaten = new ArrayList<Edible>();
     List<Chicken> chickens = new ArrayList();
 
@@ -39,7 +37,7 @@ public class Chicken extends Produce implements Animal {
 
     public List reproduce(Integer increaseBy) {
         for (int i = 0; i < increaseBy; i++) {
-            chickens.add(chicken);
+            chickens.add(new Chicken());
         } return chickens;
     }
 

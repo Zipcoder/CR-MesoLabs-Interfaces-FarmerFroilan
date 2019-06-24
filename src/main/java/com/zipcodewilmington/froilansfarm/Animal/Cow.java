@@ -8,8 +8,6 @@ import java.util.List;
 
 public class Cow implements Animal {
 
-
-        private Cow cow;
         Milk milk;
         List<Edible> foodEaten = new ArrayList<Edible>();
         List<Cow> cows = new ArrayList();
@@ -44,7 +42,7 @@ public class Cow implements Animal {
 
         public List reproduce(Integer increaseBy) {
             for (int i = 0; i < increaseBy; i++) {
-                cows.add(cow);
+                cows.add(new Cow());
             } return cows;
         }
 

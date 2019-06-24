@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Alpaca implements Animal {
 
-        Alpaca alpaca;
         List<Edible> foodEaten = new ArrayList<Edible>();
 
         public Alpaca() {
@@ -29,7 +28,7 @@ public class Alpaca implements Animal {
         public List reproduce(Integer increaseBy) {
             List<Alpaca> alpacas = new ArrayList();
             for (int i = 0; i < increaseBy; i++) {
-                alpacas.add(alpaca);
+                alpacas.add(new Alpaca());
                 return alpacas;
             } return null;
         }

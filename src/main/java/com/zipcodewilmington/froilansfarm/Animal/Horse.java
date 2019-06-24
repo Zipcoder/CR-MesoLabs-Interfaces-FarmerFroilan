@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Horse implements Animal, Rideable {
 
-        Horse horse;
         boolean isMounted;
         List<Edible> foodEaten = new ArrayList<Edible>();
         List<Horse> horses = new ArrayList();
@@ -25,7 +24,7 @@ public class Horse implements Animal, Rideable {
 
         public List reproduce(Integer increaseBy) {
             for (int i = 0; i < increaseBy; i++) {
-                horses.add(horse);
+                horses.add(new Horse());
             } return horses;
         }
 

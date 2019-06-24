@@ -12,7 +12,6 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     public class Farmer implements Person, Botanist, Rider, Driver {
 
-            Farmer farmer;
             Farm farm;
             List<Edible> foodEaten = new ArrayList<Edible>();
             List<Farmer> froilanFarmers = new ArrayList<Farmer>();
@@ -55,7 +54,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
             public List reproduce(Integer increaseBy) {
                 for (int i = 0; i < increaseBy; i++) {
-                    froilanFarmers.add(farmer);
+                    froilanFarmers.add(new Farmer());
                 } return froilanFarmers;
             }
 
@@ -76,7 +75,10 @@ package com.zipcodewilmington.froilansfarm.Animal;
             }
 
             public void feedFarmAnimals(Eater animal, Edible food) {
-                farmer.feedFarmAnimals(animal, food);
+                Froilan froilan = new Froilan(new Farm());
+                Froilanda froilanda = new Froilanda();
+                froilan.feedFarmAnimals(animal, food);
+                froilanda.feedFarmAnimals(animal, food);
             }
 
             public void mount(Rideable rideable) {
