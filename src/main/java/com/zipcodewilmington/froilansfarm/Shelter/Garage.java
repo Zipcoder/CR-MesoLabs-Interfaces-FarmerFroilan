@@ -20,10 +20,12 @@ public class Garage implements Shelter {
     }
 
     public Boolean isEmpty() {
-        return null;
+
+        return farmVehicles.isEmpty();
     }
 
     public Boolean atCapacity() {
+
         return null;
     }
 

@@ -10,6 +10,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     public abstract class Farmer implements Person, Botanist, Rider, Driver {
 
+
             List<Edible> foodEaten = new ArrayList<Edible>();
 
             public Farmer(String name){

@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.DailyTasks;
 
-public enum DayOfWeek {
+import java.time.DayOfWeek;
+public enum DaysOfWeek {
+
+
 }
