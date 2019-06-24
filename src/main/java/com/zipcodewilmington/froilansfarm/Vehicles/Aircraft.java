@@ -47,4 +47,12 @@ public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle
     public void setOperateVehicle(boolean operating) {
 
     }
+
+    public boolean flyingAirCraft() {
+        return false;
+    }
+
+    public void setFlyAirCraft(boolean flying) {
+
+    }
 }
