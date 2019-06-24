@@ -41,9 +41,9 @@ public class FoodStorage<T>  {
         return null;
     }
 
-    public Boolean add() { return true; }
-    public Boolean remove() { return true; }
-    public Integer itemCount() { return null; }
+
+
+    public Integer itemCount() { return foodStorage.size(); }
 }
 
 

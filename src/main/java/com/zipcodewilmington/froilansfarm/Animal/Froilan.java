@@ -2,9 +2,13 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 
 
+
+import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.FoodStorage;
+
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Tomatoes;
+import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 
 import java.util.ArrayList;
@@ -24,11 +28,20 @@ public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater
         Froilan froilan;
         List<Edible> foodEaten = new ArrayList<Edible>();
 
-        public Froilan() {
+        public Froilan(Farm farm) {
             super();
+            this.farm = new Farm();
         }
 
     public void drive() {
+
+    }
+
+    public void drive(Driveable vehicle) {
+
+    }
+
+    public void ceaseDrive(Driveable vehicle) {
 
     }
 }

@@ -54,7 +54,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
             Tractor tractor = new Tractor();
             Tomatoes tomatoes = new Tomatoes();
             List<TomatoPlant> tomatoPlants = tomatorow.getTplant();
-            tomatoes = (Tomatoes) tractor.harvest((TomatoPlant) tomatoPlants);
+            tomatoes = tractor.harvest((TomatoPlant) tomatoPlants);
             return tomatoes;
         }
 

@@ -59,4 +59,8 @@ public class Horse implements Animal, Rideable {
             isMounted = mounted;
         }
 
+    public void ride() {
+
+    }
+
 }

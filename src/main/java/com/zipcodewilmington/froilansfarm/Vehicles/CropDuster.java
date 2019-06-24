@@ -13,6 +13,18 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
     public boolean canFly() {
         return true;
     }
+    public void farmoperation(){
+        System.out.println("call fertilize function");
+    }
+    public void ride(){
+        System.out.println(" Hi I can ride");
+    }
+    public boolean isMounted() {
+        return false;
+    }
+    public void setMounted(boolean mounted) {
+
+    }
 
    // public boolean makeNoise(){return  true;}
    public String makeNoise(){return "";}
@@ -29,26 +41,8 @@ public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
         cropRow.fertilize();
         return cropRow;//croprow method is fetilized true
     }
-//    public CropRow fertilize(CropRow<CucumberPlant> cropRow){
-//        cropRow.Fertilize();
-//        return cropRow;//croprow method is fetilized true
-//    }
-//    public CropRow fertilize(CropRow<StringBeanPlant> cropRow){
-//        cropRow.Fertilize();
-//        return cropRow;//croprow method is fetilized true
-//    }
-//    public CropRow fertilize(CropRow<CornStalk> cropRow){
-//        cropRow.Fertilize();
-//        return cropRow;//croprow method is fetilized true
-//    }
-
-    public boolean fertilized(CropRow cropRow) {
-       cropRow.fertilize();
-        return true;
-    }
-
     public boolean flyingAirCraft() {
-        return false;
+        return true;
     }
 
     public void setFlyAirCraft(boolean flying) {

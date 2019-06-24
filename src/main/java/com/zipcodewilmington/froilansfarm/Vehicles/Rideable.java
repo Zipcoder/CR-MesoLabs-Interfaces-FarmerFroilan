@@ -4,5 +4,6 @@ public interface Rideable {
 
         public boolean isMounted();
         public void setMounted(boolean mounted);
+        public void ride();
 
 }

@@ -1,5 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public interface Vehicle {
-    public boolean operate();
+import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+
+public interface Vehicle extends NoiseMaker, Rideable {
+    public void ride();
+
+    public boolean drivable = true;
+
+
 }

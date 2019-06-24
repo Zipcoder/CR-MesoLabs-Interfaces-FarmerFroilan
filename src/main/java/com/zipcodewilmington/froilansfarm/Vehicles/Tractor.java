@@ -1,18 +1,27 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
 import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import com.zipcodewilmington.froilansfarm.Crops.Crops;
-import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Crops.*;
+import com.zipcodewilmington.froilansfarm.Produce.Cucumbers;
+import com.zipcodewilmington.froilansfarm.Produce.EarOfCorn;
+import com.zipcodewilmington.froilansfarm.Produce.StringBeans;
 import com.zipcodewilmington.froilansfarm.Produce.Tomatoes;
 import com.zipcodewilmington.froilansfarm.Tomato;
 
 import java.util.List;
 
-public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseMaker {
+public class Tractor implements FarmVehicle {
     Crops crops;
     public boolean isFarmVehicle() {
         return true;
+    }
+
+    public void farmoperation(){
+        System.out.println("call harvest function");
+    }
+
+    public void ride(){
+        System.out.println(" Hi I can ride");
     }
 
     public boolean operate() {
@@ -34,10 +43,26 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
         return true;
     }
 
-    public List<Tomatoes> harvest(TomatoPlant tomatoPlant){
+    public Tomatoes harvest(TomatoPlant tomatoPlant){
         Tomatoes harvestedtomatoes = new Tomatoes();
-        return (List<Tomatoes>) harvestedtomatoes;
+        return  harvestedtomatoes;
     }
+
+    public StringBeans harvest(StringBeanPlant stringBeanPlant){
+        StringBeans harvestedStringBeans = new StringBeans();
+        return harvestedStringBeans;
+    }
+
+    public EarOfCorn harvest(CornStalk cornStalk){
+        EarOfCorn harvestedEarOfCorns = new EarOfCorn();
+        return harvestedEarOfCorns;
+    }
+
+    public Cucumbers harvest(CucumberPlant cucumberPlant){
+        Cucumbers harvestedCucumbers = new Cucumbers();
+        return  harvestedCucumbers;
+    }
+
 
     public boolean isMounted() {
         return false;
