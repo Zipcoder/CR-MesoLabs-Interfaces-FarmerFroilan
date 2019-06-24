@@ -10,28 +10,12 @@ public class Horse implements Animal, Rideable {
 
         boolean isMounted;
         List<Edible> foodEaten = new ArrayList<Edible>();
-        List<Horse> horses = new ArrayList();
 
         public Horse(){
-            super();
-        }
-
-        public boolean isHungry() {
-            if (foodEaten.isEmpty()) {
-                return true;
-            } return false;
-        }
-
-        public List reproduce(Integer increaseBy) {
-            for (int i = 0; i < increaseBy; i++) {
-                horses.add(new Horse());
-            } return horses;
         }
 
         public void eatEdible(Edible food) {
-            if (foodEaten.isEmpty()) {
-                foodEaten.add(food);
-            }
+            foodEaten.add(food);
         }
 
         public List<Edible> getFoodEaten() {
@@ -39,9 +23,7 @@ public class Horse implements Animal, Rideable {
         }
 
         public String makeNoise() {
-            if (isHungry()) {
-                return "Neigh! Neigh!";
-            } return null;
+            return "Neigh! Neigh!";
         }
 
         public boolean isMounted() {

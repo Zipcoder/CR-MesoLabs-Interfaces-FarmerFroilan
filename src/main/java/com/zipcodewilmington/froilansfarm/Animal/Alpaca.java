@@ -11,7 +11,6 @@ public class Alpaca implements Animal {
         List<Edible> foodEaten = new ArrayList<Edible>();
 
         public Alpaca() {
-            super();
         }
 
         public Wool collectWool() {
@@ -19,24 +18,8 @@ public class Alpaca implements Animal {
             return wool;
         }
 
-        public boolean isHungry () {
-            if (foodEaten.isEmpty()) {
-                return true;
-            } return false;
-        }
-
-        public List reproduce(Integer increaseBy) {
-            List<Alpaca> alpacas = new ArrayList();
-            for (int i = 0; i < increaseBy; i++) {
-                alpacas.add(new Alpaca());
-                return alpacas;
-            } return null;
-        }
-
         public void eatEdible(Edible e) {
-            if (!isHungry()) {
-                foodEaten.add(e);
-            }
+            foodEaten.add(e);
         }
 
         public List<Edible> getFoodEaten() {
@@ -44,8 +27,6 @@ public class Alpaca implements Animal {
         }
 
         public String makeNoise() {
-                if (isHungry()) {
-                    return "Mehh! Mehh!";
-                } return null;
+            return "Mehh! Mehh!";
         }
 }
