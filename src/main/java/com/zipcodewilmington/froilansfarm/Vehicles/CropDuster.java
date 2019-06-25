@@ -7,6 +7,7 @@ import com.zipcodewilmington.froilansfarm.Crops.*;
 
 
 public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
+    Pilot pilot;
 
 
     public String makeNoise(){return "vrooom";}
@@ -24,7 +25,8 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
 
     }
 
-    public boolean fertilizing(){
+
+    public boolean flying(){
         this.fly();
         return true;
 
@@ -32,12 +34,17 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
 
     public boolean land() {
         if(flying()==true)
-
-        if(fertilizing()==true)
-
         return false;
         else
             return true;
+    }
+
+    @Override
+    public boolean isPilot(Rider rider) {
+        if(rider instanceof Pilot)
+            return true;
+        else
+        return false;
     }
 
 
@@ -47,8 +54,6 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
         else
         return null;
     }
-
-
 
 }
 

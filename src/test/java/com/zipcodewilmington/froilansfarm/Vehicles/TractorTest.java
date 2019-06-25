@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.zipcodewilmington.froilansfarm.Animal.Froilan;
+import com.zipcodewilmington.froilansfarm.Animal.Froilanda;
 import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Crops.Crops;
 import com.zipcodewilmington.froilansfarm.Crops.CucumberPlant;
@@ -42,8 +44,18 @@ public class TractorTest {
     public void harvest() {
         Tractor tractor=new Tractor();
         Crops crops=new CucumberPlant();
-        String actual=null;
         Assert.assertEquals(null,tractor.harvest(crops));
     }
-
+    @Test
+    public void isDriver(){
+        Tractor tractor=new Tractor();
+        Froilan froilan=new Froilan();
+        Assert.assertTrue(tractor.isDriver(froilan));
+    }
+    @Test
+    public void isDriver1(){
+        Tractor tractor=new Tractor();
+        Froilanda froilanda=new Froilanda();
+        Assert.assertTrue(tractor.isDriver(froilanda));
+    }
 }
