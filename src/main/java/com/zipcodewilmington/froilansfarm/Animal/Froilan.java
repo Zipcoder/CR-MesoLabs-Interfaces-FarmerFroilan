@@ -5,7 +5,11 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Froilan extends Farmer implements Driver {
+
+public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater {
+
+  
+
 
     List<Edible> foodEaten = new ArrayList<Edible>();
 
