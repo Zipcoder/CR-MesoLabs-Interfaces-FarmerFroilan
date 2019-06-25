@@ -1,21 +1,21 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-    import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-    import com.zipcodewilmington.froilansfarm.Crops.Crops;
-    import com.zipcodewilmington.froilansfarm.Produce.*;
-    import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Produce.*;
+import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
+import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 
-    import java.util.ArrayList;
-    import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
+public class Farmer implements Person, Botanist, Rider, Driver {
 
-    public abstract class Farmer implements Person, Botanist, Rider, Driver {
+        List<Edible> foodEaten = new ArrayList<Edible>();
 
+        public Farmer(String name){
+        }
 
-            List<Edible> foodEaten = new ArrayList<Edible>();
-
-            public Farmer(String name){
-            }
-            public List<Edible> harvest() { return null;
+        public List<Edible> harvest() { return null;
                 //Determine harvest behavior later
 //                List<Edible> harvestCrops = new ArrayList<Edible>();
 //                Tomatoes tomatoes = new Tomatoes();
@@ -27,33 +27,47 @@ package com.zipcodewilmington.froilansfarm.Animal;
 //                harvestCrops.add(cucumbers);
 //                harvestCrops.add(corn);
 //                return harvestCrops;
-            }
+        }
 
-            public List<Edible> getFoodEaten() {
+        public List<Edible> getFoodEaten() {
                 return foodEaten;
             }
 
-            public void feedFarmAnimals(Eater animal, Edible food) {
-                Froilan froilan = new Froilan();
-                Froilanda froilanda = new Froilanda();
-                froilan.feedFarmAnimals(animal, food);
-                froilanda.feedFarmAnimals(animal, food);
-            }
 
-            public void mount(Rideable rideable) {
-                rideable.setMounted(true);
-            }
+        public void plant(Crops crops, CropRow cropRow) {
 
-            public void dismount(Rideable rideable) {
-                rideable.setMounted(false);
-            }
+        }
 
-            public void plant(Crops crops, CropRow cropRow) {
-                CropRow.addCrops(crops);
-            }
+        public void drive(Driveable vehicle) {
+
+        }
+
+        public void ceaseDrive(Driveable vehicle) {
+
+        }
+
+        public void mount(Rideable rideable) {
+
+        }
+
+        public void dismount(Rideable rideable) {
+
+
+        }
+
+        public void feedFarmAnimals(Eater animal, Edible food) {
+
+        }
+
+        public void eatEdible(Edible food) {
+
+        }
+
+        @Override
+        public String makeNoise() {
+            return null;
+        }
     }
-
-
 
 
 

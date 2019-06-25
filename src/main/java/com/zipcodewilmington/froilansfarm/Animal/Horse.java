@@ -35,4 +35,7 @@ public class Horse implements Animal, Rideable {
             foodEaten.add(food);
 
     }
+    public void ride() {
+
+    }
 }

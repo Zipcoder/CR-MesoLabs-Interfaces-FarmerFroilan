@@ -92,7 +92,7 @@ public class CucumberPlantTest {
 
         //When
         plant.setFertilized(true);
-        Edible food = plant.yield();
+        Cucumbers food = plant.yield();
 
         //Then
         assertNotNull(food);
@@ -108,7 +108,7 @@ public class CucumberPlantTest {
 
         //When
         plant.setFertilized(false);
-        Edible food = plant.yield();
+        Cucumbers food = plant.yield();
 
         //Then
         assertNull(food);

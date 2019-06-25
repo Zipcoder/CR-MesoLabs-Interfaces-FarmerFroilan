@@ -3,9 +3,9 @@ package com.zipcodewilmington.froilansfarm.Produce;
 import java.util.LinkedList;
 import java.util.List;
 
-abstract class Bounty<T extends Edible> {
+public abstract class Bounty<T extends Edible> {
 
-    private List<T> bounty;
+    List<T> bounty;
 
     public Bounty() {
         bounty = new LinkedList<T>();
@@ -16,5 +16,9 @@ abstract class Bounty<T extends Edible> {
     }
 
     abstract T[] store();
+
+    protected Boolean isEmpty() {
+        return bounty.isEmpty();
+    }
     
 }

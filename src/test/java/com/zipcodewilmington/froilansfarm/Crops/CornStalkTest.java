@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
-import com.zipcodewilmington.froilansfarm.Produce.EarOfCorn;
+import com.zipcodewilmington.froilansfarm.Produce.EarsOfCorn;
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Produce;
 import org.junit.Test;
@@ -92,11 +92,11 @@ public class CornStalkTest {
 
         //When
         plant.setFertilized(true);
-        Edible food = plant.yield();
+        EarsOfCorn food = plant.yield();
 
         //Then
         assertNotNull(food);
-        assertTrue(food instanceof EarOfCorn);
+        assertTrue(food instanceof EarsOfCorn);
 
     }
 
@@ -108,7 +108,7 @@ public class CornStalkTest {
 
         //When
         plant.setFertilized(false);
-        Edible food = plant.yield();
+        EarsOfCorn food = plant.yield();
 
         //Then
         assertNull(food);
