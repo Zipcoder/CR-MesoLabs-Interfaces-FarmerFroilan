@@ -1,9 +1,14 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
+import com.zipcodewilmington.froilansfarm.Animal.Animal;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public interface Shelter {
+
     public Boolean isEmpty();
-    public Boolean atCapacity();
-    public Boolean add();
-    public Boolean remove();
+    public void add();
+    public void remove();
     public Integer itemCount();
 }

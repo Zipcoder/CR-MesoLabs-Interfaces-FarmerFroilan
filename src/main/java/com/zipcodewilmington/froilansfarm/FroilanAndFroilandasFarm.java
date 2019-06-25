@@ -40,9 +40,9 @@ public class FroilanAndFroilandasFarm {
             return INSTANCE;
         }
 
-        public Froilan fetchFroilan() {
-            return new Froilan(new Farm());
-        }
+//        public Froilan fetchFroilan() {
+//            return new Froilan(new Farm());
+//        }
 
         public Froilanda fetchFroilanda() {
             return new Froilanda();
@@ -66,3 +66,7 @@ public class FroilanAndFroilandasFarm {
 
 
 }
+
+/*
+TODO this class needs to be deleted.
+ */

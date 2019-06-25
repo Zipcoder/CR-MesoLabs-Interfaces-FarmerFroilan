@@ -4,6 +4,5 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 
 public interface Driver extends Person, Rider{
 
-    public void drive(Driveable vehicle);
-    public void ceaseDrive(Driveable vehicle);
+
 }

@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Cow implements Animal {
 
-
     public List reproduce(Integer increaseBy) {
         return null;
     }

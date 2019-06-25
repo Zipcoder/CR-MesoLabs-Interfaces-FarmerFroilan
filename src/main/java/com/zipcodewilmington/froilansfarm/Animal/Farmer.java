@@ -2,17 +2,16 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     import com.zipcodewilmington.froilansfarm.Crops.CropRow;
     import com.zipcodewilmington.froilansfarm.Crops.Crops;
+
     import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
 
     import com.zipcodewilmington.froilansfarm.FoodStorage;
     import com.zipcodewilmington.froilansfarm.Produce.Tomatoes;
+    import com.zipcodewilmington.froilansfarm.Farm;
 
     import com.zipcodewilmington.froilansfarm.Produce.*;
     import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
 
-    import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
-
-    import com.zipcodewilmington.froilansfarm.Farm;
     import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 
 
@@ -23,48 +22,21 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 
 
+
     public class Farmer implements Person, Botanist, Rider, Driver {
 
 
+            List<Edible> foodEaten = new ArrayList<Edible>();
+
+            public Farmer(String name){
+            }
 
 
-        Farm farm;
-
-        List<Edible> foodEaten = new ArrayList<Edible>();
-        List<Farmer> froilanFarmers = new ArrayList<Farmer>();
-
-        public Farmer(Person person, Farm farm) {
-            super();
-            this.farm = farm;
-        }
-
-        public Farmer() {
-            super();
-        }
-
-        public String makeNoise() {
-            return "Hey there y'all Sassafrases! Welcome to mah farm!";
-        }
 
         FoodStorage foodStorage = new FoodStorage();
 
+        public Farmer() {
 
-        public void foodStore(Tomatoes tomatoes) {
-            foodStorage.add(tomatoes);
-        }
-
-        public List<Edible> harvest() {
-            //insert condition to check if plants are ready for harvest.
-            List<Edible> harvestCrops = new ArrayList<Edible>();
-            Tomatoes tomatoes = new Tomatoes();
-            StringBeans stringbeans = new StringBeans();
-            Cucumbers cucumbers = new Cucumbers();
-            EarOfCorn corn = new EarOfCorn();
-            harvestCrops.add(tomatoes);
-            harvestCrops.add(stringbeans);
-            harvestCrops.add(cucumbers);
-            harvestCrops.add(corn);
-            return harvestCrops;
         }
 
 
@@ -105,6 +77,11 @@ package com.zipcodewilmington.froilansfarm.Animal;
         }
 
         public List<Edible> getFoodEaten() {
+            return null;
+        }
+
+        @Override
+        public String makeNoise() {
             return null;
         }
     }

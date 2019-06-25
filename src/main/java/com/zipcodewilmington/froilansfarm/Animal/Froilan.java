@@ -20,17 +20,22 @@ public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater
         return true;
     }
 
+
     public boolean makesNoise() {
         return true;
     }
     FoodStorage foodStorage=new FoodStorage();
 
+
         Froilan froilan;
         List<Edible> foodEaten = new ArrayList<Edible>();
 
-        public Froilan(Farm farm) {
-            super();
-            this.farm = new Farm();
+        public Froilan() {
+            super("Froilan");
+        }
+
+        public String makNoise() {
+            return "Welcome to mah farm!";
         }
 
     public void drive() {

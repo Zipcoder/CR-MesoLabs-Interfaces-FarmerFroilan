@@ -20,6 +20,7 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
         CropRow cropRow=new CropRow();
         if(this instanceof Flyable)
             this.fertilize(cropRow);
+
     }
 
     public void land() {
@@ -29,12 +30,13 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
 
     public Vehicle operate(Rider rider) {
         if(rider instanceof Pilot)
-            return this;
+            return (Vehicle) this;
         else
         return null;
     }
-}
 
+
+}
 
 
 
