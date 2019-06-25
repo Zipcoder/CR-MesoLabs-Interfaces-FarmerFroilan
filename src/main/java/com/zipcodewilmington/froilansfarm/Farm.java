@@ -1,14 +1,18 @@
 package com.zipcodewilmington.froilansfarm;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 
-
+import java.util.List;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import com.zipcodewilmington.froilansfarm.Crops.Crops;
 import com.zipcodewilmington.froilansfarm.Shelter.*;
 
 import java.util.Collections;
-
 public class Farm {
-
+//    private Field field = new Field();
+//
+//    public Farm(Field field) {
+//        this.field = field;
+//    }
     //Include all farm contents.
     private Barn barn;
     private Stable stable;
@@ -96,3 +100,4 @@ public class Farm {
     }
 
 }
+

@@ -1,47 +1,49 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
-
-
-
+import com.zipcodewilmington.froilansfarm.Animal.Driver;
 import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Animal.Pilot;
+import com.zipcodewilmington.froilansfarm.Animal.Rider;
+import com.zipcodewilmington.froilansfarm.Crops.*;
 
-public class CropDuster implements FarmVehicle, Vehicle, NoiseMaker, Flyable {
-    public boolean isFarmVehicle() {
+
+public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
+
+
+    public String makeNoise(){return "vrooom";}
+
+    public CropRow fertilize(CropRow cropRow){
+        cropRow.fertilize();
+        return cropRow;
+    }
+
+    public void fly() {
+        CropRow cropRow=new CropRow();
+        if(this instanceof Flyable)
+            this.fertilize(cropRow);
+
+    }
+    public boolean fertilizing(){
+        this.fly();
         return true;
     }
 
-    public boolean canFly() {
-        return true;
-    }
-
-    @Override
-    public void operate() {
-
-    }
-    public Crops fertilize(CropRow cropRow){
-        return null;//croprow method is fetilized true
+    public boolean land() {
+        if(fertilizing()==true)
+        return false;
+        else
+            return true;
     }
 
 
-    public String makeNoise() {
+    public Vehicle operate(Rider rider) {
+        if(rider instanceof Pilot)
+            return (Vehicle) this;
+        else
         return null;
     }
 
-    public boolean flyingAirCraft() {
-        return false;
-    }
 
-    public void setFlyAirCraft(boolean flying) {
-
-    }
-
-    public boolean isMounted() {
-        return false;
-    }
-
-    public void setMounted(boolean mounted) {
-
-    }
 }
+
+
 

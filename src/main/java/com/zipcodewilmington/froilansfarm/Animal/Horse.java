@@ -33,4 +33,9 @@ public class Horse implements Animal, Rideable {
         public void setMounted(boolean mounted) {
             isMounted = mounted;
         }
+
+    public void ride() {
+
+    }
+
 }

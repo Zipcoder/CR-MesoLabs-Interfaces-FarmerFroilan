@@ -8,32 +8,23 @@ import java.util.List;
 
 public class Cow implements Animal {
 
-        List<Edible> foodEaten = new ArrayList<Edible>();
+    public List reproduce(Integer increaseBy) {
+        return null;
+    }
 
-        public Cow() {
-        }
+    public void eatEdible(Edible food) {
 
-        public boolean isMilkable() {
-            //Establish conditions later
-            return true;
-        }
+    }
 
-        public Milk yieldMilk() throws Exception {
-            if (isMilkable()) {
-                return new Milk();
-            } else throw new Exception
-                    ("This cow is not producing milk at the moment. May yield milk later, after she has been well fed.");
-        }
+    public boolean isHungry() {
+        return false;
+    }
 
-        public String makeNoise() {
-            return "Mooo!! Mooooo!!";
-        }
+    public List<Edible> getFoodEaten() {
+        return null;
+    }
 
-        public void eatEdible(Edible e) {
-                foodEaten.add(e);
-        }
-
-        public List<Edible> getFoodEaten() {
-            return foodEaten;
-        }
+    public String makeNoise() {
+        return null;
+    }
 }
