@@ -188,4 +188,16 @@ public class CowTest {
         //Then
         Assert.assertNotNull(actual);
     }
+
+    @Test
+    public void instanceOf(){
+        Cow cow = new Cow();
+        Assert.assertTrue(cow instanceof Animal);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Cow cow = new Cow();
+        Assert.assertTrue(cow instanceof Produce);
+    }
 }

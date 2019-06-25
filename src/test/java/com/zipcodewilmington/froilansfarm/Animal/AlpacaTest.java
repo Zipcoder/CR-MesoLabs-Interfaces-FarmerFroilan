@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.*;
+import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
+import com.zipcodewilmington.froilansfarm.Vehicles.FarmVehicle;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -151,6 +153,18 @@ public class AlpacaTest {
 
         //Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void instanceOf(){
+        Alpaca alpaca = new Alpaca();
+        Assert.assertTrue(alpaca instanceof Animal);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Alpaca alpaca = new Alpaca();
+        Assert.assertTrue(alpaca instanceof Produce);
     }
 
 //    @Test

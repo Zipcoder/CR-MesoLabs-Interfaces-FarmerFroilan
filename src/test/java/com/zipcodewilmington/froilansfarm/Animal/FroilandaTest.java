@@ -149,4 +149,22 @@ public class FroilandaTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void instanceOf(){
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Person);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Pilot);
+    }
+
+    @Test
+    public void instanceOf3(){
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Farmer);
+    }
 }

@@ -169,4 +169,16 @@ public class ChickenTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void instanceOf(){
+        Chicken chicken = new Chicken();
+        Assert.assertTrue(chicken instanceof Animal);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Chicken chicken = new Chicken();
+        Assert.assertTrue(chicken instanceof Produce);
+    }
 }
