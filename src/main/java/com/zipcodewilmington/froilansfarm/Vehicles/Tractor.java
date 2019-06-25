@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import com.zipcodewilmington.froilansfarm.Crops.Crops;
 import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Produce.Tomatoes;
-import com.zipcodewilmington.froilansfarm.Tomato;
+import com.zipcodewilmington.froilansfarm.Produce.Tomato;
 
 import java.util.List;
 
@@ -15,8 +15,7 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
         return true;
     }
 
-    public boolean operate() {
-        return true;
+    public void operate() {
     }
 
     public boolean isDriveable() {

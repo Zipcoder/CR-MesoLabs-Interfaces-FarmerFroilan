@@ -28,6 +28,8 @@ public class ChickenCoop implements Shelter {
         return chickenCoop.size();
     }
 
+
+
     @Override
     public void add() {
 
@@ -35,6 +37,7 @@ public class ChickenCoop implements Shelter {
 
     @Override
     public void remove() {
+
 
     }
 }

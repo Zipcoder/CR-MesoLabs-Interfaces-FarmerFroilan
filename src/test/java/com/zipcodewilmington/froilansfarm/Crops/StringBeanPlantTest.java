@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Crops;
 
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Produce.Produce;
+import com.zipcodewilmington.froilansfarm.Produce.StringBean;
 import com.zipcodewilmington.froilansfarm.Produce.StringBeans;
 import org.junit.Test;
 
@@ -93,7 +94,7 @@ public class StringBeanPlantTest {
 
         //When
         plant.setFertilized(true);
-        Edible food = plant.yield();
+        StringBeans food = plant.yield();
 
         //Then
         assertNotNull(food);
@@ -109,7 +110,7 @@ public class StringBeanPlantTest {
 
         //When
         plant.setFertilized(false);
-        Edible food = plant.yield();
+        StringBeans food = plant.yield();
 
         //Then
         assertNull(food);

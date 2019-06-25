@@ -2,6 +2,9 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
     import com.zipcodewilmington.froilansfarm.Crops.CropRow;
     import com.zipcodewilmington.froilansfarm.Crops.Crops;
+
+    import com.zipcodewilmington.froilansfarm.Farm;
+
     import com.zipcodewilmington.froilansfarm.Produce.*;
     import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
 
@@ -20,18 +23,33 @@ package com.zipcodewilmington.froilansfarm.Animal;
                 return "Hey there y'all Sassafrases!";
             }
 
-            public List<Edible> harvest() { return null;
-                //Determine harvest behavior later
-//                List<Edible> harvestCrops = new ArrayList<Edible>();
-//                Tomatoes tomatoes = new Tomatoes();
-//                StringBeans stringbeans = new StringBeans();
-//                Cucumbers cucumbers = new Cucumbers();
-//                EarOfCorn corn = new EarOfCorn();
-//                harvestCrops.add(tomatoes);
-//                harvestCrops.add(stringbeans);
-//                harvestCrops.add(cucumbers);
-//                harvestCrops.add(corn);
-//                return harvestCrops;
+
+            public List<Bounty> harvest() {
+                //insert condition to check if plants are ready for harvest.
+                List<Bounty> harvestCrops = new ArrayList<>();
+                Tomatoes tomatoes = new Tomatoes();
+                StringBeans stringbeans = new StringBeans();
+                Cucumbers cucumbers = new Cucumbers();
+                EarsOfCorn corn = new EarsOfCorn();
+                harvestCrops.add(tomatoes);
+                harvestCrops.add(stringbeans);
+                harvestCrops.add(cucumbers);
+                harvestCrops.add(corn);
+                return harvestCrops;
+            }
+
+//            public List<Edible> getFoodFromStorage() {
+//
+//                return (List<Edible>) FoodStorage.getT();
+//            }
+
+
+
+            public boolean isHungry() {
+                if (foodEaten.isEmpty()) {
+                    return true;
+                } return false;
+
             }
 
             public void eatEdible(Edible food) {

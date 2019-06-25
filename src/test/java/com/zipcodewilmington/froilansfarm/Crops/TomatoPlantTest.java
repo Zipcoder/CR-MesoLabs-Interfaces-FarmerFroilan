@@ -93,7 +93,7 @@ public class TomatoPlantTest {
 
         //When
         plant.setFertilized(true);
-        Edible food = plant.yield();
+        Tomatoes food = plant.yield();
 
         //Then
         assertNotNull(food);
@@ -109,7 +109,7 @@ public class TomatoPlantTest {
 
         //When
         plant.setFertilized(false);
-        Edible food = plant.yield();
+        Tomatoes food = plant.yield();
 
         //Then
         assertNull(food);

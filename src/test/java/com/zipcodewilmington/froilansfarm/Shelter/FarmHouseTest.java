@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
+import com.zipcodewilmington.froilansfarm.Animal.Froilan;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,7 +11,7 @@ public class FarmHouseTest {
     @Test
     public void testIsEmpty1() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
+        Farmer farmer1 = new Froilan();
 
         farmhouse1.add(farmer1);
 
@@ -23,7 +24,7 @@ public class FarmHouseTest {
     @Test
     public void TestIsEmpty2() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
+        Farmer farmer1 = new Froilan();
 
         Boolean expected = true;
         Boolean actual = farmhouse1.isEmpty();
@@ -35,7 +36,7 @@ public class FarmHouseTest {
     @Test
     public void testAdd1() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
+        Farmer farmer1 = new Froilan();
 
         farmhouse1.add(farmer1);
         String expected = "farmer1";
@@ -47,8 +48,8 @@ public class FarmHouseTest {
     @Test
     public void testAdd2() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
+        Farmer farmer1 = new Froilan();
+        Farmer farmer2 = new Froilan();
 
         farmhouse1.add(farmer1);
         farmhouse1.add(farmer2);
@@ -61,8 +62,8 @@ public class FarmHouseTest {
     @Test
     public void testRemove1() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
+        Farmer farmer1 = new Froilan();
+        Farmer farmer2 = new Froilan();
 
         farmhouse1.add(farmer1);
         farmhouse1.add(farmer2);
@@ -78,8 +79,8 @@ public class FarmHouseTest {
     @Test
     public void testRemove2() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
+        Farmer farmer1 = new Froilan();
+        Farmer farmer2 = new Froilan();
 
         farmhouse1.add(farmer1);
         farmhouse1.add(farmer2);
@@ -97,8 +98,8 @@ public class FarmHouseTest {
     @Test
     public void TestItemCount1() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
+        Farmer farmer1 = new Froilan();
+        Farmer farmer2 = new Froilan();
 
         farmhouse1.add(farmer1);
         farmhouse1.add(farmer2);
@@ -113,8 +114,8 @@ public class FarmHouseTest {
     @Test
     public void TestItemCount2() {
         FarmHouse farmhouse1 = new FarmHouse();
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
+        Farmer farmer1 = new Froilan();
+        Farmer farmer2 = new Froilan();
 
         farmhouse1.add(farmer1);
         farmhouse1.add(farmer2);

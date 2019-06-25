@@ -19,5 +19,5 @@ public abstract class Produce{
         this.fertilized = fertilized;
     }
 
-    public Edible yield() { return null; }
+    public abstract Bounty yield();
 }

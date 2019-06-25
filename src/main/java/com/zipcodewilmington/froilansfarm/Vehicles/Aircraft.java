@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.Vehicles;
 
 import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
 
-public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle, NoiseMaker {
+public class Aircraft {
     public boolean isFarmVehicle() {
         return true;
     }
@@ -19,9 +19,9 @@ public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle
         return true;
     }
 
-    public boolean operate() {
-        return true;
-    }
+    //public void operate() {
+//        return true;
+//    }
 
 
     public boolean makesNoise() {
