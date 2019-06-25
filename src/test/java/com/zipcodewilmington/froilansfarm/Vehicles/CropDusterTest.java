@@ -54,13 +54,13 @@ public class CropDusterTest {
     @Test
     public  void fertilizing(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.fertilizing();
-        Assert.assertTrue(cropDuster.fertilizing());
+        cropDuster.flying();
+        Assert.assertTrue(cropDuster.flying());
     }
     @Test
     public  void land(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.fertilizing();
+        cropDuster.flying();
         Assert.assertFalse(cropDuster.land());
     }
 }

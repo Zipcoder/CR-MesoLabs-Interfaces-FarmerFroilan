@@ -59,7 +59,7 @@ public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable{
 
     @Override
     public void fly() {
-        
+
     }
 
     @Override
