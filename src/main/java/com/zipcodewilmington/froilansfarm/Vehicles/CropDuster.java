@@ -22,9 +22,16 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
             this.fertilize(cropRow);
 
     }
+    public boolean fertilizing(){
+        this.fly();
+        return true;
+    }
 
-    public void land() {
-
+    public boolean land() {
+        if(fertilizing()==true)
+        return false;
+        else
+            return true;
     }
 
 

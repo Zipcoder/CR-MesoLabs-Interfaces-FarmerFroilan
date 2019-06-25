@@ -1,13 +1,12 @@
 package com.zipcodewilmington.froilansfarm.DailyTasks;
 
-<<<<<<< HEAD
+
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
 import com.zipcodewilmington.froilansfarm.Animal.Froilan;
-
-public class Director {
-
-=======
 import com.zipcodewilmington.froilansfarm.Farm;
+
+
+
 
 public class Director {
 
@@ -70,6 +69,5 @@ public class Director {
 
     }
 
->>>>>>> 1d748d7db9ee6375c105a20811c25efa7205c09d
 
 }

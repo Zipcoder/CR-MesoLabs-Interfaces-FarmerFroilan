@@ -1,11 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
 
-import com.zipcodewilmington.froilansfarm.Animal.Farmer;
-import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
+
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
-import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
+
 
 import java.util.List;
 

@@ -5,5 +5,5 @@ import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
 public interface Flyable extends Vehicle {
 
    public void fly();
-   public void land();
+   public boolean land();
 }
