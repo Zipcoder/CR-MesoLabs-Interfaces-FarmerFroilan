@@ -33,8 +33,9 @@ public class FroilandaTest {
         List<Edible> foodEaten = froilanda.getFoodEaten();
 
 
+
         //When
-        froilanda.eatEdible(expected);
+        froilanda.eatEdible((Edible) expected);
 
         //Then
         Assert.assertTrue(froilanda.foodEaten.contains(expected));
@@ -49,7 +50,7 @@ public class FroilandaTest {
 
 
         //When
-        froilanda.eatEdible(expected);
+        froilanda.eatEdible((Edible) expected);
 
         //Then
         Assert.assertTrue(froilanda.foodEaten.contains(expected));
@@ -59,12 +60,13 @@ public class FroilandaTest {
     public void eatEdible4() {
         //Given
         Froilanda froilanda = new Froilanda();
+
         StringBean expected = new StringBean();
         List<Edible> foodEaten = froilanda.getFoodEaten();
 
 
         //When
-        froilanda.eatEdible(expected);
+        froilanda.eatEdible((Edible) expected);
 
         //Then
         Assert.assertTrue(froilanda.foodEaten.contains(expected));

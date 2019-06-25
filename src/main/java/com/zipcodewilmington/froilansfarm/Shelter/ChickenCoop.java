@@ -24,6 +24,7 @@ public class ChickenCoop implements Shelter {
     }
 
 
+
     public Integer itemCount() {
 
         return chickenCoop.size();

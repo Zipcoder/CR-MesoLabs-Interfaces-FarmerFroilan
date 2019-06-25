@@ -26,17 +26,13 @@ public class Cow implements Animal {
             return "Mooo!! Mooooo!!";
         }
 
-
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
 
-    @Override
-    public void eatEdible(Edible food) {
+        @Override
+        public void eatEdible(Edible food) {
             foodEaten.add(food);
-
-
-
     }
 }
 

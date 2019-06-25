@@ -11,7 +11,7 @@ import com.zipcodewilmington.froilansfarm.Produce.*;
 
 public class Tractor implements FarmVehicle, NoiseMaker {
     Crops crops;
-    Farmer farmer;
+
     public boolean harvested(CropRow cropRow) {
         crops.getHarvested();
         return true;
