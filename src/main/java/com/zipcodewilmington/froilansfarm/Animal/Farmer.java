@@ -15,11 +15,6 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
             public Farmer(String name){
             }
-
-            public String makeNoise() {
-                return "Hey there y'all Sassafrases!";
-            }
-
             public List<Edible> harvest() { return null;
                 //Determine harvest behavior later
 //                List<Edible> harvestCrops = new ArrayList<Edible>();
@@ -32,10 +27,6 @@ package com.zipcodewilmington.froilansfarm.Animal;
 //                harvestCrops.add(cucumbers);
 //                harvestCrops.add(corn);
 //                return harvestCrops;
-            }
-
-            public void eatEdible(Edible food) {
-                foodEaten.add(food);
             }
 
             public List<Edible> getFoodEaten() {
@@ -60,7 +51,6 @@ package com.zipcodewilmington.froilansfarm.Animal;
             public void plant(Crops crops, CropRow cropRow) {
                 CropRow.addCrops(crops);
             }
-
     }
 
 

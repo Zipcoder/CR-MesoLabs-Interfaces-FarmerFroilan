@@ -19,8 +19,8 @@ public class Aircraft implements FarmVehicle, Flyable,Rideable,Driveable,Vehicle
         return true;
     }
 
-    public boolean operate() {
-        return true;
+    public void operate() {
+
     }
 
 

@@ -8,7 +8,6 @@ import java.util.List;
 
 public class FoodStorage<T> implements Shelter {
 
-    Farmer farmer = new Farmer();
 
     private List<T> foodStorage;
 

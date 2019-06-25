@@ -26,11 +26,16 @@ public class ChickenCoop<Chicken> implements Shelter {
         return true;
     }
 
+    @Override
+    public Integer itemCount() {
+        return null;
+    }
+
     public Integer itemCount(List<Chicken> chickenCoop) {
         return chickenCoop.size();
     }
-    public Integer totalAllCoops(){
-        Integer total = chickenCoop1.size() + chickenCoop2.size() + chickenCoop3.size() + chickenCoop4.size();
-        return total;
-    }
+//    public Integer totalAllCoops(){
+//        Integer total = chickenCoop1.size() + chickenCoop2.size() + chickenCoop3.size() + chickenCoop4.size();
+//        return total;
+//    }
 }

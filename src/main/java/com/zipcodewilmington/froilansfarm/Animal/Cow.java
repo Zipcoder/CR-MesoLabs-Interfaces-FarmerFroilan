@@ -14,26 +14,28 @@ public class Cow implements Animal {
         }
 
         public boolean isMilkable() {
-            //Establish conditions later
-            return true;
+            return (!foodEaten.isEmpty());
         }
 
-        public Milk yieldMilk() throws Exception {
+        public Milk yieldMilk() {
             if (isMilkable()) {
-                return new Milk();
-            } else throw new Exception
-                    ("This cow is not producing milk at the moment. May yield milk later, after she has been well fed.");
+            } return new Milk();
         }
 
         public String makeNoise() {
             return "Mooo!! Mooooo!!";
         }
 
-        public void eatEdible(Edible e) {
-                foodEaten.add(e);
-        }
 
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
+
+    @Override
+    public void eatEdible(Edible food) {
+            foodEaten.add(food);
+
+
+
+    }
 }

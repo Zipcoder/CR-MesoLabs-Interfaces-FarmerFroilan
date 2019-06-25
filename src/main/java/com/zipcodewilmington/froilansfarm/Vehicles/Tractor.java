@@ -15,8 +15,8 @@ public class Tractor implements Vehicle, FarmVehicle, Driveable,Rideable, NoiseM
         return true;
     }
 
-    public boolean operate() {
-        return true;
+    public void operate() {
+
     }
 
     public boolean isDriveable() {

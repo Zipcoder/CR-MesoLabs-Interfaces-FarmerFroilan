@@ -15,7 +15,13 @@ public class Froilan extends Farmer implements Driver{
             super("Froilan");
         }
 
-        public String makNoise() {
-            return "Welcome to mah farm!";
+        @Override
+        public void eatEdible(Edible food) {
+            foodEaten.add(food);
         }
+
+        @Override
+        public String makeNoise() {
+            return "I'm Froilan! Welcome to mah farm!"; }
+
 }

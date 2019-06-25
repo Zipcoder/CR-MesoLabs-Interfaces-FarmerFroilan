@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
-import com.sun.xml.internal.ws.policy.AssertionSet;
 import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 import org.junit.Assert;
 import org.junit.Test;

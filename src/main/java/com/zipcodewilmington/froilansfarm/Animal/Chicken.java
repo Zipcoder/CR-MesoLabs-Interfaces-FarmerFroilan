@@ -16,15 +16,12 @@ public class Chicken extends Produce implements Animal {
     }
 
     public boolean fertilized() {
-        //Establish conditions later
-        return true;
+        if (foodEaten.isEmpty()) {
+        } return true;
     }
 
-    public Egg yieldEgg() throws Exception {
-        if (!fertilized()) {
+    public Egg yieldEgg() {
             return new Egg();
-        } else throw new Exception
-                ("This chicken has been fertilized and cannot produce edible eggs.");
     }
 
     public void eatEdible(Edible food) {
