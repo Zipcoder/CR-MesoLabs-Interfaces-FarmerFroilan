@@ -5,6 +5,7 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,9 +17,11 @@ public class FoodStorage<T extends Edible>  {
     }
 
     public FoodStorage() {
-
+    this.foodStorage=new ArrayList<>();
     }
-
+//    public FoodStorage() {
+//        this.foodStorage=new T[100];
+//    }
 
     public void add(T edible) {
         foodStorage.add(edible);
@@ -26,7 +29,7 @@ public class FoodStorage<T extends Edible>  {
     }
 
     public T retrieve(T edible) {
-
+            if(foodStorage.contains(edible))
         foodStorage.remove(edible);
         return edible;
     }
@@ -43,12 +46,6 @@ public class FoodStorage<T extends Edible>  {
     public Boolean isEmpty() {
         return foodStorage.isEmpty();
     }
-
-    public Boolean atCapacity() {
-        //TODO needs a proper return
-        return null;
-    }
-
 
 
     public Integer itemCount() { return foodStorage.size(); }
