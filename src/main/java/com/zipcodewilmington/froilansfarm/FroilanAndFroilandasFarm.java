@@ -4,6 +4,11 @@ import com.zipcodewilmington.froilansfarm.Animal.Farmer;
 import com.zipcodewilmington.froilansfarm.Animal.Froilan;
 import com.zipcodewilmington.froilansfarm.Animal.Froilanda;
 import com.zipcodewilmington.froilansfarm.Animal.Person;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Shelter.FarmHouse;
+
+import java.util.List;
 
 public class FroilanAndFroilandasFarm {
 
@@ -14,6 +19,7 @@ public class FroilanAndFroilandasFarm {
         private FoodStorage silo;
         private Market froilanFleaMarket;
         private Farm farm;
+        private Crops crops;
 
         private FroilanAndFroilandasFarm() {
 //            froilanda = fetchFroilanda();
@@ -45,6 +51,18 @@ public class FroilanAndFroilandasFarm {
 //        public void farmCreation() {
 //            farm = froilan.fetchFarm();
 //        }
+
+        public FarmHouse addFarmHouse() {
+            FarmHouse farmHouse = farm.getFarmHouse();
+            return farmHouse;
+        }
+        //Field needs to be instantiated in order to contain new CropRows.
+//        public void createCropRow() {
+//            for (int i = 1; i <= 5; i++) {
+//                field.add(new CropRow((List) crops));
+//            }
+//        }
+
 
 
 }

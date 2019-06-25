@@ -17,13 +17,5 @@ import java.util.List;
  */
 public class MainApplication {
 
-    public static void main () {
-        List<TomatoPlant> tomatoplantsinarow = new ArrayList<TomatoPlant>();
-        CropRow<TomatoPlant> cropRow = new CropRow<TomatoPlant>(tomatoplantsinarow);
-       Farmer myfarmer = new Farmer();
-       Tomatoes harvestedtomatoes = myfarmer.farmerHarvest(cropRow);
-       myfarmer.foodStore(harvestedtomatoes);
-
-    }
 
 }

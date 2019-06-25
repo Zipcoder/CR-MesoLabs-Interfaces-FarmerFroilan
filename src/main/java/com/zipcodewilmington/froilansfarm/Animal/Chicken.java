@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.Produce.Produce;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
+public class Chicken extends Produce implements Animal {
 
 
     Chicken chicken;
@@ -20,25 +20,22 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
     }
 
     public boolean fertilized() {
-        if (hasEaten() && !isHungry()) {
-            return false;
-        }
-        return true;
+        if (!isHungry()) {
+            return true;
+        } return false;
     }
 
-    public List<Edible> yieldEggs() throws Exception {
-        Egg egg = new Egg();
+    public Egg yieldEgg() throws Exception {
         if (!fertilized()) {
-            eggBasket.add(egg);
-            return eggBasket;
+            return new Egg();
         } else throw new Exception
                 ("This chicken has been fertilized and cannot produce edible eggs.");
     }
 
     public boolean isHungry() {
-        if (!hasEaten() && foodEaten.isEmpty())
-            return false;
-        return true;
+        if (foodEaten.isEmpty())
+            return true;
+        return false;
     }
 
     public List reproduce(Integer increaseBy) {
@@ -53,22 +50,14 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
         }
     }
 
-    public boolean hasEaten() {
-        if (foodEaten.isEmpty()) {
-            return false;
-        }
-        return true;
-    }
-
     public List<Edible> getFoodEaten() {
         return foodEaten;
     }
 
     public String makeNoise() {
-        if (!hasEaten() && isHungry()) {
+        if (isHungry()) {
             return "Cluck! Cluck! Cluck-a-luck!";
-        }
-        return null;
+        } return null;
     }
 
     @Override
@@ -76,12 +65,4 @@ public class Chicken extends Produce implements Animal, NoiseMaker, Eater {
         return !fertilized;
     }
 
-
-    //Yield individual eggs.
-    @Override
-    public Edible yield() {
-        if (hasEdible()) return new Egg();
-
-        return null;
-    }
 }

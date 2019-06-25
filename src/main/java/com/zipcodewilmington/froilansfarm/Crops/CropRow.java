@@ -10,6 +10,9 @@ import java.util.List;
 
         private boolean fertilized = false;
 
+        public CropRow() {
+        }
+
         public boolean fertilize() {
             fertilized = true;
             return true;

@@ -4,23 +4,32 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 
 import java.util.List;
 
-public class FoodStorage<T>  {
+public class FoodStorage<T extends Edible>  {
     private List<T> foodStorage;
 
+    public FoodStorage(List<T> foodStorage) {
+        this.foodStorage = foodStorage;
+    }
 
-    public void add(T production) {
-        foodStorage.add(production);
+    public FoodStorage() {
 
     }
 
-    public T retrieve(T consumption) {
 
-        foodStorage.remove(consumption);
-        return consumption;
+    public void add(T edible) {
+        foodStorage.add(edible);
+
+    }
+
+    public T retrieve(T edible) {
+
+        foodStorage.remove(edible);
+        return edible;
     }
 
     public List<T> getT() {

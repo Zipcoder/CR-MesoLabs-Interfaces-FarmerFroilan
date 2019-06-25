@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
 import com.zipcodewilmington.froilansfarm.Vehicles.Flyable;
+import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,16 +20,11 @@ public class Froilanda implements Pilot, Person {
         }
 
         public void eatEdible(Edible food) {
-                if (isHungry() && !hasEaten()) {
+                if (isHungry()) {
                     foodEaten.add(food);
                 }
             }
 
-        public boolean hasEaten() {
-            if (foodEaten.isEmpty()) {
-                return false;
-            } return true;
-        }
 
         public List<Edible> getFoodEaten() {
             return foodEaten;
@@ -40,7 +36,7 @@ public class Froilanda implements Pilot, Person {
         }
 
         public boolean isHungry() {
-            if (!hasEaten() && foodEaten.isEmpty()) {
+            if (foodEaten.isEmpty()) {
                 return true;
             } return false;
         }
@@ -55,11 +51,19 @@ public class Froilanda implements Pilot, Person {
             return "Welcome to Froilan's farm. I'm Froilanda; the rootinest, tootinest pilot down in these parts!";
         }
 
-        public void flyAirCraft(Flyable airCraft) {
-            airCraft.setFlyAirCraft(true);
-        }
+    public void flyAirCraft(Flyable airCraft) {
 
-        public void ceaseFlying(Flyable airCraft) {
-            airCraft.setFlyAirCraft(false);
-        }
+    }
+
+    public void ceaseFlying(Flyable airCraft) {
+
+    }
+
+    public void mount(Rideable rideable) {
+
+    }
+
+    public void dismount(Rideable rideable) {
+
+    }
 }
