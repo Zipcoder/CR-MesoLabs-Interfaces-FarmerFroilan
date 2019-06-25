@@ -41,7 +41,3 @@ public class Cow extends Produce implements Animal {
         }
 }
 
-
-
-
-
