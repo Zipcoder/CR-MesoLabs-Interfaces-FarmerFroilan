@@ -8,23 +8,31 @@ import java.util.List;
 
 public class Cow implements Animal {
 
-    public List reproduce(Integer increaseBy) {
-        return null;
-    }
+        List<Edible> foodEaten = new ArrayList<Edible>();
 
-    public void eatEdible(Edible food) {
+        public Cow() {
+        }
 
-    }
+        public boolean isMilkable() {
+            return (!foodEaten.isEmpty());
+        }
 
-    public boolean isHungry() {
-        return false;
-    }
+        public Milk yieldMilk() {
+            if (isMilkable()) {
+            } return new Milk();
+        }
 
-    public List<Edible> getFoodEaten() {
-        return null;
-    }
+        public String makeNoise() {
+            return "Mooo!! Mooooo!!";
+        }
 
-    public String makeNoise() {
-        return null;
+        public List<Edible> getFoodEaten() {
+            return foodEaten;
+        }
+
+        @Override
+        public void eatEdible(Edible food) {
+            foodEaten.add(food);
     }
 }
+

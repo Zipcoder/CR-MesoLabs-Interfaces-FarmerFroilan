@@ -10,10 +10,7 @@ import java.util.List;
 
 public class Froilanda extends Farmer implements Pilot {
 
-
-
         List<Edible> foodEaten = new ArrayList<Edible>();
-
 
         public Froilanda() {
             super("Froilanda");
@@ -21,25 +18,14 @@ public class Froilanda extends Farmer implements Pilot {
 
         public void eatEdible(Edible food) {
                     foodEaten.add(food);
-            }
-
+        }
 
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
 
+        @Override
         public String makeNoise() {
             return "Welcome to Froilan's farm. I'm Froilanda; the rootinest, tootinest pilot down in these parts!";
         }
-
-
-    public void flyAirCraft(Flyable airCraft) {
-
-    }
-
-    public void ceaseFlying(Flyable airCraft) {
-
-    }
-
-
 }

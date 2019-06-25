@@ -14,10 +14,6 @@ public class Horse implements Animal, Rideable {
         public Horse(){
         }
 
-        public void eatEdible(Edible food) {
-            foodEaten.add(food);
-        }
-
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
@@ -34,8 +30,12 @@ public class Horse implements Animal, Rideable {
             isMounted = mounted;
         }
 
+    @Override
+    public void eatEdible(Edible food) {
+            foodEaten.add(food);
+
+    }
     public void ride() {
 
     }
-
 }

@@ -8,15 +8,17 @@ import com.zipcodewilmington.froilansfarm.Produce.*;
 
 public class Tractor implements FarmVehicle, NoiseMaker ,Driveable{
     Crops crops;
-    Farmer farmer=new Farmer();
+
     public boolean harvested(CropRow cropRow) {
         crops.getHarvested();
         return true;
     }
 
+
     public Edible harvest(Crops crops){
-        Edible harvest= (Edible) crops.yield();
+        Edible harvest = (Edible) crops.yield();
         return  harvest;
+
     }
 
     public String makeNoise() {

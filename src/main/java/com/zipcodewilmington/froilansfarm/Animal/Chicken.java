@@ -2,10 +2,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 
 
 
-import com.zipcodewilmington.froilansfarm.Produce.Edible;
-import com.zipcodewilmington.froilansfarm.Produce.Egg;
-import com.zipcodewilmington.froilansfarm.Produce.Eggs;
-import com.zipcodewilmington.froilansfarm.Produce.Produce;
+import com.zipcodewilmington.froilansfarm.Produce.*;
 
 
 import java.util.ArrayList;
@@ -19,15 +16,12 @@ public class Chicken extends Produce implements Animal {
     }
 
     public boolean fertilized() {
-        //Establish conditions later
-        return true;
+        if (foodEaten.isEmpty()) {
+        } return true;
     }
 
-    public Egg yieldEgg() throws Exception {
-        if (!fertilized()) {
+    public Egg yieldEgg() {
             return new Egg();
-        } else throw new Exception
-                ("This chicken has been fertilized and cannot produce edible eggs.");
     }
 
     public void eatEdible(Edible food) {
@@ -48,6 +42,8 @@ public class Chicken extends Produce implements Animal {
     }
 
     @Override
-    public Eggs yield() { return null; }
+    public Bounty yield() {
+        return null;
+    }
 
 }
