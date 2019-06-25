@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Animal.*;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
@@ -54,13 +54,26 @@ public class CropDusterTest {
     @Test
     public  void fertilizing(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.fertilizing();
-        Assert.assertTrue(cropDuster.fertilizing());
+        cropDuster.flying();
+        Assert.assertTrue(cropDuster.flying());
     }
     @Test
     public  void land(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.fertilizing();
+        cropDuster.flying();
         Assert.assertFalse(cropDuster.land());
+    }
+
+    @Test
+    public void isPilot(){
+        CropDuster cropDuster = new CropDuster();
+        Froilanda froilanda=new Froilanda();
+        Assert.assertTrue(cropDuster.isPilot(froilanda));
+    }
+    @Test
+    public void isPilot1(){
+        CropDuster cropDuster = new CropDuster();
+        Froilan froilan=new Froilan();
+        Assert.assertFalse(cropDuster.isPilot(froilan));
     }
 }

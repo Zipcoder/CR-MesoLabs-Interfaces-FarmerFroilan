@@ -1,15 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-import com.zipcodewilmington.froilansfarm.Animal.Driver;
-import com.zipcodewilmington.froilansfarm.Animal.Farmer;
-import com.zipcodewilmington.froilansfarm.Animal.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Animal.*;
 
 
-import com.zipcodewilmington.froilansfarm.Animal.Rider;
 import com.zipcodewilmington.froilansfarm.Crops.*;
 import com.zipcodewilmington.froilansfarm.Produce.*;
 
-public class Tractor implements FarmVehicle, NoiseMaker {
+public class Tractor implements FarmVehicle, NoiseMaker ,Driveable{
     Crops crops;
     Farmer farmer=new Farmer();
     public boolean harvested(CropRow cropRow) {
@@ -33,4 +30,16 @@ public class Tractor implements FarmVehicle, NoiseMaker {
             return null;
 
     }
+
+
+    @Override
+    public boolean isDriver(  Rider rider) {
+
+        if(rider instanceof Driver)
+        return true;
+        else
+            return false;
+    }
+
+
 }
