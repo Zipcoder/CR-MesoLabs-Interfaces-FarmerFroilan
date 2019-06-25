@@ -11,7 +11,8 @@ public class Horse implements Animal, Rideable {
         boolean isMounted;
         List<Edible> foodEaten = new ArrayList<Edible>();
 
-        public Horse(){
+        public Horse() {
+            isMounted = false;
         }
 
         public List<Edible> getFoodEaten() {

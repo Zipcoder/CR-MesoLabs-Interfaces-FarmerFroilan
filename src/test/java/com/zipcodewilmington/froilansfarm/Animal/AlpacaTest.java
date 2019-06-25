@@ -31,7 +31,7 @@ public class AlpacaTest {
     public void eatEdible() {
         //Given
         Alpaca alpaca = new Alpaca();
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         List<Edible> foodEaten = alpaca.foodEaten;
         foodEaten.add(expected);
 
@@ -48,12 +48,12 @@ public class AlpacaTest {
     public void eatEdible2() {
         //Given
         Cow cow = new Cow();
-        Cucumbers expected = new Cucumbers();
+        Tomato expected = new Tomato();
         List<Edible> foodEaten = cow.foodEaten;
         foodEaten.add(expected);
 
         //When
-        cow.eatEdible(expected);
+        cow.eatEdible((Edible) expected);
 
         //Then
         Assert.assertTrue(cow.foodEaten.contains(expected));
@@ -79,9 +79,9 @@ public class AlpacaTest {
     public void eatEdible4() {
         //Given
         Cow cow = new Cow();
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         List<Edible> foodEaten = cow.foodEaten;
-        foodEaten.add(expected);
+        foodEaten.add( expected);
 
 
         //When
@@ -96,7 +96,7 @@ public class AlpacaTest {
         //Given
         Alpaca alpaca = new Alpaca();
         List<Edible> foodEaten = alpaca.foodEaten;
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         foodEaten.add(expected);
 
         //When
@@ -110,7 +110,7 @@ public class AlpacaTest {
         //Given
         Alpaca alpaca = new Alpaca();
         List<Edible> foodEaten = alpaca.foodEaten;
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         foodEaten.add(expected);
 
         //When
@@ -145,4 +145,21 @@ public class AlpacaTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
+
+//    @Test
+//    public void yield() {
+//        //Given
+//        Alpaca alpaca = new Alpaca();
+//        WoolBasket woolBasket = new WoolBasket();
+//        woolBasket.add((Edible) new Wool());
+//        woolBasket.add((Edible) new Wool());
+//        woolBasket.add((Edible) new Wool());
+//        WoolBasket expected = woolBasket;
+//
+//        //When
+//        WoolBasket actual = (WoolBasket) alpaca.yield();
+//
+//        //Then
+//        Assert.assertEquals(expected, actual);
+//    }
 }

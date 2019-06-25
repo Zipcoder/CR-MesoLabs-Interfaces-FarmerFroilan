@@ -29,7 +29,6 @@ public class Froilan extends Farmer implements Driver {
 
     public void drive(Driveable vehicle) {
 
-
     }
 
     public void ceaseDrive(Driveable vehicle) {

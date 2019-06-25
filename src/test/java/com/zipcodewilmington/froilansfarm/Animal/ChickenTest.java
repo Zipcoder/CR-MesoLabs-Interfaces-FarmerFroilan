@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.*;
-import com.zipcodewilmington.froilansfarm.Tomato;
+//import com.zipcodewilmington.froilansfarm.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,20 +11,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class ChickenTest {
-
-    @Test
-    public void fertilized() {
-        //Given
-        Chicken chicken = new Chicken();
-        List<Edible> foodEaten = new ArrayList<>();
-        Boolean expected = foodEaten.isEmpty() == true;
-
-        //When
-        Boolean actual = chicken.fertilized();
-
-        //Then
-        Assert.assertEquals(expected, actual);
-    }
 
     @Test
     public void yieldEgg() {
@@ -43,7 +29,7 @@ public class ChickenTest {
     public void eatEdible() {
         //Given
         Chicken chicken = new Chicken();
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         List<Edible> foodEaten = chicken.foodEaten;
         foodEaten.add(expected);
 
@@ -59,7 +45,7 @@ public class ChickenTest {
     public void eatEdible2() {
         //Given
         Chicken chicken = new Chicken();
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         List<Edible> foodEaten = chicken.foodEaten;
         foodEaten.add(expected);
 
@@ -89,7 +75,7 @@ public class ChickenTest {
     public void eatEdible4() {
         //Given
         Chicken chicken = new Chicken();
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         List<Edible> foodEaten = chicken.foodEaten;
         foodEaten.add(expected);
 
@@ -106,7 +92,7 @@ public class ChickenTest {
         //Given
         Chicken chicken = new Chicken();
         List<Edible> foodEaten = chicken.foodEaten;
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         foodEaten.add(expected);
 
         //When
@@ -120,7 +106,7 @@ public class ChickenTest {
         //Given
         Chicken chicken = new Chicken();
         List<Edible> foodEaten = chicken.foodEaten;
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         foodEaten.add(expected);
 
         //When
@@ -134,7 +120,7 @@ public class ChickenTest {
         //Given
         Chicken chicken = new Chicken();
         List<Edible> foodEaten = chicken.foodEaten;
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         foodEaten.add(expected);
 
         //When
@@ -174,7 +160,7 @@ public class ChickenTest {
     public void hasEdible() {
         //Given
         Chicken chicken = new Chicken();
-        Boolean expected = chicken.fertilized() == true;
+        Boolean expected = !chicken.getFertilized();
 
         //When
         Boolean actual = chicken.hasEdible();
