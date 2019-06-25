@@ -1,10 +1,10 @@
-package com.zipcodewilmington.froilansfarm;
-
-import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
+//package com.zipcodewilmington.froilansfarm;
+//
+//import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+//import org.junit.Test;
+//
+//import static org.junit.Assert.*;
+//
 //public class FieldTest {
 //
 //    @Test
