@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater {
-    Farmer farmer=new Farmer();
+
     public boolean canDrive() {
         return true;
     }
