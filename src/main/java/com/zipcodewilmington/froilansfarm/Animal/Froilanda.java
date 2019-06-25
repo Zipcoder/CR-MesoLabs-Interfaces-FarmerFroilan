@@ -28,15 +28,4 @@ public class Froilanda extends Farmer implements Pilot {
         public String makeNoise() {
             return "Welcome to Froilan's farm. I'm Froilanda; the rootinest, tootinest pilot down in these parts!";
         }
-
-
-    public void flyAirCraft(Flyable airCraft) {
-
-    }
-
-    public void ceaseFlying(Flyable airCraft) {
-
-    }
-
-
 }
