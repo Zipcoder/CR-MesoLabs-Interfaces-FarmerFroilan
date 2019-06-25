@@ -1,13 +1,13 @@
-package com.zipcodewilmington.froilansfarm;
-
-import com.zipcodewilmington.froilansfarm.Vehicles.Aircraft;
-import org.junit.Assert;
-
-import static org.junit.Assert.*;
-
-public class AircraftTest {
-Aircraft aircraft=new Aircraft();
-
+//package com.zipcodewilmington.froilansfarm;
+//
+//import com.zipcodewilmington.froilansfarm.Vehicles.Aircraft;
+//import org.junit.Assert;
+//
+//import static org.junit.Assert.*;
+//
+//public class AircraftTest {
+//Aircraft aircraft=new Aircraft();
+//
 //    @org.junit.Test
 //    public void isFarmVehicle() {
 //        Assert.assertTrue(aircraft.isFarmVehicle());
@@ -38,8 +38,4 @@ Aircraft aircraft=new Aircraft();
 //    public void makesNoise() {
 //        Assert.assertTrue(aircraft.makesNoise());
 //    }
-}
-
-/*
-TODO this Test Class needs to be deleted and rewritten as a CropDuster Test
- */
+//}

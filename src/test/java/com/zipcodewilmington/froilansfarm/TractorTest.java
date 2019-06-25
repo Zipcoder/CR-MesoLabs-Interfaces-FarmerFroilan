@@ -1,13 +1,13 @@
-package com.zipcodewilmington.froilansfarm;
-
-import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
-import org.junit.Assert;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
-public class TractorTest {
-Tractor tractor=new Tractor();
+//package com.zipcodewilmington.froilansfarm;
+//
+//import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
+//import org.junit.Assert;
+//import org.junit.Test;
+//
+//import static org.junit.Assert.*;
+//
+//public class TractorTest {
+//Tractor tractor=new Tractor();
 //    @Test
 //    public void isFarmVehicle() {
 //        Assert.assertTrue(tractor.isFarmVehicle());
@@ -37,8 +37,4 @@ Tractor tractor=new Tractor();
 //    public void makesNoise() {
 //        Assert.assertTrue(tractor.makesNoise());
 //    }
-}
-
-/*
-TODO this test needs to be refactored
- */
+//}

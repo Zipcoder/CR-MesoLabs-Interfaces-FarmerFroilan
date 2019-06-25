@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garage implements Shelter {
+
     List<Tractor> tractors = new ArrayList<>();
     List<CropDuster> cropDusters = new ArrayList<>();
 
 
-    public Garage() {
-    }
+    public Garage() {}
+
 
     public Boolean isEmpty() {
         if (tractors.isEmpty() && cropDusters.isEmpty()){

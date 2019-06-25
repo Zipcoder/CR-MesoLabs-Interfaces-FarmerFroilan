@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public interface Driver extends Person {
+import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
+
+public interface Driver extends Person, Rider{
+
 
 }

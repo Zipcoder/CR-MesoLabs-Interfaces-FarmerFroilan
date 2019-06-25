@@ -1,87 +1,73 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-    import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-    import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Produce.*;
+import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
+import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 
-    import com.zipcodewilmington.froilansfarm.Farm;
+import java.util.ArrayList;
+import java.util.List;
+public class Farmer implements Person, Botanist, Rider, Driver {
 
-    import com.zipcodewilmington.froilansfarm.Produce.*;
-    import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
+        List<Edible> foodEaten = new ArrayList<Edible>();
 
-    import java.util.ArrayList;
-    import java.util.List;
+        public Farmer(String name){
+        }
 
-    public abstract class Farmer implements Person, Botanist, Rider, Driver {
+        public List<Edible> harvest() { return null;
+                //Determine harvest behavior later
+//                List<Edible> harvestCrops = new ArrayList<Edible>();
+//                Tomatoes tomatoes = new Tomatoes();
+//                StringBeans stringbeans = new StringBeans();
+//                Cucumbers cucumbers = new Cucumbers();
+//                EarOfCorn corn = new EarOfCorn();
+//                harvestCrops.add(tomatoes);
+//                harvestCrops.add(stringbeans);
+//                harvestCrops.add(cucumbers);
+//                harvestCrops.add(corn);
+//                return harvestCrops;
+        }
 
-
-            List<Edible> foodEaten = new ArrayList<Edible>();
-
-            public Farmer(String name){
-            }
-
-            public String makeNoise() {
-                return "Hey there y'all Sassafrases!";
-            }
-
-
-            public List<Bounty> harvest() {
-                //insert condition to check if plants are ready for harvest.
-                List<Bounty> harvestCrops = new ArrayList<>();
-                Tomatoes tomatoes = new Tomatoes();
-                StringBeans stringbeans = new StringBeans();
-                Cucumbers cucumbers = new Cucumbers();
-                EarsOfCorn corn = new EarsOfCorn();
-                harvestCrops.add(tomatoes);
-                harvestCrops.add(stringbeans);
-                harvestCrops.add(cucumbers);
-                harvestCrops.add(corn);
-                return harvestCrops;
-            }
-
-//            public List<Edible> getFoodFromStorage() {
-//
-//                return (List<Edible>) FoodStorage.getT();
-//            }
-
-
-
-            public boolean isHungry() {
-                if (foodEaten.isEmpty()) {
-                    return true;
-                } return false;
-
-            }
-
-            public void eatEdible(Edible food) {
-                foodEaten.add(food);
-            }
-
-            public List<Edible> getFoodEaten() {
+        public List<Edible> getFoodEaten() {
                 return foodEaten;
             }
 
-            public void feedFarmAnimals(Eater animal, Edible food) {
-                Froilan froilan = new Froilan();
-                Froilanda froilanda = new Froilanda();
-                froilan.feedFarmAnimals(animal, food);
-                froilanda.feedFarmAnimals(animal, food);
-            }
 
-            public void mount(Rideable rideable) {
-                rideable.setMounted(true);
-            }
+        public void plant(Crops crops, CropRow cropRow) {
 
-            public void dismount(Rideable rideable) {
-                rideable.setMounted(false);
-            }
+        }
 
-            public void plant(Crops crops, CropRow cropRow) {
-                CropRow.addCrops(crops);
-            }
+        public void drive(Driveable vehicle) {
 
+        }
+
+        public void ceaseDrive(Driveable vehicle) {
+
+        }
+
+        public void mount(Rideable rideable) {
+
+        }
+
+        public void dismount(Rideable rideable) {
+
+
+        }
+
+        public void feedFarmAnimals(Eater animal, Edible food) {
+
+        }
+
+        public void eatEdible(Edible food) {
+
+        }
+
+        @Override
+        public String makeNoise() {
+            return null;
+        }
     }
-
-
 
 
 
