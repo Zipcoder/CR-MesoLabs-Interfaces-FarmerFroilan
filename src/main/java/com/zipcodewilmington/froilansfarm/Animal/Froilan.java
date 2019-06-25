@@ -34,13 +34,16 @@ public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater
             super("Froilan");
         }
 
-        public String makNoise() {
-            return "Welcome to mah farm!";
+        @Override
+        public void eatEdible(Edible food) {
+            foodEaten.add(food);
         }
 
-    public void drive() {
 
-    }
+        @Override
+        public String makeNoise() {
+            return "I'm Froilan! Welcome to mah farm!"; }
+
 
     public void drive(Driveable vehicle) {
 

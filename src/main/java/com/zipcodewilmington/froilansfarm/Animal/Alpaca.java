@@ -18,10 +18,6 @@ public class Alpaca implements Animal {
             return wool;
         }
 
-        public void eatEdible(Edible e) {
-            foodEaten.add(e);
-        }
-
         public List<Edible> getFoodEaten() {
             return foodEaten;
         }
@@ -29,4 +25,10 @@ public class Alpaca implements Animal {
         public String makeNoise() {
             return "Mehh! Mehh!";
         }
+
+    @Override
+    public void eatEdible(Edible food) {
+            foodEaten.add(food);
+
+    }
 }
