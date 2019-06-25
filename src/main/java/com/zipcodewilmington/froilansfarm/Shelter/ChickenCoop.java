@@ -23,9 +23,7 @@ public class ChickenCoop implements Shelter {
         chickenCoop.remove(chicken);
     }
 
-    public Integer itemCount(List<Chicken> chickenCoop) {
-        return chickenCoop.size();
-    }
+
 
     public Integer itemCount() {
 

@@ -18,8 +18,29 @@ public class Tractor implements FarmVehicle, NoiseMaker {
     }
 
 
+    public void operate() {
+
+    }
+
+    public boolean isDriveable() {
+        return true;
+    }
+
+    public boolean vehicleRideable() {
+        return true;
+    }
+
+    public boolean makesNoise() {
+        return true;
+    }
+
+    public Tomatoes harvest(TomatoPlant tomatoPlant) {
+        Tomatoes harvestedtomatoes = new Tomatoes();
+        return harvestedtomatoes;
+    }
+
     public Edible harvest(Crops crops){
-        Edible harvest= (Edible) crops.yield();
+        Edible harvest = (Edible) crops.yield();
         return  harvest;
 
     }

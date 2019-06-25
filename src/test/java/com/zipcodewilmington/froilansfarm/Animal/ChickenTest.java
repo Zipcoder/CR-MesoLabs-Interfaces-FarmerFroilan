@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.*;
-import com.zipcodewilmington.froilansfarm.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -43,7 +42,7 @@ public class ChickenTest {
     public void eatEdible() {
         //Given
         Chicken chicken = new Chicken();
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         List<Edible> foodEaten = chicken.foodEaten;
         foodEaten.add(expected);
 
@@ -59,7 +58,7 @@ public class ChickenTest {
     public void eatEdible2() {
         //Given
         Chicken chicken = new Chicken();
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         List<Edible> foodEaten = chicken.foodEaten;
         foodEaten.add(expected);
 
@@ -89,7 +88,7 @@ public class ChickenTest {
     public void eatEdible4() {
         //Given
         Chicken chicken = new Chicken();
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         List<Edible> foodEaten = chicken.foodEaten;
         foodEaten.add(expected);
 
@@ -106,7 +105,7 @@ public class ChickenTest {
         //Given
         Chicken chicken = new Chicken();
         List<Edible> foodEaten = chicken.foodEaten;
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         foodEaten.add(expected);
 
         //When
@@ -120,7 +119,7 @@ public class ChickenTest {
         //Given
         Chicken chicken = new Chicken();
         List<Edible> foodEaten = chicken.foodEaten;
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         foodEaten.add(expected);
 
         //When
@@ -134,7 +133,7 @@ public class ChickenTest {
         //Given
         Chicken chicken = new Chicken();
         List<Edible> foodEaten = chicken.foodEaten;
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         foodEaten.add(expected);
 
         //When

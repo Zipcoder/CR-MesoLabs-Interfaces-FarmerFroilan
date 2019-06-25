@@ -31,16 +31,15 @@ public class AlpacaTest {
     public void eatEdible() {
         //Given
         Alpaca alpaca = new Alpaca();
-        Cucumbers expected = new Cucumbers();
-        List<Edible> foodEaten = alpaca.foodEaten;
-        foodEaten.add(expected);
+        Cucumber expected = new Cucumber();
+        List<Edible> foodEaten = alpaca.getFoodEaten();
 
 
         //When
         alpaca.eatEdible(expected);
 
         //Then
-        Assert.assertTrue(alpaca.foodEaten.contains(expected));
+        Assert.assertTrue(foodEaten.contains(expected));
 //      Assert.assertTrue(alpaca.foodEaten.contains(expected));
     }
 
@@ -48,15 +47,15 @@ public class AlpacaTest {
     public void eatEdible2() {
         //Given
         Cow cow = new Cow();
-        Cucumbers expected = new Cucumbers();
-        List<Edible> foodEaten = cow.foodEaten;
-        foodEaten.add(expected);
+        Cucumber expected = new Cucumber();
+        List<Edible> foodEaten = cow.getFoodEaten();
+
 
         //When
         cow.eatEdible(expected);
 
         //Then
-        Assert.assertTrue(cow.foodEaten.contains(expected));
+        Assert.assertTrue(foodEaten.contains(expected));
     }
 
     @Test
@@ -64,7 +63,7 @@ public class AlpacaTest {
         //Given
         Cow cow = new Cow();
         EarOfCorn expected = new EarOfCorn();
-        List<Edible> foodEaten = cow.foodEaten;
+        List<Edible> foodEaten = cow.getFoodEaten();
         foodEaten.add(expected);
 
 
@@ -79,8 +78,8 @@ public class AlpacaTest {
     public void eatEdible4() {
         //Given
         Cow cow = new Cow();
-        StringBeans expected = new StringBeans();
-        List<Edible> foodEaten = cow.foodEaten;
+        StringBean expected = new StringBean();
+        List<Edible> foodEaten = cow.getFoodEaten();
         foodEaten.add(expected);
 
 
@@ -95,11 +94,12 @@ public class AlpacaTest {
     public void getFoodEaten() {
         //Given
         Alpaca alpaca = new Alpaca();
-        List<Edible> foodEaten = alpaca.foodEaten;
-        Cucumbers expected = new Cucumbers();
-        foodEaten.add(expected);
+        List<Edible> foodEaten = alpaca.getFoodEaten();
+        Cucumber expected = new Cucumber();
+
 
         //When
+        alpaca.eatEdible(expected);
 
         //Then
         Assert.assertTrue(alpaca.getFoodEaten().contains(expected));
@@ -109,11 +109,11 @@ public class AlpacaTest {
     public void getFoodEaten2() {
         //Given
         Alpaca alpaca = new Alpaca();
-        List<Edible> foodEaten = alpaca.foodEaten;
-        Tomatoes expected = new Tomatoes();
-        foodEaten.add(expected);
+        List<Edible> foodEaten = alpaca.getFoodEaten();
+        Tomato expected = new Tomato();
 
         //When
+        alpaca.eatEdible(expected);
 
         //Then
         Assert.assertTrue(alpaca.getFoodEaten().contains(expected));
@@ -123,11 +123,12 @@ public class AlpacaTest {
     public void getFoodEaten3() {
         //Given
         Alpaca alpaca = new Alpaca();
-        List<Edible> foodEaten = alpaca.foodEaten;
+        List<Edible> foodEaten = alpaca.getFoodEaten();
         EarOfCorn expected = new EarOfCorn();
-        foodEaten.add(expected);
+
 
         //When
+        alpaca.eatEdible(expected);
 
         //Then
         Assert.assertTrue(alpaca.getFoodEaten().contains(expected));

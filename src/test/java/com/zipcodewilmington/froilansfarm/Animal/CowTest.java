@@ -56,7 +56,7 @@ public class CowTest {
     public void eatEdible() {
         //Given
         Cow cow = new Cow();
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         List<Edible> foodEaten = cow.foodEaten;
         foodEaten.add(expected);
 
@@ -88,7 +88,7 @@ public class CowTest {
     public void eatEdible3() {
         //Given
         Cow cow = new Cow();
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         List<Edible> foodEaten = cow.foodEaten;
         foodEaten.add(expected);
 
@@ -104,7 +104,7 @@ public class CowTest {
     public void eatEdible4() {
         //Given
         Cow cow = new Cow();
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         List<Edible> foodEaten = cow.foodEaten;
         foodEaten.add(expected);
 
@@ -121,7 +121,7 @@ public class CowTest {
         //Given
         Cow cow = new Cow();
         List<Edible> foodEaten = cow.foodEaten;
-        Tomatoes expected = new Tomatoes();
+        Tomato expected = new Tomato();
         foodEaten.add(expected);
 
         //When
@@ -135,7 +135,7 @@ public class CowTest {
         //Given
         Cow cow = new Cow();
         List<Edible> foodEaten = cow.foodEaten;
-        Cucumbers expected = new Cucumbers();
+        Cucumber expected = new Cucumber();
         foodEaten.add(expected);
 
         //When
@@ -163,7 +163,7 @@ public class CowTest {
         //Given
         Cow cow = new Cow();
         List<Edible> foodEaten = cow.foodEaten;
-        StringBeans expected = new StringBeans();
+        StringBean expected = new StringBean();
         foodEaten.add(expected);
 
         //When

@@ -16,13 +16,15 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
         return cropRow;
     }
 
+
     public void fly() {
         CropRow cropRow=new CropRow();
         if(this instanceof Flyable)
             this.fertilize(cropRow);
 
     }
-    public boolean flying(){
+
+    public boolean fertilizing(){
         this.fly();
         return true;
 
@@ -30,6 +32,9 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
 
     public boolean land() {
         if(flying()==true)
+
+        if(fertilizing()==true)
+
         return false;
         else
             return true;
