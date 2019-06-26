@@ -164,21 +164,4 @@ public class AlpacaTest {
         Alpaca alpaca = new Alpaca();
         Assert.assertTrue(alpaca instanceof Produce);
     }
-
-//    @Test
-//    public void yield() {
-//        //Given
-//        Alpaca alpaca = new Alpaca();
-//        WoolBasket woolBasket = new WoolBasket();
-//        woolBasket.add((Edible) new Wool());
-//        woolBasket.add((Edible) new Wool());
-//        woolBasket.add((Edible) new Wool());
-//        WoolBasket expected = woolBasket;
-//
-//        //When
-//        WoolBasket actual = (WoolBasket) alpaca.yield();
-//
-//        //Then
-//        Assert.assertEquals(expected, actual);
-//    }
 }

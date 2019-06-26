@@ -23,14 +23,6 @@ public class Horse implements Animal, Rideable {
             return "Neigh! Neigh!";
         }
 
-        public boolean isMounted() {
-            return isMounted;
-        }
-
-        public void setMounted(boolean mounted) {
-            isMounted = mounted;
-        }
-
     @Override
     public void eatEdible(Edible food) {
             foodEaten.add(food);

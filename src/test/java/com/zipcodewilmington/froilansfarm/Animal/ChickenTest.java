@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.List;
