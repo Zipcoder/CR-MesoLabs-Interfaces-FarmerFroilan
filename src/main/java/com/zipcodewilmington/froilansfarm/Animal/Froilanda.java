@@ -1,8 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.Edible;
-
-import com.zipcodewilmington.froilansfarm.Vehicles.Flyable;
 import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
 
 
@@ -29,4 +27,14 @@ public class Froilanda extends Farmer implements Pilot {
         public String makeNoise() {
             return "Welcome to Froilan's farm. I'm Froilanda; the rootinest, tootinest pilot down in these parts!";
         }
+
+    @Override
+    public void mount(Rideable rideable) {
+
+    }
+
+    @Override
+    public void dismount(Rideable rideable) {
+
+    }
 }
