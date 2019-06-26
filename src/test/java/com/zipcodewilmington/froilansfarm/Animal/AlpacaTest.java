@@ -26,7 +26,6 @@ public class AlpacaTest {
         //Then
 
         Assert.assertNotNull(actual);
-//       Assert.assertEquals(thisClass.getSimpleName(),"Wool");
     }
 
     @Test
@@ -43,7 +42,6 @@ public class AlpacaTest {
 
         //Then
         Assert.assertTrue(foodEaten.contains(expected));
-//      Assert.assertTrue(alpaca.foodEaten.contains(expected));
     }
 
     @Test
