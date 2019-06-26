@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater {
+public class Froilan extends Farmer implements Driver {
 
   
 
@@ -15,10 +15,6 @@ public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater
 
     public Froilan() {
         super("Froilan");
-    }
-
-    public boolean canDrive() {
-        return true;
     }
 
     @Override
@@ -32,7 +28,6 @@ public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater
 
 
     public void drive(Driveable vehicle) {
-
 
     }
 

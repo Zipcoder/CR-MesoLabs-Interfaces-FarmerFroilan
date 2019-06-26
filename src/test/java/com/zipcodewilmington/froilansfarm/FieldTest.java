@@ -128,4 +128,3 @@ public class FieldTest {
         assertEquals(expected, actual);
     }
 }
-

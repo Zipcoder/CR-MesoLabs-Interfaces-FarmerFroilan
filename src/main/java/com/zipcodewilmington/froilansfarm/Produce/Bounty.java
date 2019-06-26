@@ -15,7 +15,7 @@ public abstract class Bounty<T extends Edible> {
         bounty.add(edible);
     }
 
-    abstract T[] store();
+    abstract Edible[] store();
 
     protected Boolean isEmpty() {
         return bounty.isEmpty();

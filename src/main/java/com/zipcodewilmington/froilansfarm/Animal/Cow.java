@@ -1,12 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-import com.zipcodewilmington.froilansfarm.Produce.Edible;
-import com.zipcodewilmington.froilansfarm.Produce.Milk;
+import com.zipcodewilmington.froilansfarm.Produce.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cow implements Animal {
+public class Cow extends Produce implements Animal {
 
         List<Edible> foodEaten = new ArrayList<Edible>();
 
@@ -14,7 +13,8 @@ public class Cow implements Animal {
         }
 
         public boolean isMilkable() {
-            return (!foodEaten.isEmpty());
+            if (foodEaten.isEmpty() == false);
+            return true;
         }
 
         public Milk yieldMilk() {
@@ -34,5 +34,10 @@ public class Cow implements Animal {
         public void eatEdible(Edible food) {
             foodEaten.add(food);
     }
+
+        @Override
+        public Bounty yield() {
+            return new MilkGallons();
+        }
 }
 

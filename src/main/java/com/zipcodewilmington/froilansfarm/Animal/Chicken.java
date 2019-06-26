@@ -15,9 +15,12 @@ public class Chicken extends Produce implements Animal {
     public Chicken() {
     }
 
-    public boolean fertilized() {
-        if (foodEaten.isEmpty()) {
-        } return true;
+    public Boolean getFertilized() {
+        return fertilized;
+    }
+
+    public void setFertilized(Boolean fertilized) {
+        this.fertilized = fertilized;
     }
 
     public Egg yieldEgg() {
@@ -43,7 +46,8 @@ public class Chicken extends Produce implements Animal {
 
     @Override
     public Bounty yield() {
-        return null;
+        return new Eggs();
     }
+
 
 }

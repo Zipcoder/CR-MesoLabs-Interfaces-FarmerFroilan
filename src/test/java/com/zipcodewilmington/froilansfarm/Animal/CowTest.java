@@ -16,7 +16,7 @@ public class CowTest {
         //Given
         Cow cow = new Cow();
         List<Edible> foodEaten = new ArrayList<>();
-        Boolean expected = !foodEaten.isEmpty();
+        Boolean expected = foodEaten.isEmpty();
 
         //When
         Boolean actual = cow.isMilkable();
@@ -58,11 +58,11 @@ public class CowTest {
         Cow cow = new Cow();
         Tomato expected = new Tomato();
         List<Edible> foodEaten = cow.foodEaten;
-        foodEaten.add(expected);
+        foodEaten.add((Edible) expected);
 
 
         //When
-        cow.eatEdible(expected);
+        cow.eatEdible((Edible) expected);
 
         //Then
         Assert.assertTrue(cow.foodEaten.contains(expected));
@@ -172,4 +172,32 @@ public class CowTest {
         Assert.assertTrue(cow.getFoodEaten().contains(expected));
     }
 
+    @Test
+    public void yield() {
+        //Given
+        Cow cow = new Cow();
+        MilkGallons gallons = new MilkGallons();
+        gallons.add(new Milk());
+        gallons.add(new Milk());
+        gallons.add(new Milk());
+        MilkGallons expected = gallons;
+
+        //When
+        MilkGallons actual = (MilkGallons) cow.yield();
+
+        //Then
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void instanceOf(){
+        Cow cow = new Cow();
+        Assert.assertTrue(cow instanceof Animal);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Cow cow = new Cow();
+        Assert.assertTrue(cow instanceof Produce);
+    }
 }

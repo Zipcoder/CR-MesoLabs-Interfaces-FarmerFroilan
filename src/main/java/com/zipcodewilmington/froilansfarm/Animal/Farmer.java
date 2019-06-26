@@ -8,7 +8,7 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 
 import java.util.ArrayList;
 import java.util.List;
-public class Farmer implements Person, Botanist, Rider, Driver {
+public abstract class Farmer implements Person, Botanist, Rider, Driver {
 
         List<Edible> foodEaten = new ArrayList<Edible>();
 
@@ -51,11 +51,6 @@ public class Farmer implements Person, Botanist, Rider, Driver {
         }
 
         public void dismount(Rideable rideable) {
-
-
-        }
-
-        public void feedFarmAnimals(Eater animal, Edible food) {
 
         }
 

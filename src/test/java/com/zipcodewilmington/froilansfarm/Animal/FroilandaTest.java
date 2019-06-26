@@ -30,12 +30,12 @@ public class FroilandaTest {
         //Given
         Froilanda froilanda = new Froilanda();
         Cucumber expected = new Cucumber();
-        List<Edible> foodEaten = froilanda.getFoodEaten();
 
-
+        List<Edible> foodEaten = froilanda.foodEaten;
+        foodEaten.add(expected);
 
         //When
-        froilanda.eatEdible((Edible) expected);
+        froilanda.eatEdible(expected);
 
         //Then
         Assert.assertTrue(froilanda.foodEaten.contains(expected));
@@ -46,11 +46,12 @@ public class FroilandaTest {
         //Given
         Froilanda froilanda = new Froilanda();
         Tomato expected = new Tomato();
-        List<Edible> foodEaten = froilanda.getFoodEaten();
 
+        List<Edible> foodEaten = froilanda.foodEaten;
+        foodEaten.add(expected);
 
         //When
-        froilanda.eatEdible((Edible) expected);
+        froilanda.eatEdible(expected);
 
         //Then
         Assert.assertTrue(froilanda.foodEaten.contains(expected));
@@ -62,11 +63,11 @@ public class FroilandaTest {
         Froilanda froilanda = new Froilanda();
 
         StringBean expected = new StringBean();
-        List<Edible> foodEaten = froilanda.getFoodEaten();
-
+        List<Edible> foodEaten = froilanda.foodEaten;
+        foodEaten.add(expected);
 
         //When
-        froilanda.eatEdible((Edible) expected);
+        froilanda.eatEdible(expected);
 
         //Then
         Assert.assertTrue(froilanda.foodEaten.contains(expected));
@@ -91,9 +92,10 @@ public class FroilandaTest {
     public void getFoodEaten2() {
         //Given
         Froilanda froilanda = new Froilanda();
-        StringBean expected = new StringBean();
-        List<Edible> foodEaten = froilanda.getFoodEaten();
 
+        List<Edible> foodEaten = froilanda.foodEaten;
+        StringBean expected = new StringBean();
+        foodEaten.add(expected);
 
         //When
         froilanda.eatEdible(expected);
@@ -106,8 +108,10 @@ public class FroilandaTest {
     public void getFoodEaten3() {
         //Given
         Froilanda froilanda = new Froilanda();
+
+        List<Edible> foodEaten = froilanda.foodEaten;
         Tomato expected = new Tomato();
-        List<Edible> foodEaten = froilanda.getFoodEaten();
+        foodEaten.add(expected);
 
 
         //When
@@ -121,9 +125,10 @@ public class FroilandaTest {
     public void getFoodEaten4() {
         //Given
         Froilanda froilanda = new Froilanda();
-        Cucumber expected = new Cucumber();
-        List<Edible> foodEaten = froilanda.getFoodEaten();
 
+        List<Edible> foodEaten = froilanda.foodEaten;
+        Cucumber expected = new Cucumber();
+        foodEaten.add(expected);
 
         //When
         froilanda.eatEdible(expected);
@@ -143,5 +148,23 @@ public class FroilandaTest {
 
         //Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void instanceOf(){
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Person);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Pilot);
+    }
+
+    @Test
+    public void instanceOf3(){
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Farmer);
     }
 }

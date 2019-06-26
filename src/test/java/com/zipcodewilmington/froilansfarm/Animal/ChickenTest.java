@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Produce.*;
+//import com.zipcodewilmington.froilansfarm.Tomato;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,20 +12,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class ChickenTest {
-
-    @Test
-    public void fertilized() {
-        //Given
-        Chicken chicken = new Chicken();
-        List<Edible> foodEaten = new ArrayList<>();
-        Boolean expected = foodEaten.isEmpty() == true;
-
-        //When
-        Boolean actual = chicken.fertilized();
-
-        //Then
-        Assert.assertEquals(expected, actual);
-    }
 
     @Test
     public void yieldEgg() {
@@ -173,12 +161,24 @@ public class ChickenTest {
     public void hasEdible() {
         //Given
         Chicken chicken = new Chicken();
-        Boolean expected = chicken.fertilized() == true;
+        Boolean expected = !chicken.getFertilized();
 
         //When
         Boolean actual = chicken.hasEdible();
 
         //Then
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void instanceOf(){
+        Chicken chicken = new Chicken();
+        Assert.assertTrue(chicken instanceof Animal);
+    }
+
+    @Test
+    public void instanceOf2(){
+        Chicken chicken = new Chicken();
+        Assert.assertTrue(chicken instanceof Produce);
     }
 }
