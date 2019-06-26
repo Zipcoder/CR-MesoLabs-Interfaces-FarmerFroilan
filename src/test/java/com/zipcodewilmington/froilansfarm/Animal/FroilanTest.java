@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Field;
 import org.junit.Assert;
 import org.junit.Test;
 

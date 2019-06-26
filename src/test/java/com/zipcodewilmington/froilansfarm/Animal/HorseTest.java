@@ -142,12 +142,4 @@ public class HorseTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-
-    @Test
-    public void isMounted() {
-    }
-
-    @Test
-    public void setMounted() {
-    }
 }

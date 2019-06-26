@@ -28,7 +28,6 @@ public class Froilan extends Farmer implements Driver {
 
     @Override
     public void plant(Field field, CropRow cropRow) {
-        field = new Field();
         field.add(cropRow);
     }
 
