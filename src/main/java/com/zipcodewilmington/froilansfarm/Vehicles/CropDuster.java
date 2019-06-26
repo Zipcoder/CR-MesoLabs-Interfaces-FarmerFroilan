@@ -27,57 +27,69 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
 
     }
 
+
     @Override
     public boolean land() {
+        return false;
+    }
+
+    @Override
+    public boolean isPilot(Rider rider) {
         return false;
     }
 
     public boolean fertilizing() {
 
 
-    public boolean flying(){
+        public boolean flying () {
 
-        this.fly();
-        return true;
+            this.fly();
+            return true;
 
-    }
+        }
 
 
-    public boolean land() {
-        if (flying() == true)
+        public boolean land () {
+            if (flying() == true)
 
-            if (fertilizing() == true)
+                if (fertilizing() == true)
 
+                    return false;
+                else
+                    return true;
+        }
+
+        public boolean land() {
+            if (flying() == true)
                 return false;
             else
                 return true;
-    }
+        }
 
-    public boolean land() {
-        if(flying()==true)
-        return false;
-        else
-            return true;
-    }
 
+        @Override
+        public boolean isPilot (Rider rider){
+            if (rider instanceof Pilot)
+                return true;
+            else
+                return false;
+        }
+
+
+        public Vehicle operate(Rider rider){
+            if (rider instanceof Pilot)
+                return (Vehicle) this;
+            else
+                return null;
+        }
+    }
 
     @Override
-    public boolean isPilot(Rider rider) {
-        if(rider instanceof Pilot)
-            return true;
-        else
-        return false;
-    }
-
-
     public Vehicle operate(Rider rider) {
-        if(rider instanceof Pilot)
-            return (Vehicle) this;
-        else
         return null;
     }
-
 }
+
 
 
 
