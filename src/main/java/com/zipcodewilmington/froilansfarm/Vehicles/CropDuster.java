@@ -84,11 +84,12 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
         }
     }
 
-    @Override
-    public Vehicle operate(Rider rider) {
-        return null;
-    }
+        @Override
+        public Vehicle operate (Rider rider){
+            return null;
+        }
 }
+
 
 
 
