@@ -18,13 +18,10 @@ public  class Field {
 
     }
 
-
-
     public Boolean isEmpty() {
 
         return field.isEmpty();
     }
-
 
     public void add(CropRow cropRow) {
         field.add(cropRow);
