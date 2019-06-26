@@ -126,7 +126,5 @@ public class FieldTest {
         Integer actual = field1.itemCount();
 
         assertEquals(expected, actual);
-
     }
-
 }
