@@ -11,13 +11,13 @@ public class Pilot extends Person {
         super(name);
     }
 
-    public void mount(Rideable rideable)    {
+    public void mount(Aircraft aircraft)    {
         this.aircraft.fly();
 
     }
 
 
-    public void disMount(Rideable rideable) {   //TODO sets aircraft's current status
+    public void disMount(Aircraft aircraft) {   //need a method to stop flying in aircraft.
 
     }
 

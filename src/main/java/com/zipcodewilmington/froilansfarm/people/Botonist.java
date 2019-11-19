@@ -25,6 +25,10 @@ public class Botonist extends Farmer{
         this.plantsInCropRow = num;
     }
 
+    public Integer getPlantsInCropRow() {
+        return this.plantsInCropRow;
+    }
+
     public ArrayList<Crop> produce(Integer num)    {
         ArrayList<Crop> edibles = new ArrayList<Crop>();
         return edibles;
