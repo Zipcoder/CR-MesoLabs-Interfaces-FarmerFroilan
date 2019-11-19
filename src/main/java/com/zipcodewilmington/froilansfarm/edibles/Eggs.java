@@ -1,13 +1,8 @@
 package com.zipcodewilmington.froilansfarm.edibles;
 
+import sun.jvm.hotspot.utilities.Assert;
+
 public class Eggs extends Edibles {
-    private String name;
-
-    public Eggs(String name){
-        this.name = name;
-    }
-
-    public String getName(){
-        return this.name;
+    public Eggs(){
     }
 }
