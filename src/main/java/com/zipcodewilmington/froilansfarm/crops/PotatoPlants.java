@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
+import com.zipcodewilmington.froilansfarm.edibles.Edibles;
+import com.zipcodewilmington.froilansfarm.edibles.Potatos;
 import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 public class PotatoPlants implements Produces {
@@ -10,11 +12,12 @@ public class PotatoPlants implements Produces {
         this.hasBeenFertilized = false;
     }
 
-    // should return type "Edible"
-    public void yield(){
+    public Edibles yield(){
         if(hasBeenFertilized){
-            return;//return "Edible" parameter
+            Potatos potatos = new Potatos();
+            return potatos;
         }
+        return null;
     }
 
     //getter and setter
