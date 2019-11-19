@@ -5,18 +5,21 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 public class Rider extends Farmer{
 
     private String name;
+    Rideable rideable;
 
 
     Rider(String name) {
         super(name);
     }
 
-    public void mount(Rideable rideable)    {   //TODO sets farm equipment's current status
-
+    public void mount(Rideable rideable)    {
+        this.rideable = rideable;
+        rideable.mounted();
     }
 
 
-    public void disMount(Rideable rideable) {   //TODO sets farm equipment's current status
-
+    public void disMount(Rideable rideable) {
+        this.rideable = rideable;
+        rideable.dismounted();
     }
 }
