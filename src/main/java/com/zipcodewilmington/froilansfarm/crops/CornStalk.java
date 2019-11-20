@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
 import com.zipcodewilmington.froilansfarm.edibles.Corn;
-import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.interfaces.Produces;
+
+import java.util.Arrays;
 
 public class CornStalk implements Produces {
 
@@ -12,13 +13,16 @@ public class CornStalk implements Produces {
         this.hasBeenFertilized = false;
     }
 
-    public Edibles yield(){
+    public Corn[] yield(){
         if(hasBeenFertilized){
-            Corn corn = new Corn();
-            return corn;
+            int yieldAmount = (int)(Math.random() * ((2 - 1) + 1)) + 1;
+            Corn[] yieldGroup = new Corn[yieldAmount];
+            Arrays.fill(yieldGroup, new Corn());
+            return yieldGroup;
         }
         return null;
     }
+
 
     //getter and setter
     public Boolean getHasBeenFertilized() {

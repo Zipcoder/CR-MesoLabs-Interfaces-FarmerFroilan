@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
-import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.edibles.Tomatos;
 import com.zipcodewilmington.froilansfarm.interfaces.Produces;
+
+import java.util.Arrays;
 
 public class TomatoPlants implements Produces {
 
@@ -12,13 +13,16 @@ public class TomatoPlants implements Produces {
         this.hasBeenFertilized = false;
     }
 
-    public Edibles yield(){
+    public Tomatos[] yield(){
         if(hasBeenFertilized){
-            Tomatos tomatos = new Tomatos();
-            return tomatos;
+            int yieldAmount = (int)(Math.random() * ((5 - 4) + 1)) + 4;
+            Tomatos[] yieldGroup = new Tomatos[yieldAmount];
+            Arrays.fill(yieldGroup, new Tomatos());
+            return yieldGroup;
         }
         return null;
     }
+
 
     //getter and setter
     public Boolean getHasBeenFertilized() {

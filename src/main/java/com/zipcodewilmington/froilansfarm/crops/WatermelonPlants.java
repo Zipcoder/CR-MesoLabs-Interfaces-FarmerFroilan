@@ -18,7 +18,7 @@ public class WatermelonPlants implements Produces {
 
     public Watermelon[] yield(){
         if(hasBeenFertilized){
-            int yieldAmount = (int)(Math.random() * ((4 - 2) + 2)) + 1;
+            int yieldAmount = (int)(Math.random() * ((4 - 2) + 1)) + 2;
             Watermelon[] yieldGroup = new Watermelon[yieldAmount];
             Arrays.fill(yieldGroup, new Watermelon());
             return yieldGroup;
