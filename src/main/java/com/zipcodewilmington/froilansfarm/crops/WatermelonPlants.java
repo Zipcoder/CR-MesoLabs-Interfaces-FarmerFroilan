@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.edibles.Watermelon;
 import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class WatermelonPlants implements Produces {
@@ -15,16 +16,11 @@ public class WatermelonPlants implements Produces {
         this.hasBeenFertilized = false;
     }
 
-    public List<Watermelon> yield(){
+    public Watermelon[] yield(){
         if(hasBeenFertilized){
-
-            List<Watermelon> yieldGroup = new ArrayList<Watermelon>();
             int yieldAmount = (int)(Math.random() * ((4 - 2) + 2)) + 1;
-
-            for(int i = 0; i < yieldAmount; i++){
-                Watermelon watermelon = new Watermelon();
-                yieldGroup.add(watermelon);
-            }
+            Watermelon[] yieldGroup = new Watermelon[yieldAmount];
+            Arrays.fill(yieldGroup, new Watermelon());
             return yieldGroup;
         }
         return null;
