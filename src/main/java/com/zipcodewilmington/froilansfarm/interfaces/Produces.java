@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface Produces {
+import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 
+public interface Produces {
+    public Edibles[] yield();
 }

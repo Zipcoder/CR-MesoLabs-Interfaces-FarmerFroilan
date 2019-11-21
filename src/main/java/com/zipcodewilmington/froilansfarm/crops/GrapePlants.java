@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.edibles.Grapes;
 import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
+import java.util.Arrays;
+
 public class GrapePlants implements Produces {
 
     private Boolean hasBeenFertilized;
@@ -12,13 +14,16 @@ public class GrapePlants implements Produces {
         this.hasBeenFertilized = false;
     }
 
-    public Edibles yield(){
+    public Grapes[] yield(){
         if(hasBeenFertilized){
-            Grapes grapes = new Grapes();
-            return grapes;
+            int yieldAmount = (int)(Math.random() * ((30 - 20) + 1)) + 20;
+            Grapes[] yieldGroup = new Grapes[yieldAmount];
+            Arrays.fill(yieldGroup, new Grapes());
+            return yieldGroup;
         }
         return null;
     }
+
 
     //getter and setter
     public Boolean getHasBeenFertilized() {
