@@ -1,16 +1,15 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
 import com.zipcodewilmington.froilansfarm.edibles.Potatos;
-import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.Arrays;
 
-public class PotatoPlants implements Produces {
+public class PotatoPlants extends Crop {
 
-    private Boolean hasBeenFertilized;
+    Boolean hasBeenFertilized;
 
     public PotatoPlants(){
-        this.hasBeenFertilized = false;
+        super();
     }
 
     public Potatos[] yield(){

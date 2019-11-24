@@ -1,21 +1,19 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
-import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.edibles.Grapes;
-import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.Arrays;
 
-public class GrapePlants implements Produces {
+public class GrapePlants extends Crop {
 
-    private Boolean hasBeenFertilized;
+    Boolean hasBeenFertilized;
 
     public GrapePlants(){
-        this.hasBeenFertilized = false;
+        super();
     }
 
     public Grapes[] yield(){
-        if(hasBeenFertilized){
+        if(this.hasBeenFertilized){
             int yieldAmount = (int)(Math.random() * ((30 - 20) + 1)) + 20;
             Grapes[] yieldGroup = new Grapes[yieldAmount];
             Arrays.fill(yieldGroup, new Grapes());

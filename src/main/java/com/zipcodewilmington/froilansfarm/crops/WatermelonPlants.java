@@ -1,19 +1,15 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
-import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.edibles.Watermelon;
-import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class WatermelonPlants implements Produces {
+public class WatermelonPlants extends Crop {
 
-    private Boolean hasBeenFertilized;
+    Boolean hasBeenFertilized;
 
     public WatermelonPlants(){
-        this.hasBeenFertilized = false;
+        super();
     }
 
     public Watermelon[] yield(){

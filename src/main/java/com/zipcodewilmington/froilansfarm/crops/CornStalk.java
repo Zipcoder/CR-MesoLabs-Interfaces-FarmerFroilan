@@ -1,16 +1,13 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
 import com.zipcodewilmington.froilansfarm.edibles.Corn;
-import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.Arrays;
 
-public class CornStalk implements Produces {
-
-    private Boolean hasBeenFertilized;
+public class CornStalk extends Crop{
 
     public CornStalk(){
-        this.hasBeenFertilized = false;
+        super();
     }
 
     public Corn[] yield(){
