@@ -4,12 +4,8 @@ import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
 
-public class Animals implements NoiseMaker, Eater {
-    public void Eat(Edibles edible) {
+public abstract class Animals implements NoiseMaker, Eater {
+    public abstract void Eat(Edibles edible);
 
-    }
-
-    public String makeNoise() {
-        return null;
-    }
+    public abstract String makeNoise();
 }
