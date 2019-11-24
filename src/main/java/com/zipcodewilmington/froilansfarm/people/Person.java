@@ -20,4 +20,8 @@ public class Person implements NoiseMaker, Eater {
     public void Eat(Edibles edible) {
 
     }
+
+    public String makeNoise() {
+        return null;
+    }
 }

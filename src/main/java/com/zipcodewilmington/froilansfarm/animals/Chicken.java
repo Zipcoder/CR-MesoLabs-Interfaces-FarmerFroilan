@@ -8,4 +8,8 @@ public class Chicken extends Animals {
         Eggs egg = new Eggs();
         return egg;
     }
+
+    public String makeNoise(){
+        return "Cluck cluck";
+    }
 }
