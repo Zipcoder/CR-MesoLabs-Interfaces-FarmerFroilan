@@ -23,10 +23,6 @@ public class Froilan extends Botonist implements Rider {
         rideable.dismounted();
     }
 
-    public void plant(Crop crop){
-
-    }
-
     public void gather(){
         //gather eggs
     }

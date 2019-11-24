@@ -36,7 +36,9 @@ public class DaysOfTheWeekTests {
         Assert.assertFalse(horse1.dismounted());
         Assert.assertFalse(horse2.dismounted());
 
-        froilan.plant(tomatoes);
+        froilan.setPlantsInCropRow(1);
+        froilan.setPlantsInCropRow(2);
+        froilan.setPlantsInCropRow(3);
     }
 
     @Test

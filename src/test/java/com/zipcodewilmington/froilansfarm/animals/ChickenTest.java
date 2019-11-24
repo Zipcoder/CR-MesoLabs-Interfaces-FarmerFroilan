@@ -19,4 +19,13 @@ public class ChickenTest {
         Eggs egg = chicken.layEgg();
         Assert.assertTrue(egg instanceof Edibles);
     }
+
+    @Test
+    public void makeNoiseTest(){
+        Chicken chicken = new Chicken();
+        String expected = "Cluck cluck";
+        String actual = chicken.makeNoise();
+
+        Assert.assertEquals(expected,actual);
+    }
 }
