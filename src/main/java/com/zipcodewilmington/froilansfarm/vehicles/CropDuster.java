@@ -5,8 +5,13 @@ import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicles;
 
 public class CropDuster extends Aircraft implements FarmVehicles {
 
-    public void fly() {
-        for(CropRow cropRow : Field)
+    public Boolean fly() {
+        isFlying = true;
+        return isFlying;
+    }
 
+    public Boolean land(){
+        isFlying = false;
+        return isFlying;
     }
 }
