@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.people;
 
+
+import com.zipcodewilmington.froilansfarm.crops.Crop;
 import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
@@ -19,5 +21,13 @@ public class Froilan extends Botonist implements Rider {
 
     public void dismount(Rideable rideable) {
         rideable.dismounted();
+    }
+
+    public void plant(Crop crop){
+
+    }
+
+    public void gather(){
+        //gather eggs
     }
 }

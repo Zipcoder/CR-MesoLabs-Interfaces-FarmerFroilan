@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.Arrays;
 
-public class CornStalk implements Produces {
+public class CornStalk extends Crop implements Produces {
 
     private Boolean hasBeenFertilized;
 

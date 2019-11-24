@@ -3,10 +3,8 @@ package com.zipcodewilmington.froilansfarm.mainFarm;
 import com.zipcodewilmington.froilansfarm.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.edibles.Eggs;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
 
 public class ChickenCoop {
     private Chicken chicken = new Chicken();

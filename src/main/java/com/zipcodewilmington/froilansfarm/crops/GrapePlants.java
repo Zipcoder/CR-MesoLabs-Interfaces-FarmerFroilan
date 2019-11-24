@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.Arrays;
 
-public class GrapePlants implements Produces {
+public class GrapePlants extends Crop implements Produces {
 
     private Boolean hasBeenFertilized;
 

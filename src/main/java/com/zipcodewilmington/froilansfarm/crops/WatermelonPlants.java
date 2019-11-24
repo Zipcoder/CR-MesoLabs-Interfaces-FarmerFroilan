@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class WatermelonPlants implements Produces {
+public class WatermelonPlants extends Crop implements Produces {
 
     private Boolean hasBeenFertilized;
 

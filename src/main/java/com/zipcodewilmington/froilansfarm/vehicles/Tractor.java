@@ -35,4 +35,8 @@ public class Tractor extends Vehicle implements FarmVehicles {
         wasRidden = false;
         return wasRidden;
     }
+
+    public void harvest(){
+
+    }
 }
