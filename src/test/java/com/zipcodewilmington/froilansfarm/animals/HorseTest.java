@@ -17,4 +17,12 @@ public class HorseTest {
         Assert.assertTrue(horse instanceof Rideable);
     }
 
+    @Test
+    public void makeNoiseTest(){
+        Horse horse = new Horse();
+        String expected = "Neigh";
+        String actual = horse.makeNoise();
+
+        Assert.assertEquals(expected,actual);
+    }
 }

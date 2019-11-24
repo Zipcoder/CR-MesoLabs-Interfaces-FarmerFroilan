@@ -6,7 +6,6 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 public class Farmer extends Person {
 
     private Botonist botonist;
-    private Rider rider;
 
 
 

@@ -1,17 +1,26 @@
 package com.zipcodewilmington.froilansfarm.animals;
 
+import com.zipcodewilmington.froilansfarm.edibles.Edibles;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
-import com.zipcodewilmington.froilansfarm.people.Rider;
 
 public class Horse extends Animals implements Rideable {
-    private Rider currentRider;
     private Boolean wasRidden;
 
-    public Boolean riderRiding(Rider rider) {
-        return null;
+    public void Eat(Edibles edible) {
+
     }
 
-    public void dismount() {
+    public String makeNoise(){
+        return "Neigh";
+    }
 
+    public Boolean mounted() {
+        wasRidden = true;
+        return wasRidden;
+    }
+
+    public Boolean dismounted() {
+        wasRidden = false;
+        return wasRidden;
     }
 }

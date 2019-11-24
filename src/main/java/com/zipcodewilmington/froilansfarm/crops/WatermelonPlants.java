@@ -1,10 +1,11 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
 import com.zipcodewilmington.froilansfarm.edibles.Watermelon;
+import com.zipcodewilmington.froilansfarm.interfaces.Produces;
 
 import java.util.Arrays;
 
-public class WatermelonPlants extends Crop {
+public class WatermelonPlants extends Crop implements Produces {
 
     Boolean hasBeenFertilized;
 
