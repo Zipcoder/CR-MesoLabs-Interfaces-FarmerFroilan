@@ -2,16 +2,17 @@ package com.zipcodewilmington.froilansfarm.mainFarm;
 
 import com.zipcodewilmington.froilansfarm.crops.Crop;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CropRow<E extends Crop> {
 
     private E cropType;
-    private List<E> cropRowContents;
+    private ArrayList<E> cropRowContents;
 
 
     public CropRow(E cropType, int howManyPlants) {
-        cropType = cropType;
+        cropRowContents = new ArrayList<E>();
         plantCrops(cropType, howManyPlants);
     }
 
@@ -24,7 +25,7 @@ public class CropRow<E extends Crop> {
         }
     }
 
-    public List<E> getHarvested() {
+    public List<E> beHarvested() {
         List<E> returnThis = this.cropRowContents;
         cropRowContents.clear();
         return returnThis;
@@ -45,6 +46,4 @@ public class CropRow<E extends Crop> {
     public void setCropType(E cropType) {
         this.cropType = cropType;
     }
-
-
 }
