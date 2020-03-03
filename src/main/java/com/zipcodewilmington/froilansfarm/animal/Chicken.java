@@ -15,6 +15,10 @@ public class Chicken extends Animal implements Produce {
         return false;
     }
 
+    public boolean isYield() {
+        return false;
+    }
+
     public boolean storeFood() {
         return false;
     }

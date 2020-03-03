@@ -2,5 +2,6 @@ package com.zipcodewilmington.froilansfarm.food;
 
 import com.zipcodewilmington.froilansfarm.Produce;
 
-public class Egg extends Food implements Produce {
+public class Egg extends Food {
+
 }
