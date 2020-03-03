@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.animalstest;
 
 import com.zipcodewilmington.froilansfarm.animals.Chicken;
+import com.zipcodewilmington.froilansfarm.food.Edible;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,12 +10,22 @@ import java.util.ArrayList;
 public class ChickenTest {
     @Test
     public void eatFoodTest(){
-        //
-
+        Chicken chick1 = new Chicken();
+        Edible earCorn = new Edible() {};
+        boolean result;
+        if (chick1.eatFood(earCorn)) result = true;
+        else result = false;
+        Boolean answer = true;
+        Assert.assertTrue("Let's eat", true);
     }
 
     @Test
     public void makeNoiseTest(){
+        Chicken chick1 = new Chicken();
+
+
+
+
 
     }
 
@@ -24,7 +35,7 @@ public class ChickenTest {
         Chicken chick1 = new Chicken(givenId);
         Integer retrievedId = chick1.getId();
         Assert.assertEquals(givenId, retrievedId);
-        
+
 
     }
 
