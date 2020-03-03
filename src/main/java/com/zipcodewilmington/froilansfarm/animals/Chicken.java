@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class Chicken implements Animal{
     private Integer id;
-    private ArrayList<String> edible;
 
-    public Chicken(Integer id, ArrayList edible){
+
+    public Chicken(Integer id, {
         this.id = id;
-        this.edible = edible;
+
     }
 
     public Integer getId(){
@@ -19,14 +19,6 @@ public class Chicken implements Animal{
 
     public void setId(Integer id){
         this.id = id;
-    }
-
-    public ArrayList<String> getEdible(){
-        return this.edible;
-    }
-
-    public void setEdible(ArrayList edible){
-        this.edible= edible;
     }
 
     public Chicken(){}
