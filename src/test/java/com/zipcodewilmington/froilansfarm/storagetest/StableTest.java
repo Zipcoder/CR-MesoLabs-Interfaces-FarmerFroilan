@@ -67,5 +67,4 @@ public class StableTest {
 
         assertEquals(expected, actual);
     }
-
 }
