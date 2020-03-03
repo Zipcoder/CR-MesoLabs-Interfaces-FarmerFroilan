@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.storagetest;
 import com.zipcodewilmington.froilansfarm.people.Farmer;
 import com.zipcodewilmington.froilansfarm.people.Person;
 import com.zipcodewilmington.froilansfarm.storage.FarmHouse;
+import com.zipcodewilmington.froilansfarm.storage.Stable;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,6 +19,16 @@ public class FarmHouseTest {
     public void init(){
         testHouse = new FarmHouse();
         testPerson = new Farmer();
+    }
+
+    @Test
+    public void constructorTest(){
+        testHouse = new FarmHouse(testPerson);
+        Integer expected = 1;
+
+        Integer actual = testHouse.size();
+
+        assertEquals(expected, actual);
     }
 
     @Test

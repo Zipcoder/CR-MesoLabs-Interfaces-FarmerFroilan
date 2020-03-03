@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.storagetest;
 import com.zipcodewilmington.froilansfarm.food.Edible;
 import com.zipcodewilmington.froilansfarm.food.Tomato;
 import com.zipcodewilmington.froilansfarm.storage.Silo;
+import com.zipcodewilmington.froilansfarm.storage.Stable;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +18,17 @@ public class SiloTest {
     @Before
     public void init(){
         testSilo = new Silo();
-        testEdible = new Tomato();
+       //testEdible = new Tomato();
+    }
+
+    @Test
+    public void constructorTest(){
+        testSilo = new Silo(testEdible);
+        Integer expected = 1;
+
+        Integer actual = testSilo.size();
+
+        assertEquals(expected, actual);
     }
 
     @Test

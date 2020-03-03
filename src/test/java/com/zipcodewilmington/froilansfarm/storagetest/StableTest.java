@@ -19,6 +19,16 @@ public class StableTest {
     }
 
     @Test
+    public void constructorTest(){
+        testStable = new Stable(testHorse);
+        Integer expected = 1;
+
+        Integer actual = testStable.size();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void addTest(){
         Boolean actual = testStable.add(testHorse);
 
