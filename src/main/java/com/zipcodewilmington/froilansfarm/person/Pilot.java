@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-public class Pilot {
+public class Pilot implements Rider {
 }

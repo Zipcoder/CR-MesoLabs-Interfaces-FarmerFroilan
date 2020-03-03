@@ -1,13 +1,14 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Rider;
 
 import java.util.logging.Logger;
 
-public class Tractor extends Vehicle implements FarmVehicle{
+public class Tractor extends Vehicle implements FarmVehicle, Rideable {
 
     private static final Logger LOGGER = Logger.getLogger(Tractor.class.getName());
 
