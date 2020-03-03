@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.food;
 
-public class EarCorn {
+import com.zipcodewilmington.froilansfarm.Produce;
+
+public class EarCorn extends Food implements Produce {
 }
