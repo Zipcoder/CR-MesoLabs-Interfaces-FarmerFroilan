@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
-public class OnionRoot {
+public class OnionRoot extends Crop{
 }
