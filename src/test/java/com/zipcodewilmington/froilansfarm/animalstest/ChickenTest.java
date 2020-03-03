@@ -22,6 +22,9 @@ public class ChickenTest {
     @Test
     public void makeNoiseTest(){
         Chicken chick1 = new Chicken();
+        String expected = "cluck, cluck, cluck";
+        String actual = chick1.makeNoise();
+        Assert.assertEquals(expected, actual);
 
 
 

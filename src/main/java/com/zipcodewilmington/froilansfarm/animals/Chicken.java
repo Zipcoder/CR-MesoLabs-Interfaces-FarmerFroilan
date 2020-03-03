@@ -24,10 +24,11 @@ public class Chicken implements Animal{
 
 
     public boolean eatFood(Edible edible) {
-        return false;
+        return true;
     }
 
     public String makeNoise() {
-        return null;
+        String noise = "cluck, cluck, cluck";
+        return noise;
     }
 }
