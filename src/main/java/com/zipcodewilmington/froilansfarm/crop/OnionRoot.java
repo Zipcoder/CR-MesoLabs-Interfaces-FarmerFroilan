@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
-public class OnionRoot {
+import com.zipcodewilmington.froilansfarm.Produce;
+
+public class OnionRoot extends Crop implements Produce {
 }
