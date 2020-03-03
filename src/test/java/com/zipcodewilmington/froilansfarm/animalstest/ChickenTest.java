@@ -20,6 +20,11 @@ public class ChickenTest {
 
     @Test
     public void chickenConstructorTest(){
+        Integer givenId = 2;
+        Chicken chick1 = new Chicken(givenId);
+        Integer retrievedId = chick1.getId();
+        Assert.assertEquals(givenId, retrievedId);
+        
 
     }
 
@@ -33,5 +38,5 @@ public class ChickenTest {
 
     }
 
-  
+
 }

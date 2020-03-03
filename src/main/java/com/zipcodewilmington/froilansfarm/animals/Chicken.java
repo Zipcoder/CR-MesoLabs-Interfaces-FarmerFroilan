@@ -8,9 +8,8 @@ public class Chicken implements Animal{
     private Integer id;
 
 
-    public Chicken(Integer id, {
+    public Chicken(Integer id){
         this.id = id;
-
     }
 
     public Integer getId(){
