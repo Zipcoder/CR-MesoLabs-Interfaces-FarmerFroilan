@@ -26,7 +26,7 @@ public class ChickenTest {
     }
 
     @Test
-    public void impementationTest(){Assert.assertTrue(testChicken instanceof Produce);}
+    public void implementationTest(){Assert.assertTrue(testChicken instanceof Produce);}
 
     @Test
     public void isYeoildTest(){
@@ -45,11 +45,9 @@ public class ChickenTest {
 
     @Test
     public void makeNoiseTest(){
-
     }
 
     @Test
     public void eatTest(){
-
     }
 }
