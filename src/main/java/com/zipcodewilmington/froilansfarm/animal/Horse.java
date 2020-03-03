@@ -20,6 +20,6 @@ public class Horse extends Animal implements Rideable {
     }
 
     public void MakeNoise() {
-
+        System.out.println("Whoaaa Wilbur!  Horses can't talk!");
     }
 }

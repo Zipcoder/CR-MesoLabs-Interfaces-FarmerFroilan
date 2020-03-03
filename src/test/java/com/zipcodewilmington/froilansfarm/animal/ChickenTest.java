@@ -26,12 +26,9 @@ public class ChickenTest {
     }
 
     @Test
-    public void impementationTest(){Assert.assertTrue(testChicken instanceof Produce);}
+    public void implementationTest(){Assert.assertTrue(testChicken instanceof Produce);}
 
-    @Test
-    public void isYeoildTest(){
-        Assert.assertFalse(testChicken.isYeoild());
-    }
+
 
     @Test
     public void storeFoodTest(){
@@ -39,17 +36,15 @@ public class ChickenTest {
     }
 
     @Test
-    public void yieldTest(){
-        Assert.assertTrue(testChicken.yield() instanceof Egg);
+    public void isYieldTest(){
+        Assert.assertTrue(testChicken.isYield());
     }
 
     @Test
     public void makeNoiseTest(){
-
     }
 
     @Test
     public void eatTest(){
-
     }
 }

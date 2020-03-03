@@ -7,16 +7,11 @@ import com.zipcodewilmington.froilansfarm.food.Egg;
 
 public class Chicken extends Animal implements Produce {
 
-    public Egg yield(){
-        return new Egg();
-    }
 
-    public boolean isYeoild() {
-        return false;
-    }
 
     public boolean isYield() {
-        return false;
+        Egg newEgg = new Egg();
+        return true;
     }
 
     public boolean storeFood() {
@@ -27,5 +22,6 @@ public class Chicken extends Animal implements Produce {
     }
 
     public void MakeNoise() {
+        System.out.println("Bawwwk buk buk buk buk buk BCAW!");
     }
 }
