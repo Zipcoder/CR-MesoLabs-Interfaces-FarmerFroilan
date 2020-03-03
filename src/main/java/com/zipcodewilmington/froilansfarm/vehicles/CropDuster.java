@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.vehicles;
 
 public class CropDuster extends Vehicle implements FarmVehicle, Aircraft {
     public String makeNoise() {
-        return null;
+        return "putt putt putt putt";
     }
 
     public boolean fly() {
