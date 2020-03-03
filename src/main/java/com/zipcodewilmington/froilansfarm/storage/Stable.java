@@ -3,11 +3,21 @@ package com.zipcodewilmington.froilansfarm.storage;
 import com.zipcodewilmington.froilansfarm.animals.Horse;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Stable implements Storage<Horse>{
 
-    List<Horse> stable = new ArrayList<Horse>();
+    private List<Horse> stable;
+
+    public Stable(){
+        stable = new ArrayList<Horse>();
+    }
+
+    public Stable(Horse... horses){
+        this();
+        Collections.addAll(stable, horses);
+    }
 
     public Boolean add(Horse horseToAdd) {
         if(!stable.contains(horseToAdd)){

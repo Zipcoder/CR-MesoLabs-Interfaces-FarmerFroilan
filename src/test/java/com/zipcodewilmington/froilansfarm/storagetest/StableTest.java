@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.storagetest;
 
-import com.zipcodewilmington.froilansfarm.animals.Animal;
 import com.zipcodewilmington.froilansfarm.animals.Horse;
 import com.zipcodewilmington.froilansfarm.storage.Stable;
 import org.junit.Before;
@@ -52,7 +51,17 @@ public class StableTest {
 
     @Test
     public void sizeTest(){
-        Integer expected = -1;
+        Integer expected = 0;
+
+        Integer actual = testStable.size();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sizeTest2(){
+        Integer expected = 1;
+        testStable.add(testHorse);
 
         Integer actual = testStable.size();
 
