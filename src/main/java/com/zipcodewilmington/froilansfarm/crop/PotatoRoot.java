@@ -1,4 +1,13 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
-public class PotatoRoot {
+import com.zipcodewilmington.froilansfarm.Produce;
+
+public class PotatoRoot extends Crop implements Produce {
+    public boolean isYield() {
+        return false;
+    }
+
+    public boolean storeFood() {
+        return false;
+    }
 }
