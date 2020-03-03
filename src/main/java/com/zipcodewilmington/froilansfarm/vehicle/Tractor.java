@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
+
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Rider;
@@ -30,4 +31,5 @@ public class Tractor extends Vehicle implements FarmVehicle{
     public void MakeNoise() {
         System.out.println("Track Track Track Track...");
     }
+
 }

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
+
 import com.zipcodewilmington.froilansfarm.person.Rider;
 
 public abstract class Aircraft extends Vehicle implements Flyable {
@@ -20,4 +21,5 @@ public abstract class Aircraft extends Vehicle implements Flyable {
         this.isFlying = false;
         return false;
     }
+
 }
