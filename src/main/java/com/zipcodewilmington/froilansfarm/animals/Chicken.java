@@ -13,7 +13,24 @@ public class Chicken implements Animal{
         this.edible = edible;
     }
 
-    
+    public Integer getId(){
+        return this.id;
+    }
+
+    public void setId(Integer id){
+        this.id = id;
+    }
+
+    public ArrayList<String> getEdible(){
+        return this.edible;
+    }
+
+    public void setEdible(ArrayList edible){
+        this.edible= edible;
+    }
+
+    public Chicken(){}
+
 
     public boolean eatFood(Edible edible) {
         return false;
