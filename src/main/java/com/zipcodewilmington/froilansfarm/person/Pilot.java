@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.person;
 
+
 import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.vehicle.Aircraft;
 
@@ -22,12 +23,15 @@ public class Pilot extends Person implements Rider {
 
     }
 
-    public void eat(){
-
+    public void eat() {
     }
+
+
+
 
     public String makeNoise() {
         return "Good Morning";
 
     }
 }
+

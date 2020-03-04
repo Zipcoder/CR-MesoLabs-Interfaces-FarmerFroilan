@@ -1,13 +1,15 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.Field;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Rider;
 
 import java.util.logging.Logger;
 
-public class Tractor extends Vehicle implements FarmVehicle{
+public class Tractor extends Vehicle implements FarmVehicle, Rideable {
 
     private static final Logger LOGGER = Logger.getLogger(Tractor.class.getName());
 
@@ -17,15 +19,16 @@ public class Tractor extends Vehicle implements FarmVehicle{
         this.rider = rider;
     }
 
-    public void operate(CropRow row) {
+    public void operate(Field field) {
         if (!(rider instanceof Farmer)){
-            //rider.crash();
+            LOGGER.info("\nOnly a farmer can operate this!");
         }
-    }
-
-    public void crash(){
-        LOGGER.info("Oh no " + /*rider.getName()*/ " has crashed and died!");
-        //rider.die();
+        else {
+            for (Integer i = 1; i < 6; i++) {
+                CropRow tempRow = field.getCropRow(i);
+                tempRow.getCrop().setHarvested(true);
+            }
+        }
     }
 
     public String makeNoise() {

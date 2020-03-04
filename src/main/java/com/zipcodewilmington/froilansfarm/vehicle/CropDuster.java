@@ -1,13 +1,15 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.Field;
 import com.zipcodewilmington.froilansfarm.person.Pilot;
 import com.zipcodewilmington.froilansfarm.person.Rider;
 
 import java.util.logging.Logger;
 
-public class CropDuster extends Aircraft implements FarmVehicle{
+public class CropDuster extends Aircraft implements FarmVehicle, Rideable {
 
     private static final Logger LOGGER = Logger.getLogger(CropDuster.class.getName());
 
@@ -15,18 +17,22 @@ public class CropDuster extends Aircraft implements FarmVehicle{
         super(rider);
     }
 
-    public void operate(CropRow row) {
+    public void operate(Field field) {
         if (!(rider instanceof Pilot)){
-            crash();
+            LOGGER.info("\nYou must be a pilot to pilot this!");
+        }
+        else {
+            for (Integer i = 1; i < 6; i++) {
+                CropRow tempRow = field.getCropRow(i);
+                tempRow.getCrop().setFertilized(true);
+            }
         }
     }
 
-    private void crash() {
-        LOGGER.info("\nOh no "+/*rider.getname()*/  " has crashed and died!");
-        //rider.die();
-    }
 
-    public void MakeNoise() {
-        System.out.println("bzzzzzzzzzzz");
+
+    @Override
+    public String makeNoise() {
+        return "bzzzzzzzzzzz";
     }
 }

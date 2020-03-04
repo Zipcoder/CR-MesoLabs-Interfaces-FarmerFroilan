@@ -1,12 +1,14 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
 public abstract class Crop {
+    boolean harvested;
+    boolean fertilized;
 
-    Boolean harvested() {
-        return false;
+    public void setHarvested(boolean harvested) {
+        this.harvested = harvested;
     }
 
-    Boolean fertilized() {
-        return false;
+    public void setFertilized(boolean fertilized) {
+        this.fertilized = fertilized;
     }
 }
