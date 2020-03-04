@@ -8,23 +8,28 @@ import java.util.ArrayList;
 public class Farmer extends Person implements Rider, Botanist
 {
     Farm farmOwned;
+    Boolean harvestEgg;
+    Boolean mount;
+    Boolean dismount;
+    Boolean plant;
 
     public Boolean harvestEgg(ArrayList<Egg> eggsHarvested)
     {
-        return null;
+        return harvestEgg;
     }
 
     public Boolean mount()
     {
-        return null;
+
+        return mount;
     }
 
     public Boolean dismount()
     {
-        return null;
+        return dismount;
     }
 
     public Boolean plant() {
-        return null;
+        return plant;
     }
 }
