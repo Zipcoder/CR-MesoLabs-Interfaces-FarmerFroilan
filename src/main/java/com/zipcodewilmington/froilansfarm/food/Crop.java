@@ -4,6 +4,7 @@ package com.zipcodewilmington.froilansfarm.food;
 public abstract class Crop implements Produce {
     Boolean hasBeenHarvested;
     Boolean hasBeenFertilized;
+   public Edible yielded;
 
     public Boolean getHasBeenFertilized() {
         return hasBeenFertilized;
@@ -13,22 +14,26 @@ public abstract class Crop implements Produce {
         return hasBeenHarvested;
     }
 
-    public Boolean setHasBeenHarvestedTrue(Crop cropToSet){
-        this.hasBeenHarvested = true;
-        return cropToSet.getHasBeenHarvested();
+    public Boolean setHasBeenHarvested(Boolean hasBeenHarvested) {
+        this.hasBeenHarvested = hasBeenHarvested;
+        return hasBeenHarvested;
     }
 
     public Boolean setHasBeenFertilized(Boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
-        return getHasBeenFertilized();
+        return hasBeenFertilized;
     }
 
-    public Edible harvest(Crop cropToHarvest){
-        if(cropToHarvest.hasBeenFertilized && !cropToHarvest.hasBeenHarvested){
-            return cropToHarvest.yield(cropToHarvest);
+    public Edible harvest(Crop cropToHarvest) {
+        if (cropToHarvest.hasBeenFertilized && !cropToHarvest.hasBeenHarvested) {
+            return cropToHarvest.getYielded();
         }
         return null;
     }
 
-    public abstract Edible yield(Crop crop);
+    public Edible getYielded() {
+        return this.yielded;
+    }
+
+
 }

@@ -1,10 +1,16 @@
 package com.zipcodewilmington.froilansfarm.food;
 
 public class CornStalk extends Crop {
-    // constructor
-    public CornStalk(){};
 
-    public Edible yield(Crop crop) {
-         return null;
+    private EarCorn EarCorn = new EarCorn();
+
+    // constructor
+    public CornStalk() {
+        this.hasBeenFertilized = false;
+        this.hasBeenHarvested = false;
+        this.yielded = EarCorn;
     }
+
+
 }
+
