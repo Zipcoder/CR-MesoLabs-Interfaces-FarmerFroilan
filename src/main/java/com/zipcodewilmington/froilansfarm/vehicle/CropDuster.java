@@ -22,7 +22,10 @@ public class CropDuster extends Aircraft implements FarmVehicle, Rideable {
             LOGGER.info("\nYou must be a pilot to pilot this!");
         }
         else {
-
+            for (Integer i = 1; i < 6; i++) {
+                CropRow tempRow = field.getCropRow(i);
+                tempRow.getCrop().setFertilized(true);
+            }
         }
     }
 
