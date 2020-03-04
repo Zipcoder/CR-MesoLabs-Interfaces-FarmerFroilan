@@ -21,4 +21,12 @@ public class Pilot extends Person implements Rider {
     public void ride(Rideable rideable) {
 
     }
+
+    public void Eat() {
+
+    }
+
+    public void MakeNoise() {
+
+    }
 }

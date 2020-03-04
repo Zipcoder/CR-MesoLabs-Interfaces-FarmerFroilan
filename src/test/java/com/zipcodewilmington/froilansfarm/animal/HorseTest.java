@@ -11,7 +11,6 @@ import static org.junit.Assert.*;
 
 public class HorseTest {
     Horse testHorse = new Horse();
-    Person testPerson = new Person();
 
     @Test
     public void inheritanceTest() {
@@ -35,10 +34,6 @@ public class HorseTest {
 
     @Test
     public void getSetRiderTest(){
-        testHorse.setRider(testPerson);
-        Person expected = testPerson;
-        Person actual = testHorse.getRider();
-        Assert.assertEquals(expected,actual);
     }
 
     @Test
