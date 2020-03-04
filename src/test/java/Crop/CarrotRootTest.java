@@ -11,7 +11,7 @@ public class CarrotRootTest {
 
 
     @Test
-    public void carrotRootTest(); {
+    public void carrotRootTest1() {
         Assert.assertTrue(testCarrotRoot instanceof Crop);
     }
 
@@ -20,5 +20,24 @@ public class CarrotRootTest {
         Assert.assertTrue(testCarrotRoot instanceof Produce);
     }
 
+    @Test
+    public void carrotTest3() {
+        Assert.assertFalse(testCarrotRoot.yield());
+    }
 
-        }
+    @Test
+    public void carrotTest4() {
+        Assert.assertFalse(testCarrotRoot.storeFood());
+    }
+
+    @Test
+    public void carrotTest5() {
+        Assert.assertFalse(testCarrotRoot.fertilized());
+    }
+
+    @Test
+    public void carrotTest6() {
+        Assert.assertFalse(testCarrotRoot.harvested());
+    }
+
+}

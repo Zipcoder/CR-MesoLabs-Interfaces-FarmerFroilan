@@ -10,7 +10,7 @@ public class CarrotTest {
 
     @Test
     public void foodTest() {
-        Assert.assertTrue(testCarrot instanceof Food);∫
+        Assert.assertTrue(testCarrot instanceof Food);
     }
 
     @Test

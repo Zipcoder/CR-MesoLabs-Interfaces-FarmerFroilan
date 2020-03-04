@@ -37,7 +37,7 @@ public class ChickenTest {
 
     @Test
     public void isYieldTest(){
-        Assert.assertTrue(testChicken.isYield());
+        Assert.assertTrue(testChicken.yield());
     }
 
     @Test

@@ -18,4 +18,16 @@ public class PotatoRootTest {
     public void potatoRootTest2() {
         Assert.assertTrue(testPotatoRoot instanceof Produce);
     }
+
+    @Test
+    public void potatoRootTest3() { Assert.assertFalse(testPotatoRoot.yield());}
+
+    @Test
+    public void potatoRootTest4() { Assert.assertFalse(testPotatoRoot.storeFood());}
+
+    @Test
+    public void potatoRootTest5() {Assert.assertFalse(testPotatoRoot.fertilized());}
+
+    @Test
+    public void potatoRootTest6() {Assert.assertFalse(testPotatoRoot.harvested());}
 }

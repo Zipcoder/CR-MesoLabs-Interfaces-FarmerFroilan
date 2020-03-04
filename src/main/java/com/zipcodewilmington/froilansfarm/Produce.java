@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 public interface Produce {
 
-    boolean yield();
-    boolean storeFood ();
+    Boolean yield();
+
+    Boolean storeFood ();
 }

@@ -9,12 +9,12 @@ public class Chicken extends Animal implements Produce {
 
 
 
-    public boolean isYield() {
+    public Boolean yield() {
         Egg newEgg = new Egg();
         return true;
     }
 
-    public boolean storeFood() {
+    public Boolean storeFood() {
         return false;
     }
 

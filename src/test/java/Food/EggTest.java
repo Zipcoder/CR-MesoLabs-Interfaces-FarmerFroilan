@@ -11,10 +11,11 @@ public class EggTest {
     @Test
     public void eggTest1() {
         Assert.assertTrue(testEgg instanceof Food);
+    }
 
     @Test
     public void eggTest2() {
         Assert.assertTrue(testEgg instanceof Edible);
         }
-    }
+
 }

@@ -17,5 +17,4 @@ public class OnionTest {
     public void onionTest2() {
         Assert.assertTrue(testOnion instanceof Edible);
     }
-
 }
