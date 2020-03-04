@@ -15,19 +15,12 @@ public class FarmerTest {
     public void instanceTest2() { Assert.assertTrue(farmer instanceof Rider); }
 
     @Test
-    public void plants() {
-
+    public void makeNoise() {
+        String expected = "Howdy Partner";
+        String actual = farmer.makeNoise();
+        Assert.assertEquals(expected,actual);
     }
 
-    @Test
-    public void mount() {
-    }
 
-    @Test
-    public void dismount() {
-    }
 
-    @Test
-    public void ride() {
-    }
 }

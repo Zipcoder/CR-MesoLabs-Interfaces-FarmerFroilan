@@ -11,14 +11,9 @@ public class PilotTest {
     public void instanceTest1() { Assert.assertTrue(pilot instanceof Rider); }
 
     @Test
-    public void mount() {
-    }
-
-    @Test
-    public void dismount() {
-    }
-
-    @Test
-    public void ride() {
+    public void makeNoise() {
+        String expected = "Good Morning";
+        String actual = pilot.makeNoise();
+        Assert.assertEquals(expected,actual);
     }
 }

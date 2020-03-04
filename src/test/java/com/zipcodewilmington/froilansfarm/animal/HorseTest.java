@@ -23,7 +23,6 @@ public class HorseTest {
 
         }
     };
-
     @Test
     public void inheritanceTest() {
         Assert.assertTrue(testHorse instanceof Animal);
@@ -44,16 +43,18 @@ public class HorseTest {
         Assert.assertTrue(testHorse instanceof Rideable);
     }
 
-    @Test
-    public void getSetRiderTest(){
-        testHorse.setRider(testPerson);
-        Person expected = testPerson;
-        Person actual = testHorse.getRider();
-        Assert.assertEquals(expected,actual);
-    }
+//    @Test
+//    public void getSetRiderTest(){
+//        testHorse.setRider(testPerson);
+//        Person expected = testPerson;
+//        Person actual = testHorse.getRider();
+//        Assert.assertEquals(expected,actual);
+//    }
 
     @Test
     public void makeNoiseTest(){
+
+
     }
 
     @Test

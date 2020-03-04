@@ -11,12 +11,10 @@ public class Farmer extends Person implements Botanist, Rider{
         super(name, gender);
     }
 
-    public void plants(Crop crop, CropRow cropRow, Integer numOfCrops) {
-
+    public void plant() {
     }
 
-    public void mount(Rideable rideable) {
-
+    public void eat() {
     }
 
     public void dismount(Rideable rideable) {
@@ -34,4 +32,7 @@ public class Farmer extends Person implements Botanist, Rider{
     public void MakeNoise() {
 
     }
+
+    public String makeNoise() { return "Howdy Partner"; }
+
 }

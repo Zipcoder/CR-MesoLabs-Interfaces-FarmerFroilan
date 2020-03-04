@@ -2,8 +2,11 @@ package com.zipcodewilmington.froilansfarm.crop;
 
 public abstract class Crop {
 
+    Boolean harvested() {
+        return false;
+    }
 
-    boolean isHarvested;
-    boolean isFertilized;
-
+    Boolean fertilized() {
+        return false;
+    }
 }
