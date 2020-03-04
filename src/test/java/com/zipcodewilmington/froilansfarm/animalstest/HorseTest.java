@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.animalstest;
 
 import com.zipcodewilmington.froilansfarm.animals.Horse;
+import com.zipcodewilmington.froilansfarm.food.EarCorn;
 import com.zipcodewilmington.froilansfarm.food.Edible;
 import com.zipcodewilmington.froilansfarm.vehicles.Vehicle;
 import org.junit.Assert;
@@ -21,12 +22,8 @@ public class HorseTest {
     @Test
     public void eatFoodTest() {
         Horse horse1 = new Horse();
-        Edible earCorn = new Edible() {};
-        boolean result;
-        if (horse1.eatFood(earCorn)) result = true;
-        else result = false;
-        Boolean answer = true;
-        Assert.assertTrue("Let's eat", true);
+        Edible earCorn = new EarCorn();
+        Assert.assertTrue(horse1.eatFood(earCorn));
     }
 
     @Test
@@ -40,12 +37,15 @@ public class HorseTest {
     @Test
     public void rideTest() {
         Horse trigger = new Horse();
-        Assert.assertTrue(trigger instanceof Vehicle);
+        Assert.assertTrue(trigger.ride());
     }
 
     @Test
     public void stopRidingTest() {
         Horse seabiscuit = new Horse();
-        Assert.assertTrue(seabiscuit instanceof Vehicle);
+        seabiscuit.ride();
+        Assert.assertTrue(seabiscuit.stopRiding());
     }
+
+
 }
