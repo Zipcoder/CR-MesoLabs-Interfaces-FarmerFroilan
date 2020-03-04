@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.animalstest;
 
-import com.zipcodewilmington.froilansfarm.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.animals.Horse;
 import com.zipcodewilmington.froilansfarm.food.Edible;
 import com.zipcodewilmington.froilansfarm.vehicles.Vehicle;
@@ -46,5 +45,7 @@ public class HorseTest {
 
     @Test
     public void stopRidingTest() {
+        Horse seabiscuit = new Horse();
+        Assert.assertTrue(seabiscuit instanceof Vehicle);
     }
 }
