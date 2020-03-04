@@ -9,34 +9,34 @@ import java.util.List;
 
 public class Silo implements Storage<Edible>{
 
-    private List<Edible> siloEgg;
+    private List<Edible> silo;
 
     public Silo(){
-        siloEgg = new ArrayList<Edible>();
+        silo = new ArrayList<Edible>();
     }
 
     public Silo(Edible... edibles){
         this();
-        Collections.addAll(siloEgg, edibles);
+        Collections.addAll(silo, edibles);
     }
 
     public Boolean add(Edible edibleToAdd) {
-        if(!siloEgg.contains(edibleToAdd)){
-            siloEgg.add(edibleToAdd);
+        if(!silo.contains(edibleToAdd)){
+            silo.add(edibleToAdd);
             return true;
         }else
             return false;
     }
 
     public Boolean remove(Edible edibleToRemove) {
-        if(siloEgg.contains(edibleToRemove)){
-            siloEgg.remove(edibleToRemove);
+        if(silo.contains(edibleToRemove)){
+            silo.remove(edibleToRemove);
             return true;
         }else
             return false;
     }
 
     public Integer size() {
-        return siloEgg.size();
+        return silo.size();
     }
 }
