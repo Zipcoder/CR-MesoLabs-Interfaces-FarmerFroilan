@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.Eater;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Produce;
 import com.zipcodewilmington.froilansfarm.food.Egg;
+import com.zipcodewilmington.froilansfarm.person.Pilot;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -37,11 +39,12 @@ public class ChickenTest {
 
     @Test
     public void isYieldTest(){
-        Assert.assertTrue(testChicken.isYield());
+        Assert.assertTrue(testChicken.yield());
     }
 
     @Test
     public void makeNoiseTest(){
+
     }
 
     @Test

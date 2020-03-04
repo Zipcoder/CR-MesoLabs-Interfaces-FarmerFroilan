@@ -9,19 +9,20 @@ public class Chicken extends Animal implements Produce {
 
 
 
-    public boolean isYield() {
+    public Boolean yield() {
         Egg newEgg = new Egg();
         return true;
     }
 
-    public boolean storeFood() {
+    public Boolean storeFood() {
         return false;
     }
 
-    public void Eat() {
+
+    public void eat() {
     }
 
-    public void MakeNoise() {
-        System.out.println("Bawwwk buk buk buk buk buk BCAW!");
+    public String makeNoise() {
+        return "Bawwwk buk buk buk buk buk BCAW!";
     }
 }
