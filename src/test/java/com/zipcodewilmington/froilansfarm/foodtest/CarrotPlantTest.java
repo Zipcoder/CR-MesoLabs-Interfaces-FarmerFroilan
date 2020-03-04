@@ -41,7 +41,22 @@ public class CarrotPlantTest {
         Assert.assertEquals(actual,expected);
     }
 
-    //@Test
+    @Test
+    public void CarrotSetHarvestedTest(){
+        test.setHasBeenHarvested(true);
+        Boolean expected = true;
+        Boolean actual = test.getHasBeenHarvested();
 
+        Assert.assertEquals(actual,expected);
+    }
 
+    @Test
+    public void CarrotSetFertilizedTest(){
+        test.setHasBeenFertilized(true);
+
+        Boolean expected = true;
+        Boolean actual = test.getHasBeenFertilized();
+
+        Assert.assertEquals(actual,expected);
+    }
 }

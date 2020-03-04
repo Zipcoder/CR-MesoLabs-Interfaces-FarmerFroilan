@@ -23,4 +23,40 @@ public class TomatoPlantTest {
         Assert.assertEquals(actual,expected);
 
     }
+
+
+    @Test
+    public void TomatoGetHarvestedTest(){
+        Boolean expected = false;
+        Boolean actual = test.getHasBeenHarvested();
+
+        Assert.assertEquals(actual,expected);
+    }
+
+    @Test
+    public void TomatoGetFertilizedTest(){
+        Boolean expected = false;
+        Boolean actual = test.getHasBeenFertilized();
+
+        Assert.assertEquals(actual,expected);
+    }
+
+    @Test
+    public void TomatoSetHarvestedTest(){
+        test.setHasBeenHarvested(true);
+        Boolean expected = true;
+        Boolean actual = test.getHasBeenHarvested();
+
+        Assert.assertEquals(actual,expected);
+    }
+
+    @Test
+    public void TomatoSetFertilizedTest(){
+        test.setHasBeenFertilized(true);
+
+        Boolean expected = true;
+        Boolean actual = test.getHasBeenFertilized();
+
+        Assert.assertEquals(actual,expected);
+    }
 }
