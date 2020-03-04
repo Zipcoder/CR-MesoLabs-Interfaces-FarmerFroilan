@@ -4,11 +4,14 @@ import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.farmland.CropRow;
 import com.zipcodewilmington.froilansfarm.farmland.Field;
 import com.zipcodewilmington.froilansfarm.food.CornStalk;
+import com.zipcodewilmington.froilansfarm.people.Pilot;
 import com.zipcodewilmington.froilansfarm.vehicles.*;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CropDusterTest {
+
+    Pilot jeff = new Pilot();
 
     @Test
     public void instanceOfVehicleTest(){
@@ -29,20 +32,20 @@ public class CropDusterTest {
     @Test
     public void rideTest(){
         CropDuster cropDuster = new CropDuster();
-        Assert.assertTrue(cropDuster.ride());
+        Assert.assertTrue(cropDuster.ride(jeff));
     }
 
     @Test
     public void stopRidingTest(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.ride();
-        Assert.assertTrue(cropDuster.stopRiding());
+        cropDuster.ride(jeff);
+        Assert.assertTrue(jeff == cropDuster.stopRiding());
     }
 
     @Test
     public void flyTest(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.ride();
+        cropDuster.ride(jeff);
         cropDuster.fly();
         Assert.assertTrue(cropDuster.isFlying());
     }
@@ -50,7 +53,7 @@ public class CropDusterTest {
     @Test
     public void stopFlyingTest(){
         CropDuster cropDuster = new CropDuster();
-        cropDuster.ride();
+        cropDuster.ride(jeff);
         cropDuster.fly();
         cropDuster.land();
         cropDuster.stopRiding();
@@ -65,7 +68,7 @@ public class CropDusterTest {
         CornStalk cornStalk = new CornStalk();
         cropRow1.addCropsToCropRow(cornStalk);
         farm.getField().addCropRowsToCropField(cropRow1);
-        cropDuster.ride();
+        cropDuster.ride(jeff);
         cropDuster.fly();
         cropDuster.operate(farm);
         Assert.assertTrue(cropRow1.getCropFromCropRow(0).getHasBeenFertilized());
