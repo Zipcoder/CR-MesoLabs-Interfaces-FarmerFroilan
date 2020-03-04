@@ -4,8 +4,8 @@ import com.zipcodewilmington.froilansfarm.basicactions.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.people.Person;
 
 public abstract class Vehicle implements Rideable, NoiseMaker {
-boolean hasRider = false;
-Person personRidingThisVehicle;
+public boolean hasRider = false;
+public Person personRidingThisVehicle;
 
 
     public Person stopRiding() {
