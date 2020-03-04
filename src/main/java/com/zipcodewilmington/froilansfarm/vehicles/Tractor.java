@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
+import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.farmland.CropRow;
 import com.zipcodewilmington.froilansfarm.farmland.Field;
 import com.zipcodewilmington.froilansfarm.food.Edible;
@@ -18,11 +19,10 @@ public class Tractor extends Vehicle implements FarmVehicle {
         return "KlunkaKlunka";
     }
 
-    public boolean operate(Field field) {
-        return false;
+    public void operate(Farm farm){
     }
 
-    public boolean harvest(CropRow croprow) {
+    public boolean harvest(Field field) {
         return false;
     }
 

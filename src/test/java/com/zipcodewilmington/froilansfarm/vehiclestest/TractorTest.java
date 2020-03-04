@@ -1,5 +1,10 @@
 package com.zipcodewilmington.froilansfarm.vehiclestest;
 
+import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.farmland.CropRow;
+import com.zipcodewilmington.froilansfarm.farmland.Field;
+import com.zipcodewilmington.froilansfarm.food.CornStalk;
+import com.zipcodewilmington.froilansfarm.vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicles.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicles.Tractor;
 import com.zipcodewilmington.froilansfarm.vehicles.Vehicle;
@@ -24,8 +29,19 @@ public class TractorTest {
     }
     @Test
     public void operateTest(){
+        Farm farm = new Farm();
+        CropDuster cropDuster = new CropDuster();
         Tractor tractor = new Tractor();
+        Field field = new Field();
+        CropRow cropRow = new CropRow();
+        CornStalk cornStalk = new CornStalk();
+        for (int i = 0; i < 10; i++) {
+            cropRow.addCropsToCropRow(cornStalk);
+        }
+        field.addCropRowsToCropField(cropRow);
+        cropDuster.operate(farm);
 
+        tractor.operate(farm);
 
         Assert.assertTrue(tractor instanceof Vehicle);
 
@@ -41,6 +57,5 @@ public class TractorTest {
         Tractor tractor = new Tractor();
         tractor.ride();
         Assert.assertTrue(tractor.stopRiding());
-
     }
 }

@@ -21,4 +21,8 @@ public class Field {
         }
         return false;
     }
+
+    public int amountOfCropRowsInField(){
+        return cropRowsInField.size();
+    }
 }

@@ -23,10 +23,11 @@ public class CropRow {
         return false;
     }
 
-    public Crop removeCropFromCropRow(){
-       return cropRow.remove(0);
+    public Crop getCropFromCropRow(int index){
+       return cropRow.get(index);
     }
 
-
-
+    public ArrayList<Crop> getCropRow() {
+        return cropRow;
+    }
 }
