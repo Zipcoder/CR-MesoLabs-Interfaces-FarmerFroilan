@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
-public abstract class Vehicle {
+import com.zipcodewilmington.froilansfarm.basicactions.NoiseMaker;
+
+public abstract class Vehicle implements Rideable, NoiseMaker {
+boolean hasRider = false;
 }
