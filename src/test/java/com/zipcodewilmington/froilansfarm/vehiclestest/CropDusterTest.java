@@ -1,5 +1,9 @@
 package com.zipcodewilmington.froilansfarm.vehiclestest;
 
+import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.farmland.CropRow;
+import com.zipcodewilmington.froilansfarm.farmland.Field;
+import com.zipcodewilmington.froilansfarm.food.CornStalk;
 import com.zipcodewilmington.froilansfarm.vehicles.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,33 +17,60 @@ public class CropDusterTest {
         Assert.assertTrue(cropDuster instanceof FarmVehicle);
         Assert.assertTrue(cropDuster instanceof Aircraft);
     }
+
     @Test
     public void makeNoiseTest(){
         CropDuster cropDuster = new CropDuster();
         String expected = "putt putt putt putt";
         String actual = cropDuster.makeNoise();
         Assert.assertEquals(expected, actual);
-
     }
-    @Test
-    public void operateTest(){
-        CropDuster cropDuster = new CropDuster();
 
-        Assert.assertTrue(cropDuster instanceof Vehicle);
-
-    }
     @Test
     public void rideTest(){
         CropDuster cropDuster = new CropDuster();
-
-        Assert.assertTrue(cropDuster instanceof Vehicle);
-
+        Assert.assertTrue(cropDuster.ride());
     }
+
     @Test
     public void stopRidingTest(){
         CropDuster cropDuster = new CropDuster();
-
-        Assert.assertTrue(cropDuster instanceof Vehicle);
-
+        cropDuster.ride();
+        Assert.assertTrue(cropDuster.stopRiding());
     }
+
+    @Test
+    public void flyTest(){
+        CropDuster cropDuster = new CropDuster();
+        cropDuster.ride();
+        cropDuster.fly();
+        Assert.assertTrue(cropDuster.isFlying());
+    }
+
+    @Test
+    public void stopFlyingTest(){
+        CropDuster cropDuster = new CropDuster();
+        cropDuster.ride();
+        cropDuster.fly();
+        cropDuster.land();
+        cropDuster.stopRiding();
+        Assert.assertFalse(cropDuster.isFlying());
+    }
+
+    @Test
+    public void operateTest(){
+        CropDuster cropDuster = new CropDuster();
+        Farm farm = new Farm();
+        CropRow cropRow1 = new CropRow();
+        CornStalk cornStalk = new CornStalk();
+        cropRow1.addCropsToCropRow(cornStalk);
+        farm.getField().addCropRowsToCropField(cropRow1);
+        cropDuster.ride();
+        cropDuster.fly();
+        cropDuster.operate(farm);
+        Assert.assertTrue(cropRow1.getCropFromCropRow(0).getHasBeenFertilized());
+        Assert.assertTrue(farm.getField().amountOfCropRowsInField() == 1);
+    }
+
+
 }

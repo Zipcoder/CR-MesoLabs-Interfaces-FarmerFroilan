@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
 public interface Aircraft {
-    boolean fly();
+    void fly();
+    void land();
 }
