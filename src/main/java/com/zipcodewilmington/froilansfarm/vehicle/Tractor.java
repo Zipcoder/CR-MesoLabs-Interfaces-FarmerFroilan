@@ -24,7 +24,10 @@ public class Tractor extends Vehicle implements FarmVehicle, Rideable {
             LOGGER.info("\nOnly a farmer can operate this!");
         }
         else {
-
+            for (Integer i = 1; i < 6; i++) {
+                CropRow tempRow = field.getCropRow(i);
+                tempRow.getCrop().setHarvested(true);
+            }
         }
     }
 
