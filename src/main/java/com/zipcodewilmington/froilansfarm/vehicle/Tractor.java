@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 
 import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
+import com.zipcodewilmington.froilansfarm.farm.Field;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Rider;
 
@@ -18,15 +19,13 @@ public class Tractor extends Vehicle implements FarmVehicle, Rideable {
         this.rider = rider;
     }
 
-    public void operate(CropRow row) {
+    public void operate(Field field) {
         if (!(rider instanceof Farmer)){
-            //rider.crash();
+            LOGGER.info("\nOnly a farmer can operate this!");
         }
-    }
+        else {
 
-    public void crash(){
-        LOGGER.info("Oh no " + /*rider.getName()*/ " has crashed and died!");
-        //rider.die();
+        }
     }
 
     public String makeNoise() {
