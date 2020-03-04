@@ -4,5 +4,4 @@ import com.zipcodewilmington.froilansfarm.Rideable;
 
 public interface Rider {
 
-
-    }
+}
