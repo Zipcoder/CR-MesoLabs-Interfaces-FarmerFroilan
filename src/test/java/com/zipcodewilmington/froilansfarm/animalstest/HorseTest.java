@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.animalstest;
 import com.zipcodewilmington.froilansfarm.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.animals.Horse;
 import com.zipcodewilmington.froilansfarm.food.Edible;
+import com.zipcodewilmington.froilansfarm.vehicles.Vehicle;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -39,6 +40,8 @@ public class HorseTest {
 
     @Test
     public void rideTest() {
+        Horse trigger = new Horse();
+        Assert.assertTrue(trigger instanceof Vehicle);
     }
 
     @Test
