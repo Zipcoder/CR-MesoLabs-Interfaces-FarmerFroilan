@@ -7,11 +7,11 @@ import com.zipcodewilmington.froilansfarm.food.Edible;
 import java.util.ArrayList;
 
 public class Tractor extends Vehicle implements FarmVehicle {
-    ArrayList<Edible> tractorStorgeBin;
 
+    ArrayList<Edible> tractorStorageBin;
 
     public Tractor() {
-        this.tractorStorgeBin = new ArrayList<Edible>();
+        this.tractorStorageBin = new ArrayList<Edible>();
     }
 
     public String makeNoise() {

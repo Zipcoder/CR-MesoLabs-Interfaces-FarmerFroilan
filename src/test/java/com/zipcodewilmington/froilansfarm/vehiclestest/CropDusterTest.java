@@ -38,11 +38,24 @@ public class CropDusterTest {
         Assert.assertTrue(cropDuster.ride());
 
     }
+
     @Test
     public void stopRidingTest(){
         CropDuster cropDuster = new CropDuster();
         cropDuster.ride();
         Assert.assertTrue(cropDuster.stopRiding());
+    }
 
+    @Test
+    public void flyTest(){
+        CropDuster cropDuster = new CropDuster();
+        Assert.assertTrue(cropDuster.fly());
+    }
+
+    @Test
+    public void stopFlyingTest(){
+        CropDuster cropDuster = new CropDuster();
+        cropDuster.fly();
+        Assert.assertFalse(cropDuster.fly());
     }
 }
