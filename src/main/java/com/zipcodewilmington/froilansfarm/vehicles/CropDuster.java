@@ -3,6 +3,8 @@ package com.zipcodewilmington.froilansfarm.vehicles;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.farmland.CropRow;
 import com.zipcodewilmington.froilansfarm.food.Crop;
+import com.zipcodewilmington.froilansfarm.people.Person;
+import com.zipcodewilmington.froilansfarm.people.Pilot;
 
 public class CropDuster extends Vehicle implements FarmVehicle, Aircraft {
     boolean isFlying = false;
@@ -41,4 +43,14 @@ public class CropDuster extends Vehicle implements FarmVehicle, Aircraft {
             }
         }
     }
+
+    public boolean ride(Person person) {
+        if(!this.hasRider && personRidingThisVehicle == null && person instanceof Pilot){
+            this.hasRider = true;
+            personRidingThisVehicle = person;
+            return true;
+        }
+        return false;
+    }
+
 }

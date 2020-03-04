@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.farmland.CropRow;
 import com.zipcodewilmington.froilansfarm.farmland.Field;
 import com.zipcodewilmington.froilansfarm.food.Crop;
 import com.zipcodewilmington.froilansfarm.food.Edible;
+import com.zipcodewilmington.froilansfarm.people.Person;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,15 @@ public class Tractor extends Vehicle implements FarmVehicle {
             }
         }
         return this.tractorStorageBin;
+    }
+
+    public boolean ride(Person person) {
+        if(!this.hasRider && personRidingThisVehicle == null){
+            this.hasRider = true;
+            personRidingThisVehicle = person;
+            return true;
+        }
+        return false;
     }
 
 }
