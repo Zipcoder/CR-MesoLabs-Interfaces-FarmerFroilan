@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
-public class Crop {
+public abstract class Crop {
+
+    boolean isHarvested;
+    boolean isFertilized;
 }
