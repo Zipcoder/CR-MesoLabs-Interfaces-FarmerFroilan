@@ -9,5 +9,4 @@ public class HempPlant extends Crop {
         this.hasBeenHarvested = false;
         this.yielded = hemp;
     }
-
 }
