@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
+import com.zipcodewilmington.froilansfarm.Farm;
+
 public interface FarmVehicle {
-    boolean operate();
+   void operate(Farm farm);
 }

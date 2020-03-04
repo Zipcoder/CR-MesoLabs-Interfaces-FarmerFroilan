@@ -1,4 +1,9 @@
 package com.zipcodewilmington.froilansfarm.food;
 
-public class Egg {
+public class Egg  implements Edible {
+
+    public Egg(){
+
+    }
+
 }
