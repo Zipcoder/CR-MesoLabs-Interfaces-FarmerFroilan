@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.food;
 
-public class Hemp {
+public class Hemp implements Edible {
 }
