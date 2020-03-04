@@ -2,5 +2,5 @@ package com.zipcodewilmington.froilansfarm;
 
 public interface Eater {
 
-    void Eat();
+    void eat();
 }
