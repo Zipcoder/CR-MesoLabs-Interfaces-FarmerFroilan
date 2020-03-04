@@ -10,7 +10,5 @@ public class CornStalk extends Crop {
         this.hasBeenHarvested = false;
         this.yielded = EarCorn;
     }
-
-
 }
 

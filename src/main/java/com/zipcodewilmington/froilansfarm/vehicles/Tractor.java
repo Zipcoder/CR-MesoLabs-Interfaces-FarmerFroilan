@@ -1,24 +1,52 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
+import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.farmland.CropRow;
+import com.zipcodewilmington.froilansfarm.farmland.Field;
 import com.zipcodewilmington.froilansfarm.food.Crop;
+import com.zipcodewilmington.froilansfarm.food.Edible;
+
+import java.util.ArrayList;
 
 public class Tractor extends Vehicle implements FarmVehicle {
+    ArrayList<Edible> tractorStorageBin;
+    boolean operatingOnFarm;
+    Field fieldCurrentlyBeingWorkedOn;
+
+
+    public Tractor() {
+        this.tractorStorageBin = new ArrayList<Edible>();
+        this.operatingOnFarm = false;
+    }
+
     public String makeNoise() {
         return "KlunkaKlunka";
     }
 
-    public boolean operate() {
-        return false;
+    public void operate(Farm farm){
+        if(this.hasRider){
+            this.operatingOnFarm = true;
+            this.fieldCurrentlyBeingWorkedOn = farm.getField();
+        }
     }
 
-    public boolean ride() {
-        return false;
+    public boolean isOperatingOnFarm() {
+        return operatingOnFarm;
     }
 
-    public boolean stopRiding() {
-        return false;
+    public ArrayList<Edible> harvest() {
+        if(operatingOnFarm){
+            for (CropRow cropRow : fieldCurrentlyBeingWorkedOn.getCropRowsInField()) {
+                for (Crop crop : cropRow.getCropRow()) {
+                    if(crop.getHasBeenFertilized() && !crop.getHasBeenHarvested()){
+                        tractorStorageBin.add(crop.getYielded());
+                        crop.setHasBeenHarvested(true);
+                        crop.setHasBeenFertilized(false);
+                    }
+                }
+            }
+        }
+        return this.tractorStorageBin;
     }
-    public boolean harvest(Crop crop) {
-        return false;
-    }
+
 }
