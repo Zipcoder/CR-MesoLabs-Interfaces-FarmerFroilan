@@ -1,8 +1,10 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
+import com.zipcodewilmington.froilansfarm.food.Crop;
+
 public class Tractor extends Vehicle implements FarmVehicle {
     public String makeNoise() {
-        return null;
+        return "KlunkaKlunka";
     }
 
     public boolean operate() {
@@ -14,6 +16,9 @@ public class Tractor extends Vehicle implements FarmVehicle {
     }
 
     public boolean stopRiding() {
+        return false;
+    }
+    public boolean harvest(Crop crop) {
         return false;
     }
 }
