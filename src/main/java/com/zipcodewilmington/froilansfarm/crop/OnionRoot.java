@@ -4,12 +4,12 @@ import com.zipcodewilmington.froilansfarm.Produce;
 
 public class OnionRoot extends Crop implements Produce {
 
-    public boolean isYield() {
-        return false;
-    }
+    public Boolean yield() { return false; }
 
-    public boolean storeFood() {
-        return false;
-    }
+    public Boolean storeFood() { return false; }
+
+    public Boolean harvested() {return false;}
+
+    public Boolean fertilized() {return false;}
 }
 
