@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
+import com.zipcodewilmington.froilansfarm.farmland.Field;
+
 public class CropDuster extends Vehicle implements FarmVehicle, Aircraft {
+
     public String makeNoise() {
         return "putt putt putt putt";
     }
@@ -9,15 +12,7 @@ public class CropDuster extends Vehicle implements FarmVehicle, Aircraft {
         return false;
     }
 
-    public boolean operate() {
-        return false;
-    }
-
-    public boolean ride() {
-        return false;
-    }
-
-    public boolean stopRiding() {
+    public boolean operate(Field field) {
         return false;
     }
 }

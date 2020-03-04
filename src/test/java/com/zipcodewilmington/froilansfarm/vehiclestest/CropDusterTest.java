@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehiclestest;
 
+import com.zipcodewilmington.froilansfarm.farmland.Field;
 import com.zipcodewilmington.froilansfarm.vehicles.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,33 +14,35 @@ public class CropDusterTest {
         Assert.assertTrue(cropDuster instanceof FarmVehicle);
         Assert.assertTrue(cropDuster instanceof Aircraft);
     }
+
     @Test
     public void makeNoiseTest(){
         CropDuster cropDuster = new CropDuster();
         String expected = "putt putt putt putt";
         String actual = cropDuster.makeNoise();
         Assert.assertEquals(expected, actual);
-
     }
+
     @Test
     public void operateTest(){
         CropDuster cropDuster = new CropDuster();
+        Field field = new Field();
 
-        Assert.assertTrue(cropDuster instanceof Vehicle);
+
+        Assert.assertTrue(true);
 
     }
     @Test
     public void rideTest(){
         CropDuster cropDuster = new CropDuster();
-
-        Assert.assertTrue(cropDuster instanceof Vehicle);
+        Assert.assertTrue(cropDuster.ride());
 
     }
     @Test
     public void stopRidingTest(){
         CropDuster cropDuster = new CropDuster();
-
-        Assert.assertTrue(cropDuster instanceof Vehicle);
+        cropDuster.ride();
+        Assert.assertTrue(cropDuster.stopRiding());
 
     }
 }

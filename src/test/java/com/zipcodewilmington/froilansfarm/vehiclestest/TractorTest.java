@@ -26,21 +26,21 @@ public class TractorTest {
     public void operateTest(){
         Tractor tractor = new Tractor();
 
+
         Assert.assertTrue(tractor instanceof Vehicle);
 
     }
     @Test
     public void rideTest(){
         Tractor tractor = new Tractor();
-
-        Assert.assertTrue(tractor instanceof Vehicle);
+        Assert.assertTrue(tractor.ride());
 
     }
     @Test
     public void stopRidingTest(){
         Tractor tractor = new Tractor();
-
-        Assert.assertTrue(tractor instanceof Vehicle);
+        tractor.ride();
+        Assert.assertTrue(tractor.stopRiding());
 
     }
 }
