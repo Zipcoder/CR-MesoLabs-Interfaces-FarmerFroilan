@@ -24,13 +24,6 @@ public abstract class Crop implements Produce {
         return hasBeenFertilized;
     }
 
-    public Edible harvest(Crop cropToHarvest) {
-        if (cropToHarvest.hasBeenFertilized && !cropToHarvest.hasBeenHarvested) {
-            return cropToHarvest.getYielded();
-        }
-        return null;
-    }
-
     public Edible getYielded() {
         return this.yielded;
     }
