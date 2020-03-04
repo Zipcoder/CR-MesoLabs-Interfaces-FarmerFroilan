@@ -4,7 +4,7 @@ import com.zipcodewilmington.froilansfarm.Produce;
 
 public class CarrotRoot extends Crop implements Produce {
 
-    public boolean isYield() {
+    public boolean yield() {
         return false;
     }
 

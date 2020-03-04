@@ -4,7 +4,8 @@ import com.zipcodewilmington.froilansfarm.Produce;
 
 public class TomatoPlant extends Crop implements Produce {
 
-    public boolean isYield() {
+
+    public boolean yield() {
         return false;
     }
 
