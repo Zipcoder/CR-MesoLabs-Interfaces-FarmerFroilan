@@ -28,10 +28,6 @@ public class Tractor extends Vehicle implements FarmVehicle{
         //rider.die();
     }
 
-//    //public void MakeNoise() {
-//        System.out.println("Track Track Track Track...");
-//    }
-
     public String makeNoise() {
         return " bum bum";
 
