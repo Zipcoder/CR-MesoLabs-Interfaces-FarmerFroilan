@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.food;
 
-public class Potato {
+import com.zipcodewilmington.froilansfarm.Produce;
+
+public class Potato extends Food{
+
 }

@@ -1,4 +1,17 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
-public class OnionRoot extends Crop{
+import com.zipcodewilmington.froilansfarm.Produce;
+
+import com.zipcodewilmington.froilansfarm.Produce;
+
+public class OnionRoot extends Crop implements Produce {
+
+    public boolean isYield() {
+        return false;
+    }
+
+    public boolean storeFood() {
+        return false;
+    }
 }
+
