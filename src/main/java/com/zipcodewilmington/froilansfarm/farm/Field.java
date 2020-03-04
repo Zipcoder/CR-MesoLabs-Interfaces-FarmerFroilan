@@ -5,15 +5,15 @@ import com.zipcodewilmington.froilansfarm.crop.Crop;
 import java.security.PublicKey;
 
 public class Field {
-    CropRow row1;
-    CropRow row2;
-    CropRow row3;
-    CropRow row4;
-    CropRow row5;
+    CropRow row1 = new CropRow();
+    CropRow row2 = new CropRow();
+    CropRow row3 = new CropRow();
+    CropRow row4 = new CropRow();
+    CropRow row5 = new CropRow();
 
     public Field(){
-
     }
+
     public CropRow getCropRow(Integer rowNum){
         if(rowNum == 1){
             return row1;
@@ -23,34 +23,28 @@ public class Field {
             return row3;
         }else if(rowNum == 4){
             return row4;
-        }else{
+        }else if(rowNum == 5){
             return row5;
+        }else{
+            return null;
         }
     }
+
     public void setCropRow(Integer rowNum, Crop cropType){
 
         if(rowNum == 1){
-            if(isEmpty(row1)){
-                row1.setCropType(cropType);
-            }
+            row1.setCropType(cropType);
         }else if(rowNum == 2){
-            if(isEmpty(row2)){
-                row2.setCropType(cropType);
-            }
+            row2.setCropType(cropType);
         }else if(rowNum == 3){
-            if(isEmpty(row3)){
-                row3.setCropType(cropType);
-            }
+            row3.setCropType(cropType);
         }else if(rowNum == 4){
-            if(isEmpty(row4)){
-                row4.setCropType(cropType);
-            }
-        }else{
-            if(isEmpty(row5)){
-                row5.setCropType(cropType);
-            }
+            row4.setCropType(cropType);
+        }else if(rowNum == 5){
+            row5.setCropType(cropType);
         }
     }
+
     public Boolean isEmpty(CropRow rowToCheck){
        if(rowToCheck ==  null){
            return true;

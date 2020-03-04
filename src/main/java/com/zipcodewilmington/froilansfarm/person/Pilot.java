@@ -23,10 +23,11 @@ public class Pilot extends Person implements Rider {
 
     }
 
-
     public void eat() {
-
     }
+
+
+
 
     public String makeNoise() {
         return "Good Morning";
