@@ -1,4 +1,34 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-public class Pilot implements Rider {
+
+import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.vehicle.Aircraft;
+
+public class Pilot extends Person implements Rider {
+
+
+    public Pilot(String name, String gender) {
+        super(name, gender);
+    }
+
+    public void mount(Rideable rideable) {
+
+    }
+
+    public void dismount(Rideable rideable) {
+
+    }
+
+    public void ride(Rideable rideable) {
+
+    }
+
+    public void Eat() {
+
+    }
+
+    public void MakeNoise() {
+
+    }
 }
+
