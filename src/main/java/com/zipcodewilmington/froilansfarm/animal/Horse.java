@@ -15,11 +15,11 @@ public class Horse extends Animal implements Rideable {
         this.rider = rider;
     }
 
-    public void Eat() {
 
+    public String makeNoise() {
+        return "Whoaaa Wilbur!  Horses can't talk!";
     }
 
-    public void MakeNoise() {
-        System.out.println("Whoaaa Wilbur!  Horses can't talk!");
+    public void eat() {
     }
 }
