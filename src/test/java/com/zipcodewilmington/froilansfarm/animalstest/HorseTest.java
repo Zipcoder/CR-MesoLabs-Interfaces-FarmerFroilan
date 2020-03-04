@@ -31,6 +31,10 @@ public class HorseTest {
 
     @Test
     public void makeNoiseTest() {
+        Horse horse1 = new Horse();
+        String expected = "neigh, snort";
+        String actual = horse1.makeNoise();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test

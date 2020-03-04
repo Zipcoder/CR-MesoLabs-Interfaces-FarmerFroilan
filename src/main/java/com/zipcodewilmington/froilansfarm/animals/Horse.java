@@ -25,7 +25,8 @@ public class Horse extends Vehicle implements Animal {
     }
 
     public String makeNoise() {
-        return null;
+        String noise = "neigh, snort";
+        return noise;
     }
 
     public boolean ride() {
