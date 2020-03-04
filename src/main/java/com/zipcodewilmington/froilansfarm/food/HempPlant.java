@@ -1,7 +1,13 @@
 package com.zipcodewilmington.froilansfarm.food;
 
 public class HempPlant extends Crop {
-    public Edible yield(Crop crop) {
-        return null;
+
+    private Hemp hemp = new Hemp();
+
+    public HempPlant() {
+        this.hasBeenFertilized = false;
+        this.hasBeenHarvested = false;
+        this.yielded = hemp;
     }
+
 }

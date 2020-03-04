@@ -1,7 +1,12 @@
 package com.zipcodewilmington.froilansfarm.food;
 
 public class TomatoPlant extends Crop {
-    public Edible yield(Crop crop) {
-        return null;
+
+    private Tomato tomato = new Tomato();
+
+    public TomatoPlant() {
+        this.hasBeenFertilized = false;
+        this.hasBeenHarvested = false;
+        this.yielded = tomato;
     }
 }
