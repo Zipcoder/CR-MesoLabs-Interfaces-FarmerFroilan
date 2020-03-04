@@ -41,6 +41,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
                     if(crop.getHasBeenFertilized() && !crop.getHasBeenHarvested()){
                         tractorStorageBin.add(crop.getYielded());
                         crop.setHasBeenHarvested(true);
+                        crop.setHasBeenFertilized(false);
                     }
                 }
             }

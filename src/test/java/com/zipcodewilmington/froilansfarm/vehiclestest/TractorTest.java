@@ -3,7 +3,6 @@ package com.zipcodewilmington.froilansfarm.vehiclestest;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.farmland.CropRow;
 import com.zipcodewilmington.froilansfarm.food.CornStalk;
-import com.zipcodewilmington.froilansfarm.food.Crop;
 import com.zipcodewilmington.froilansfarm.vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicles.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicles.Tractor;
