@@ -12,27 +12,12 @@ public class Farmer extends Person implements Botanist, Rider{
         super(name, gender);
     }
 
-    public void plants(Crop crop, CropRow cropRow, Integer numOfCrops) {
-
+    public void plant() {
     }
 
-    public void mount(Rideable rideable) {
-
+    public void eat() {
     }
 
-    public void dismount(Rideable rideable) {
+    public String makeNoise() { return "Howdy Partner"; }
 
-    }
-
-    public void ride(Rideable rideable) {
-
-    }
-
-    public void Eat() {
-
-    }
-
-    public void MakeNoise() {
-
-    }
 }
