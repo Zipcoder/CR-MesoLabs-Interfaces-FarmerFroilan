@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.animals;
 
 import com.zipcodewilmington.froilansfarm.food.Edible;
+import com.zipcodewilmington.froilansfarm.people.Person;
 import com.zipcodewilmington.froilansfarm.vehicles.Vehicle;
 
 import java.util.ArrayList;
@@ -50,4 +51,12 @@ public class Horse extends Vehicle implements Animal {
         return noise;
     }
 
+    public boolean ride(Person person) {
+        if(!this.hasRider && personRidingThisVehicle == null){
+            this.hasRider = true;
+            personRidingThisVehicle = person;
+            return true;
+        }
+        return false;
+    }
 }
