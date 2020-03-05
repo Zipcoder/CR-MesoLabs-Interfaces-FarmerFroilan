@@ -17,16 +17,5 @@ public class TomatoPlantTest {
     public void tomatoPlantTest2() {
         Assert.assertTrue(testTomatoPlant instanceof Produce);}
 
-    @Test
-    public void tomatoPlantTest3() { Assert.assertFalse(testTomatoPlant.yield()); }
-
-    @Test
-    public void tomatoPlantTest4() { Assert.assertFalse(testTomatoPlant.storeFood()); }
-
-    @Test
-    public void tomatoPlantTest5() { Assert.assertFalse(testTomatoPlant.fertilized());}
-
-    @Test
-    public void tomatoPlantTest6() {Assert.assertFalse(testTomatoPlant.harvested());}
 }
 

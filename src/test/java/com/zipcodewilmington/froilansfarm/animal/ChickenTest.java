@@ -37,10 +37,6 @@ public class ChickenTest {
         Assert.assertFalse(testChicken.storeFood());
     }
 
-    @Test
-    public void isYieldTest(){
-        Assert.assertTrue(testChicken.yield());
-    }
 
     @Test
     public void makeNoiseTest(){

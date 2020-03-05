@@ -19,16 +19,4 @@ public class CornStalkTest {
         Assert.assertTrue(testCornStalk instanceof Produce);
     }
 
-    @Test
-    public void cornStalkTest3() { Assert.assertFalse(testCornStalk.yield());
-    }
-
-    @Test
-    public void cornStalkTest4() { Assert.assertFalse(testCornStalk.storeFood()); }
-
-    @Test
-    public void cornStalkTest5() { Assert.assertFalse(testCornStalk.fertilized());}
-
-    @Test
-    public void cornStalkTest6() {Assert.assertFalse(testCornStalk.harvested());}
 }

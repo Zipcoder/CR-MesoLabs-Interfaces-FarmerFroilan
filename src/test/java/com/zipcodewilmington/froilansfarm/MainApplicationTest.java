@@ -4,8 +4,10 @@ import com.sun.javafx.stage.StageHelper;
 import com.zipcodewilmington.froilansfarm.crop.*;
 import com.zipcodewilmington.froilansfarm.farm.*;
 import com.zipcodewilmington.froilansfarm.food.Tomato;
+import com.zipcodewilmington.froilansfarm.food.EarCorn;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Pilot;
+import com.zipcodewilmington.froilansfarm.person.Rider;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
@@ -118,6 +120,7 @@ public class MainApplicationTest {
 //        int expected4 = 3;
 //        int actual4 = 3;
 //        Assert.assertEquals(expected4,actual4);
+//
 //    }
 //
 //    @Test
@@ -189,14 +192,51 @@ public class MainApplicationTest {
 //        Farmer froilan = new Farmer("Froilan", "m");
 //        CropDuster duster = new CropDuster(froilanda);
 //        Tractor tractor = new Tractor(froilan);
+//        FoodStorage springHouse = new FoodStorage();
+//        springHouse.add()
 //
-//        for()
+//        //horse riding, feeding
+//        for(int i = 0;i<stable1.getNumOfHorses();i++){
+//            froilan.ride(Stable.getHorses.get(i));
+//            froilanda.ride(Stable.getHorses.get(i));
+//            Stable.getHorses.get(i).makeNoise();
+//            Assert.assertTrue(Stable.getHorses.get(i) instanceof Rideable);
+//            Assert.assertTrue(Stable.getHorses.get(i) instanceof Eater);
+//            Stable.getHorses.get(i).eat(3, EarCorn);
+//        }
+//        for(int i = 0;i<stable1.getNumOfHorses();i++) {
+//            froilan.ride(Stable.getHorses.get(i));
+//            froilanda.ride(Stable.getHorses.get(i));
+//            Stable.getHorses.get(i).makeNoise();
+//            Assert.assertTrue(Stable.getHorses.get(i) instanceof Rideable);
+//            Assert.assertTrue(Stable.getHorses.get(i) instanceof Eater);
+//            Stable.getHorses.get(i).eat(3, EarCorn);
+//        }
+//        for(int i = 0;i<stable1.getNumOfHorses();i++) {
+//            froilan.ride(Stable.getHorses.get(i));
+//            froilanda.ride(Stable.getHorses.get(i));
+//            Stable.getHorses.get(i).makeNoise();
+//            Assert.assertTrue(Stable.getHorses.get(i) instanceof Rideable);
+//            Assert.assertTrue(Stable.getHorses.get(i) instanceof Eater);
+//            Stable.getHorses.get(i).eat(3, EarCorn);
+//        }
 //
+//        //rider test
+//        Assert.assertTrue(froilan instanceof Rider);
+//        Assert.assertTrue(froilanda instanceof Rider);
+//
+//        //breakfast
+//        froilan.eat(EarCorn);
+//        froilan.eat(2, Tomato);
+//        froilan.eat(
+//        froilanda.eat(2, EarCorn);
 //
 //
 //    }
-//
-//
-//
+
+
+
+
+
 
 }

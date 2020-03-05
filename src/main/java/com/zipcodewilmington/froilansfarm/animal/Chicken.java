@@ -9,9 +9,9 @@ public class Chicken extends Animal implements Produce {
 
 
 
-    public Boolean yield() {
+    public Egg yield() {
         Egg newEgg = new Egg();
-        return true;
+        return newEgg;
     }
 
     public Boolean storeFood() {
