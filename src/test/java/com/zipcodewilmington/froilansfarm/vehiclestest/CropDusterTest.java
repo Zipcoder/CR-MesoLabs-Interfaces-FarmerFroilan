@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class CropDusterTest {
 
-    Pilot jeff = new Pilot();
+    Pilot jeff = new Pilot("JeffFriend");
 
     @Test
     public void instanceOfVehicleTest(){

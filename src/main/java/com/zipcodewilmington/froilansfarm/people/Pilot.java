@@ -4,19 +4,38 @@ import com.zipcodewilmington.froilansfarm.vehicles.Vehicle;
 
 public class Pilot extends Person implements Rider
 {
+    Boolean hasMounted;
+    Boolean hasDismounted;
 
-    public Boolean mount(Vehicle thingToBeMounted)
-    {
-        if(thingToBeMounted.ride(this))
-            return true;
-        else
-            return false;
+    public Pilot(String name){
+        this.setName(name);
+
+        this.hasMounted = false;
+        this.hasDismounted = false;
+
+    }
+
+    public Boolean mount(Vehicle thingToBeMounted) {
+        if (thingToBeMounted.ride(this)) {
+            hasMounted = true;
+        }
+        else {
+            hasMounted = false;
+        }
+
+        return hasMounted;
     }
 
     public Boolean dismount(Vehicle thingToBeDismounted)
     {
-        thingToBeDismounted.stopRiding();
-        return true;
+        if (this == thingToBeDismounted.stopRiding()) {
+            hasDismounted = true;
+        }
+        else {
+            hasDismounted = false;
+        }
+
+        return hasDismounted;
     }
 }
 
