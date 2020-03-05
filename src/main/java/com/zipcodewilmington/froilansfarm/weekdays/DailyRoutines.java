@@ -20,15 +20,15 @@ public abstract class DailyRoutines {
         console.printNewDay(this.getClass().getSimpleName());
         eatBreakfast();
         rideAndFeedHorses();
-        return null;
+        return true;
     }
 
     public Boolean dailyRoutine(){
-        return null;
+        return false;
     }
 
     public Boolean eveningRoutine(){
-        return null;
+        return false;
     }
 
     public Boolean eatBreakfast(){
