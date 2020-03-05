@@ -16,7 +16,7 @@ public class TomatoPlantTest {
 
     @Test
     public void tomatoPlantTest2() {
-        Assert.assertTrue(testTomatoPlant instanceof Produce);
     }
 }
+
 
