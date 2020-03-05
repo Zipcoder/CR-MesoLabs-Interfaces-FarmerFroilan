@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.crop;
 import com.zipcodewilmington.froilansfarm.Produce;
 import com.zipcodewilmington.froilansfarm.crop.CarrotRoot;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
+import com.zipcodewilmington.froilansfarm.food.Carrot;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,33 +12,27 @@ public class CarrotRootTest {
 
 
     @Test
-    public void carrotRootTest1() {
+    public void carrotRootCropTest1() {
         Assert.assertTrue(testCarrotRoot instanceof Crop);
     }
 
     @Test
-    public void carrotRootTest2() {
+    public void carrotRootProduceTest() {
         Assert.assertTrue(testCarrotRoot instanceof Produce);
     }
 
     @Test
-    public void carrotTest3() {
-        Assert.assertFalse(testCarrotRoot.yield());
+    public void carrotRootYieldTest() {
+        Carrot testCarrot = new Carrot();
+        CarrotRoot testCarrotRoot = new CarrotRoot();
+        Carrot expected = testCarrot;
+        CarrotRoot actual = testCarrotRoot.fertilized;
+        Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void carrotTest4() {
-        Assert.assertFalse(testCarrotRoot.storeFood());
-    }
+    //@Test
 
-    @Test
-    public void carrotTest5() {
-        //Assert.assertFalse(testCarrotRoot.fertilized());
-    }
 
-    @Test
-    public void carrotTest6() {
-        //Assert.assertFalse(testCarrotRoot.harvested());
-    }
+
 
 }

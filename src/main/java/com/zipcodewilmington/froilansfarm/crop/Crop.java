@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.crop;
 
 public abstract class Crop {
     boolean harvested;
-    boolean fertilized;
+    CarrotRoot fertilized;
 
     public void setHarvested(boolean harvested) {
         this.harvested = harvested;
