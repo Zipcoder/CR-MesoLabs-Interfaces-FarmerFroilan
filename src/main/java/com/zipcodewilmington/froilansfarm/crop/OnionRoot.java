@@ -1,15 +1,17 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
 import com.zipcodewilmington.froilansfarm.Produce;
+import com.zipcodewilmington.froilansfarm.food.Carrot;
+import com.zipcodewilmington.froilansfarm.food.Onion;
 
 public class OnionRoot extends Crop implements Produce {
 
-    public Boolean yield() { return false; }
+    public Onion yield() {
 
-    public Boolean storeFood() { return false; }
-
-    public Boolean harvested() {return false;}
-
-    public Boolean fertilized() {return false;}
+        if (fertilized && harvested) {
+            Onion onion = new Onion();
+            return onion;
+        } else { return null;}
+    }
 }
 
