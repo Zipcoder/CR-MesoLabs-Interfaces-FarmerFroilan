@@ -2,11 +2,13 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 
 
 import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.farm.CropRow;
 import com.zipcodewilmington.froilansfarm.farm.Field;
 import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Rider;
 
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 public class Tractor extends Vehicle implements FarmVehicle, Rideable {
@@ -26,7 +28,10 @@ public class Tractor extends Vehicle implements FarmVehicle, Rideable {
         else {
             for (Integer i = 1; i < 6; i++) {
                 CropRow tempRow = field.getCropRow(i);
-                tempRow.getCrop().setHarvested(true);
+                ArrayList<Crop> row = tempRow.getRow();
+                for (int j = 0; j < 5; j++) {
+                    row.get(j).setHarvested(true);
+                }
             }
         }
     }

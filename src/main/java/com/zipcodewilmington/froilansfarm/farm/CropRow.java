@@ -25,6 +25,10 @@ public class CropRow {
         }
     }
 
+    public ArrayList<Crop> getRow(){
+        return row;
+    }
+
     public String checkCropType(){
 
         Crop crop = this.row.get(0);
