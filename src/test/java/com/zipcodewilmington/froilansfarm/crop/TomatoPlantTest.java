@@ -11,11 +11,12 @@ public class TomatoPlantTest {
 
     @Test
     public void tomatoPlantTest1() {
-        Assert.assertTrue(testTomatoPlant instanceof Crop);}
+        Assert.assertTrue(testTomatoPlant instanceof Crop);
+    }
 
     @Test
     public void tomatoPlantTest2() {
-        Assert.assertTrue(testTomatoPlant instanceof Produce);}
-
+    }
 }
+
 
