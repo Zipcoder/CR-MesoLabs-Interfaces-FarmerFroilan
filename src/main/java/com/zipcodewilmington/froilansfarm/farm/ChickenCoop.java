@@ -15,6 +15,9 @@ public class ChickenCoop {
             chickens.add(genericChicken);
         }
     }
+    public ArrayList<Chicken> getChickens(){
+        return this.chickens;
+    }
 
     public void removeChicken(Integer numToRemove){
 

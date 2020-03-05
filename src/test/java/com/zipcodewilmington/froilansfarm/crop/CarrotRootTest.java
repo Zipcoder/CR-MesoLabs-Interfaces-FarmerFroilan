@@ -20,7 +20,6 @@ public class CarrotRootTest {
         Assert.assertTrue(testCarrotRoot instanceof Produce);
     }
 
-
     @Test
     public void carrotTest5() {
         //Assert.assertFalse(testCarrotRoot.fertilized());
