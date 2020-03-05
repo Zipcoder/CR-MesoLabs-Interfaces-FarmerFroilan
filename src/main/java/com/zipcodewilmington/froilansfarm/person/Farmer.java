@@ -18,6 +18,22 @@ public class Farmer extends Person implements Botanist, Rider{
     public void eat() {
     }
 
+    public void dismount(Rideable rideable) {
+
+    }
+
+    public void ride(Rideable rideable) {
+
+    }
+
+    public void Eat() {
+
+    }
+
+    public void MakeNoise() {
+
+    }
+
     public String makeNoise() { return "Howdy Partner"; }
 
 }
