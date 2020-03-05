@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.peopletest;
 
+import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.people.Pilot;
 import com.zipcodewilmington.froilansfarm.vehicles.CropDuster;
 import org.junit.Assert;
@@ -12,6 +13,8 @@ public class PilotTest
     @Test
     public void TestMount()
     {
+        Farm test = new Farm();
+        testDuster.operate(test);
         Pilot riding = new Pilot();
         Assert.assertTrue(riding.mount(testDuster));
 
