@@ -12,11 +12,11 @@ public class Farm {
     FarmHouse farmhouse = new FarmHouse();
 
     public Farm(Integer numOfStables,Integer numOfCoops,Integer numOfField){
+
     }
     public void setUpFarm(){
 
     }
-
 
     public static void main(String[] args){
 
