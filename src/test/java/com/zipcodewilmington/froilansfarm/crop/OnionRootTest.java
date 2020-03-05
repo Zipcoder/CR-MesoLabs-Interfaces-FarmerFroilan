@@ -19,15 +19,4 @@ public class OnionRootTest {
         Assert.assertTrue(testOnionRoot instanceof Produce);
     }
 
-    @Test
-    public void onionRootTest3() { Assert.assertFalse(testOnionRoot.yield()); }
-
-    @Test
-    public void onionRootTest4() { Assert.assertFalse(testOnionRoot.storeFood()); }
-
-    @Test
-    public void onionRootTest5() {Assert.assertFalse(testOnionRoot.fertilized());}
-
-    @Test
-    public void onionRootTest6() {Assert.assertFalse(testOnionRoot.harvested());}
 }
