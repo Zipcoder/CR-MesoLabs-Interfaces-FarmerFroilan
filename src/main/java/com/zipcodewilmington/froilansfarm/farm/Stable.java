@@ -1,24 +1,32 @@
 package com.zipcodewilmington.froilansfarm.farm;
-import com.zipcodewilmington.froilansfarm.animal.Chicken;
+import com.zipcodewilmington.froilansfarm.animal.Horse;
+
 import java.util.ArrayList;
 
-public class Stable {
+public class Stable{
 
-    ArrayList<Chicken> horses = new ArrayList<Chicken>();
+    ArrayList<Horse> horses = new ArrayList<Horse>();
 
-    public void addChickens(Chicken chickToadd){
-        this.horses.add(chickToadd);
+
+    public void addHorses(Integer numOfHorses){
+        Horse genericHorse = new Horse();
+
+        for(int x = 1; x <= numOfHorses; x++){
+            horses.add(genericHorse);
+        }
     }
 
-    public void removeChicken(Chicken chickenToRemove){
-        this.horses.remove(chickenToRemove);
-    }
+    public void removeHorses(Integer numToRemove){
 
-    public ArrayList<Chicken> getChickens(){
-        return this.horses;
+        if(numToRemove > this.horses.size() || numToRemove <= 0){
+            //do nothing
+        }else {
+            for(int x = 1; x<= numToRemove; x++){
+                horses.remove(horses.size()-1);
+            }
+        }
     }
-
-    public Integer getNumOfChickens(){
+    public Integer getNumOfHorses(){
         return this.horses.size();
     }
 }

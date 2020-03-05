@@ -3,6 +3,8 @@ package com.zipcodewilmington.froilansfarm.crop;
 import com.zipcodewilmington.froilansfarm.Produce;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.crop.OnionRoot;
+import com.zipcodewilmington.froilansfarm.food.Carrot;
+import com.zipcodewilmington.froilansfarm.food.Onion;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,14 +22,27 @@ public class OnionRootTest {
     }
 
     @Test
-    public void onionRootTest3() { Assert.assertFalse(testOnionRoot.yield()); }
+    public void onionRootYieldTest() {
+        OnionRoot testOnionRoot = new OnionRoot();
+        testOnionRoot.fertilized = false;
+        Onion actual = testOnionRoot.yield();
+        Assert.assertNull(actual);
+    }
 
     @Test
-    public void onionRootTest4() { Assert.assertFalse(testOnionRoot.storeFood()); }
+    public void onionRootYieldTest2() {
+        OnionRoot testOnionRoot = new OnionRoot();
+        testOnionRoot.harvested = false;
+        Onion actual = testOnionRoot.yield();
+        Assert.assertNull(actual);
+    }
 
     @Test
-    public void onionRootTest5() {Assert.assertFalse(testOnionRoot.fertilized());}
-
-    @Test
-    public void onionRootTest6() {Assert.assertFalse(testOnionRoot.harvested());}
+    public void onionRootYieldTest3() {
+        OnionRoot testOnionRoot = new OnionRoot();
+        testOnionRoot.fertilized = true;
+        testOnionRoot.harvested = true;
+        Class actual = testOnionRoot.yield().getClass();
+        Assert.assertNotNull(actual);
+    }
 }

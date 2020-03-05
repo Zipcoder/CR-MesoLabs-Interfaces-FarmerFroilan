@@ -21,18 +21,29 @@ public class CarrotRootTest {
         Assert.assertTrue(testCarrotRoot instanceof Produce);
     }
 
+
     @Test
     public void carrotRootYieldTest() {
-        Carrot testCarrot = new Carrot();
         CarrotRoot testCarrotRoot = new CarrotRoot();
-        Carrot expected = testCarrot;
-        CarrotRoot actual = testCarrotRoot.fertilized;
-        Assert.assertEquals(expected, actual);
+        testCarrotRoot.fertilized = false;
+        Carrot actual = testCarrotRoot.yield();
+        Assert.assertNull(actual);
     }
 
-    //@Test
+    @Test
+    public void carrotRootYieldTest2() {
+        CarrotRoot testCarrotRoot = new CarrotRoot();
+        testCarrotRoot.harvested = false;
+        Carrot actual = testCarrotRoot.yield();
+        Assert.assertNull(actual);
+    }
 
-
-
-
+    @Test
+    public void carrotRootYieldTest3() {
+        CarrotRoot testCarrotRoot = new CarrotRoot();
+        testCarrotRoot.fertilized = true;
+        testCarrotRoot.harvested = true;
+        Class actual = testCarrotRoot.yield().getClass();
+        Assert.assertNotNull(actual);
+    }
 }

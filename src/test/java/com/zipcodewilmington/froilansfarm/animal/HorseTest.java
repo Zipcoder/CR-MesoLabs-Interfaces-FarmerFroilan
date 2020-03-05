@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.animal;
 import com.zipcodewilmington.froilansfarm.Eater;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.person.Farmer;
 import com.zipcodewilmington.froilansfarm.person.Person;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,7 +12,17 @@ import static org.junit.Assert.*;
 
 public class HorseTest {
     Horse testHorse = new Horse();
+    Person testPerson = new Farmer("Jimmy","male")
 
+    {
+        public void MakeNoise() {
+
+        }
+
+        public void Eat() {
+
+        }
+    };
     @Test
     public void inheritanceTest() {
         Assert.assertTrue(testHorse instanceof Animal);
@@ -32,6 +43,7 @@ public class HorseTest {
         Assert.assertTrue(testHorse instanceof Rideable);
     }
 
+
 //    @Test
 //    public void getSetRiderTest(){
 //        testHorse.setRider(testPerson);
@@ -39,6 +51,7 @@ public class HorseTest {
 //        Person actual = testHorse.getRider();
 //        Assert.assertEquals(expected,actual);
 //    }
+
 
     @Test
     public void makeNoiseTest(){

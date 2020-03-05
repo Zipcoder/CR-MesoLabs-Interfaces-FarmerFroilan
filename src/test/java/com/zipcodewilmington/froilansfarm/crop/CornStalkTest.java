@@ -3,6 +3,8 @@ package com.zipcodewilmington.froilansfarm.crop;
 import com.zipcodewilmington.froilansfarm.Produce;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
+import com.zipcodewilmington.froilansfarm.food.Carrot;
+import com.zipcodewilmington.froilansfarm.food.EarCorn;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,15 +22,27 @@ public class CornStalkTest {
     }
 
     @Test
-    public void cornStalkTest3() { Assert.assertFalse(testCornStalk.yield());
+    public void cornStalkYieldTest() {
+        CornStalk testCornStalk = new CornStalk();
+        testCornStalk.fertilized = false;
+        EarCorn actual = testCornStalk.yield();
+        Assert.assertNull(actual);
+    }
+
+   @Test
+    public void cornStalkYieldTest2() {
+        CornStalk testCornStalk = new CornStalk();
+        testCornStalk.fertilized = false;
+        EarCorn actual = testCornStalk.yield();
+        Assert.assertNull(actual);
     }
 
     @Test
-    public void cornStalkTest4() { Assert.assertFalse(testCornStalk.storeFood()); }
-
-    @Test
-    public void cornStalkTest5() { Assert.assertFalse(testCornStalk.fertilized());}
-
-    @Test
-    public void cornStalkTest6() {Assert.assertFalse(testCornStalk.harvested());}
+    public void cornStalkYieldTest3() {
+        CornStalk testCornStalk = new CornStalk();
+        testCornStalk.fertilized = true;
+        testCornStalk.harvested = true;
+        Class actual = testCornStalk.yield().getClass();
+        Assert.assertNotNull(actual);
+    }
 }
