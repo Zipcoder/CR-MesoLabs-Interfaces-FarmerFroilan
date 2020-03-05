@@ -11,6 +11,9 @@ public class PilotTest {
     public void instanceTest1() { Assert.assertTrue(pilot instanceof Rider); }
 
     @Test
+    public void instanceTest2() { Assert.assertTrue(pilot instanceof Person); }
+
+    @Test
     public void makeNoise() {
         String expected = "Good Morning";
         String actual = pilot.makeNoise();

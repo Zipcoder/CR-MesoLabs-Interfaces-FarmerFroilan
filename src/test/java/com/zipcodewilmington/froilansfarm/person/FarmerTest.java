@@ -15,6 +15,9 @@ public class FarmerTest {
     public void instanceTest2() { Assert.assertTrue(farmer instanceof Rider); }
 
     @Test
+    public void instanceTest3() { Assert.assertTrue(farmer instanceof Person);}
+
+    @Test
     public void makeNoise() {
         String expected = "Howdy Partner";
         String actual = farmer.makeNoise();
