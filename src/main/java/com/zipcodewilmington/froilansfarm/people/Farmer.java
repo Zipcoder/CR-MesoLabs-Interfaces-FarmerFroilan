@@ -24,10 +24,16 @@ public class Farmer extends Person implements Rider, Botanist
         this.hasPlanted = false;
     }
 
-    public Boolean harvestEgg(ArrayList<Egg> eggsHarvested)
-    {
+    public Boolean harvestEgg(ArrayList<Egg> eggsHarvested) {
+        Egg harvestedEgg = new Egg();
+        for (int i = 0; i < 15; i++) {
+            eggsHarvested.add(0, harvestedEgg);
+
+        }
         return harvestEgg;
     }
+
+
 
     public Boolean mount(Vehicle thingToBeMounted) {
         if (thingToBeMounted.ride(this)) {

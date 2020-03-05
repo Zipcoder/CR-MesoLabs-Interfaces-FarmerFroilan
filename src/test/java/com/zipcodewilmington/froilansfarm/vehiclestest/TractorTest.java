@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class TractorTest {
     Farmer jeffsBro = new Farmer("Jeff");
-    Pilot jeff = new Pilot();
+    Pilot jeff = new Pilot("JeffFriend");
 
     @Test
     public void instanceOfVehicleTest(){
