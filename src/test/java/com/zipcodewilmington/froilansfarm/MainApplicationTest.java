@@ -2,11 +2,12 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.sun.javafx.stage.StageHelper;
 import com.zipcodewilmington.froilansfarm.crop.*;
-import com.zipcodewilmington.froilansfarm.farm.ChickenCoop;
-import com.zipcodewilmington.froilansfarm.farm.CropRow;
-import com.zipcodewilmington.froilansfarm.farm.Farm;
-import com.zipcodewilmington.froilansfarm.farm.Field;
+import com.zipcodewilmington.froilansfarm.farm.*;
 import com.zipcodewilmington.froilansfarm.food.Tomato;
+import com.zipcodewilmington.froilansfarm.person.Farmer;
+import com.zipcodewilmington.froilansfarm.person.Pilot;
+import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ import org.junit.Test;
  * Created by leon on 2/26/18.
  */
 public class MainApplicationTest {
+
 //    @Test
 //    public void testFarmConstructor(){
 //        //farm state
@@ -116,7 +118,85 @@ public class MainApplicationTest {
 //        int expected4 = 3;
 //        int actual4 = 3;
 //        Assert.assertEquals(expected4,actual4);
-    }
-
+//    }
+//
+//    @Test
+//    public void testStables(){
+//        //farm state
+//        Farm theFarm = new Farm(3,4,1);
+//        Field theField = new Field();
+//        theField.setCropRow(1, new CornStalk());
+//        theField.setCropRow(2, new TomatoPlant());
+//        theField.setCropRow(3, new OnionRoot());
+//        theField.setCropRow(4, new PotatoRoot());
+//        theField.setCropRow(5, new CarrotRoot());
+//        ChickenCoop coop1 = new ChickenCoop();
+//        coop1.addChickens(4);
+//        ChickenCoop coop2 = new ChickenCoop();
+//        coop2.addChickens(4);
+//        ChickenCoop coop3 = new ChickenCoop();
+//        coop3.addChickens(4);
+//        ChickenCoop coop4 = new ChickenCoop();
+//        coop4.addChickens(3);
+//        Stable stable1 = new Stable();
+//        stable1.addHorses(4);
+//        Stable stable2 = new Stable();
+//        stable2.addHorses(3);
+//        Stable stable3 = new Stable();
+//        stable3.addHorses(3);
+//
+//        //stable1
+//        int expected = 4;
+//        int actual = stable1.getNumOfHorses();
+//        Assert.assertEquals(expected,actual);
+//
+//        //stable2
+//        int expected2 = 3;
+//        int actual2 = stable2.getNumOfHorses();
+//        Assert.assertEquals(expected2,actual2);
+//
+//        //stable3
+//        int expected3 = 3;
+//        int actual3 = 3;
+//        Assert.assertEquals(expected3,actual3);
+//    }
+//
+//    @Test
+//    public void testMonday(){
+//        //farm state
+//        Farm theFarm = new Farm(3,4,1);
+//        Field theField = new Field();
+//        theField.setCropRow(1, new CornStalk());
+//        theField.setCropRow(2, new TomatoPlant());
+//        theField.setCropRow(3, new OnionRoot());
+//        theField.setCropRow(4, new PotatoRoot());
+//        theField.setCropRow(5, new CarrotRoot());
+//        ChickenCoop coop1 = new ChickenCoop();
+//        coop1.addChickens(4);
+//        ChickenCoop coop2 = new ChickenCoop();
+//        coop2.addChickens(4);
+//        ChickenCoop coop3 = new ChickenCoop();
+//        coop3.addChickens(4);
+//        ChickenCoop coop4 = new ChickenCoop();
+//        coop4.addChickens(3);
+//        Stable stable1 = new Stable();
+//        stable1.addHorses(4);
+//        Stable stable2 = new Stable();
+//        stable2.addHorses(3);
+//        Stable stable3 = new Stable();
+//        stable3.addHorses(3);
+//        Pilot froilanda = new Pilot("Froilanda", "f");
+//        Farmer froilan = new Farmer("Froilan", "m");
+//        CropDuster duster = new CropDuster(froilanda);
+//        Tractor tractor = new Tractor(froilan);
+//
+//        for()
+//
+//
+//
+//    }
+//
+//
+//
 
 }

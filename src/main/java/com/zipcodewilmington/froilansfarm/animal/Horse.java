@@ -17,7 +17,7 @@ public class Horse extends Animal implements Rideable {
 
 
     public String makeNoise() {
-        return "Whoaaa Wilbur!  Horses can't talk!";
+        return "Neigh";
     }
 
     public void eat() {
