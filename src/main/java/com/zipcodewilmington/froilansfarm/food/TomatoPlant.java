@@ -9,4 +9,7 @@ public class TomatoPlant extends Crop {
         this.hasBeenHarvested = false;
         this.yielded = tomato;
     }
+
+
+
 }

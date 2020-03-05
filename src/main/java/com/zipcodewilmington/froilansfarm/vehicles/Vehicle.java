@@ -1,24 +1,23 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
 import com.zipcodewilmington.froilansfarm.basicactions.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.people.Person;
 
 public abstract class Vehicle implements Rideable, NoiseMaker {
-boolean hasRider = false;
+public boolean hasRider = false;
+public Person personRidingThisVehicle;
 
-    public boolean ride() {
-        if(!this.hasRider){
-            this.hasRider = true;
-            return true;
-        }
-        return false;
-    }
 
-    public boolean stopRiding() {
+    public Person stopRiding() {
+        Person returningPerson;
         if(this.hasRider){
             this.hasRider = false;
-            return true;
+            returningPerson = this.personRidingThisVehicle;
+            this.personRidingThisVehicle = null;
+            return returningPerson;
         }
-        return false;
+        return null;
     }
+
 
 }

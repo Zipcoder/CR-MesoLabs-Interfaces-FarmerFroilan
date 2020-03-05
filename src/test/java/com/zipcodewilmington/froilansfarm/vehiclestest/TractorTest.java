@@ -3,7 +3,9 @@ package com.zipcodewilmington.froilansfarm.vehiclestest;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.farmland.CropRow;
 import com.zipcodewilmington.froilansfarm.food.CornStalk;
-import com.zipcodewilmington.froilansfarm.food.Crop;
+import com.zipcodewilmington.froilansfarm.people.Farmer;
+import com.zipcodewilmington.froilansfarm.people.Person;
+import com.zipcodewilmington.froilansfarm.people.Pilot;
 import com.zipcodewilmington.froilansfarm.vehicles.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicles.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicles.Tractor;
@@ -12,6 +14,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TractorTest {
+    Farmer jeffsBro = new Farmer("Jeff");
+    Pilot jeff = new Pilot();
 
     @Test
     public void instanceOfVehicleTest(){
@@ -30,21 +34,21 @@ public class TractorTest {
     @Test
     public void rideTest(){
         Tractor tractor = new Tractor();
-        Assert.assertTrue(tractor.ride());
+        Assert.assertTrue(tractor.ride(jeffsBro));
     }
 
     @Test
     public void stopRidingTest(){
         Tractor tractor = new Tractor();
-        tractor.ride();
-        Assert.assertTrue(tractor.stopRiding());
+        tractor.ride(jeffsBro);
+        Assert.assertTrue(jeffsBro == tractor.stopRiding());
     }
 
     @Test
     public void operateTest(){
         Farm farm = new Farm();
         Tractor tractor = new Tractor();
-        tractor.ride();
+        tractor.ride(jeffsBro);
         boolean beforeOperating = tractor.isOperatingOnFarm();
         tractor.operate(farm);
         boolean afterOperating = tractor.isOperatingOnFarm();
@@ -62,12 +66,12 @@ public class TractorTest {
         }
         farm.getField().addCropRowsToCropField(cropRow);
         CropDuster cropDuster = new CropDuster();
-        cropDuster.ride();
+        cropDuster.ride(jeff);
         cropDuster.fly();
         cropDuster.operate(farm);
 
         Tractor tractor = new Tractor();
-        tractor.ride();
+        tractor.ride(jeffsBro);
         tractor.operate(farm);
         int expected = 4;
         int actual = tractor.harvest().size();
@@ -85,12 +89,12 @@ public class TractorTest {
         }
         farm.getField().addCropRowsToCropField(cropRow);
         CropDuster cropDuster = new CropDuster();
-        cropDuster.ride();
+        cropDuster.ride(jeff);
         cropDuster.fly();
         cropDuster.operate(farm);
 
         Tractor tractor = new Tractor();
-        tractor.ride();
+        tractor.ride(jeffsBro);
         tractor.operate(farm);
 
         //First
