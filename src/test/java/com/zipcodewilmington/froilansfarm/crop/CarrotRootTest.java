@@ -21,16 +21,6 @@ public class CarrotRootTest {
     }
 
     @Test
-    public void carrotTest3() {
-        Assert.assertFalse(testCarrotRoot.yield());
-    }
-
-    @Test
-    public void carrotTest4() {
-        Assert.assertFalse(testCarrotRoot.storeFood());
-    }
-
-    @Test
     public void carrotTest5() {
         //Assert.assertFalse(testCarrotRoot.fertilized());
     }

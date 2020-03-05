@@ -11,22 +11,12 @@ public class TomatoPlantTest {
 
     @Test
     public void tomatoPlantTest1() {
-        Assert.assertTrue(testTomatoPlant instanceof Crop);}
+        Assert.assertTrue(testTomatoPlant instanceof Crop);
+    }
 
     @Test
     public void tomatoPlantTest2() {
-        Assert.assertTrue(testTomatoPlant instanceof Produce);}
-
-    @Test
-    public void tomatoPlantTest3() { Assert.assertFalse(testTomatoPlant.yield()); }
-
-    @Test
-    public void tomatoPlantTest4() { Assert.assertFalse(testTomatoPlant.storeFood()); }
-
-    @Test
-    public void tomatoPlantTest5() { Assert.assertFalse(testTomatoPlant.fertilized());}
-
-    @Test
-    public void tomatoPlantTest6() {Assert.assertFalse(testTomatoPlant.harvested());}
+        Assert.assertTrue(testTomatoPlant instanceof Produce);
+    }
 }
 

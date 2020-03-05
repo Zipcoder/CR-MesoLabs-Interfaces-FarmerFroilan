@@ -1,13 +1,19 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
 import com.zipcodewilmington.froilansfarm.Produce;
+import com.zipcodewilmington.froilansfarm.food.Carrot;
+import com.zipcodewilmington.froilansfarm.food.Edible;
+
+import java.util.ArrayList;
 
 public class CarrotRoot extends Crop implements Produce {
 
 
-    public Boolean yield() {
-        return false;
-    }
+    public Carrot yield() {
 
-    public Boolean storeFood() { return false;}
+        if (fertilized && harvested) {
+            Carrot carrot = new Carrot();
+            return carrot;
+        } else { return null;}
+    }
 }
