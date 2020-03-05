@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class HorseTest {
-Farmer joe = new Farmer();
+Farmer joe = new Farmer("Jeff");
 
     @Test
     public void setIdTest() {
