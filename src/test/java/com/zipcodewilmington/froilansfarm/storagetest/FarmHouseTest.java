@@ -18,7 +18,7 @@ public class FarmHouseTest {
     @Before
     public void init(){
         testHouse = new FarmHouse();
-        testPerson = new Farmer();
+        testPerson = new Farmer("Jeff");
     }
 
     @Test

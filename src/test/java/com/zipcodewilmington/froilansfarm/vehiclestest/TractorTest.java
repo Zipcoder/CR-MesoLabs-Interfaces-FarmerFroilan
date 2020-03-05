@@ -14,7 +14,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TractorTest {
-    Farmer jeffsBro = new Farmer();
+    Farmer jeffsBro = new Farmer("Jeff");
     Pilot jeff = new Pilot();
 
     @Test
