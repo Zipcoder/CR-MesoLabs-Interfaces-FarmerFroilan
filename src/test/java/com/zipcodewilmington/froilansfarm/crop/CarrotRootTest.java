@@ -21,7 +21,6 @@ public class CarrotRootTest {
         Assert.assertTrue(testCarrotRoot instanceof Produce);
     }
 
-
     @Test
     public void carrotRootYieldTest() {
         CarrotRoot testCarrotRoot = new CarrotRoot();

@@ -13,10 +13,12 @@ public class TomatoPlantTest {
 
     @Test
     public void tomatoPlantTest1() {
-        Assert.assertTrue(testTomatoPlant instanceof Crop);}
+        Assert.assertTrue(testTomatoPlant instanceof Crop);
+    }
 
     @Test
     public void tomatoPlantTest2() {
+<<<<<<< HEAD
         Assert.assertTrue(testTomatoPlant instanceof Produce);}
 
     @Test
@@ -42,6 +44,9 @@ public class TomatoPlantTest {
         testTomatoPlant.harvested = true;
         Class actual = testTomatoPlant.yield().getClass();
         Assert.assertNotNull(actual);
+=======
+>>>>>>> 62ddf75a7beb3b7eba84dbc78d591c41c2f6dc03
     }
 }
+
 
