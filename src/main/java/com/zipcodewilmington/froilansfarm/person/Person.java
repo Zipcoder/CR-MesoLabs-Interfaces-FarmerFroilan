@@ -20,4 +20,8 @@ public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
         System.out.println(name+" ate "+food);
         //INTERACT WITH INVENTORY AND DELETE FOOD
     }
+
+    public String getName(){
+        return name;
+    }
 }
