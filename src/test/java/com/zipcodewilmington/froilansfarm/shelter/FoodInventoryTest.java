@@ -7,6 +7,9 @@ import com.zipcodewilmington.froilansfarm.edible.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class FoodInventoryTest {
@@ -36,8 +39,35 @@ public class FoodInventoryTest {
         Assert.assertEquals(expected3,actual3);
     }
 
+    @Test
+    public void testAdd2(){
+        List<Edible> edibleList = new ArrayList<Edible>();
+        Corn corn1 = new Corn();
+        Tomato tomato1 = new Tomato();
+        Egg egg1 = new Egg();
+
+        edibleList.add(corn1);
+        edibleList.add(tomato1);
+        edibleList.add(egg1);
+
+        FoodInventory silo = new FoodInventory(edibleList);
+
+        Edible expected1 = corn1;
+        Edible actual1 = silo.get(0);
+
+        Edible expected2 = tomato1;
+        Edible actual2 = silo.get(1);
+
+        Edible expected3 = egg1;
+        Edible actual3 = silo.get(2);
+
+        Assert.assertEquals(expected1,actual1);
+        Assert.assertEquals(expected2,actual2);
+        Assert.assertEquals(expected3,actual3);
+    }
+
 //    @Test
-//    public void testAdd2(){
+//    public void testAdd3(){
 //        FoodInventory silo = new FoodInventory();
 //
 //        String string1 = "testing";

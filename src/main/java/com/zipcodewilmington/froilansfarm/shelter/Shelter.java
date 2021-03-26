@@ -6,6 +6,10 @@ import java.util.List;
 public abstract class Shelter<T> {
     private List<T> inShelter = new ArrayList<T>();
 
+    public Shelter(List<T> inShelter){
+        this.inShelter = inShelter;
+    }
+
     public Shelter(){
 
     }
