@@ -11,7 +11,7 @@ public class Botanist extends Person{
     }
 
     public void plantCrops(Crop crop, CropRow cropRow){
-        //PLANT THE CROP IN THE CROPROW
+        cropRow.add(crop);
     }
 
     public void mount(Ridable mountable) {

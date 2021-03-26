@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.shelter;
 
-public class CropRow {//extends Shelter<Crop> {
+import com.zipcodewilmington.froilansfarm.crops.Crop;
+
+public class CropRow extends Shelter<Crop> {
 
     public CropRow(){
 
