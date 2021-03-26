@@ -22,4 +22,8 @@ public abstract class Shelter<T> {
         return inShelter.get(index);
     }
 
+    public int size(){
+        return inShelter.size();
+    }
+
 }

@@ -65,8 +65,13 @@ public class FoodInventoryTest {
         Edible expected2 = egg1;
         Edible actual2 = silo.get(1);
 
+        int expected3 = 2;
+        int actual3 = silo.size();
+
         Assert.assertEquals(expected1,actual1);
         Assert.assertEquals(expected2,actual2);
+        Assert.assertEquals(expected3,actual3);
+
 
     }
 
