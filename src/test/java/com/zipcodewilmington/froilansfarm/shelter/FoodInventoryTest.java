@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.shelter;
 
 import com.zipcodewilmington.froilansfarm.edible.Corn;
-import com.zipcodewilmington.froilansfarm.edible.Edible;
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.edible.Egg;
 import com.zipcodewilmington.froilansfarm.edible.Tomato;
 import org.junit.Assert;
@@ -9,8 +9,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class FoodInventoryTest {
 

@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.shelter;
-import com.zipcodewilmington.froilansfarm.edible.Edible;
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 
 import java.util.List;
 

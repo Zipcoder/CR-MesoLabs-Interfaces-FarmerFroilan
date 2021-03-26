@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.edible;
 
-public class Egg implements Edible{
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+
+public class Egg implements Edible {
 
 }
