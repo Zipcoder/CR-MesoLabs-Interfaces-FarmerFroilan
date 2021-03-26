@@ -5,4 +5,22 @@ package com.zipcodewilmington.froilansfarm;
  */
 public class MainApplication {
 
+/*     interface Eater <TypeOfFood extends Edible>
+
+
+     abstract class animal implements Eater<Vegetable>
+
+     class person implements Eater<Edible>
+
+
+
+     class chicken
+
+     public void eat(Vegetable veg)
+
+
+
+     class farmer
+
+     public void eat(Edible edible)*/
 }

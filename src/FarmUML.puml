@@ -1,0 +1,100 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Botanist <|-- Farmer
+Rider <|-- Farmer
+
+Pilot <|-- Farmer
+Person <|--- Farmer
+NoiseMaker <|-- Person
+NoiseMaker <|-- Animal
+Eater <|-- Person
+Eater <|-- Animal
+
+Crop <|--- TomatoPlant
+Crop <|--- CornStalk
+
+Animal <|-- Horse
+Animal <|-- Chicken
+
+
+Produce <|-- Chicken
+Produce <|-- Crop
+
+Edible <|--- Vegetable
+Vegetable <|--- EarCorn
+Vegetable <|--- Tomato
+Edible <|--- Egg
+
+Rideable <|-- Horse
+Rideable <|-- Vehicle
+
+Vehicle <|-- Aircraft
+Vehicle <|-- FarmVehicle
+
+Aircraft <|-- CropDuster
+FarmVehicle <|-- CropDuster
+FarmVehicle <|-- Tractor
+
+NoiseMaker <|-- Vehicle
+
+class Farm
+
+'INTERFACES
+interface Edible
+interface Produce{
+yield(Edible edible)
+hasBeenHarvested
+hasBeenFertilized
+}
+interface NoiseMaker{
+makeNoise()
+}
+interface Botanist {
+plantCrop()
+}
+interface Rider {
+mount()
+dismount()
+}
+interface Eater <TypeOfFood extends Edible> {
+eat()
+}
+interface Pilot
+interface Aircraft {
+fly()
+}
+interface Vehicle
+
+'ABSTRACT CLASSES
+abstract class Animal
+abstract class Person
+abstract class Crop
+abstract class Vegetable
+
+'CLASSES
+abstract class FarmVehicle {
+operate()
+}
+class Farmer
+class Horse
+class Chicken
+class Field{}
+class Tomato
+class EarCorn
+class Egg
+class Stable
+class ChickenCoop
+class FarmHouse
+class CropRow {
+HashMap Rows
+}
+class Tractor{
+harvest(Crop crop)
+}
+class CropDuster{
+fertilize()
+}
+interface Rideable
+
+@enduml
