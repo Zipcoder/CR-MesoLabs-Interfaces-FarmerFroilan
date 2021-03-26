@@ -1,2 +1,5 @@
-package com.zipcodewilmington.froilansfarm;public interface FarmVehicle {
+package com.zipcodewilmington.froilansfarm;
+
+public interface FarmVehicle {
+    public void operate();
 }

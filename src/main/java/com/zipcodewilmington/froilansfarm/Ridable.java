@@ -1,2 +1,4 @@
-package com.zipcodewilmington.froilansfarm;public interface Ridable {
+package com.zipcodewilmington.froilansfarm;
+
+public interface Ridable {
 }

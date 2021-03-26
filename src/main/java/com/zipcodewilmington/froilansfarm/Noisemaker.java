@@ -1,2 +1,5 @@
-package com.zipcodewilmington.froilansfarm;public interface Noisemaker {
+package com.zipcodewilmington.froilansfarm;
+
+public interface Noisemaker {
+    public void makeNoise();
 }
