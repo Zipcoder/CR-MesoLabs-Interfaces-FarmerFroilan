@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
+import com.zipcodewilmington.froilansfarm.crops.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.shelter.CropRow;
 
 public class CropDuster extends Airplane implements FarmVehicle {
 
@@ -8,11 +10,15 @@ public class CropDuster extends Airplane implements FarmVehicle {
         super(name);
     }
 
-    public void operate(){
-        fertilize();
+    public void operate(CropRow cropRow){
+        fertilize(cropRow);
     }
-    //will be passed Crop parameter
-    public void fertilize(){}
+
+    private void fertilize(CropRow cropRow){
+        for(int i=0;i<cropRow.size();i++){
+            cropRow.get(i).isFertilized();
+        }
+    }
 
     public void makeNoise(){
         System.out.println("Stupid plane noise");
@@ -22,4 +28,5 @@ public class CropDuster extends Airplane implements FarmVehicle {
     public String toString(){
         return "Crop Duster";
     }
+
 }

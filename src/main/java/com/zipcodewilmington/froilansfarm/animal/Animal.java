@@ -12,7 +12,7 @@ public abstract class Animal implements Eater<Corn>, Noisemaker {
     }
 
     public void eat(Corn food){
-
+        System.out.println(this.toString()+" ate "+food.toString());
     }
 
 

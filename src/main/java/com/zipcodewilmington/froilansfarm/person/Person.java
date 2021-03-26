@@ -1,9 +1,6 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Eater;
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.interfaces.Noisemaker;
-import com.zipcodewilmington.froilansfarm.interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.interfaces.*;
 
 public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
     private String name;
@@ -19,6 +16,14 @@ public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
     public void eat(Edible food){
         System.out.println(name+" ate "+food);
         //INTERACT WITH INVENTORY AND DELETE FOOD
+    }
+
+    public void mount(Ridable somethingRidable){
+        System.out.print(this.getName()+" is riding "+somethingRidable.toString());
+    }
+
+    public void dismount(Ridable somethingRidable){
+        System.out.print(this.getName()+" stopped riding "+somethingRidable.toString());
     }
 
     public String getName(){

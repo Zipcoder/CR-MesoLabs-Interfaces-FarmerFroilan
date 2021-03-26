@@ -8,19 +8,12 @@ public class Pilot extends Farmer{
         super(name);
     }
 
-    public void fly(CropDuster plane){
-
+    public void fly(CropDuster cropDuster){
+        System.out.println(this.getName()+" is flying a "+cropDuster.toString());
     }
 
     public void operate(CropDuster cropDuster){
 
     }
 
-    public void mount(){
-
-    }
-
-    public void dismount(){
-
-    }
 }

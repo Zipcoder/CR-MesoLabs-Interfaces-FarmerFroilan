@@ -13,12 +13,4 @@ public class Botanist extends Person{
     public void plantCrops(Crop crop, CropRow cropRow){
         cropRow.add(crop);
     }
-
-    public void mount(Ridable mountable) {
-
-    }
-
-    public void dismount(Ridable mountable) {
-
-    }
 }

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.animal;
 
+import com.zipcodewilmington.froilansfarm.edible.Corn;
 import com.zipcodewilmington.froilansfarm.edible.Egg;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
@@ -23,5 +24,10 @@ public class Chicken extends Animal implements Produce {
 
     public void makeNoise() {
         System.out.println("Cock-a-doodle-doo");
+    }
+
+    @Override
+    public String toString(){
+        return "Chicken";
     }
 }
