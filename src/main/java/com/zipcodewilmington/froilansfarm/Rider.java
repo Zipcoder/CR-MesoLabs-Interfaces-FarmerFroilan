@@ -1,2 +1,6 @@
-package com.zipcodewilmington.froilansfarm;public interface Rider {
+package com.zipcodewilmington.froilansfarm;
+
+public interface Rider <T extends Ridable>{
+    public void mount(T mountable);
+    public void dismount(T mountable);
 }
