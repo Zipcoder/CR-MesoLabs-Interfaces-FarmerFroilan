@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.shelter;
 
 public class Stables extends Shelter<Horse>{
 
