@@ -1,6 +1,8 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.vehicle;
 
-public class CropDuster extends Airplane implements FarmVehicle{
+import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+
+public class CropDuster extends Airplane implements FarmVehicle {
     public void operate(){
         fertilize();
     }
