@@ -1,0 +1,305 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Animal<E extends EdiblePlant> {
+eat (EdiblePlant obj)
+makeNoise;
+}
+abstract class FarmVehicle {
+operate;
+makeNoise;
+}
+abstract class Aircraft {
+fly;
+makeNoise;
+}
+
+
+interface LivingThing {}
+interface HorseFood {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+interface ChickenFood {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+interface EdiblePlant {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+interface Edible{
+hasBeenFertilized;
+}
+interface Eater<Edible> {
+eat(Edible obj);
+}
+interface NoiseMaker {
+makeNoise;
+}
+interface Rideable {}
+interface Produce {
+yield(Edible obj) if hasBeenFertilized;
+}
+interface Vehicle {
+makeNoise;
+}
+interface Person<Edible> {
+eat(Edible obj);
+makeNoise;
+}
+interface Rider {
+mount(Rideable obj)
+dismount(Rideable obj)
+eat(Edible obj);
+makeNoise;
+}
+interface Botanist {
+plant (Crop crop, CropRow row);
+eat(Edible obj);
+makeNoise;
+}
+interface DailyRoutine {
+mount (Horse horse)
+dismount (Horse horse)
+feed (Horse horse, int numOfCorn)
+}
+interface Housing {
+store (LivingThing livingThing)
+}
+
+
+class Farm {
+Collections for houses
+}
+class Horse {
+makeNoise
+eat (HorseFood obj)
+}
+class Chicken {
+eat (ChickenFood obj)
+makeNoise;
+yield(EdibleEgg egg) if hasBeenFertilized == false
+}
+class EdibleEgg {
+hasBeenFertilized;
+}
+class Field<CropRow> {
+store(CropRow);
+}
+class CropRow<Crop> {
+store(Crop);
+}
+class Crop <E extends EdiblePlant>{
+yield (EdiblePlant obj) if hasBeenFertilized && hasBeenHarvested;
+}
+class CornStalk<EarCorn> {
+yield(EarCorn);
+}
+class EarCorn {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+class TomatoPlant<Tomato> {
+yield(Tomato);
+}
+class Tomato {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+class BeanStalk <SoyBean> {
+yield(Soybean soybean)
+}
+class SoyBean {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+class PumpkinVines<Pumpkin> {
+yield(Pumpkin pumpkin)
+}
+class Pumpkin {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+class AppleTrees<Apple> {
+yield (Apple apple)
+}
+class Apple {
+hasBeenFertilized;
+hasBeenHarvested;
+}
+class Tractor {
+harvest(Crop crop);
+operate;
+makeNoise;
+}
+class CropDuster {
+fertilize(CropRow row);
+fly;
+makeNoise;
+}
+class Farmer {
+mount(Rideable obj)
+dismount(Rideable obj)
+eat(Edible obj);
+makeNoise;
+plant (Crop crop, CropRow row);
+}
+class Pilot {
+mount(Rideable obj)
+dismount(Rideable obj)
+eat(Edible obj);
+makeNoise;
+Fly (CropDuster duster);
+}
+class Stable<Horse> {
+store (Horse horse);
+}
+class FarmHouse<Person> {
+store (Person person)
+}
+class ChickenCoop<Chicken> {
+store (Chicken)
+}
+class Moonshine {
+distill (Corn corn)
+}
+class ProduceStand {
+addProduce (Produce)
+}
+class routineEngine {
+Monday;
+Tuesday;
+Wednesday;
+Thursday;
+Friday;
+Saturday;
+Sunday;
+}
+
+
+'class Monday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'fly (CropDuster duster)
+'}
+'class Tuesday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'mount(Tractor tractor)
+'harvest (Crop crop)
+'dismount(Tractor tractor)
+'}
+'class Wednesday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'distill (Moonshine moonshine)
+'}
+'class Thursday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'}
+'class Friday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'drink (Moonshine moonshine)
+'work (ProduceStand produceStand)
+'}
+'class Saturday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'feed (Chicken chicken)
+'}
+'class Sunday {
+'mount (Horse horse)
+'dismount (Horse horse)
+'feed (Horse horse, int numOfCorn)
+'eat(Edible obj)
+'plant (Crop crop, CropRow row) 3-5
+'}
+
+
+
+Eater <|-- Animal
+NoiseMaker <|-- Animal
+
+Animal <|-- Horse
+Rideable <|-- Horse
+
+Animal <|-- Chicken
+Produce <|-- Chicken
+
+Person <|-- Rider
+Person <|-- Botanist
+
+Field <|-- CropRow
+
+NoiseMaker <|--- Vehicle
+Rideable <|--- Vehicle
+
+Vehicle <|--- Aircraft
+Vehicle <|--- FarmVehicle
+
+Produce <|--- Crop
+
+Crop <|--- CornStalk
+Crop <|--- TomatoPlant
+Crop <|--- BeanStalk
+Crop <|--- PumpkinVines
+Crop <|--- AppleTrees
+
+Edible <|- EdiblePlant
+Edible <|--- EdibleEgg
+
+EdiblePlant <|-- Tomato
+EdiblePlant <|--- Pumpkin
+EdiblePlant <|-- HorseFood
+EdiblePlant <|-- ChickenFood
+
+HorseFood <|-- EarCorn
+HorseFood <|-- Apple
+
+ChickenFood <|-- SoyBean
+ChickenFood <|-- EarCorn
+
+NoiseMaker <|---- Person
+Eater <|---- Person
+
+FarmVehicle <|-- Tractor
+Aircraft <|-- CropDuster
+
+Botanist <|---- Farmer
+Rider <|---- Farmer
+
+Housing <|-- FarmHouse
+Housing <|-- ChickenCoop
+Housing <|-- Stable
+
+Rider <|--- Pilot
+
+DailyRoutine <|-- routineEngine
+
+LivingThing <|---- Animal
+LivingThing <|---- Person
+
+'DailyRoutine <|--- Monday
+'DailyRoutine <|--- Tuesday
+'DailyRoutine <|--- Wednesday
+'DailyRoutine <|--- Thursday
+'DailyRoutine <|--- Friday
+'DailyRoutine <|--- Saturday
+'DailyRoutine <|--- Sunday
+
+@enduml
