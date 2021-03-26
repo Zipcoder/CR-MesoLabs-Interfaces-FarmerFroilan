@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Shelter<T> {
-    List<T> inShelter = new ArrayList<T>();
+    private List<T> inShelter = new ArrayList<T>();
 
     public Shelter(){
 
