@@ -5,25 +5,17 @@ import com.zipcodewilmington.froilansfarm.edible.Tomato;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 
 public class CornStalk extends Crop{
-    boolean isFertilized = false;
-    boolean isHarvested = false;
 
     public CornStalk(){
 
     }
 
     public Edible yield() {
-        if(isFertilized){
-            return new Corn();
-        }
-        return null;
+        return new Corn();
     }
 
-    public void isFertilized() {
-        isFertilized = true;
-    }
-
-    public void isHarvested(){
-        isHarvested = true;
+    @Override
+    public String toString(){
+        return "Corn Stalk";
     }
 }
