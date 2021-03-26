@@ -10,13 +10,13 @@ public class CropDuster extends Airplane implements FarmVehicle {
         super(name);
     }
 
-    public void operate(CropRow cropRow){
-        fertilize(cropRow);
+    public void operate(){
+        System.out.println(this.toString()+" is running!");
     }
 
-    private void fertilize(CropRow cropRow){
+    public void fertilize(CropRow cropRow){
         for(int i=0;i<cropRow.size();i++){
-            cropRow.get(i).isFertilized();
+            cropRow.get(i).fertilizeCrop();
         }
     }
 

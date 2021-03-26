@@ -16,6 +16,7 @@ public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
     public void eat(Edible food){
         System.out.println(name+" ate "+food);
         //INTERACT WITH INVENTORY AND DELETE FOOD
+
     }
 
     public void mount(Ridable somethingRidable){

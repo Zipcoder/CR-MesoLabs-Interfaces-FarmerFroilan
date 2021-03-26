@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.crops.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.shelter.CropRow;
+import com.zipcodewilmington.froilansfarm.shelter.FoodInventory;
 
 public class Tractor extends Vehicle implements FarmVehicle {
 
@@ -11,21 +12,19 @@ public class Tractor extends Vehicle implements FarmVehicle {
         super(name);
     }
 
-    public void operate(CropRow cropRow){
-        harvest(cropRow);
+    public void operate(){
+        System.out.println(this.toString()+" is running!");
     }
 
-    public void operate(Crop crop){
-        harvest(crop);
-    }
+//    public void harvest(Crop crop, FoodInventory silo){
+//        silo.add(crop.harvestCrop());
+//    }
 
-    private void harvest(Crop crop){
-        crop.isHarvested();
-    }
-
-    private void harvest(CropRow cropRow){
+    public void harvest(CropRow cropRow, FoodInventory silo){
         for(int i=0;i<cropRow.size();i++){
-            cropRow.get(i).isHarvested();
+            if(cropRow.get(i).isFertilized() && !cropRow.get(i).isHarvested()){
+                silo.add(cropRow.get(i).yield());
+            }
         }
     }
 

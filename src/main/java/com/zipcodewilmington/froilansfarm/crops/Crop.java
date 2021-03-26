@@ -11,16 +11,16 @@ public abstract class Crop implements Produce {
 
     }
 
-    public void isFertilized() {
+    public void fertilizeCrop() {
         isFertilized = true;
     }
 
-    public void isHarvested(){
-        if(isFertilized && !isHarvested){
-            Edible ediblePlant = this.yield();
+    public boolean isFertilized() {
+        return isFertilized;
+    }
 
-        }
-
+    public boolean isHarvested() {
+        return isHarvested;
     }
 
 

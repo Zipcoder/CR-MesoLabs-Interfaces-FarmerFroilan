@@ -12,14 +12,18 @@ public class Chicken extends Animal implements Produce {
     }
 
     public Egg yield(){
-        if(isFertilized){
+        if(!isFertilized){
             return new Egg();
         }
         return null;
     }
 
-    public void isFertilized(){
+    public void fertilizeEgg(){
         isFertilized = true;
+    }
+
+    public boolean isFertilized(){
+        return isFertilized;
     }
 
     public void makeNoise() {
