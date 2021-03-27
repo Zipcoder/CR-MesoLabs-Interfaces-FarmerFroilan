@@ -9,6 +9,8 @@ public class Farm {
     List<Stables> stables = new ArrayList<Stables>();
     FarmHouse farmHouse = new FarmHouse();
 
+    //Possibly instantiate vehicles/people/animals here?
+
     public Farm(){
 
     }

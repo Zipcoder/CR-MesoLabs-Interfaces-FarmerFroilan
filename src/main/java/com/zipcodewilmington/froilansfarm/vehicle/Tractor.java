@@ -12,6 +12,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
         super(name);
     }
 
+    //Pass farmer as parameter, print the rider's name?
     public void operate(){
         System.out.println(this.toString()+" is running!");
     }
