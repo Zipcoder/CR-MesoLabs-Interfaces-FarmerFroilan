@@ -11,6 +11,7 @@ public class Chicken extends Animal implements Produce {
         super(name);
     }
 
+    //whatever calls yield here has to put the egg in the FoodInventory
     public Egg yield(){
         if(!isFertilized){
             return new Egg();
