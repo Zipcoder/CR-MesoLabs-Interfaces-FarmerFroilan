@@ -10,7 +10,7 @@ public class Botanist extends Person{
         super(name);
     }
 
-    //Passes Crop objects into croprows
+    //Passes Crop objects into croprows -> DONE
     public void plantCrops(Crop crop, CropRow cropRow){
         cropRow.add(crop);
     }

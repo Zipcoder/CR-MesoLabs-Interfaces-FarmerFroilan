@@ -10,11 +10,17 @@ public class CornStalk extends Crop{
 
     }
 
-    //IF isFertilized is true and isHarvested is false
-    //Then return a Corn, and set isHarvested to true
+    //IF isFertilized is true and isHarvested is false -> DONE
+    //Then return a Corn, and set isHarvested to true -> DONE
     //caller will need to store returned food object some place
     public Edible yield() {
-        return new Corn();
+        if(isFertilized() && !isHarvested()){
+            harvestCrop();
+            return new Corn();
+        }
+        else{
+            return null;
+        }
     }
 
     @Override

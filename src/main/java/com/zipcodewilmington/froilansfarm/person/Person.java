@@ -16,8 +16,8 @@ public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
 
     public void eat(Edible food, FoodInventory silo){
         System.out.println(name+" ate "+food);
-        //INTERACT WITH INVENTORY AND DELETE FOOD
-
+        silo.remove(food);
+        System.out.println("Current food in food inventory: "+silo.size());
     }
 
     public void mount(Ridable somethingRidable){
