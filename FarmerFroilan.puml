@@ -1,0 +1,171 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Abstract Class Animal{
+eat(Corn)
+makeNoise()
+}
+
+Abstract Class Shelter<T>{
+add()
+remove()
+get()
+}
+
+interface Edible{
+
+}
+interface Noisemaker{
+makeNoise()
+}
+interface Rideable
+Class Botanist{
+Plant(Crop crop, CropRow)
+}
+Abstract Class Person{
+eat(Edible)
+MakeNoise()
+getName()
+}
+Class Farmer{
+mount()
+dismount()
+operate(tractor)
+feed(Animal)
+}
+
+
+Class CropRow<Crop>{
+get(Crops)
+add(Crop)
+TomatoPlant
+CornStalk
+}
+Class Crop{
+isFertilized()
+isHarvested()
+
+}
+Class TomatoPlant{
+yield(tomato)
+
+}
+Class CornStalk{
+yield(corn)
+
+}
+interface Produce<food extends Edible>{
+yield(food)
+isFertilized()
+}
+
+interface Rider<Riding Extends Rideable>{
+
+Mount(riding)
+Dismount(riding)
+}
+
+Class Field{
+CropRow
+}
+
+Abstract Class Vehicle{
+drive()
+park()
+makeNoise()
+}
+Abstract Class AirCraft{
+Fly()
+Land()
+}
+
+interface FarmVehicle{
+Operate()
+}
+
+Class Farm{
+FarmHouse Instance
+ArrayList ChickenCoop & Stables
+getHouse()
+getVehicles()
+}
+
+Class ChickenCoop<Chicken>{
+ArrayList<Chicken>
+add(chicken)
+remove(chicken)
+get(chicken)
+}
+
+Class Stables<Horse>{
+add(Horse)
+remove(Horse)
+get(Horse)
+}
+interface Eater<typeOfFood extends Edible>{
+eat(Edible)
+}
+Class FoodInventory<Produce>{
+Corns
+Tomatos
+Eggs
+}
+Class FarmHouse<Person>{
+ArrayList<person>
+
+}
+Class Tractor{
+Harvest(Crop crop)
+makeNoise()
+operate()
+}
+
+Class CropDuster{
+operate()
+fertilized(CropRow)
+}
+
+Class Chicken{
+yield(egg)
+isFertilized()
+}
+Class Pilot{
+fly(AirCraft)
+operate(CropDuster)
+mount()
+dismount()
+}
+Shelter <-- FarmHouse
+Shelter <-- ChickenCoop
+Shelter <-- FoodInventory
+Shelter <-- Stables
+Eater <-- Person
+Person <|-- Botanist
+Botanist <|-- Farmer
+Animal <|--- Horse
+Rideable <-- Horse
+Animal <|-- Chicken
+Produce <-- Chicken
+
+Vehicle <-- AirCraft
+AirCraft <-- CropDuster
+FarmVehicle <-- CropDuster
+
+Crop <|-- TomatoPlant
+Crop <|-- CornStalk
+Produce <-- Crop
+Edible <-- Corn
+Edible <-- Tomato
+Edible <-- Egg
+Noisemaker <-- Animal
+Noisemaker <-- Person
+Farmer <|-- Pilot
+Shelter <|-- Field
+
+Noisemaker <-- Vehicle
+Rideable <- Vehicle
+FarmVehicle <-- Tractor
+Eater <-- Animal
+Person -> Rider
+Shelter <-- CropRow
+@enduml

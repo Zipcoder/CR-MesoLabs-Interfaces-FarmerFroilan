@@ -27,5 +27,12 @@ public abstract class Animal implements Eater<Corn>, Noisemaker {
 
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
 
 }

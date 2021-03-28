@@ -10,5 +10,12 @@ public abstract class Vehicle implements Ridable, Noisemaker {
         this.name = name;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
 
 }
