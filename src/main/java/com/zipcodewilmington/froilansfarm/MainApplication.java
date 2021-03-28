@@ -7,6 +7,9 @@ public class MainApplication {
 
     public static void main(String[] args){
 
+        DayInTheFarm sim=new DayInTheFarm();
+        sim.justBuildTheStupidFarmAlready();
+        sim.goodMorning();
     }
 
 }

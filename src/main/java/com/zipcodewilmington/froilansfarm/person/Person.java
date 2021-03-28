@@ -17,15 +17,16 @@ public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
     public void eat(Edible food, FoodInventory silo){
         System.out.println(name+" ate "+food);
         silo.remove(food);
+        //Remember to delete this line, checking the inventory is only for debugging
         System.out.println("Current food in food inventory: "+silo.size());
     }
 
     public void mount(Ridable somethingRidable){
-        System.out.print(this.getName()+" is riding "+somethingRidable.toString());
+        System.out.println(this.getName()+" is riding "+somethingRidable.toString());
     }
 
     public void dismount(Ridable somethingRidable){
-        System.out.print(this.getName()+" stopped riding "+somethingRidable.toString());
+        System.out.println(this.getName()+" stopped riding "+somethingRidable.toString());
     }
 
     public String getName(){
