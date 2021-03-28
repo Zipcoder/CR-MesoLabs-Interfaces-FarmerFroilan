@@ -18,7 +18,9 @@ public abstract class Crop implements Produce {
         isFertilized = true;
     }
 
-
+    public void harvestCrop() {
+        isHarvested = true;
+    }
 
     public boolean isFertilized() {
         return isFertilized;

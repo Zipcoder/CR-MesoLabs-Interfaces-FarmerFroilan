@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.vehicle;
 
 import com.zipcodewilmington.froilansfarm.crops.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.person.Pilot;
 import com.zipcodewilmington.froilansfarm.shelter.CropRow;
 
 public class CropDuster extends Airplane implements FarmVehicle {
@@ -10,9 +11,14 @@ public class CropDuster extends Airplane implements FarmVehicle {
         super(name);
     }
 
-    //put pilot as parameter, use pilots name in string output
+    //put pilot as parameter, use pilots name in string output -> DONE
+    public void operate(Pilot pilot){
+        System.out.println(pilot.getName()+" is flying a "+this.toString());
+    }
+
+    //Added this one to satisfy operate() method in FarmVehicle interface
     public void operate(){
-        System.out.println(this.toString()+" is running!");
+        System.out.println("The "+this.toString()+" is flying!");
     }
 
 
