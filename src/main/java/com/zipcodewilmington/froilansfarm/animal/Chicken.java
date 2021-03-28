@@ -27,8 +27,8 @@ public class Chicken extends Animal implements Produce {
         return isFertilized;
     }
 
-    public void makeNoise() {
-        System.out.println("Cock-a-doodle-doo");
+    public String makeNoise() {
+        return "Cock-a-doodle-doo";
     }
 
     @Override

@@ -32,8 +32,8 @@ public class Tractor extends Vehicle implements FarmVehicle {
         }
     }
 
-    public void makeNoise() {
-        System.out.println("Dumb tractor noises");
+    public String makeNoise() {
+        return "Putt putt put Bang";
     }
 
     @Override

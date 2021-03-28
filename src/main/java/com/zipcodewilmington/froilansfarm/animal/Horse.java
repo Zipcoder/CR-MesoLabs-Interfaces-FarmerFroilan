@@ -9,8 +9,8 @@ public class Horse extends Animal implements Ridable {
     }
 
 
-    public void makeNoise() {
-        System.out.println("Nayyy");
+    public String makeNoise() {
+        return "Nayyy";
     }
 
     @Override
