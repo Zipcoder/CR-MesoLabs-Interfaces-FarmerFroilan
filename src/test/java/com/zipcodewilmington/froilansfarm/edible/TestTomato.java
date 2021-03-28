@@ -5,14 +5,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EggTest {
-
+public class TestTomato {
     @Test
-    public void EggTest(){
+    public void TestTomato(){
         //Given
-        String toString = new String("Egg");
+        String toString = new String("Tomato");
         //When
-        String expected = ("Egg");
+        String expected = ("Tomato");
         String actual = toString;
         //Then
         Assert.assertEquals(expected, actual);
@@ -21,3 +20,4 @@ public class EggTest {
     }
 
 }
+

@@ -1,18 +1,17 @@
-package com.zipcodewilmington.froilansfarm.edible;
+package com.zipcodewilmington.froilansfarm.crops;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EggTest {
-
+public class TestCornStalk {
     @Test
-    public void EggTest(){
+    public void TestCornStalk(){
         //Given
-        String toString = new String("Egg");
+        String toString = new String("Corn Stalk");
         //When
-        String expected = ("Egg");
+        String expected = ("Corn Stalk");
         String actual = toString;
         //Then
         Assert.assertEquals(expected, actual);

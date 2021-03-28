@@ -80,7 +80,7 @@ public class DayInTheFarm{
         theFarm.getChickenCoops().get(3).add(c14);
         theFarm.getChickenCoops().get(3).add(c15);
 
-        //They then built stables, to store their 10 horses.
+     /*   //They then built stables, to store their 10 horses.
         theFarm.addStable(new Stables());
         theFarm.addStable(new Stables());
         theFarm.addStable(new Stables());
@@ -93,7 +93,7 @@ public class DayInTheFarm{
         theFarm.getStables().get(1).add(h7);
         theFarm.getStables().get(1).add(h8);
         theFarm.getStables().get(2).add(h9);
-        theFarm.getStables().get(2).add(h10);
+        theFarm.getStables().get(2).add(h10); */
 
 
         //They make rows in the field to plant the crops
