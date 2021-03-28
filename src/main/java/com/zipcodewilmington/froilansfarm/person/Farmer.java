@@ -34,4 +34,8 @@ public class Farmer extends Botanist{
         System.out.println(animal.toString()+" was fed");
         animal.eat(food,silo);
     }
+
+    public String makeNoise(){
+        return "I'm farmer Froilan";
+    }
 }

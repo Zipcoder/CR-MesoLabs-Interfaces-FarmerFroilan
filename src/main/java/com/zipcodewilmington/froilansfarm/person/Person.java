@@ -10,8 +10,8 @@ public abstract class Person implements Eater<Edible>, Noisemaker, Rider {
         this.name = name;
     }
 
-    public void makeNoise(){
-        System.out.println("Hi I'm a Person");
+    public String makeNoise(){
+        return "Hi I'm a Person";
     }
 
     public void eat(Edible food, FoodInventory silo){

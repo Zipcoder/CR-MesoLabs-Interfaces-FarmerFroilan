@@ -30,8 +30,8 @@ public class CropDuster extends Airplane implements FarmVehicle {
         }else System.out.println("Still on the ground, genius");
     }
 
-    public void makeNoise(){
-        System.out.println("Stupid plane noise");
+    public String makeNoise(){
+        return "nnneeaoowww";
     }
 
     @Override
