@@ -4,11 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TestShelter {
-
-    @Test
-    public void add() {
-    }
+public class ShelterTest {
 
     @Test
     public void remove() {

@@ -17,26 +17,28 @@ public class TestTomatoPlant {
         String actual = toString;
         //Then
         Assert.assertEquals(expected, actual);
-
-
-        /*TomatoPlant Tomato = new TomatoPlant();
-        Tomato.yield();
-        Assert.assertTrue(Tomato.isFertilized());*/
     }
 
-    @Test
-    public void TestharvestCrop() {
-       /* TomatoPlant Tomato = new TomatoPlant();
-        Tomato.yield();
-        Assert.assertTrue(Tomato.isHarvested());*/
-
-    }
 
     @Test
     public void TestisFertilized() {
+
+        TomatoPlant Tomato = new TomatoPlant();
+
+        Assert.assertFalse(Tomato.isFertilized());
+
+        Tomato.fertilizeCrop();
+
+        Tomato.isFertilized();
+
+        Assert.assertTrue(Tomato.isFertilized());
     }
 
     @Test
     public void TestisHarvested() {
+        TomatoPlant Tomato = new TomatoPlant();
+        Tomato.harvestCrop();
+        Tomato.yield();
+        Assert.assertTrue(Tomato.isHarvested());
     }
 }
