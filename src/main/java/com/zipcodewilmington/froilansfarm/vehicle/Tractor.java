@@ -15,7 +15,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
 
     //Pass farmer as parameter, print the rider's name? -> DONE
     public void operate(Farmer farmer){
-        System.out.println(farmer.getName()+" is flying a "+this.toString());
+        System.out.println(farmer.getName()+" is riding a "+this.toString());
     }
 
     //Added this one to satisfy operate() method in FarmVehicle interface
@@ -28,6 +28,8 @@ public class Tractor extends Vehicle implements FarmVehicle {
         for(int i=0;i<cropRow.size();i++){
             if(cropRow.get(i).isFertilized() && !cropRow.get(i).isHarvested()){
                 silo.add(cropRow.get(i).yield());
+                cropRow.remove(cropRow.get(i));
+                i=0;
             }
         }
     }

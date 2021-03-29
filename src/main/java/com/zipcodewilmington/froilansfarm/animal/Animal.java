@@ -18,7 +18,6 @@ public abstract class Animal implements Eater<Corn>, Noisemaker {
         //For debugging purposes at least, print out given foodInventory ->
         if(silo.remove(food)){
             System.out.println(this.name.toString()+" ate "+food.toString());
-            System.out.println("Current food in food inventory: "+silo.size());
         }
         else{
             System.out.println(this.name.toString()+" was not completely fed and is still hungry!");

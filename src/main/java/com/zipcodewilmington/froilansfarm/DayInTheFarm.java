@@ -127,9 +127,9 @@ public class DayInTheFarm{
             theField.get(3).add(new BroccoliPlant());
         }
         //Start everyone out with food so they don't instantly starve.
-        for (int i=0;i<450;i++){silo.add(corn);}
-        for (int i=0;i<100;i++){silo.add(tomato);}
-        for (int i=0;i<100;i++){silo.add(egg);}
+        for (int i=0;i<150;i++){silo.add(corn);}
+        for (int i=0;i<20;i++){silo.add(tomato);}
+        for (int i=0;i<20;i++){silo.add(egg);}
 
     }
 
@@ -222,6 +222,8 @@ public class DayInTheFarm{
     }
 
     public void monday(){
+        goodMorning();
+        System.out.println("Monday! Time for froilana to fly and fertilize the crops!");
         froilana.mount(duster);
         duster.operate(froilana);
         duster.fly();
@@ -233,10 +235,21 @@ public class DayInTheFarm{
         duster.land();
     }
     public void tuesday(){
-        //Froilan harvests all crops today, using the tractor
+        goodMorning();
+        System.out.println("Tuesday! Time to harvest!");
+        froilan.mount(tractor);
+        tractor.operate(froilan);
+        tractor.harvest(theField.get(0),silo);
+        tractor.harvest(theField.get(1),silo);
+        tractor.harvest(theField.get(2),silo);
+        tractor.harvest(theField.get(3),silo);
+        tractor.harvest(theField.get(4),silo);
+        System.out.println("Food Storage has: "+silo.size()+" edible items.");
+
     }
     public void wednesday(){
         goodMorning();
+        System.out.println("EGGS!");
         for(ChickenCoop coop: theFarm.getChickenCoops()){
             for(int i=0;i<coop.size();i++){
                 silo.add(coop.get(i).yield());
@@ -245,6 +258,7 @@ public class DayInTheFarm{
     }
     public void thursday(){
         goodMorning();
+        System.out.println("Thursday, froilana's day to plant!");
         for(int i=0;i<150;i++){
             froilana.plantCrops(new CornStalk(),theField.get(4));
         }
@@ -253,6 +267,7 @@ public class DayInTheFarm{
         }}
     public void friday(){
         goodMorning();
+        System.out.println("MORE EGGS");
         for(ChickenCoop coop: theFarm.getChickenCoops()){
             for(int i=0;i<coop.size();i++){
                 silo.add(coop.get(i).yield());
@@ -265,11 +280,12 @@ public class DayInTheFarm{
         froilana.mount(h6);
         System.out.println("On Saturdays, the sibling go into town to sell their excess veggies.");
         for (int i=0;i<50;i++){silo.remove(tomato);}
-        for (int i=0;i<100;i++){silo.remove(broccoli);}
+        for (int i=0;i<90;i++){silo.remove(broccoli);}
 
     }
     public void sunday(){
         goodMorning();
+        System.out.println("Sunday! Now it's Froilan's day to plant crops.");
         for(int i=0;i<150;i++){
             froilan.plantCrops(new CornStalk(),theField.get(0));
             froilan.plantCrops(new CornStalk(),theField.get(2));

@@ -10,12 +10,12 @@ public class MainApplication {
         DayInTheFarm sim=new DayInTheFarm();
         sim.justBuildTheStupidFarmAlready();
         sim.monday();
-        //sim.tuesday();
-        //sim.wednesday();
-        //sim.thursday();
-        //sim.friday();
-        //sim.saturday();
-        //sim.sunday();
+        sim.tuesday();
+        sim.wednesday();
+        sim.thursday();
+        sim.friday();
+        sim.saturday();
+        sim.sunday();
     }
 
 }
