@@ -2,8 +2,10 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.animal.Chicken;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
+import com.zipcodewilmington.froilansfarm.crops.BroccoliPlant;
 import com.zipcodewilmington.froilansfarm.crops.CornStalk;
 import com.zipcodewilmington.froilansfarm.crops.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.edible.Broccoli;
 import com.zipcodewilmington.froilansfarm.edible.Corn;
 import com.zipcodewilmington.froilansfarm.edible.Egg;
 import com.zipcodewilmington.froilansfarm.edible.Tomato;
@@ -23,6 +25,7 @@ public class DayInTheFarm{
     DayInTheFarm(){}
     Egg egg=new Egg();
     Corn corn=new Corn();
+    Broccoli broccoli=new Broccoli();
     Tomato tomato=new Tomato(); //Lets call the whole thing off~
     Tractor tractor=new Tractor("Dumb tractor");
     CropDuster duster=new CropDuster("A stupid plane");
@@ -55,6 +58,15 @@ public class DayInTheFarm{
     Chicken c13 = new Chicken("The Colonel");
     Chicken c14 = new Chicken("Mr. Bawk b-gawk");
     Chicken c15 = new Chicken("The last of the chickens");
+
+    Stables s1=new Stables();
+    Stables s2=new Stables();
+    Stables s3=new Stables();
+
+    ChickenCoop coop1=new ChickenCoop();
+    ChickenCoop coop2=new ChickenCoop();
+    ChickenCoop coop3=new ChickenCoop();
+    ChickenCoop coop4=new ChickenCoop();
 
     Field theField=new Field();
     FoodInventory silo=new FoodInventory();
@@ -104,72 +116,25 @@ public class DayInTheFarm{
         theField.add(new CropRow());
         theField.add(new CropRow());
         theField.add(new CropRow());
-        //they plant 10 corn in row 1, 10 tomato in row 2, and whatever else they felt like that day.
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(0).add(new CornStalk());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(1).add(new TomatoPlant());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(2).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(3).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
-        theField.get(4).add(new CornStalk());
+        //Planting corn in row 1, tomato in row 2, and whatever else they felt like.
+        for(int i=0;i<150;i++){
+            theField.get(0).add(new CornStalk());
+            theField.get(2).add(new CornStalk());
+            theField.get(4).add(new CornStalk());
+        }
+        for(int i=0;i<100;i++){
+            theField.get(1).add(new TomatoPlant());
+            theField.get(3).add(new BroccoliPlant());
+        }
         //Start everyone out with food so they don't instantly starve.
-        for (int i=0;i<100;i++){silo.add(corn);}
-        for (int i=0;i<10;i++){silo.add(tomato);}
-        for (int i=0;i<20;i++){silo.add(egg);}
+        for (int i=0;i<450;i++){silo.add(corn);}
+        for (int i=0;i<100;i++){silo.add(tomato);}
+        for (int i=0;i<100;i++){silo.add(egg);}
+
     }
 
     public void goodMorning(){
-        /*Morning checklist:
-    Feeding each Horse 3 ear of Corn.
-    Chickens are smaller, so they'll eat 2 ears of corn a day.
-    Froilan eats 1 EarCorn, 2 Tomoato, and 5 Egg.
-    Froilanda eats 2 EarCorn, 1 Tomoato, and 2 Egg.*/
         System.out.println("The sun's up lazybones, get to work! It's morning. First we gotta ride these horses, get em some excersize.");
-        //Horse riding at the crack of dawn!
         froilan.mount(h1);
         froilan.dismount(h1);
         froilan.mount(h2);
@@ -191,7 +156,7 @@ public class DayInTheFarm{
         froilana.mount(h10);
         froilana.dismount(h10);
 
-        //Time to feed the damn things
+        System.out.println("Time to feed the horses!");
         feedHorse(h1);
         feedHorse(h2);
         feedHorse(h3);
@@ -202,6 +167,8 @@ public class DayInTheFarm{
         feedHorse(h8);
         feedHorse(h9);
         feedHorse(h10);
+
+        System.out.println("And now the chickens need food");
         feedChicken(c1);
         feedChicken(c2);
         feedChicken(c3);
@@ -216,6 +183,10 @@ public class DayInTheFarm{
         feedChicken(c13);
         feedChicken(c14);
         feedChicken(c15);
+
+        System.out.println("Whew! Now that all that's done, Foilan and his sister can take a break to eat.");
+        froilanBreakfast(froilan);
+        froilanaBreakfast(froilana);
     }
     //Horseys are big, they need 3 ear of corn a day
     public void feedHorse(Horse h){
@@ -250,6 +221,52 @@ public class DayInTheFarm{
         f.eat(tomato, silo);
     }
 
+    public void monday(){
+        //Froilanda fertilizes all crops today, flying the cropDuster
+    }
+    public void tuesday(){
+        //Froilan harvests all crops today, using the tractor
+    }
+    public void wednesday(){
+        goodMorning();
+        for(ChickenCoop coop: theFarm.getChickenCoops()){
+            for(int i=0;i<coop.size();i++){
+                silo.add(coop.get(i).yield());
+            }
+        }
+    }
+    public void thursday(){
+        goodMorning();
+        for(int i=0;i<150;i++){
+            froilana.plantCrops(new CornStalk(),theField.get(4));
+        }
+        for(int i=0;i<100;i++){
+            froilana.plantCrops(new BroccoliPlant(),theField.get(3));
+        }}
+    public void friday(){
+        goodMorning();
+        for(ChickenCoop coop: theFarm.getChickenCoops()){
+            for(int i=0;i<coop.size();i++){
+                silo.add(coop.get(i).yield());
+            }
+        }
+    }
+    public void saturday(){
+        goodMorning();
+        froilan.mount(h1);
+        froilana.mount(h6);
+        System.out.println("On Saturdays, the sibling go into town to sell their excess veggies.");
+        for (int i=0;i<50;i++){silo.remove(tomato);}
+        for (int i=0;i<100;i++){silo.remove(broccoli);}
 
-
+    }
+    public void sunday(){
+        goodMorning();
+        for(int i=0;i<150;i++){
+            froilan.plantCrops(new CornStalk(),theField.get(0));
+            froilan.plantCrops(new CornStalk(),theField.get(2));
+        }
+        for(int i=0;i<100;i++){
+            froilan.plantCrops(new TomatoPlant(),theField.get(1));
+    }}
 }
