@@ -13,12 +13,13 @@ public class CropDuster extends Airplane implements FarmVehicle {
 
     //put pilot as parameter, use pilots name in string output -> DONE
     public void operate(Pilot pilot){
+        pilotOnBoard(pilot);
         System.out.println(pilot.getName()+" is flying a "+this.toString());
     }
 
     //Added this one to satisfy operate() method in FarmVehicle interface
     public void operate(){
-        System.out.println("The "+this.toString()+" is flying!");
+        if(properPilot){System.out.println("The "+this.toString()+" is on now!");}
     }
 
 

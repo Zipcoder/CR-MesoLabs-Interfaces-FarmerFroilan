@@ -18,8 +18,8 @@ public abstract class Shelter<T> {
         inShelter.add(element);
     }
 
-    public void remove(T element){
-        inShelter.remove(element);
+    public Boolean remove(T element){
+        return (inShelter.remove(element));
     }
 
     public T get(int index){

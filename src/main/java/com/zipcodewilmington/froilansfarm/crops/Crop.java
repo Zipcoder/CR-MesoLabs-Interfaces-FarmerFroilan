@@ -11,9 +11,6 @@ public abstract class Crop implements Produce {
     public Crop(){
     }
 
-
-
-
     public void fertilizeCrop() {
         isFertilized = true;
     }

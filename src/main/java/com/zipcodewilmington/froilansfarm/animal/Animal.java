@@ -16,13 +16,11 @@ public abstract class Animal implements Eater<Corn>, Noisemaker {
         //Will remove an instance of a Corn edible object from the given foodInventory -> DONE
         //Maybe if object doesn't exist, give a message that the animal is hungry -> DONE
         //For debugging purposes at least, print out given foodInventory ->
-        if(food != null){
-            System.out.println(this.toString()+" ate "+food.toString());
-            silo.remove(food);
-            System.out.println("Current food in food inventory: "+silo.size());
+        if(silo.remove(food)){
+            System.out.println(this.name.toString()+" ate "+food.toString());
         }
         else{
-            System.out.println(this.toString()+" was not fed and is still hungry!");
+            System.out.println(this.name.toString()+" was not completely fed and is still hungry!");
         }
 
     }
