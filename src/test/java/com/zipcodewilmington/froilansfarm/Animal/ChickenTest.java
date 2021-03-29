@@ -70,17 +70,51 @@ public class ChickenTest{
         food.add(corn);
         chick.eat(corn, food);
 
-        System.out.println(food.size());
+        Integer expected = 1;
+        Integer actual = food.size();
 
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void eatTest2(){
+        Chicken chick = new Chicken("Clucky");
+        FoodInventory food = new FoodInventory();
+        Corn corn = new Corn();
+        food.add(corn);
+        food.add(corn);
+        food.add(corn);
+        chick.eat(corn, food);
+
+        Integer expected = 2;
+        Integer actual = food.size();
+
+        Assert.assertEquals(expected, actual);
 
     }
 
 
 
-//    @Test
-//    public void eatTest(){
-//        Chicken chick = new Chicken("Albert Eggstein");
-//        chick.eat(corn, silo);
-//    }
+    @Test
+    public void chickenMakeNoiseTest(){
+        Chicken chick = new Chicken("Clucky");
+        String expected = "Cock-a-doodle-doo";
+
+        String actual = chick.makeNoise();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void chickenMakeNoiseTest2(){
+        Chicken chick = new Chicken("Clucky");
+        String expected = "cluck cluck";
+
+        String actual = chick.makeNoise();
+
+        Assert.assertNotEquals(expected, actual);
+    }
+
 
 }

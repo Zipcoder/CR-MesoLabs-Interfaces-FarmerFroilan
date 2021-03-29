@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
+import com.zipcodewilmington.froilansfarm.crops.Crop;
 import com.zipcodewilmington.froilansfarm.shelter.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
@@ -31,12 +32,22 @@ public class CropDusterTest {
     }
 
     @Test
-    public void fertilizeTest(){
+    public void makeNoiseCropDuster(){
         CropDuster duster = new CropDuster("Dusty");
-        boolean inAir = true;
-        CropRow rows = new CropRow();
-        duster.fertilize(rows);
+        String expected = "nnneeaoowww";
 
+        String actual = duster.makeNoise();
+
+        Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void makeNoiseCropDuster2(){
+        CropDuster duster = new CropDuster("Dusty");
+        String expected = "some plane noise";
+
+        String actual = duster.makeNoise();
+
+        Assert.assertNotEquals(expected, actual);
+    }
 }
