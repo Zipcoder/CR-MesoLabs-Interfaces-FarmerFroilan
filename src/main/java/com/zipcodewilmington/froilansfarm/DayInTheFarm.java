@@ -100,7 +100,7 @@ public class DayInTheFarm{
         theFarm.addStable(new Stables());
         theFarm.addStable(new Stables());
         theFarm.addStable(new Stables());
-        theFarm.getStables().get(0).add(h1);
+      /*  theFarm.getStables().get(0).add(h1);
         theFarm.getStables().get(0).add(h2);
         theFarm.getStables().get(0).add(h3);
         theFarm.getStables().get(0).add(h4);
@@ -109,7 +109,7 @@ public class DayInTheFarm{
         theFarm.getStables().get(1).add(h7);
         theFarm.getStables().get(1).add(h8);
         theFarm.getStables().get(2).add(h9);
-        theFarm.getStables().get(2).add(h10);
+        theFarm.getStables().get(2).add(h10);*/
         //They make rows in the field to plant the crops
         theField.add(new CropRow());
         theField.add(new CropRow());
