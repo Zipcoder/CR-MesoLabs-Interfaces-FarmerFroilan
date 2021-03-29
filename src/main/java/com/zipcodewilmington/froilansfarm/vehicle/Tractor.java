@@ -35,7 +35,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
     }
 
     public String makeNoise() {
-        return "Putt putt put Bang";
+        return "Putt putt putt Bang";
     }
 
     @Override
