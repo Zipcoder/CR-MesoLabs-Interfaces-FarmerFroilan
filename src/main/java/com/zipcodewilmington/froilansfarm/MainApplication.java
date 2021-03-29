@@ -9,7 +9,7 @@ public class MainApplication {
 
         DayInTheFarm sim=new DayInTheFarm();
         sim.justBuildTheStupidFarmAlready();
-        //sim.monday();
+        sim.monday();
         //sim.tuesday();
         //sim.wednesday();
         //sim.thursday();

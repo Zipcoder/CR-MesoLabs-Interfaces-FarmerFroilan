@@ -222,7 +222,15 @@ public class DayInTheFarm{
     }
 
     public void monday(){
-        //Froilanda fertilizes all crops today, flying the cropDuster
+        froilana.mount(duster);
+        duster.operate(froilana);
+        duster.fly();
+        duster.fertilize(theField.get(0));
+        duster.fertilize(theField.get(1));
+        duster.fertilize(theField.get(2));
+        duster.fertilize(theField.get(3));
+        duster.fertilize(theField.get(4));
+        duster.land();
     }
     public void tuesday(){
         //Froilan harvests all crops today, using the tractor

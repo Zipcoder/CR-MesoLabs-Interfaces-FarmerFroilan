@@ -13,7 +13,6 @@ public class Pilot extends Farmer{
     }
 
     public void operate(CropDuster cropDuster){
-
     }
 
 }
